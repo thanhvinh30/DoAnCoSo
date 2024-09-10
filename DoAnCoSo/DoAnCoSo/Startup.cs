@@ -29,17 +29,29 @@ namespace DoAnCoSo
         public IConfiguration Configuration { get; }
         public void ConfigureServices(IServiceCollection services)
         {
+
+            // Thêm mới
+            services.AddMvc();
+            services.AddHttpContextAccessor();
+            // End
+
+            //
             var stringConnectdb = Configuration.GetConnectionString("dbPhuTungXeMay");
             services.AddDbContext<DataDoAnCoSoContext>(Options => Options.UseSqlServer(stringConnectdb));
+            //
 
+            //
+            services.AddDbContext<DataDoAnCoSoContext>(options =>
+            options.UseSqlServer(Configuration.GetConnectionString("dbPhuTungXeMay")));
+            //
 
-            //services.AddSingleton<HtmlEncoder>(HtmlEncoder.Create(allowedRanges: new[] { UnicodeRange.All }));
+            //services.AddSingleton<HtmlEncoder>(HtmlEncoder.Create(allowedRanges: new[] { UnicodeRange.All }));                // Sửa phần chữ Unicode ( tiếng việt ) 
 
             services.AddControllersWithViews().AddRazorRuntimeCompilation();
         }
 
 
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env, ILogger<Startup> logger)
         {
             if (env.IsDevelopment())
             {
@@ -69,6 +81,9 @@ namespace DoAnCoSo
                     pattern: "{controller=Home}/{action=Index}/{id?}"
                  );
             });
+
+            // tạo mới Logger từ CHatGPT ( xóa nhớ để ý phần public void đã có thêm vào logger )
+            logger.LogInformation("Application has started and routing is configured correctly.");
         }
     }
 }

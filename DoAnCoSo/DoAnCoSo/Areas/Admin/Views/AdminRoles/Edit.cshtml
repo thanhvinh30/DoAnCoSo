@@ -1,0 +1,44 @@
+﻿@model DoAnCoSo.Models.Role
+
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="card">
+            <div class="card-body">
+                <h1 class="mb-3 header-title mt-0">Edit Account</h1>
+                <form asp-action="Edit">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <input type="hidden" asp-for="RoleId" />
+
+                    <div class="mb-3">
+                        <label asp-for="RoleName" class="form-label" for="exampleInputEmail1">Name Manager/ Staff</label>
+                        <input asp-for="RoleName" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Name">
+                        <span asp-validation-for="RoleName" class="text-danger"></span>
+                    </div>
+
+                    <div class="mb-3">
+                        <label asp-for="DesRole" class="form-label" for="exampleInputPassword1">Roles</label>
+                        <input asp-for="DesRole" type="text" class="form-control" id="exampleInputPassword1" placeholder="Enter Roles">
+                        <span asp-validation-for="DesRole" class="text-danger"></span>
+                    </div>
+
+                    <div class ="form-group">
+                        
+                         <input type="submit" value="Save" class="btn btn-outline-success"></input>
+                        
+                        |
+                        <a asp-action="Index" class="btn btn-outline-secondary">Back to List</a>
+                    </div>
+
+
+                </form>
+            </div> <!-- end card-body-->
+        </div> <!-- end card-->
+    </div>
+    <!-- end col -->
+</div>
