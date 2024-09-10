@@ -5709,11 +5709,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\DoAnCoSo\\DoAnCoSo\\DoAnCoSo\\DoAnCoSo.csproj",
+      "projectUniqueName": "D:\\DoAn\\DoAnCoSo\\DoAnCoSo\\DoAnCoSo\\DoAnCoSo.csproj",
       "projectName": "DoAnCoSo",
-      "projectPath": "D:\\DoAnCoSo\\DoAnCoSo\\DoAnCoSo\\DoAnCoSo.csproj",
+      "projectPath": "D:\\DoAn\\DoAnCoSo\\DoAnCoSo\\DoAnCoSo\\DoAnCoSo.csproj",
       "packagesPath": "C:\\Users\\VINH\\.nuget\\packages\\",
-      "outputPath": "D:\\DoAnCoSo\\DoAnCoSo\\DoAnCoSo\\obj\\",
+      "outputPath": "D:\\DoAn\\DoAnCoSo\\DoAnCoSo\\DoAnCoSo\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\VINH\\AppData\\Roaming\\NuGet\\NuGet.Config",

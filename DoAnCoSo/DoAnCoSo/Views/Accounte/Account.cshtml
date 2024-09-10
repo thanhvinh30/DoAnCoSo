@@ -1,0 +1,56 @@
+﻿
+@{
+    ViewData["Title"] = "Account";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Account</h1>
+
+<!-- Single Page Header start -->
+<div class="container-fluid page-header py-5">
+    <h1 class="text-center text-white display-6">Đăng Nhập</h1>
+    <ol class="breadcrumb justify-content-center mb-0">
+        <li class="breadcrumb-item"><a href="index.html"> Trang Chủ</a></li>
+    </ol>
+</div>
+<!-- Single Page Header End -->
+<!-- Account Start -->
+<div class="custom-card">
+    <div class="custom-container" id="container">
+        <div class="custom-form-container custom-sign-up">
+            <form>
+                <h1>Đăng Ký</h1>
+                <span>or use your email for registration</span>
+                <input type="text" placeholder="Name">
+                <input type="email" placeholder="Email">
+                <input type="password" placeholder="Password">
+                <button>Đăng Ký</button>
+            </form>
+        </div>
+        <div class="custom-form-container custom-sign-in">
+            <form>
+                <h1>Đăng Nhập</h1>
+                <span>or use your email password</span>
+                <input type="email" placeholder="Email">
+                <input type="password" placeholder="Password">
+                <a href="#">Quên Mật Khẩu</a>
+                <button>Đăng Nhập</button>
+            </form>
+        </div>
+        <div class="custom-toggle-container">
+            <div class="custom-toggle">
+                <div class="custom-toggle-panel custom-toggle-left">
+                    <h1>Chào Mừng Bạn Đã Quay Lại</h1>
+                    <p>Nhập thông tin cá nhân của bạn để sử dụng tất cả các tính năng của trang web</p>
+                    <button class="hidden" id="login">Đăng Nhập</button>
+                </div>
+                <div class="custom-toggle-panel custom-toggle-right">
+                    <h1>Tạo Tài Khoản</h1>
+                    <p>Đăng ký với thông tin cá nhân của bạn để sử dụng tất cả các tính năng của trang web</p>
+                    <button class="hidden" id="register">Đăng Ký</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

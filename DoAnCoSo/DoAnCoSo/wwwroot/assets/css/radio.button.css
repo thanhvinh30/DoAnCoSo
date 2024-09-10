@@ -1,0 +1,52 @@
+
+/*.Button-Functions{
+    cursor: pointer;
+    transform: 
+        scale 0.25s ease-in,
+        opacity 0.25s ease-in,
+        filter 0.25s ease-in;
+
+    &:hover{
+               scale: 1.2;
+           }
+}*/
+
+
+.radio-buttons {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 4px;
+    background-color: #eee;
+    box-sizing: border-box;
+    padding: 0.25rem;
+    width: 150px;
+    font-size: 14px;
+    height: 46px;
+}
+
+    .radio-buttons .radio {
+        flex: 1 1 auto;
+        text-align: center;
+    }
+
+        .radio-buttons .radio input {
+            display: none;
+        }
+
+        .radio-buttons .radio .name {
+            display: flex;
+            cursor: pointer;
+            align-items: center;
+            justify-content: center;
+            border-radius: 4px;
+            border: none;
+            padding: 0.5rem 0;
+            color: rgba(51, 65, 85, 1);
+            transition: all 0.15s ease-in-out;
+        }
+
+        .radio-buttons .radio input:checked + .name {
+            background-color: #fff;
+            font-weight: 600;
+        }

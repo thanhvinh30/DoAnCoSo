@@ -1,0 +1,223 @@
+﻿
+@{
+    ViewData["Title"] = "Products";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!-- Single Page Header start -->
+<div class="container-fluid page-header py-5">
+    <h1 class="text-center text-white display-6">Các Sản Phẩm </h1>
+    <ol class="breadcrumb justify-content-center mb-0">
+        <li class="breadcrumb-item"><a asp-controller="Home" asp-action="Index"> Trang Chủ</a></li>
+    </ol>
+</div>
+<!-- Single Page Header End -->
+<!-- Fruits Shop Start-->
+<div class="container-fluid fruite py-5">
+    <div class="container py-5">
+        <h1 class="mb-4">Sản Phẩm Phụ Tùng</h1>
+        <div class="row g-4">
+            <div class="col-lg-12">
+                <div class="row g-4">
+                    <div class="col-xl-3">
+                        <div class="input-group w-100 mx-auto d-flex">
+                            <input type="search" class="form-control p-3" placeholder="keywords" aria-describedby="search-icon-1">
+                            <span id="search-icon-1" class="input-group-text p-3"><i class="fa fa-search"></i></span>
+                        </div>
+                    </div>
+                    <div class="col-6"></div>
+                </div>
+                <div class="row g-4">
+                    <div class="col-lg-3">
+                        <div class="row g-4">
+                            <div class="col-lg-12">
+                                <div class="mb-3">
+                                    <h4>Các loại sản phẩm</h4>
+                                    <ul class="list-unstyled fruite-categorie">
+                                        <li>
+                                            <div class="d-flex justify-content-between fruite-name">
+                                                <a asp-controller="Home"><i class="fa fa-motorcycle me-2" aria-hidden="true"></i>Nhông Sên Dĩa</a>
+                                                <span>(3)</span>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="d-flex justify-content-between fruite-name">
+                                                <a asp-controller="Home"><i class="fa fa-motorcycle me-2" aria-hidden="true"></i>Lọc Gió</a>
+                                                <span>(3)</span>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="d-flex justify-content-between fruite-name">
+                                                <a asp-controller="Home"><i class="fa fa-motorcycle me-2" aria-hidden="true"></i>Kiến Chiếu Hậu</a>
+                                                <span>(2)</span>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="d-flex justify-content-between fruite-name">
+                                                <a asp-controller="Home"><i class="fa fa-motorcycle me-2" aria-hidden="true"></i>Đèn Led Xe Máy</a>
+                                                <span>(8)</span>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="d-flex justify-content-between fruite-name">
+                                                <a asp-controller="Home"><i class="fa fa-motorcycle me-2" aria-hidden="true"></i>Bao Tay Cầm</a>
+                                                <span>(5)</span>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="d-flex justify-content-between fruite-name">
+                                                <a asp-controller="Home"><i class="fa fa-motorcycle me-2" aria-hidden="true"></i>Ba - Ga</a>
+                                                <span>(5)</span>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-lg-12">
+                                <div class="mb-3">
+                                    <h4 class="mb-2">Mức Giá</h4>
+                                    <input type="range" class="form-range w-100" id="rangeInput" name="rangeInput" min="0" max="500" value="0" oninput="amount.value=rangeInput.value">
+                                    <output id="amount" name="amount" min-velue="0" max-value="500" for="rangeInput">0</output>
+                                </div>
+                            </div>
+                            <div class="col-lg-12">
+                                <div class="position-relative">
+                                    <img src="img/banner-fruits.jpg" class="img-fluid w-100 rounded" alt="">
+                                    <div class="position-absolute" style="top: 50%; right: 10px; transform: translateY(-50%);">
+                                        <h3 class="text-secondary fw-bold"><br>  <br> </h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-9">
+                        <div class="row g-4 justify-content-center">
+                            <div class="col-md-6 col-lg-6 col-xl-4">
+                                <div class="rounded position-relative fruite-item">
+                                    <a href="shop-detail.html">
+                                        <div class="fruite-img">
+                                            <img src="img-PhuTungXe/Nhông-xên-dĩa/Dĩa Nhôm 43T cho Honda Winner Sonic.jpg" class="img-fluid w-100 rounded-top" alt="">
+                                        </div>
+                                        <div class="text-white bg-secondary px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px;">Chi Tiết Sản Phẩm</div>
+                                        <div class="p-4 border border-secondary border-top-0 rounded-bottom">
+                                            <h4>Phụ Tùng Xê</h4>
+                                            <p>Nội Dung Sản Phẩm</p>
+                                            <div class="d-flex justify-content-between flex-lg-wrap">
+                                                <p class="text-dark fs-5 fw-bold mb-0">200.000Đ/ Cái</p>
+                                                <a asp-controller="Home" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Thêm Vào Giỏ Hàng</a>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-6 col-xl-4">
+                                <div class="rounded position-relative fruite-item">
+                                    <a href="shop-detail.html">
+                                        <div class="fruite-img">
+                                            <img src="img-PhuTungXe/Nhông-xên-dĩa/Dĩa Nhôm 43T cho Honda Winner Sonic.jpg" class="img-fluid w-100 rounded-top" alt="">
+                                        </div>
+                                        <div class="text-white bg-secondary px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px;">Chi Tiết Sản Phẩm</div>
+                                        <div class="p-4 border border-secondary border-top-0 rounded-bottom">
+                                            <h4>Phụ Tùng Xê</h4>
+                                            <p>Nội Dung Sản Phẩm</p>
+                                            <div class="d-flex justify-content-between flex-lg-wrap">
+                                                <p class="text-dark fs-5 fw-bold mb-0">200.000Đ/ Cái</p>
+                                                <a asp-controller="Home" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Thêm Vào Giỏ Hàng</a>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-6 col-xl-4">
+                                <div class="rounded position-relative fruite-item">
+                                    <a href="shop-detail.html">
+                                        <div class="fruite-img">
+                                            <img src="img-PhuTungXe/Nhông-xên-dĩa/Dĩa Nhôm 43T cho Honda Winner Sonic.jpg" class="img-fluid w-100 rounded-top" alt="">
+                                        </div>
+                                        <div class="text-white bg-secondary px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px;">Chi Tiết Sản Phẩm</div>
+                                        <div class="p-4 border border-secondary border-top-0 rounded-bottom">
+                                            <h4>Phụ Tùng Xê</h4>
+                                            <p>Nội Dung Sản Phẩm</p>
+                                            <div class="d-flex justify-content-between flex-lg-wrap">
+                                                <p class="text-dark fs-5 fw-bold mb-0">200.000Đ/ Cái</p>
+                                                <a asp-controller="Home" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Thêm Vào Giỏ Hàng</a>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-6 col-xl-4">
+                                <div class="rounded position-relative fruite-item">
+                                    <a href="shop-detail.html">
+                                        <div class="fruite-img">
+                                            <img src="img-PhuTungXe/Nhông-xên-dĩa/Dĩa Nhôm 43T cho Honda Winner Sonic.jpg" class="img-fluid w-100 rounded-top" alt="">
+                                        </div>
+                                        <div class="text-white bg-secondary px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px;">Chi Tiết Sản Phẩm</div>
+                                        <div class="p-4 border border-secondary border-top-0 rounded-bottom">
+                                            <h4>Phụ Tùng Xê</h4>
+                                            <p>Nội Dung Sản Phẩm</p>
+                                            <div class="d-flex justify-content-between flex-lg-wrap">
+                                                <p class="text-dark fs-5 fw-bold mb-0">200.000Đ/ Cái</p>
+                                                <a asp-controller="Home" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Thêm Vào Giỏ Hàng</a>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-6 col-xl-4">
+                                <div class="rounded position-relative fruite-item">
+                                    <a href="shop-detail.html">
+                                        <div class="fruite-img">
+                                            <img src="img-PhuTungXe/Nhông-xên-dĩa/Dĩa Nhôm 43T cho Honda Winner Sonic.jpg" class="img-fluid w-100 rounded-top" alt="">
+                                        </div>
+                                        <div class="text-white bg-secondary px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px;">Chi Tiết Sản Phẩm</div>
+                                        <div class="p-4 border border-secondary border-top-0 rounded-bottom">
+                                            <h4>Phụ Tùng Xê</h4>
+                                            <p>Nội Dung Sản Phẩm</p>
+                                            <div class="d-flex justify-content-between flex-lg-wrap">
+                                                <p class="text-dark fs-5 fw-bold mb-0">200.000Đ/ Cái</p>
+                                                <a asp-controller="Home" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Thêm Vào Giỏ Hàng</a>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-6 col-xl-4">
+                                <div class="rounded position-relative fruite-item">
+                                    <a href="shop-detail.html">
+                                        <div class="fruite-img">
+                                            <img src="img-PhuTungXe/Nhông-xên-dĩa/Dĩa Nhôm 43T cho Honda Winner Sonic.jpg" class="img-fluid w-100 rounded-top" alt="">
+                                        </div>
+                                        <div class="text-white bg-secondary px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px;">Chi Tiết Sản Phẩm</div>
+                                        <div class="p-4 border border-secondary border-top-0 rounded-bottom">
+                                            <h4>Phụ Tùng Xê</h4>
+                                            <p>Nội Dung Sản Phẩm</p>
+                                            <div class="d-flex justify-content-between flex-lg-wrap">
+                                                <p class="text-dark fs-5 fw-bold mb-0">200.000Đ/ Cái</p>
+                                                <a asp-controller="Home" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Thêm Vào Giỏ Hàng</a>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="pagination d-flex justify-content-center mt-5">
+                                    <a asp-controller="Home" class="rounded">&laquo;</a>
+                                    <a asp-controller="Home" class="active rounded">1</a>
+                                    <a asp-controller="Home" class="rounded">2</a>
+                                    <a asp-controller="Home" class="rounded">3</a>
+                                    <a asp-controller="Home" class="rounded">4</a>
+                                    <a asp-controller="Home" class="rounded">5</a>
+                                    <a asp-controller="Home" class="rounded">6</a>
+                                    <a asp-controller="Home" class="rounded">&raquo;</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Fruits Shop End-->
+

@@ -39,15 +39,14 @@ select * from Roles
 create table Accounts
 (
 	AccountId				int								Identity(1,1),
-	UserNameAcc				nvarchar(50)					null,
-	Phone					varchar(50)						null,
-	Email					varchar(50)						null,
-	LastLogin				datetime						null,
+	UserNameAcc				nvarchar(150)					null,
+	Phone					varchar(12)						null,
+	Email					varchar(150)					null,
+	LastLogin				date							null,
 	RoleId					int								null,
 	PasswordAcc				nvarchar(50)					null,
-	Cate					nvarchar(10)					null,
-	Active					bit								null,
-	Province				nvarchar(50)					null
+	Active					bit								not null,
+	CreateDate				date							null
 
 	constraint PK_Account			primary key (AccountId),
 	constraint FK_Account_Roles		foreign key (RoleId) references  Roles(RoleId) 
@@ -69,7 +68,7 @@ Create table Category
 	  Ordering		int					null,
 	  ParentID		int					null,
 	  Levels		int					null,
-	  Published		bit					null
+	  Published		bit					not null
 
 
 	  constraint PK_Category primary key (CatId)
@@ -92,11 +91,11 @@ SET IDENTITY_INSERT Category Off;
 
 
 insert into Category (CatId, CatName, Ordering, ParentID, Levels, Published) values 
-(1, N'Phụ Kiện Dàn Đầu', 1, 1, 2, 1 ),
-(2, N'Phụ Kiện Dàn Áo', 2, 1, 2, 1 ),
-(3, N'Phụ Kiện Dàn Chân', 3, 1, 2, 1 ),
-(4, N'Phụ Kiện Dàn Máy', 4, 1, 2, 1 ),
-(5, N'Phụ Kiện Khác', 5, 1, 2, 1 )
+(1, N'Phụ Kiện Dàn Đầu', 0, 1, 2, 1 ),
+(2, N'Phụ Kiện Dàn Áo', 0, 1, 2, 1 ),
+(3, N'Phụ Kiện Dàn Chân', 0, 1, 2, 1 ),
+(4, N'Phụ Kiện Dàn Máy', 0, 1, 2, 1 ),
+(5, N'Phụ Kiện Khác', 0, 1, 2, 1 )
 
 
 
@@ -135,17 +134,18 @@ select * from Category
 -- Create table Khách hàng
 Create table Customer
 (
-	CusId				int				identity(1,1),
-	CusName				varchar(50)		null,
-	CusPassword			varchar(255)	null,
-	CusEmail			varchar(50)		null,
-	Address				nvarchar(250)	null,
-	Phone				int				null,
-	LocationId			int				null,
-	CreateDate			datetime		null,
-	LastLogin			datetime		null,
-	Avatar				nvarchar(250)	null,
-	Active				bit				null
+	CusId				int						identity(1,1),
+	CusName				varchar(150)				null,
+	CusPassword			varchar(50)					null,
+	CusEmail			varchar(50)					null,
+	Address				nvarchar(250)				null,
+	Birthday			date						null,
+	Phone				int							null,
+	LocationId			int							null,
+	CreateDate			date						null,
+	LastLogin			date						null,
+	Avatar				nvarchar(250)				null,
+	Active				bit						not null
 
 	constraint PK_Customer	primary key (CusId)
 
@@ -157,11 +157,14 @@ select * from Customer
 -- Create table Địa phương
 create table Locations
 (
-	LocationId			int				identity(1,1),
-	Name				nvarchar(100)	null,
+	LocationId			int						identity(1,1),
+	Name				nvarchar(100)			null,
+	NameWithType		nvarchar(150)			null,
+	PathWithType		nvarchar(150)			null
 
 	constraint PK_Location		primary key(LocationId)
 )
+go
 
 select * from Locations
 
@@ -193,10 +196,11 @@ create table Orders
 	ShipDate					datetime						null,				-- Ngày Giao hàng cho khách hàng
 	StatusId					int								null,			-- Trạng thái đơn hàng
 	Paid						bit								null,			-- Trạng thái thanh toán hay chưa
-	PaymentDate					datetime						null,			-- Ngày giờ thanh toán
+	PaymentDate					date							null,			-- Ngày giờ thanh toán
 	PaymentId					int								null,			-- Mã thanh toán
 	PaymentType					nvarchar(50)					null,			-- Loại thanh toán
 	Note						nvarchar(max)					null,
+	Deleted						bit								null,		
 	Quantity					int								null,
 	CustomerName				nvarchar(100)					null,
 	CustomerPhone				varchar(11)						null,
@@ -204,8 +208,7 @@ create table Orders
 	CustomerAddress				nvarchar(250)					null
 
 	Constraint PK_Orders					primary key (OrderId),
-	Constraint FK_Orders_Customer			foreign key (CusId) references Customer(CusId),
-	Constraint FK_Orders_TransactStatus		foreign key (StatusId) references  TransactStatus(StatusId)
+
 )
 go
 
@@ -225,20 +228,23 @@ ALTER COLUMN Note nvarchar(max) null;
 Create table Products
 (
 	  ProId				int					 identity(1,1),
-	  ProName			nvarchar(50)		 null,
-	  ProImage			nvarchar(100)		 null,
-	  ProPrice			decimal(18,2)		 null,
-	  ShortDes			nvarchar(50)		 null,
 	  CatId				int					 null,
+	  ProName			nvarchar(250)		 null,
+	  ProImage			nvarchar(100)		 null,
+	  ProPrice			int					 null,
+	  Quantity			int					 null,
+	  UnitlnStock		int					 null,
 	  DateCreated		datetime			 null,
 	  DateModified		datetime			 null,
+	  BestSellers		bit					 null,
 	  Active			bit					 null,
+	  HomeFlag			bit					 null,
+	  ShortDes			nvarchar(50)		 null,
 	  MetaDesc			nvarchar(100)		 null,
-	  MeetaKey			nvarchar(100)		 null,
-	  Quantity			int					 null,
-	  UnitlnStock		int					 null
+	  MeetaKey			nvarchar(100)		 null
+	  
 
-		constraint PK_Products				primary key (ProId, CatId)
+	constraint PK_Products				primary key (ProId)
 		
 )
 GO
@@ -247,6 +253,7 @@ SET IDENTITY_INSERT Products ON;
 SET IDENTITY_INSERT Products OFF;
 SET IDENTITY_INSERT AnotherTable OFF;
 
+drop table Products
 select * from Products
 
 update Products set UnitlnStock = '2' where ProId = 1
@@ -269,7 +276,7 @@ ALTER COLUMN UnitlnStock int null;
 INSERT INTO Products (ProId, ProName, ProImage, ProPrice, ShortDes, CatId, DateCreated, DateModified, Active, MetaDesc, MeetaKey, Quantity, UnitlnStock)
 VALUES 
 -- Loại 1
-(1, N'Chigee AIO-5 Lite - CAM HÀNH TRÌNH VÀ Dàn ĐƯỜNG', N'img1-01', 9550000, N'Dàn Đầu', 1, '27/08/2024', '', 1, N'Dàn Đầu', N'Đầu Xe', 10, 0),
+(1, N'Chigee AIO-5 Lite - CAM HÀNH TRÌNH VÀ Dàn ĐƯỜNG', N'img1-01', 9550000, N'Dàn Đầu', 1, '27/08/2024', '', 1, N'Dàn Đầu', N'Đầu Xe', 10, 10),
 (2, N'Evotech - Bảo vệ choá Triumph Speed 400', N'img1-01', 2599000, N'Dàn Đầu', 1, '28/08/2024', '28/08/2024', 1, N'Dàn Đầu', N'Đầu Xe', 10, 0),
 (3, N'Koso USA - Đồng hồ điện tử RX3 Honda Monkey 125', N'img3-01', 14500000, N'Dàn Đầu', 1, '28/08/2024', '28/08/2024', 1, N'Dàn Đầu', N'Đầu Xe', 10, 0),
 (4, N'RG Racing - Bảo vệ chóa đèn cho BMW R1200GS R1250GS', N'img4-01', 3150000, N'Dàn Đầu', 1, '28/08/2024', '28/08/2024', 1, N'Dàn Đầu', N'Đầu Xe', 10, 0),
@@ -324,7 +331,6 @@ Create table OrderDetail
 		  Quantity					int								null,
 		  Total						float							null
 		  
-
 		  constraint PK_OrderDetail					Primary key (OrderDetailId)
 )
 GO
@@ -338,7 +344,7 @@ Create table Shipper
 		ShipperName		nvarchar(50)		null,
 		Phone			nchar(10)			null,
 		Company			nvarchar(50)		null,
-		ShipDate		datetime			null
+		ShipDate		date				null
 
 
 		constraint Pk_Shipper primary key (ShipperId)
