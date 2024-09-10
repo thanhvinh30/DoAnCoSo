@@ -355,16 +355,20 @@
     <script src="~/assets/libs/apexcharts/apexcharts.min.js"></script>
     <script src="~/assets/libs/flatpickr/flatpickr.min.js"></script>
 
-
+    <!-- Lệnh Thông báo cho chức năng Start-->
     <script>
         setTimeout(function () {
             $(document).ready(function () {
                 $(function () {
                     $("#AlertBox").removeClass("hide");
-                    $("#AlertBox").delay("500").sliceUp("500");
+                   // $("#AlertBox").delay("50").sliceUp("50");
+                    setTimeout(function () {
+                        $("#AlertBox").addClass("hide");
+                    }, 500);// 10000 ms = 10 giây
                 });
             }
-                }, 1000);
+                                }, 10);// Trì hoãn ban đầu là 100ms
     </script>
+    <!-- Lệnh Thông báo cho chức năng End-->
 </body>
 </html>

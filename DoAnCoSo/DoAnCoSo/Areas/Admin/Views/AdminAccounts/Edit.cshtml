@@ -1,0 +1,142 @@
+﻿@model DoAnCoSo.Models.Account
+
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h1>Edit</h1>
+
+<h4>Account</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="AccountId" />
+            <div class="form-group">
+                <label asp-for="UserNameAcc" class="control-label"></label>
+                <input asp-for="UserNameAcc" class="form-control" />
+                <span asp-validation-for="UserNameAcc" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Phone" class="control-label"></label>
+                <input asp-for="Phone" class="form-control" />
+                <span asp-validation-for="Phone" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Email" class="control-label"></label>
+                <input asp-for="Email" class="form-control" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="LastLogin" class="control-label"></label>
+                <input asp-for="LastLogin" class="form-control" />
+                <span asp-validation-for="LastLogin" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="RoleId" class="control-label"></label>
+                <select asp-for="RoleId" class="form-control" asp-items="ViewBag.RoleId"></select>
+                <span asp-validation-for="RoleId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PasswordAcc" class="control-label"></label>
+                <input asp-for="PasswordAcc" class="form-control" />
+                <span asp-validation-for="PasswordAcc" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Active" /> @Html.DisplayNameFor(model => model.Active)
+                </label>
+            </div>
+            <div class="form-group">
+                <label asp-for="CreateDate" class="control-label"></label>
+                <input asp-for="CreateDate" class="form-control" />
+                <span asp-validation-for="CreateDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+
+
+
+<div class="row">
+    <div class="col-lg-12">
+        <div class="card">
+            <div class="card-body">
+                <h1 class="header-title mt-0 mb-1">Edit Account</h1>
+                
+
+                <form asp-action="Edit" class="parsley-examples">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <input type="hidden" asp-for="AccountId" />
+
+                    <div class="mb-3">
+                        <label asp-for="UserNameAcc" class="form-label">Full Name</label>
+                        <input asp-for="UserNameAcc" type="text" class="form-control" required placeholder="Full Name " />
+                        <span asp-validation-for="UserNameAcc" class="text-danger"></span>
+                    </div>
+
+                    <div class="mb-3">
+                        <label asp-for="Email" class="form-label">E-Mail</label>
+                        <input asp-for="Email" type="email" class="form-control" required parsley-type="email" placeholder="Enter a valid e-mail" />
+                        <span asp-validation-for="Email" class="text-danger"></span>
+                    </div>
+
+                    <div class="mb-3">
+                        <label asp-for="Phone" class="form-label">Number</label>
+                        <input asp-for="Phone" data-parsley-type="number" type="text" class="form-control" required placeholder="Enter only numbers" />
+                        <span asp-validation-for="Phone" class="text-danger"></span>
+                    </div>
+
+                    <div class="mb-3">
+                        <label asp-for="CreateDate" class="col-lg-2 col-form-label" for="example-date">Date</label>
+                        <div class="col-lg-10">
+                            <input asp-for="CreateDate" class="form-control" id="example-date" type="date" name="date">                            
+                        </div>
+                        <span asp-validation-for="CreateDate" class="text-danger"></span>
+                    </div>
+
+                    <div class="mb-3">
+                        <label asp-for="LastLogin" class="col-lg-2 col-form-label" for="example-date">LastLogin</label>
+                        <div class="col-lg-10">
+                            <input asp-for="LastLogin" class="form-control" id="example-date" type="date" name="date">
+                        </div>
+                        <span asp-validation-for="LastLogin" class="text-danger"></span>
+                    </div>
+
+                    <div class="mb-3">
+                        <label asp-for="RoleId" class="col-lg-2 col-form-label">Role</label>
+                        <div class="col-lg-10">
+                            <select id="IdRole" name="IdRole" class="form-select" asp-items="ViewBag.QuyenTruyCap">
+                                <option value=""></option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label asp-for="RoleId" class="col-lg-2 col-form-label">Role</label>
+                        <div class="col-lg-10">
+                            <select id ="IdStatus" name="IdStatus" class="form-select" asp-items="ViewBag.lsStatus">
+                                <option value=""></option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="mb-0">
+                        <button type="submit" class="btn btn-primary me-1">Submit</button>
+                        <button type="reset" class="btn btn-secondary">Cancel</button>
+                    </div>
+                </form>
+            </div>
+        </div> <!-- end card -->
+    </div> <!-- end col-->-- end col-->
+</div>

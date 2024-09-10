@@ -1,0 +1,113 @@
+﻿@model IEnumerable<DoAnCoSo.Models.Account>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+
+     @* <p>
+         <a asp-action="Create">Create New</a>
+     </p> *@
+
+
+
+
+
+
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-body">
+                <h1 class="header-title mt-0 mb-1">Danh Sách tài khoản</h1>
+                <p class="sub-header">
+                    <!--
+                    <div class="mt-2 mt-md-0">
+                        <a class="btn btn-danger me-4 mb-2 mb-md-0" asp-controller="AdminAccounts" asp-action="Create">
+                            <i class="uil-plus me-1"></i>Create New
+                        </a>
+                    </div>
+                    -->
+                </p>
+
+                <div class="row">
+                    <div class="col-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="row">
+
+                                    <div class="col-xl-2 col-sm-4">
+                                        <div class="mb-3 mt-3 mt-sm-0">
+                                            <select id="IdRole" name="IdRole" data-plugin="customselect" class="form-select" data-placeholder="Select an option" asp-items="ViewBag.QuyenTruyCap">
+                                                <option value="" disabled selected>Chọn Quyền Truy Cập</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-xl-2 col-sm-4">
+                                        <div class="mb-3 mt-3 mt-sm-0">
+                                            <select id="IdStatus" name="IdStatus" data-plugin="customselect" class="form-select" data-placeholder="Select an option" asp-items="ViewBag.lsStatus">
+                                                <option value="" disabled selected>Chọn Trạng Thái</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div> <!-- end card-body -->
+                        </div> <!-- end card-->
+                    </div> <!-- end col -->
+                </div>
+
+                <table id="basic-datatable" class="table dt-responsive nowrap w-100">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Full Name</th>
+                            <th>Email</th>
+                            <th>Phone</th>
+                            <th>Roles</th>
+                            <th>Active</th>
+                            <th>#</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        @if (Model != null)
+                        {
+                            @foreach (var item in Model)
+                            {
+                                <tr>
+                                    <td>@item.AccountId</td>
+                                    <td>@item.UserNameAcc</td>
+                                    <td>@item.Email</td>
+                                    <td>@item.Phone</td>
+                                    <td>@item.Role.DesRole</td>
+                                    <td>
+                                        @if (item.Active)
+                                        {
+                                            <div class="spinner-grow text-success m-2" role="status">
+                                            </div>
+                                            <span class="badge bg-success">Active</span>
+                                        }
+                                        else
+                                        {
+                                            <div class="spinner-grow text-danger m-2" role="status">
+                                            </div>
+                                            <span class="badge bg-danger">Block</span>
+                                        }
+                                    </td>
+                                    <td>
+                                        <a class="btn btn-outline-warning" asp-action="Edit" asp-route-id="@item.AccountId">Edit</a> |
+                                        <a class="btn btn-outline-primary" asp-action="Details" asp-route-id="@item.AccountId">Details</a> |
+                                        <a class="btn btn-outline-danger" asp-action="Delete" asp-route-id="@item.AccountId">Delete</a>
+                                    </td>
+                                </tr>
+                            }
+                        }
+                    </tbody>
+                </table>
+            </div> <!-- end card body-->
+        </div> <!-- end card -->
+    </div><!-- end col-->
+</div>

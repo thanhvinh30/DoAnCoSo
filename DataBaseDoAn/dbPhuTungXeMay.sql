@@ -256,7 +256,8 @@ SET IDENTITY_INSERT AnotherTable OFF;
 drop table Products
 select * from Products
 
-update Products set UnitlnStock = '2' where ProId = 1
+update Products set BestSellers = '1' 
+update Products set HomeFlag = '1' 
 
 select * from Category
 
