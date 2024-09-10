@@ -565,6 +565,18 @@
       "PackagePath": "staticwebassets\\assets\\libs\\spectrum-colorpicker2\\spectrum.min.js"
     },
     {
+      "Id": "D:\\DoAn\\DoAnCoSo\\DoAnCoSo\\DoAnCoSo\\wwwroot\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "D:\\DoAn\\DoAnCoSo\\DoAnCoSo\\DoAnCoSo\\wwwroot\\css\\style-account.css",
+      "PackagePath": "staticwebassets\\css\\style-account.css"
+    },
+    {
+      "Id": "D:\\DoAn\\DoAnCoSo\\DoAnCoSo\\DoAnCoSo\\wwwroot\\css\\style.css",
+      "PackagePath": "staticwebassets\\css\\style.css"
+    },
+    {
       "Id": "D:\\DoAn\\DoAnCoSo\\DoAnCoSo\\DoAnCoSo\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
     },
@@ -10241,10 +10253,6 @@
       "PackagePath": "staticwebassets\\lib\\waypoints\\waypoints.min.js"
     },
     {
-      "Id": "D:\\DoAn\\DoAnCoSo\\DoAnCoSo\\DoAnCoSo\\wwwroot\\scss\\bootstrap.min.css",
-      "PackagePath": "staticwebassets\\scss\\bootstrap.min.css"
-    },
-    {
       "Id": "D:\\DoAn\\DoAnCoSo\\DoAnCoSo\\DoAnCoSo\\wwwroot\\scss\\bootstrap.scss",
       "PackagePath": "staticwebassets\\scss\\bootstrap.scss"
     },
@@ -10575,14 +10583,6 @@
     {
       "Id": "D:\\DoAn\\DoAnCoSo\\DoAnCoSo\\DoAnCoSo\\wwwroot\\scss\\site.css",
       "PackagePath": "staticwebassets\\scss\\site.css"
-    },
-    {
-      "Id": "D:\\DoAn\\DoAnCoSo\\DoAnCoSo\\DoAnCoSo\\wwwroot\\scss\\style-account.css",
-      "PackagePath": "staticwebassets\\scss\\style-account.css"
-    },
-    {
-      "Id": "D:\\DoAn\\DoAnCoSo\\DoAnCoSo\\DoAnCoSo\\wwwroot\\scss\\style.css",
-      "PackagePath": "staticwebassets\\scss\\style.css"
     },
     {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.DoAnCoSo.Microsoft.AspNetCore.StaticWebAssets.props",

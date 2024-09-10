@@ -26,8 +26,8 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = D:\DoAn\DoAnCoSo\DoAnCoSo\DoAnCoSo
 build_property._RazorSourceGeneratorDebug = 
 
-[D:/DoAn/DoAnCoSo/DoAnCoSo/DoAnCoSo/Views/Accounte/Account.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudGVcQWNjb3VudC5jc2h0bWw=
+[D:/DoAn/DoAnCoSo/DoAnCoSo/DoAnCoSo/Views/Account/Account.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxBY2NvdW50LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/DoAn/DoAnCoSo/DoAnCoSo/DoAnCoSo/Views/Home/Category.cshtml]
@@ -58,8 +58,8 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdHNcQ2hlY2tvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/DoAn/DoAnCoSo/DoAnCoSo/DoAnCoSo/Views/Products/Detail.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdHNcRGV0YWlsLmNzaHRtbA==
+[D:/DoAn/DoAnCoSo/DoAnCoSo/DoAnCoSo/Views/Products/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdHNcRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/DoAn/DoAnCoSo/DoAnCoSo/DoAnCoSo/Views/Products/Products.cshtml]

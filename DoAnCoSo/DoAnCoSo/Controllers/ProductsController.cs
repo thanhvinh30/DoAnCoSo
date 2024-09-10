@@ -12,7 +12,7 @@ namespace DoAnCoSo.Controllers
         {
             return View();
         }
-        public IActionResult Detail()
+        public IActionResult Details()
         {
             return View();
         }
