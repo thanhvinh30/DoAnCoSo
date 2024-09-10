@@ -13,6 +13,8 @@ using System.Linq;
 using System.Text.Encodings.Web;
 using System.Text.Unicode;
 using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
+using DoAnCoSo.Models;
 
 
 namespace DoAnCoSo
@@ -27,6 +29,12 @@ namespace DoAnCoSo
         public IConfiguration Configuration { get; }
         public void ConfigureServices(IServiceCollection services)
         {
+            var stringConnectdb = Configuration.GetConnectionString("dbPhuTungXeMay");
+            services.AddDbContext<DataDoAnCoSoContext>(Options => Options.UseSqlServer(stringConnectdb));
+
+
+            //services.AddSingleton<HtmlEncoder>(HtmlEncoder.Create(allowedRanges: new[] { UnicodeRange.All }));
+
             services.AddControllersWithViews().AddRazorRuntimeCompilation();
         }
 
