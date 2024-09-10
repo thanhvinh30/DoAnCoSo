@@ -25,6 +25,11 @@ namespace DoAnCoSo
 
         }
         public IConfiguration Configuration { get; }
+        public void ConfigureServices(IServiceCollection services)
+        {
+            services.AddControllersWithViews().AddRazorRuntimeCompilation();
+        }
+
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
@@ -48,9 +53,9 @@ namespace DoAnCoSo
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllerRoute(
-            name: "areas",
-            pattern: "{area:exists}/{controller=Home}/{action=Index}/{id?}"
-          );
+                    name: "areas",
+                    pattern: "{area:exists}/{controller=Home}/{action=Index}/{id?}"
+                  );
                 endpoints.MapControllerRoute(
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}"
