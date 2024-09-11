@@ -1,20 +1,13 @@
 ﻿@model IEnumerable<DoAnCoSo.Models.Account>
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Danh Sách Tài Khoản Quản Trị";
     Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
 }
-
-
 
      @* <p>
          <a asp-action="Create">Create New</a>
      </p> *@
-
-
-
-
-
 
 <div class="row">
     <div class="col-12">
@@ -34,12 +27,12 @@
                 <div class="row">
                     <div class="col-12">
                         <div class="card">
-                            <div class="card-body">
-                                <div class="row">
+                            <div class="card-body" style="padding: 20px 50px; height:80px; justify-items:center; ">
+                                <div class="row" style="display: flex;">
 
                                     <div class="col-xl-2 col-sm-4">
                                         <div class="mb-3 mt-3 mt-sm-0">
-                                            <select id="IdRole" name="IdRole" data-plugin="customselect" class="form-select" data-placeholder="Select an option" asp-items="ViewBag.QuyenTruyCap">
+                                            <select style="min-width: 180px" id="IdRole" name="IdRole" data-plugin="customselect" class="form-select" data-placeholder="Select an option" asp-items="ViewBag.QuyenTruyCap">
                                                 <option value="" disabled selected>Chọn Quyền Truy Cập</option>
                                             </select>
                                         </div>

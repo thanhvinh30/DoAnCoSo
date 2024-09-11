@@ -2,18 +2,23 @@
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
 
+
 namespace DoAnCoSo.Models;
+
 
 public partial class DataDoAnCoSoContext : DbContext
 {
+
     public DataDoAnCoSoContext()
     {
     }
+
 
     public DataDoAnCoSoContext(DbContextOptions<DataDoAnCoSoContext> options)
         : base(options)
     {
     }
+
 
     public virtual DbSet<Account> Accounts { get; set; }
 

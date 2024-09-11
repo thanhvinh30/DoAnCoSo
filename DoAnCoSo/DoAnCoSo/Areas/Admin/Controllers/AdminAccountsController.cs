@@ -19,9 +19,34 @@ namespace DoAnCoSo.Areas.Admin.Controllers
             _context = context;
         }
 
+        //Chức Năng thông báo Start
+        protected void SetAlert(string message, string type)
+        {
+            TempData["AlertMessage"] = message;
+            switch (type)
+            {
+                case "Success":
+                    TempData["AlertType"] = "alert-Success"; break;
+                case "Warning":
+                    TempData["AlertType"] = "alert-Warning"; break;
+                case "Error":
+                    TempData["AlertType"] = "alert-Error"; break;
+                default: TempData["AlertType"] = ""; break;
+            }
+        }
+        //Chức Năng thông báo End
+
+
         // GET: Admin/AdminAccounts
         public async Task<IActionResult> Index()
         {
+            ViewData["QuyenTruyCap"] = new SelectList(_context.Roles, "RoleId", "DesRole"); // Chức năng lọc danh sách quyền truy cập
+
+            List<SelectListItem> lsStatus = new List<SelectListItem>();                     // Chức năng trạng thái trong qly tài khoản
+            lsStatus.Add(new SelectListItem() { Text = "Active", Value = "1" });
+            lsStatus.Add(new SelectListItem() { Text = "Block", Value = "0" });
+            ViewData["lsStatus"] = lsStatus;
+
             var dataDoAnCoSoContext = _context.Accounts.Include(a => a.Role);
             return View(await dataDoAnCoSoContext.ToListAsync());
         }
@@ -103,12 +128,14 @@ namespace DoAnCoSo.Areas.Admin.Controllers
                 try
                 {
                     _context.Update(account);
+                    SetAlert("Đã Sửa thành công", "Success");
                     await _context.SaveChangesAsync();
                 }
                 catch (DbUpdateConcurrencyException)
                 {
                     if (!AccountExists(account.AccountId))
                     {
+                        SetAlert("Sửa sai rầu", "Error");
                         return NotFound();
                     }
                     else
@@ -151,7 +178,7 @@ namespace DoAnCoSo.Areas.Admin.Controllers
             {
                 _context.Accounts.Remove(account);
             }
-
+            SetAlert("Đã xóa thành công", "Success");
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }

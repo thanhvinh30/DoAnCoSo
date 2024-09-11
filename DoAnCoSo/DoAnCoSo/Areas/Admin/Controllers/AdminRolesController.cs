@@ -18,6 +18,8 @@ namespace DoAnCoSo.Areas.Admin.Controllers
         {
             _context = context;
         }
+
+
         //Chức Năng thông báo Start
         protected void SetAlert(string message, string type)
         {
@@ -33,7 +35,6 @@ namespace DoAnCoSo.Areas.Admin.Controllers
                 default: TempData["AlertType"] = ""; break;
             }
         }
-
         //Chức Năng thông báo End
 
         // GET: Admin/AdminRoles
@@ -119,7 +120,7 @@ namespace DoAnCoSo.Areas.Admin.Controllers
                 {
                     _context.Update(role);
                     await _context.SaveChangesAsync();
-                    SetAlert("Tạo mới thành công", "Success");
+                    SetAlert("Đã Sửa thành công", "Success");
                 }
                 catch (DbUpdateConcurrencyException)
                 {
