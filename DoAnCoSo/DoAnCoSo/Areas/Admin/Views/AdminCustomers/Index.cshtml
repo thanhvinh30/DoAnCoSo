@@ -1,0 +1,286 @@
+﻿﻿@using PagedList.Core.Mvc;
+@model PagedList.Core.IPagedList<DoAnCoSo.Models.Customer>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<!---
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Html.DisplayNameFor(model => model.CusName)
+            </th>
+            <th>
+                Html.DisplayNameFor(model => model.CusPassword)
+            </th>
+            <th>
+                Html.DisplayNameFor(model => model.CusEmail)
+            </th>
+            <th>
+                Html.DisplayNameFor(model => model.Address)
+            </th>
+            <th>
+                Html.DisplayNameFor(model => model.Birthday)
+            </th>
+            <th>
+                Html.DisplayNameFor(model => model.Phone)
+            </th>
+            <th>
+                Html.DisplayNameFor(model => model.LocationId)
+            </th>
+            <th>
+                Html.DisplayNameFor(model => model.CreateDate)
+            </th>
+            <th>
+                Html.DisplayNameFor(model => model.LastLogin)
+            </th>
+            <th>
+                Html.DisplayNameFor(model => model.Avatar)
+            </th>
+            <th>
+                Html.DisplayNameFor(model => model.Active)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+foreach (var item in Model) {
+        <tr>
+            <td>
+                Html.DisplayFor(modelItem => item.CusName)
+            </td>
+            <td>
+                Html.DisplayFor(modelItem => item.CusPassword)
+            </td>
+            <td>
+                Html.DisplayFor(modelItem => item.CusEmail)
+            </td>
+            <td>
+                Html.DisplayFor(modelItem => item.Address)
+            </td>
+            <td>
+                Html.DisplayFor(modelItem => item.Birthday)
+            </td>
+            <td>
+                Html.DisplayFor(modelItem => item.Phone)
+            </td>
+            <td>
+                Html.DisplayFor(modelItem => item.LocationId)
+            </td>
+            <td>
+                Html.DisplayFor(modelItem => item.CreateDate)
+            </td>
+            <td>
+                Html.DisplayFor(modelItem => item.LastLogin)
+            </td>
+            <td>
+                Html.DisplayFor(modelItem => item.Avatar)
+            </td>
+            <td>
+                Html.DisplayFor(modelItem => item.Active)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="item.CusId">Edit</a> |
+                <a asp-action="Details" asp-route-id="item.CusId">Details</a> |
+                <a asp-action="Delete" asp-route-id="item.CusId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+-->
+
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-body">
+                <h1 class="header-title mt-0 mb-1">Danh Sách Khách Hàng</h1>
+                <div id="basic-datatable_wrapper" class="dataTables_wrapper dt-bootstrap4 no-footer">
+                    <!--
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="row">
+
+                                        <div class="col-xl-2 col-sm-4">
+                                            <div class="mb-3 mt-3 mt-sm-0">
+                                                <select data-plugin="customselect" class="form-select" data-placeholder="Select an option">
+                                                    <option value="" disabled selected>Category</option>
+                                                </select>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-xl-2 col-sm-4 ">
+                                            <div class="mb-3 mt-3 mt-sm-0">
+                                                <select data-plugin="customselect" class="form-select" data-placeholder="Select an option">
+                                                    <option value="" disabled selected>Status</option>
+                                                </select>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div> 
+                            </div> 
+                        </div> 
+                    </div>
+                    -->
+                    <div class="row">
+                        <div class="col-xl-16">
+                            <div class="row">
+                                <div class="col">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <!-- cta -->
+                                            <div class="row">
+                                                <!--
+                                                <div class="col-sm-3">
+                                                    <a href="#" class="btn btn-primary">
+                                                        <i class='uil uil-plus me-1'></i>Add New
+                                                    </a>
+                                                </div>
+                                                -->
+                                                <div class="col-xl-2 col-sm-4">
+                                                    <div class="mb-3 mt-3 mt-sm-0">
+                                                        <select data-plugin="customselect" class="form-select" data-placeholder="Select an option">
+                                                            <option value="" disabled selected>Category</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-xl-2 col-sm-4 ">
+                                                    <div class="mb-3 mt-3 mt-sm-0">
+                                                        <select data-plugin="customselect" class="form-select" data-placeholder="Select an option">
+                                                            <option value="" disabled selected>Status</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                
+                                                <div class="col-xl-2 col-sm-4">
+                                                    <div class="float-sm-end mt-3 mt-sm-0">
+
+                                                        <div class="task-search d-inline-block mb-3 mb-sm-0 me-sm-1">
+                                                            <form>
+                                                                <div class="input-group">
+                                                                    <input type="text" class="form-control search-input" placeholder="Search..." />
+                                                                    <span class="uil uil-search icon-search"></span>
+                                                                    <button class="btn btn-soft-primary input-group-text" type="button">
+                                                                        <i class='uil uil-file-search-alt'></i>
+                                                                    </button>
+                                                                </div>
+                                                            </form>
+                                                        </div>
+                                                        
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- end row -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- task details -->
+                        <!-- end col -->
+                    </div>
+
+
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <table id="basic-datatable" class="table dt-responsive nowrap w-100 dataTable no-footer dtr-inline" role="grid" aria-describedby="basic-datatable_info" style="width: 1560px;">
+                                <thead>
+                                    <tr role="row">
+                                        <th class="" style="width: 80px;" aria-sort="ascending" aria-label="Name: activate to sort column descending">ID</th>
+                                        <th class="" style="width: 190px;" aria-label="Start date: activate to sort column ascending">Full Name</th>
+                                        <th class="" style="width: 250px;" aria-label="Start date: activate to sort column ascending">Address</th>
+                                        <th class="" style="width: 190px;" aria-label="Start date: activate to sort column ascending">Location</th>
+                                        <th class="" style="width: 150px;" aria-label="Salary: activate to sort column ascending">#</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @if (Model != null)
+                                    {
+                                        foreach (var item in Model)
+                                        {
+                                            <tr class="odd">
+                                                <td class="dtr-control " tabindex="0">@item.CusId</td>
+                                                <td class="dtr-control " tabindex="0">
+                                                    <p>@item.CusName</p>
+                                                    <p>@item.Phone</p>
+                                                    <p>@item.CusEmail</p>
+                                                </td>
+                                                <td class="dtr-control " tabindex="0">@item.Address</td>
+                                                <td class="dtr-control " tabindex="0">@item.Location.Name</td>
+                                                <td>
+                                                    <a class="btn btn-outline-warning" asp-area="Admin" asp-controller="AdminCustomers" asp-action="Edit" asp-route-id="@item.CusId">View</a>
+                                                    <a class="btn btn-outline-primary" asp-area="Admin" asp-controller="AdminCustomers" asp-action="Details" asp-route-id="@item.CusId">Details</a>
+                                                    <a class="btn btn-outline-danger" asp-area="Admin" asp-controller="AdminCustomers" asp-action="Delete" asp-route-id="@item.CusId">Delete</a>
+
+                                                </td>
+                                            </tr>
+                                        }
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+
+                    <!--Page List Start-->
+        <div class="row">
+                        <div class="col-sm-12 col-md-7">
+                            <div class="dataTables_paginate paging_simple_numbers " id="basic-datatable_paginate" aria-label="Page navigation example">
+                                <ul class="pagination pagination-rounded">
+
+                                    <li class="paginate_button page-item active previous disabled " id="basic-datatable_previous">
+                                        <a href="#" aria-controls="basic-datatable" data-dt-idx="0" tabindex="0" class="page-link">
+                                            <i class="uil uil-angle-left"></i>
+                                        </a>
+                                    </li>
+
+                                    <li class="paginate_button page-item active">
+                                        <a href="#" aria-controls="basic-datatable" data-dt-idx="1" tabindex="0" class="page-link"></a>
+                                    </li>
+
+                                    <li class="paginate_button page-item active next disabled" id="basic-datatable_next">
+                                        <a href="#" aria-controls="basic-datatable" data-dt-idx="7" tabindex="0" class="page-link">
+                                            <i class="uil uil-angle-right"></i>
+                                        </a>
+                                    </li>
+
+                                    <pager class="pager-container" list="@Model" asp-area="Admin" asp-controller="AdminCustomers" asp-action="Index" />
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Page List End-->
+
+                </div> <!-- end card -->
+            </div><!-- end col-->
+        </div>
+
+        <!--
+        <div class="d-inline-block align-middle float-lg-end">
+            <div class="row">
+                <div class="col-4">
+                    <div class="btn-group float-end ">
+                        <ul class="pagination">
+                            <li class=""
+                        </ul>
+                        <button type="button" class="btn btn-white btn-sm">
+                            <i class="uil uil-angle-left"></i>
+                        </button>
+                        <button type="button" class="btn btn-primary btn-sm">
+                            <i class="uil uil-angle-right"></i>
+                        </button>
+                    </div>
+                </div>  end col
+            </div>
+        </div>
+        -->

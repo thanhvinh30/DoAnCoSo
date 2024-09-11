@@ -12,4 +12,6 @@ public partial class Location
     public string? NameWithType { get; set; }
 
     public string? PathWithType { get; set; }
+
+    public virtual ICollection<Customer> Customers { get; set; } = new List<Customer>();
 }

@@ -2,23 +2,18 @@
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
 
-
 namespace DoAnCoSo.Models;
-
 
 public partial class DataDoAnCoSoContext : DbContext
 {
-
     public DataDoAnCoSoContext()
     {
     }
-
 
     public DataDoAnCoSoContext(DbContextOptions<DataDoAnCoSoContext> options)
         : base(options)
     {
     }
-
 
     public virtual DbSet<Account> Accounts { get; set; }
 
@@ -91,6 +86,10 @@ public partial class DataDoAnCoSoContext : DbContext
             entity.Property(e => e.CusPassword)
                 .HasMaxLength(50)
                 .IsUnicode(false);
+
+            entity.HasOne(d => d.Location).WithMany(p => p.Customers)
+                .HasForeignKey(d => d.LocationId)
+                .HasConstraintName("FK_Customer_Locations");
         });
 
         modelBuilder.Entity<Location>(entity =>
