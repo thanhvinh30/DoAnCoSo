@@ -1,0 +1,43 @@
+Đưa project trên xuống máy 
+ - clone 1 pro có sẵn
+=> git clone link_https  
+
+Tạo 1 project trên GitHub 
+1. Tạo 1 GitHub repository (folder) - nơi chứa code
+2. Clone project này: git clone link your repository
+3. Viết code:
+	git status: ( kiểm tra trạng thái files ) 
+	git add . : ( thêm files )
+	git commit -m "your message" ( tạo nội dung commit )
+	git push origin main
+=> Tạo project local và đẩy lên github 
+
+
+Tạo project local và  đẩy lên GitHub
+1. tạo 1 GitHub repository
+2. git init (  khởi tạo )
+3. Viết code
+	git status
+	git add . 
+	git commit -m " your message"
+	git remote add origin http://..
+
+	git push origin master
+
+
+local: là máy tính cá nhân 
+Woriking Directory: Thư mục
+Remote: github nơi lưu trữ code
+
+làm việc nhóm 
+
+git pull origin master( tùy theo nhánh ): kéo code về từ GitHub về máy tính cá nhân = git fetch + git merge
+
+git merge: hợp lại từ nhánh riêng vs nhánh chính thành 1 
+- git checkout ( Tên nhánh tạo ) : tên nhánh khác bạn muốn đặt tên riêng
+sau khi tạo nhánh riêng VD: 'eric'
+- phải kiem tra nhánh mới tạo -> git branch (....) : TẠO NHÁnh mớii
+
+
+bây giờ nhánh riêng tư (eric: sẽ là nhánh chủ không phải là master)
+chúng ta o nhánh nào thì 

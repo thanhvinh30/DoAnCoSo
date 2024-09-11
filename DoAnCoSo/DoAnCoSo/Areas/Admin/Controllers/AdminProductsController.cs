@@ -31,7 +31,17 @@ namespace DoAnCoSo.Areas.Admin.Controllers
         }
 
         //Chức Năng thông báo End
+        // Thêm mới Filtter
 
+        public IActionResult Filtter(int CatID = 0)
+        {
+            var url = $"/Admin/AdminProducts?CatID = {CatID}";
+            if (CatID != 0)
+            {
+                url = $"Admin/AdminProducts";
+            }
+            return Json(new { status = "Success", redirectUrl = url });
+        }
         public AdminProductsController(DataDoAnCoSoContext context)
         {
             _context = context;
@@ -41,26 +51,18 @@ namespace DoAnCoSo.Areas.Admin.Controllers
         public async Task<IActionResult> Index(int page =1, int CatID = 0)
         {
             //var pageNumber = page == null || page <= 0 ? 1 : page.Value;
-            var pageNumber = page;
+            //var pageNumber = page;
+            var pageNumber = page < 1 ? 1 : page;
             var pageSize = 6;
             List<Product> lsProducts = new List<Product>();
-
-            //Them để theo video
-            //var lsProducts = _context.Products
-            //                    .AsNoTracking()
-            //                    .Include(x => x.Cat)
-            //                    .OrderByDescending(x => x.ProId);
-            //End
-
-
             if (CatID != 0)
             {
                 lsProducts = _context.Products
-                        .AsNoTracking()
-                        .OrderBy(x => x.ProId)
+                        .AsNoTracking()           
                         .Where(p => p.CatId == CatID && p.ProId >= 1)
                         .Include(x => x.Cat)
                         .OrderByDescending(x => x.ProId)
+                        .OrderBy(x => x.ProId)
                         .ToList();
             }
             else
@@ -68,9 +70,9 @@ namespace DoAnCoSo.Areas.Admin.Controllers
 
                 lsProducts = _context.Products
                         .AsNoTracking()
-                        .OrderBy(x => x.ProId)
                         .Include(x => x.Cat)
                         .OrderByDescending(x => x.ProId)
+                        .OrderBy(x => x.ProId)
                         .ToList();
             }
 
@@ -84,9 +86,6 @@ namespace DoAnCoSo.Areas.Admin.Controllers
             ViewData["DanhMuc"] = new SelectList(_context.Categories, "CatId", "CatName", CatID);
             ViewBag.CurrentPage = pageNumber;
             return View(models);
-
-            //var dataDoAnCoSoContext = _context.Products.Include(p => p.Cat);
-            //return View(await dataDoAnCoSoContext.ToListAsync());
         }
 
         // GET: Admin/AdminProducts/Details/5

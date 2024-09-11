@@ -1,0 +1,68 @@
+/* From Uiverse.io by Yaya12085 */ 
+.radio-button input {
+  display: none;
+
+}
+
+.radio-button {
+  --container_width: 300px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-left: 600px;
+  border-radius: 9999px;
+  background-color: #fff;
+  color: #000000;
+  width: var(--container_width);
+  overflow: hidden;
+  border: 1px solid rgba(53, 52, 52, 0.226);
+}
+
+.radio-button label {
+  width: 100%;
+  padding: 10px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  font-weight: 600;
+  letter-spacing: -1px;
+  font-size: 14px;
+}
+
+.selection {
+  display: none;
+  position: absolute;
+  height: 100%;
+  width: calc(var(--container_width) / 4);
+  z-index: 0;
+  left: 0;
+  top: 0;
+  transition: .15s ease;
+}
+
+.radio-button label:has(input:checked) {
+  color: #fff;
+}
+
+.radio-button label:has(input:checked) ~ .selection {
+  background-color: rgb(11 117 223);
+  display: inline-block;
+}
+
+.radio-button label:nth-child(1):has(input:checked) ~ .selection {
+  transform: translateX(calc(var(--container_width) * 0/4));
+}
+
+.radio-button label:nth-child(2):has(input:checked) ~ .selection {
+  transform: translateX(calc(var(--container_width) * 1/4));
+}
+
+.radio-button label:nth-child(3):has(input:checked) ~ .selection {
+  transform: translateX(calc(var(--container_width) * 2/4));
+}
+
+.radio-button label:nth-child(4):has(input:checked) ~ .selection {
+  transform: translateX(calc(var(--container_width) * 3/4));
+}

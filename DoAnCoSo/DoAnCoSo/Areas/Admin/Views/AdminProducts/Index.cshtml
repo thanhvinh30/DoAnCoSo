@@ -32,7 +32,7 @@
                                         </div>
 
                                         <div class="col-xl-2 col-sm-4">
-                                            <div class="mb-3 mt-3 mt-sm-0">
+                                            <div class="mb-3 mt-3 mt-sm-0" >
                                                 <select id="txtCatID" name="txtCatID" class="form-select" asp-items="ViewBag.DanhMuc">
                                                     <option selected>Choose Category</option>
                                                     <option value="0">All</option>
@@ -44,7 +44,7 @@
                                             <div class="float-sm-end mt-3 mt-sm-0">
 
                                                 <div class="task-search d-inline-block mb-3 mb-sm-0 me-sm-1">
-                                                    <form>
+                                                    <form style="width:190px;">
                                                         <div class="input-group">
                                                             <input type="text" class="form-control search-input" placeholder="Search..." />
                                                             <span class="uil uil-search icon-search"></span>
@@ -98,7 +98,7 @@
                                                 </th>
                                                 -->
                                                 <th scope="row">@item.Cat.CatName</th>
-                                                <th scope="row">@item.ProPrice.Value.ToString("#,##0") VND</th>
+                                                <th scope="row">@item.ProPrice.ToString("#,##0") VND</th>
                                                 <td>
                                                     @if (item.UnitlnStock > 0)
                                                     {
@@ -128,20 +128,18 @@
 
 
                         <!--Page List Start-->
-                        <div aria-label="Page navigation example" class="fc-left fc-toolbar fc-header-toolbar">
+                       
+                        <div aria-label="Page navigation example" class="btn-group mb-2">
                             <ul class="pagination">
-                                <li class="page-item">
-                                    <a asp-route-CatId="@ViewBag.CurrentCateId" class="uil uil-angle-left btn btn-primary" asp-area="Admin" asp-controller="AdminProducts" asp-action="Index" asp-route-page="@(Model.PageNumber - 1)"></a>
-                                </li>
-                                <li class="page-item">
-
-                                </li>
-                                <li class="page-item">
-                                    <a asp-route-CatId="@ViewBag.CurrentCateId" class="btn btn-primary uil uil-angle-right" asp-area="Admin" asp-controller="AdminProducts" asp-action="Index" asp-route-page="@(Model.PageNumber + 1)"></a>
+                                <li type="button" class="btn btn-light">
+                                    <a asp-route-CatId="@ViewBag.CurrentCateId" asp-area="Admin" asp-controller="AdminProducts" asp-action="Index" asp-route-page="@(Model.PageNumber - 1)" ><i class="bi bi-arrow-left"></i></a>
+                                    </li>
+                                <li type="button" class="btn btn-light">
+                                    <a asp-route-CatId="@ViewBag.CurrentCateId" asp-area="Admin" asp-controller="AdminProducts" asp-action="Index" asp-route-page="@(Model.PageNumber + 1)" ><i class="bi bi-arrow-right"></i></a>
                                 </li>
                             </ul>
-
                         </div>
+
                         <!--Page List End-->
                     </div>
                 </div>
