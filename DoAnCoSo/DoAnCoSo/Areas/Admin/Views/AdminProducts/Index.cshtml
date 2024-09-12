@@ -1,187 +1,114 @@
-﻿
-﻿@using PagedList.Core.Mvc
-@model PagedList.Core.IPagedList<DoAnCoSo.Models.Product>
+﻿@model IEnumerable<DoAnCoSo.Models.Product>
+
 @{
     ViewData["Title"] = "Index";
     Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
 }
 
-<div class="col-lg-12">
-    <div class="card">
-        <div class="card-body">
+<h1>Index</h1>
 
-            <h4 class="header-title mt-0 mb-1">Danh Sách Sản Phẩm </h4>
-            <p class="sub-header">
-
-            </p>
-
-            <div class="row">
-                <div class="col-xl-16">
-
-                    <div class="row">
-                        <div class="col-12">
-                            <div class="card" style="height: 90px">
-                                <div class="card-body">
-                                    <div class="row">
-
-                                        <!--Danh Mục Sản phẩm - tiếp Theo là Lọc sản phẩm theo danh mục-->
-                                        <div class="col-xl-2 col-sm-4">
-                                            <a class="btn btn-danger me-4 mb-2 mb-md-0" asp-controller="AdminProducts" asp-action="Create">
-                                                <i class="uil-plus me-1"></i>Create New
-                                            </a>
-                                        </div>
-
-                                        <div class="col-xl-2 col-sm-4">
-                                            <div class="mb-3 mt-3 mt-sm-0" >
-                                                <select id="txtCatID" name="txtCatID" class="form-select" asp-items="ViewBag.DanhMuc">
-                                                    <option selected>Choose Category</option>
-                                                    <option value="0">All</option>
-                                                </select>
-                                            </div>
-                                        </div>
-
-                                        <div class="col-xl-2 col-sm-4">
-                                            <div class="float-sm-end mt-3 mt-sm-0">
-
-                                                <div class="task-search d-inline-block mb-3 mb-sm-0 me-sm-1">
-                                                    <form style="width:190px;">
-                                                        <div class="input-group">
-                                                            <input type="text" class="form-control search-input" placeholder="Search..." />
-                                                            <span class="uil uil-search icon-search"></span>
-                                                            <button class="btn btn-soft-primary input-group-text" type="button">
-                                                                <i class='uil uil-file-search-alt'></i>
-                                                            </button>
-                                                        </div>
-                                                    </form>
-                                                </div>
-
-                                            </div>
-                                        </div>                                  
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div> <!-- end col -->
-                    </div>
-
-                    <div class="table-responsive">
-
-                        <table class="table table-hover mb-0">
-                            <thead>
-                                <tr>
-                                    <th scope="col">ID</th>
-                                    <th scope="col">Product Name</th>
-                                    <!--
-                                    <th scope="col" alt="image" class="avatar-xs rounded-circle" data-bs-toggle="tooltip" data-bs-placement="bottom">Image Product</th>
-                                    -->
-                                    <th scope="col">Category Name</th>
-                                    <th scope="col">Price</th>
-                                    <th scope="col">UnitlnStock</th>
-                                    <th scope="col">Quantity</th>
-                                    <!---->
-                                    <th scope="col">#</th>
-                                </tr>
-                            </thead>
-
-                            <tbody>
-                                @if (Model != null)
-                                {
-                                    foreach (var item in Model)
-                                    {
-
-                                            <tr>
-                                                <th scope="row">@item.ProId</th>
-                                                <th scope="row">@item.ProName</th>
-                                                <!--
-                                                <th scope="row"  style="width: 90px;">
-                                                    <img style="width: 90px; height: 90px " name="fThumb" asp-for="ProImage" src="~/img-PhuTungXe(BanMoi)/item.ProImage" />
-                                                </th>
-                                                -->
-                                                <th scope="row">@item.Cat.CatName</th>
-                                                <th scope="row">@item.ProPrice.ToString("#,##0") VND</th>
-                                                <td>
-                                                    @if (item.UnitlnStock > 0)
-                                                    {
-                                                        <div class="spinner-grow text-success m-2" role="status">
-                                                        </div>
-
-                                                    }
-                                                    else
-                                                    {
-                                                        <div class="spinner-grow text-danger m-2" role="status">
-                                                        </div>
-                                                    }
-                                                </td>
-                                                <td scope="row">@item.Quantity</td>
-                                                <td>
-                                                    <a class="btn btn-outline-warning" asp-area="Admin" asp-controller="AdminProducts" asp-action="Edit" asp-route-id="@item.ProId">Edit</a>
-                                                    <a class="btn btn-outline-primary" asp-area="Admin" asp-controller="AdminProducts" asp-action="Details" asp-route-id="@item.ProId">Details</a>
-                                                    <a class="btn btn-outline-danger" asp-area="Admin" asp-controller="AdminProducts" asp-action="Delete" asp-route-id="@item.ProId">Delete</a>
-                                                </td>
-                                            </tr>
-
-                                    }
-                                }
-
-                            </tbody>
-                        </table>
-
-
-                        <!--Page List Start-->
-                       
-                        <div aria-label="Page navigation example" class="btn-group mb-2">
-                            <ul class="pagination">
-                                <li type="button" class="btn btn-light">
-                                    <a asp-route-CatId="@ViewBag.CurrentCateId" asp-area="Admin" asp-controller="AdminProducts" asp-action="Index" asp-route-page="@(Model.PageNumber - 1)" ><i class="bi bi-arrow-left"></i></a>
-                                    </li>
-                                <li type="button" class="btn btn-light">
-                                    <a asp-route-CatId="@ViewBag.CurrentCateId" asp-area="Admin" asp-controller="AdminProducts" asp-action="Index" asp-route-page="@(Model.PageNumber + 1)" ><i class="bi bi-arrow-right"></i></a>
-                                </li>
-                            </ul>
-                        </div>
-
-                        <!--Page List End-->
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!--asp-route-CatId="@ViewBag.CurrentCateId"-->
-        @section Scripts {
-            <script>
-                $(document).ready(function () {
-                    jQuery("#txtCatID").change(function () {
-                        var catId = jQuery(this).children(":selected").attr("value");
-                        catId = parseFloat(CatId);
-                        $('#txtCatID option')
-                            .removeAttr('selected');
-                        $("#txtCatID > [value = " + catId + "]").attr("selected", "true");
-
-                        $.ajax({
-                            URL: '/Admin/AdminProducts/Filtter',
-                            datatpye: "json",
-                            datatpye: "GET",
-                            datatpye: {
-                                CatID: catId
-                            },
-                            async: true,
-                            Success: function (results) {
-                                if (results.status == "Success") {
-                                    window.location.href = results.redirectUrl;
-                                }
-                            },
-                            Error: function (xhr) {
-                                alert('error');
-                            }
-                        });
-                    });
-                });
-            </script>
-        }
-        <!-- đây là lệnh bổ sung vào đẩy lựa chọn lọc sản phẩm -->
-        <script>
-            document.getElementById("txtCatID").addEventListener("change", function () {
-                var selectedCategory = this.value;
-                var currentUrl = window.location.href.split('?')[0]; // Lấy URL hiện tại, bỏ phần query string
-                window.location.href = currentUrl + "?CatID=" + selectedCategory; // Chuyển hướng đến URL mới
-            });
-        </script>
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.ProName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ProImage)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ProPrice)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Quantity)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.UnitlnStock)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DateCreated)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DateModified)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BestSellers)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Active)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.HomeFlag)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ShortDes)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MetaDesc)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MeetaKey)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Cat)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProImage)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProPrice)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Quantity)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UnitlnStock)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DateCreated)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DateModified)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BestSellers)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Active)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.HomeFlag)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ShortDes)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MetaDesc)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MeetaKey)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Cat.CatId)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.ProId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.ProId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.ProId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

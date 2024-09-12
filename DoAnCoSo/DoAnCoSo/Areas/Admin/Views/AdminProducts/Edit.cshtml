@@ -5,171 +5,93 @@
     Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
 }
 
+<h1>Edit</h1>
 
+<h4>Product</h4>
+<hr />
 <div class="row">
-    <div class="col-12">
-        <div class="card">
-            <div class="card-body">
-                <h1 class="header-title mt-0">Edit Product</h1>
-                <hr />
+    <div class="col-md-4">
         <form asp-action="Edit">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <input type="hidden" asp-for="ProId" />
-
-            <div class="mb-3 row">
-                        <label asp-for="Cat.CatName" class="col-lg-2 col-form-label" for="simpleinput">Category Products</label>
-                        <div class="col-lg-10">
-                            <select id="txtCatID" name="txtCatID" class="form-select" asp-items="ViewBag.DanhMuc">
-                                <option selected>Choose Category</option>
-                                <option value="0">All</option>
-                            </select>
-                        </div>
-                        <span asp-validation-for="Cat.CatName"></span>
-                    </div>
-
-            <div class="mb-3 row">
-                        <label asp-for="ProName" class="col-lg-2 col-form-label" for="productsName">Product Name</label>
-                        <div class="col-lg-10">
-                            <input asp-for="ProName" type="text" class="form-control" id="simpleinput" value="">
-                        </div>
-                        <span asp-validation-for="ProName" class="text-danger"></span>
+            <div class="form-group">
+                <label asp-for="CatId" class="control-label"></label>
+                <select asp-for="CatId" class="form-control" asp-items="ViewBag.CatId"></select>
+                <span asp-validation-for="CatId" class="text-danger"></span>
             </div>
-            
-            <div class="mb-3 row">
-                        <label asp-for="ProImage" class="col-lg-2 col-form-label" for="ProImage"></label>
-                        <div class="col-lg-5">
-                            <input asp-for="ProImage" type="file" class="form-control" id="example-fileinput">
-                        </div>
-                        <span asp-validation-for="ProImage" class="text-danger"></span>
-
+            <div class="form-group">
+                <label asp-for="ProName" class="control-label"></label>
+                <input asp-for="ProName" class="form-control" />
+                <span asp-validation-for="ProName" class="text-danger"></span>
             </div>
-
-            <div class="mb-3 row">
-                <label asp-for="ProPrice" class="col-lg-2 col-form-label"></label>
-                        <div class="col-lg-10">
-                            <input asp-for="ProPrice" type="text" class="form-control" id="simpleinput" value="">
-                        </div>
+            <div class="form-group">
+                <label asp-for="ProImage" class="control-label"></label>
+                <input asp-for="ProImage" class="form-control" />
+                <span asp-validation-for="ProImage" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ProPrice" class="control-label"></label>
+                <input asp-for="ProPrice" class="form-control" />
                 <span asp-validation-for="ProPrice" class="text-danger"></span>
             </div>
-            
-            <div class="mb-3 row">
-                <label asp-for="Quantity" class="col-lg-2 col-form-label"></label>
-                        <div class="col-lg-10">
-                            <input asp-for="Quantity" class="form-control" id="example-number" type="number" name="">
-                        </div>
-
+            <div class="form-group">
+                <label asp-for="Quantity" class="control-label"></label>
+                <input asp-for="Quantity" class="form-control" />
                 <span asp-validation-for="Quantity" class="text-danger"></span>
             </div>
-            <div class="mb-3 row">
-                <label asp-for="UnitlnStock" class="col-lg-2 col-form-label"></label>
-                        <div class="col-lg-10">
-                            <input asp-for="UnitlnStock" class="form-control" id="example-number" type="number" name="">
-                        </div>
-
+            <div class="form-group">
+                <label asp-for="UnitlnStock" class="control-label"></label>
+                <input asp-for="UnitlnStock" class="form-control" />
                 <span asp-validation-for="UnitlnStock" class="text-danger"></span>
             </div>
-           
-            <div class="mb-3 row">
-                <label asp-for="DateCreated" class="col-lg-2 col-form-label"></label>
-                        <div class="col-lg-10">
-                            <input asp-for="DateCreated" class="form-control" id="example-date" type="date" name="date">
-                        </div>
+            <div class="form-group">
+                <label asp-for="DateCreated" class="control-label"></label>
+                <input asp-for="DateCreated" class="form-control" />
                 <span asp-validation-for="DateCreated" class="text-danger"></span>
             </div>
-            <div class="mb-3 row">
-                <label asp-for="DateModified" class="col-lg-2 col-form-label"></label>
-                        <div class="col-lg-10">
-                            <input asp-for="DateModified" class="form-control" id="example-date" type="date" name="date">
-                        </div>
+            <div class="form-group">
+                <label asp-for="DateModified" class="control-label"></label>
+                <input asp-for="DateModified" class="form-control" />
                 <span asp-validation-for="DateModified" class="text-danger"></span>
             </div>
-                    
-            <div class="mb-3 row" style="display: flex;padding-left: 250px">
-                        <div class="mt-4" style="display: flex; gap: 70px;  grid-template-columns: repeat(3, auto);">
-                            <div class="form-switch mb-2">
-                                <span asp-validation-for="BestSellers" class="text-danger"></span>
-                                <input asp-for="BestSellers" type="checkbox" class="form-check-input" />
-                                <label asp-for="BestSellers" class="form-check-label" for="BestSellers"></label>                       
-                            </div>
-                            <div class="form-switch mb-2">
-                                <span asp-validation-for="Active" class="text-danger"></span>
-                                <input asp-for="Active" type="checkbox" class="form-check-input" />
-                                <label asp-for="Active" class="form-check-label" for="Active"></label>
-                            </div>
-                            <div class="form-switch mb-2">
-                                <span asp-validation-for="HomeFlag" class="text-danger"></span>
-                                <input asp-for="HomeFlag" type="checkbox" class="form-check-input" />
-                                <label asp-for="HomeFlag" class="form-check-label" for="HomeFlag"></label>
-                            </div>
-                        </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="BestSellers" /> @Html.DisplayNameFor(model => model.BestSellers)
+                </label>
             </div>
-                    
-            <div class="mb-3 row">
-                <label asp-for="ShortDes" class="col-lg-2 col-form-label"></label>
-                        <div class="col-lg-10">
-                            <input asp-for="ShortDes" type="text" class="form-control" id="simpleinput" value="">
-                        </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Active" /> @Html.DisplayNameFor(model => model.Active)
+                </label>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="HomeFlag" /> @Html.DisplayNameFor(model => model.HomeFlag)
+                </label>
+            </div>
+            <div class="form-group">
+                <label asp-for="ShortDes" class="control-label"></label>
+                <input asp-for="ShortDes" class="form-control" />
                 <span asp-validation-for="ShortDes" class="text-danger"></span>
             </div>
-            <div class="mb-3 row">
-                <label asp-for="MetaDesc" class="col-lg-2 col-form-label"></label>
-                        <div class="col-lg-10">
-                            <input asp-for="MetaDesc" type="text" class="form-control" id="simpleinput" value="">
-                        </div>
+            <div class="form-group">
+                <label asp-for="MetaDesc" class="control-label"></label>
+                <input asp-for="MetaDesc" class="form-control" />
                 <span asp-validation-for="MetaDesc" class="text-danger"></span>
             </div>
-            <div class="mb-3 row">
-                <label asp-for="MeetaKey" class="col-lg-2 col-form-label"></label>
-                        <div class="col-lg-10">
-                            <input asp-for="MeetaKey" type="text" class="form-control" id="simpleinput" value="">
-                        </div>
+            <div class="form-group">
+                <label asp-for="MeetaKey" class="control-label"></label>
+                <input asp-for="MeetaKey" class="form-control" />
                 <span asp-validation-for="MeetaKey" class="text-danger"></span>
             </div>
-
-
-            <div class ="form-group">
-                            <input type="submit" value="Save" class="btn btn-outline-success"></input>
-                        |
-                        <a asp-action="Index" class="btn btn-outline-secondary">Back to List</a>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
             </div>
-
         </form>
     </div>
 </div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
 </div>
-</div>
 
-
-        
-@section Scripts {
-    <script>
-        $('#saveButton').click(function (event) {
-            event.preventDefault();
-
-            var formData = new FormData();
-            formData.append("ProName", $('#ProName').val());
-            formData.append("ProImageFile", $('#ProImageFile')[0].files[0]);
-
-            $.ajax({
-                url: '/create-product',
-                type: 'POST',
-                data: formData,
-                processData: false,
-                contentType: false,
-                success: function (data) {
-                    alert('Product created successfully');
-                },
-                error: function () {
-                    alert('Error creating product');
-                }
-            });
-        });</script>
-}
-<!-- đây là lệnh bổ sung vào đẩy lựa chọn lọc sản phẩm -->
-<script>
-    document.getElementById("txtCatID").addEventListener("change", function () {
-        var selectedCategory = this.value;
-        var currentUrl = window.location.href.split('?')[0]; // Lấy URL hiện tại, bỏ phần query string
-        window.location.href = currentUrl + "?CatID=" + selectedCategory; // Chuyển hướng đến URL mới
-    });
-</script>

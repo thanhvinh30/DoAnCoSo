@@ -98,10 +98,9 @@
         </dd>
     </dl>
     
-
     <form asp-action="Delete">
-        <input type="hidden" asp-for="ProId" type="submit" value="Delete" class="btn btn-danger" />
-        |
-        <a asp-action="Index" class="btn btn-outline-secondary">Back to List</a>
+        <input type="hidden" asp-for="ProId" />
+        <input type="submit" value="Delete" class="btn btn-danger" /> |
+        <a asp-action="Index">Back to List</a>
     </form>
 </div>

@@ -6,6 +6,7 @@ namespace DoAnCoSo.Controllers
 {
     public class HomeController : Controller
     {
+        DataDoAnCoSoContext db = new DataDoAnCoSoContext();
         private readonly ILogger<HomeController> _logger;
 
         public HomeController(ILogger<HomeController> logger)
@@ -15,10 +16,9 @@ namespace DoAnCoSo.Controllers
 
         public IActionResult Index()
         {
-            return View();
-        }
-        public IActionResult Category()
-        {
+
+            
+
             return View();
         }
         public IActionResult Contact()
