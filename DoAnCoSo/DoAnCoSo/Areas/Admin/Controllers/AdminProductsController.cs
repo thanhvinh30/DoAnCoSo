@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using DoAnCoSo.Models;
 using PagedList.Core;
+using DoAnCoSo.Helpper;
 
 namespace DoAnCoSo.Areas.Admin.Controllers
 {
@@ -119,10 +120,41 @@ namespace DoAnCoSo.Areas.Admin.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("ProId,CatId,ProName,ProImage,ProPrice,Quantity,UnitlnStock,DateCreated,DateModified,BestSellers,Active,HomeFlag,ShortDes,MetaDesc,MeetaKey")] Product product)
+        public async Task<IActionResult> Create([Bind("ProId,CatId,ProName,ProImage,ProPrice,Quantity,UnitlnStock,DateCreated,DateModified,BestSellers,Active,HomeFlag,ShortDes,MetaDesc,MeetaKey")] Product product, Microsoft.AspNetCore.Http.IFormFile ProImageFile)
         {
             if (ModelState.IsValid)
             {
+                product.ProName = Utilities.ToTitleCase(product.ProName);
+                if (ProImageFile != null)
+                {
+                    string extension = Path.GetExtension(ProImageFile.FileName);
+                    string image = Utilities.SEOUrl(product.ProName) + extension;
+                    product.ProImage = await Utilities.UploadFile(ProImageFile, @"img-PhuTungXe(BanMoi)", image.ToLower());
+
+                    //
+                    if (string.IsNullOrEmpty(product.ProImage))
+                    {
+                        product.ProImage = "default.jpg"; // Sử dụng ảnh mặc định nếu không upload được
+                    }
+                    // Lưu tên file vào thuộc tính ProImage
+                    product.ProImage = ProImageFile.FileName;
+                    //
+                    var fileName = Path.GetFileName(ProImageFile.FileName);
+                    var filePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/img-PhuTungXe(BanMoi)", fileName);
+
+                    using (var stream = new FileStream(filePath, FileMode.Create))
+                    {
+                        await ProImageFile.CopyToAsync(stream);
+                    }
+                    product.ProImage = fileName; // Save the file name in the product object
+                    //
+                }
+                if (string.IsNullOrEmpty(product.ProImage)) product.ProImage = ".jpg";
+
+                //product.Alias = Utilities.SEOUrl(product.ProName);
+                product.DateModified = DateTime.Now;
+                product.DateCreated = DateTime.Now;
+
                 _context.Add(product);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
