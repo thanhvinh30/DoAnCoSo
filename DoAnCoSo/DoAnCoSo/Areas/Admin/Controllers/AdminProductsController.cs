@@ -6,6 +6,10 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using DoAnCoSo.Models;
+using Azure;
+using PagedList.Core;
+using DoAnCoSo.Helpper;
+using NuGet.Packaging.Signing;
 
 namespace DoAnCoSo.Areas.Admin.Controllers
 {
@@ -18,12 +22,68 @@ namespace DoAnCoSo.Areas.Admin.Controllers
         {
             _context = context;
         }
-
-        // GET: Admin/AdminProducts
-        public async Task<IActionResult> Index()
+        protected void SetAlert(string message, string type)
         {
-            var dataDoAnCoSoContext = _context.Products.Include(p => p.Cat);
-            return View(await dataDoAnCoSoContext.ToListAsync());
+            TempData["AlertMessage"] = message;
+            switch (type)
+            {
+                case "Success":
+                    TempData["AlertType"] = "alert-Success"; break;
+                case "Warning":
+                    TempData["AlertType"] = "alert-Warning"; break;
+                case "Error":
+                    TempData["AlertType"] = "alert-Error"; break;
+                default: TempData["AlertType"] = ""; break;
+            }
+        }
+        // Thêm mới Filtter
+
+        public IActionResult Filtter(int CatID = 0)
+        {
+            var url = $"/Admin/AdminProducts?CatID = {CatID}";
+            if (CatID != 0)
+            {
+                url = $"Admin/AdminProducts";
+            }
+            return Json(new { status = "Success", redirectUrl = url });
+        }
+        // GET: Admin/AdminProducts
+        public async Task<IActionResult> Index(int page = 1, int CatID = 0)
+        {
+            var pageNumber = page < 1 ? 1 : page;
+            var pageSize = 6;
+            List<Product> lsProducts = new List<Product>();
+            if (CatID != 0)
+            {
+                lsProducts = _context.Products
+                        .AsNoTracking()
+                        .Where(p => p.CatId == CatID && p.ProId >= 1)
+                        .Include(x => x.Cat)
+                        .OrderByDescending(x => x.ProId)
+                        .OrderBy(x => x.ProId)
+                        .ToList();
+            }
+            else
+            {
+
+                lsProducts = _context.Products
+                        .AsNoTracking()
+                        .Include(x => x.Cat)
+                        .OrderByDescending(x => x.ProId)
+                        .OrderBy(x => x.ProId)
+                        .ToList();
+            }
+
+
+            PagedList<Product> models = new PagedList<Product>(lsProducts.AsQueryable(), pageNumber, pageSize);           // Fix lỗi về lsProducts                                                                                                                              //PagedList<Product> models = new PagedList<Product>(lsProducts.AsEnumerable(), pageNumber, pageSize);
+
+            ViewBag.CurrentCateId = CatID;
+            ViewBag.Currentpage = pageNumber;
+
+
+            ViewData["DanhMuc"] = new SelectList(_context.Categories, "CatId", "CatName", CatID);
+            ViewBag.CurrentPage = pageNumber;
+            return View(models);
         }
 
         // GET: Admin/AdminProducts/Details/5
@@ -48,7 +108,7 @@ namespace DoAnCoSo.Areas.Admin.Controllers
         // GET: Admin/AdminProducts/Create
         public IActionResult Create()
         {
-            ViewData["CatId"] = new SelectList(_context.Categories, "CatId", "CatId");
+            ViewData["CatId"] = new SelectList(_context.Categories, "CatId", "CatName");
             return View();
         }
 
@@ -57,15 +117,29 @@ namespace DoAnCoSo.Areas.Admin.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("ProId,CatId,ProName,ProImage,ProPrice,Quantity,UnitlnStock,DateCreated,DateModified,BestSellers,Active,HomeFlag,ShortDes,MetaDesc,MeetaKey")] Product product)
+        public async Task<IActionResult> Create([Bind("ProId,CatId,ProName,ProImage,ProPrice,Quantity,UnitlnStock,DateCreated,DateModified,BestSellers,Active,HomeFlag,ShortDes,MetaDesc,MeetaKey")] Product product, IFormFile fThumb)
         {
             if (ModelState.IsValid)
             {
+                //Tự Thêm vào Start 
+                //product.ProName = Utilities.ToTitleCase(product.ProName);
+                //if (fThumb != null)
+                //{
+                //    string extension = Path.GetExtension(fThumb.FileName);
+                //    string image = Utilities.SEOUrl(product.ProName) + extension;
+                //    product.ProImage = await Utilities.UploadFile(fThumb, @"img-PhuTungXe(BanMoi)", image.ToLower());
+
+                //}
+                //if (string.IsNullOrEmpty(product.ProImage)) product.ProImage = "default.jpg";
+                product.DateCreated = DateTime.Now;
+                product.DateModified = DateTime.Now;
+                //End
                 _context.Add(product);
                 await _context.SaveChangesAsync();
+                SetAlert("Đã sửa thành công", "Success");
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["CatId"] = new SelectList(_context.Categories, "CatId", "CatId", product.CatId);
+            ViewData["CatId"] = new SelectList(_context.Categories, "CatId", "CatName", product.CatId);
             return View(product);
         }
 
@@ -82,7 +156,7 @@ namespace DoAnCoSo.Areas.Admin.Controllers
             {
                 return NotFound();
             }
-            ViewData["CatId"] = new SelectList(_context.Categories, "CatId", "CatId", product.CatId);
+            ViewData["CatId"] = new SelectList(_context.Categories, "CatId", "CatName", product.CatId);
             return View(product);
         }
 
@@ -91,7 +165,7 @@ namespace DoAnCoSo.Areas.Admin.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("ProId,CatId,ProName,ProImage,ProPrice,Quantity,UnitlnStock,DateCreated,DateModified,BestSellers,Active,HomeFlag,ShortDes,MetaDesc,MeetaKey")] Product product)
+        public async Task<IActionResult> Edit(int id, [Bind("ProId,CatId,ProName,ProImage,ProPrice,Quantity,UnitlnStock,DateCreated,DateModified,BestSellers,Active,HomeFlag,ShortDes,MetaDesc,MeetaKey")] Product product, IFormFile fThumb)
         {
             if (id != product.ProId)
             {
@@ -102,13 +176,28 @@ namespace DoAnCoSo.Areas.Admin.Controllers
             {
                 try
                 {
+                    //Tự Thêm vào Start 
+                    //product.ProName = Utilities.ToTitleCase(product.ProName);
+                    //if (fThumb != null)
+                    //{
+                    //    string extension = Path.GetExtension(fThumb.FileName);
+                    //    string image = Utilities.SEOUrl(product.ProName) + extension;
+                    //    product.ProImage = await Utilities.UploadFile(fThumb, @"img-PhuTungXe(BanMoi)", image.ToLower());
+
+                    //}
+                    //if (string.IsNullOrEmpty(product.ProImage)) product.ProImage = "default.jpg";
+                    //product.DateCreated = DateTime.Now;
+                    product.DateModified = DateTime.Now;
+                    //End
                     _context.Update(product);
+                    SetAlert("Đã sửa thành công", "Success");
                     await _context.SaveChangesAsync();
                 }
                 catch (DbUpdateConcurrencyException)
                 {
                     if (!ProductExists(product.ProId))
                     {
+                        SetAlert("Sửa sai rầu", "Error");
                         return NotFound();
                     }
                     else
@@ -118,7 +207,7 @@ namespace DoAnCoSo.Areas.Admin.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["CatId"] = new SelectList(_context.Categories, "CatId", "CatId", product.CatId);
+            ViewData["CatId"] = new SelectList(_context.Categories, "CatId", "CatName", product.CatId);
             return View(product);
         }
 
@@ -153,6 +242,7 @@ namespace DoAnCoSo.Areas.Admin.Controllers
             }
 
             await _context.SaveChangesAsync();
+            SetAlert("Đã Xóa thành công", "Success");
             return RedirectToAction(nameof(Index));
         }
 
