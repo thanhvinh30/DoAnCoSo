@@ -104,11 +104,13 @@
             <div class="card-body">
                 <h1 class="header-title mt-0">Edit Product</h1>
                 <hr />
-                <form asp-action="Edit">
+                <form asp-action="Edit" asp-controller="AdminProducts" asp-route-id="@Model.ProId">
                     <div asp-validation-summary="ModelOnly" class="text-danger"></div>
                     <input type="hidden" asp-for="ProId" />
+                    <input type="hidden" asp-for="ProImage" />
+                    <input type="hidden" asp-for="DateCreated" />
 
-                    <div class="mb-3 row">
+                    <div class="mb-3 row form-group ">
                         <label asp-for="CatId" class="col-lg-2 col-form-label">Category Products</label>
                         <div class="col-lg-10">
                             <select asp-for="CatId" class="form-select" asp-items="ViewBag.CatId">
@@ -117,64 +119,64 @@
                         </div>
                     </div>
 
-                    <div class="mb-3 row">
+                    <div class="mb-3 row form-group ">
                         <label asp-for="ProName" class="col-lg-2 col-form-label" for="ProName">Product Name</label>
                         <div class="col-lg-10">
                             <input asp-for="ProName" type="text" class="form-control" id="ProName" value="">
                         </div>
-                        <span asp-validation-for="ProName" class="text-danger"></span>
+                     
                     </div>
 
-                    <div class="mb-3 row">
+                    <div class="mb-3 row form-group">
                         <label asp-for="ProImage" class="col-lg-2 col-form-label"></label>
                         <div class="col-lg-5">
                             <input asp-for="ProImage" type="file" class="form-control" />
                         </div>
-                        <span asp-validation-for="ProImage" class="text-danger"></span>
+                       
                     </div>
 
-                    <div class="mb-3 row">
+                    <div class="mb-3 row form-group">
                         <label asp-for="ProPrice" class="col-lg-2 col-form-label"></label>
                         <div class="col-lg-10">
                             <input asp-for="ProPrice" type="text" class="form-control" id="simpleinput" value="">
                         </div>
-                        <span asp-validation-for="ProPrice" class="text-danger"></span>
+                        
                     </div>
 
-                    <div class="mb-3 row">
+                    <div class="mb-3 row form-group">
                         <label asp-for="Quantity" class="col-lg-2 col-form-label"></label>
                         <div class="col-lg-10">
                             <input asp-for="Quantity" class="form-control" type="number" >
                         </div>
-                        <span asp-validation-for="Quantity" class="text-danger"></span>
+                       
                     </div>
-                    <div class="mb-3 row">
+                    <div class="mb-3 row form-group">
                         <label asp-for="UnitlnStock" class="col-lg-2 col-form-label">UnitlnStock</label>
                         <div class="col-lg-10">
                             <input asp-for="UnitlnStock" class="form-control" type="number" >
                         </div>
-                        <span asp-validation-for="UnitlnStock" class="text-danger"></span>
+                     
                     </div>
 
-                    <div class="mb-3 row">
+                    <div class="mb-3 row form-group">
                         <label asp-for="DateCreated" class="col-lg-2 col-form-label"></label>
                         <div class="col-lg-10">
                             <input asp-for="DateCreated" class="form-control">
                         </div>
-                        <span asp-validation-for="DateCreated" class="text-danger"></span>
+                   
                     </div>
-                    <div class="mb-3 row">
+                    <div class="mb-3 row form-group">
                         <label asp-for="DateModified" class="col-lg-2 col-form-label"></label>
                         <div class="col-lg-10">
                             <input asp-for="DateModified" class="form-control">
                         </div>
-                        <span asp-validation-for="DateModified" class="text-danger"></span>
+                 
                     </div>
 
-                    <div class="mb-3 row" style="display: flex;padding-left: 250px">
+                    <div class="mb-3 row form-group" style="display: flex;padding-left: 250px">
                         <div class="mt-4" style="display: flex; gap: 70px;  grid-template-columns: repeat(3, auto);">
                             <div class="form-switch mb-2">
-                                <span asp-validation-for="BestSellers" class="text-danger"></span>
+                              
                                 <input asp-for="BestSellers" type="checkbox" class="form-check-input" />
                                 <label asp-for="BestSellers" class="form-check-label" for="BestSellers"></label>
                             </div>
@@ -183,36 +185,36 @@
                                 <label asp-for="Active" class="form-check-label" for="Active">
                                     Active
                                 </label>
-                                <span asp-validation-for="Active" class="text-danger"></span>
+                          
                             </div>
                             <div class="form-switch mb-2">
-                                <span asp-validation-for="HomeFlag" class="text-danger"></span>
+                               
                                 <input asp-for="HomeFlag" type="checkbox" class="form-check-input" />
                                 <label asp-for="HomeFlag" class="form-check-label" for="HomeFlag"></label>
                             </div>
                         </div>
                     </div>
 
-                    <div class="mb-3 row">
+                    <div class="mb-3 row form-group">
                         <label asp-for="ShortDes" class="col-lg-2 col-form-label"></label>
                         <div class="col-lg-10">
                             <input asp-for="ShortDes" type="text" class="form-control" id="simpleinput" value="">
                         </div>
-                        <span asp-validation-for="ShortDes" class="text-danger"></span>
+              
                     </div>
-                    <div class="mb-3 row">
+                    <div class="mb-3 row form-group">
                         <label asp-for="MetaDesc" class="col-lg-2 col-form-label"></label>
                         <div class="col-lg-10">
                             <input asp-for="MetaDesc" type="text" class="form-control" id="simpleinput" value="">
                         </div>
-                        <span asp-validation-for="MetaDesc" class="text-danger"></span>
+                 
                     </div>
-                    <div class="mb-3 row">
+                    <div class="mb-3 row form-group">
                         <label asp-for="MeetaKey" class="col-lg-2 col-form-label"></label>
                         <div class="col-lg-10">
                             <input asp-for="MeetaKey" type="text" class="form-control" id="simpleinput" value="">
                         </div>
-                        <span asp-validation-for="MeetaKey" class="text-danger"></span>
+                  
                     </div>
 
 

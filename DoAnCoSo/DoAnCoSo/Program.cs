@@ -48,36 +48,3 @@ app.Run();
 
 
 
-// Tự thêm vào 
-
-app.MapPost("/create-product", async (Product product, IFormFile fThumb) =>
-{
-    // Chuy?n ??i tên s?n ph?m thành d?ng Title Case
-    product.ProName = Utilities.ToTitleCase(product.ProName);
-
-    // Ki?m tra file ?nh có t?n t?i không
-    if (fThumb != null)
-    {
-        string extension = Path.GetExtension(fThumb.FileName);
-        string image = Utilities.SEOUrl(product.ProName) + extension;
-
-        // T?i ?nh lên và l?y ???ng d?n ?nh
-        product.ProImage = await Utilities.UploadFile(fThumb, "img-PhuTungXe(BanMoi)", image.ToLower());
-
-        // N?u không có ?nh, ??t giá tr? m?c ??nh
-        if (string.IsNullOrEmpty(product.ProImage))
-        {
-            product.ProImage = "default.jpg";
-        }
-    }
-
-    // Thêm thông tin ngày t?o và ngày s?a
-    product.DateCreated = DateTime.Now;
-    product.DateModified = DateTime.Now;
-
-    // Thêm s?n ph?m vào c? s? d? li?u (logic database)
-    // Ví d?: _dbContext.Products.Add(product);
-    // await _dbContext.SaveChangesAsync();
-
-    return Results.Ok(product);
-});

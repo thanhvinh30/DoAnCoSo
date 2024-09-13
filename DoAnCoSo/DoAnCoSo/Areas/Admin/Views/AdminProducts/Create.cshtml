@@ -201,21 +201,29 @@
                                         </div>
 
                                         <div class="tab-pane" id="profile">
-                                            <div class="mb-3 row">
-                                                <label asp-for="Quantity" class="col-lg-2 col-form-label" for="Quantity">Quantity</label>
-                                                <div class="col-lg-10">
-                                                    <input asp-for="Quantity" class="form-control" id="Quantity" type="number" name="">
-                                                </div>
-                                                <span asp-validation-for="Quantity" class="text-danger"></span>
-                                            </div>
 
                                             <div class="mb-3 row">
-                                                <label asp-for="UnitlnStock" class="col-lg-2 col-form-label" for="example-date">UnitlnStock</label>
-                                                <div class="col-lg-10">
-                                                    <input asp-for="UnitlnStock" class="form-control" id="example-number" type="number" name="">
+                                                <div class="col">
+                                                    <div class="mb-3 row">
+                                                        <label asp-for="Quantity" class="col-lg-2 col-form-label" >Quantity</label>
+                                                        <div class="col-lg-10">
+                                                            <input asp-for="Quantity" class="form-control" type="number" >
+                                                        </div>
+                                                        <span asp-validation-for="Quantity" class="text-danger"></span>
+                                                    </div>
                                                 </div>
-                                                <span asp-validation-for="UnitlnStock" class="text-danger"></span>
+                                                <div class="col">
+                                                    <div class="mb-3 row">
+                                                        <label asp-for="UnitlnStock" class="col-lg-2 col-form-label">UnitlnStock</label>
+                                                        <div class="col-lg-10">
+                                                            <input asp-for="UnitlnStock" class="form-control"type="number">
+                                                        </div>
+                                                        <span asp-validation-for="UnitlnStock" class="text-danger"></span>
+                                                    </div>
+                                                </div>                                             
                                             </div>
+                                           
+
 
                                             <div class="mb-3 row">
                                                 <div class="col">
@@ -237,6 +245,7 @@
                                                     </div>
                                                 </div>
                                             </div>
+                                            
                                         </div>
 
                                         <div class="tab-pane" id="messages">

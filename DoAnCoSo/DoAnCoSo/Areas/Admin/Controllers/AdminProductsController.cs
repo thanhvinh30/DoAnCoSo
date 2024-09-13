@@ -117,23 +117,11 @@ namespace DoAnCoSo.Areas.Admin.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("ProId,CatId,ProName,ProImage,ProPrice,Quantity,UnitlnStock,DateCreated,DateModified,BestSellers,Active,HomeFlag,ShortDes,MetaDesc,MeetaKey")] Product product, IFormFile fThumb)
+        public async Task<IActionResult> Create([Bind("ProId,CatId,ProName,ProImage,ProPrice,Quantity,UnitlnStock,DateCreated,DateModified,BestSellers,Active,HomeFlag,ShortDes,MetaDesc,MeetaKey")] Product product)
         {
             if (ModelState.IsValid)
             {
-                //Tự Thêm vào Start 
-                //product.ProName = Utilities.ToTitleCase(product.ProName);
-                //if (fThumb != null)
-                //{
-                //    string extension = Path.GetExtension(fThumb.FileName);
-                //    string image = Utilities.SEOUrl(product.ProName) + extension;
-                //    product.ProImage = await Utilities.UploadFile(fThumb, @"img-PhuTungXe(BanMoi)", image.ToLower());
-
-                //}
-                //if (string.IsNullOrEmpty(product.ProImage)) product.ProImage = "default.jpg";
-                product.DateCreated = DateTime.Now;
-                product.DateModified = DateTime.Now;
-                //End
+            
                 _context.Add(product);
                 await _context.SaveChangesAsync();
                 SetAlert("Đã sửa thành công", "Success");
@@ -165,7 +153,7 @@ namespace DoAnCoSo.Areas.Admin.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("ProId,CatId,ProName,ProImage,ProPrice,Quantity,UnitlnStock,DateCreated,DateModified,BestSellers,Active,HomeFlag,ShortDes,MetaDesc,MeetaKey")] Product product, IFormFile fThumb)
+        public async Task<IActionResult> Edit(int id, [Bind("ProId,CatId,ProName,ProImage,ProPrice,Quantity,UnitlnStock,DateCreated,DateModified,BestSellers,Active,HomeFlag,ShortDes,MetaDesc,MeetaKey")] Product product)
         {
             if (id != product.ProId)
             {
@@ -176,19 +164,7 @@ namespace DoAnCoSo.Areas.Admin.Controllers
             {
                 try
                 {
-                    //Tự Thêm vào Start 
-                    //product.ProName = Utilities.ToTitleCase(product.ProName);
-                    //if (fThumb != null)
-                    //{
-                    //    string extension = Path.GetExtension(fThumb.FileName);
-                    //    string image = Utilities.SEOUrl(product.ProName) + extension;
-                    //    product.ProImage = await Utilities.UploadFile(fThumb, @"img-PhuTungXe(BanMoi)", image.ToLower());
-
-                    //}
-                    //if (string.IsNullOrEmpty(product.ProImage)) product.ProImage = "default.jpg";
-                    //product.DateCreated = DateTime.Now;
-                    product.DateModified = DateTime.Now;
-                    //End
+                   
                     _context.Update(product);
                     SetAlert("Đã sửa thành công", "Success");
                     await _context.SaveChangesAsync();

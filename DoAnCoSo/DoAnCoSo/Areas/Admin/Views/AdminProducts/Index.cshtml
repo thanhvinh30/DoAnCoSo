@@ -153,19 +153,15 @@ foreach (var item in Model) {
 
                                         <div class="col-xl-2 col-sm-4">
                                             <div class="float-sm-end mt-3 mt-sm-0">
+                                                
+                                                <div class="file-search d-inline-block me-1">
 
-                                                <div class="task-search d-inline-block mb-3 mb-sm-0 me-sm-1">
-                                                    <form style="width:190px;">
-                                                        <div class="input-group">
-                                                            <input type="text" class="form-control search-input" placeholder="Search..." />
-                                                            <span class="uil uil-search icon-search"></span>
-                                                            <button class="btn btn-soft-primary input-group-text" type="button">
-                                                                <i class='uil uil-file-search-alt'></i>
-                                                            </button>
+                                                        <div class="input-group align-items-center">
+                                                            <i class="bi bi-search icon-search bg-light ms-2"></i>
+                                                            <input type="text" id="keyword" name="keyword" class="form-control search-input bg-light border-0 mt-0" placeholder="Search...." />
                                                         </div>
-                                                    </form>
+                                                    
                                                 </div>
-
                                             </div>
                                         </div>
 
@@ -195,7 +191,7 @@ foreach (var item in Model) {
                                 </tr>
                             </thead>
 
-                            <tbody>
+                            <tbody id="records_table">
                                 @if (Model != null)
                                 {
                                     foreach (var item in Model)
@@ -211,7 +207,9 @@ foreach (var item in Model) {
                                             -->
                                             <th scope="row">@item.Cat.CatName</th>
                                             <th scope="row">@item.ProPrice.ToString("#,##0") VND</th>
-                                            <th scope="row" class="me-2 rounded-circle" height="48" src="img-PhuTungXe(BanMoi)/@item.ProImage"></th>
+                                            <th scope="row" class="me-2 rounded-circle">
+                                                <img style="width: 100px; height:100px; border:5px" src="~/img-PhuTungXe(BanMoi)/@item.ProImage" asp-append-version="true" alt="Chưa có Ảnh" />
+                                            </th>
                                             <td>
                                                 @if (item.UnitlnStock > 0)
                                                 {
@@ -258,9 +256,10 @@ foreach (var item in Model) {
                 </div>
             </div>
         </div>
-        <!--asp-route-CatId="@ViewBag.CurrentCateId"-->
+
         @section Scripts {
             <script>
+
                 $(document).ready(function () {
                     jQuery("#txtCatID").change(function () {
                         var catId = jQuery(this).children(":selected").attr("value");
@@ -286,9 +285,29 @@ foreach (var item in Model) {
                                 alert('error');
                             }
                         });
+                    });                                     
+                });
+
+                //Script search product Start
+                $("#keyword").keyup(function () {
+                    var strkeyword = $('#keyword').val();
+
+                    $.ajax({
+                        url: '/Admin/Search/FindProducts', // Sửa URL cho đúng
+                        dataType: "html", // Đảm bảo định dạng trả về là HTML (nếu dùng PartialView)
+                        type: "POST",
+                        data: { keyword: strkeyword },
+                        success: function (results) {
+                            $("#records_table").html(results); // Chèn kết quả vào table
+                        },
+                        error: function (xhr) {
+                            alert('Error occurred while searching for products');
+                        }
                     });
                 });
-            </script>
+                  //Script search product End
+                    
+            </script>         
         }
         <!-- đây là lệnh bổ sung vào đẩy lựa chọn lọc sản phẩm -->
         <script>
