@@ -1,0 +1,140 @@
+﻿﻿@using PagedList.Core.Mvc
+@model PagedList.Core.IPagedList<DoAnCoSo.Models.Category>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+<!--
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Html.DisplayNameFor(model => model.CatName)
+            </th>
+            <th>
+                Html.DisplayNameFor(model => model.Ordering)
+            </th>
+            <th>
+                Html.DisplayNameFor(model => model.ParentId)
+            </th>
+            <th>
+                Html.DisplayNameFor(model => model.Levels)
+            </th>
+            <th>
+                Html.DisplayNameFor(model => model.Published)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+foreach (var item in Model) {
+        <tr>
+            <td>
+                Html.DisplayFor(modelItem => item.CatName)
+            </td>
+            <td>
+                Html.DisplayFor(modelItem => item.Ordering)
+            </td>
+            <td>
+                Html.DisplayFor(modelItem => item.ParentId)
+            </td>
+            <td>
+                Html.DisplayFor(modelItem => item.Levels)
+            </td>
+            <td>
+                Html.DisplayFor(modelItem => item.Published)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="item.CatId">Edit</a> |
+                <a asp-action="Details" asp-route-id="item.CatId">Details</a> |
+                <a asp-action="Delete" asp-route-id="item.CatId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+-->
+
+
+<div class="row">
+    <div class="col-lg-12">
+        <div class="card">
+            <div class="card-body">
+                <h1 class="header-title mt-0 mb-1">Quản lý Quyền Truy Cập</h1>
+                <p class="sub-header">
+                    <div class="mt-2 mt-md-0 button-list">
+                        <a asp-controller="AdminCategories" type="button" class="btn btn-danger me-4 mb-2 mb-md-0 " asp-action="Create" >
+                            <i class="uil-plus me-1"></i>Create Category
+                        </a>
+                    </div>
+                </p>
+
+                <div class="table-responsive">
+                    <table class="table table-hover mb-0">
+                        <thead>
+                            <tr>
+                                <th scope="col">Category ID</th>
+                                <th scope="col">Category Name</th>
+@*                                 <th scope="col">Levels</th>*@
+                                <th scope="col">Order</th> 
+                                <th scope="col">Publish</th>
+                                <th scope="col">#</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @if (Model != null)
+                            {
+                                foreach (var item in Model)
+                                {
+                                    <tr>
+                                        <th scope="row">@item.CatId</th>
+                                        <td>@item.CatName</td>
+                                        @* <td>@item.Levels</td>*@
+                                        <td>@item.Ordering</td> 
+                                        <td>
+                                            @if (item.Published == true)
+                                            {
+                                                <div class="spinner-grow text-success m-2" role="Published">
+                                                </div>
+
+                                            }
+                                            else
+                                            {
+                                                <div class="spinner-grow text-danger m-2" role="Published">
+                                                </div>
+                                            }
+                                        </td>
+                                        <td>
+                                            <a class="btn btn-outline-warning" asp-area="Admin" asp-controller="AdminCategories" asp-action="Edit" asp-route-id="@item.CatId">Edit</a>
+                                            <a class="btn btn-outline-primary" asp-area="Admin" asp-controller="AdminCategories" asp-action="Details" asp-route-id="@item.CatId">View</a>
+                                            <a class="btn btn-outline-danger" asp-area="Admin" asp-controller="AdminCategories" asp-action="Delete" asp-route-id="@item.CatId">Delete</a>
+
+                                        </td>
+                                    </tr>
+                                }
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div aria-label="Page navigation example" class="btn-group mb-2">
+    <ul class="pagination">
+        <li type="button" class="btn btn-light">
+            <a asp-route-CatId="@ViewBag.CurrentCateId" asp-area="Admin" asp-controller="AdminCategories" asp-action="Index" asp-route-page="@(Model.PageNumber - 1)"><i class="bi bi-arrow-left"></i></a>
+        </li>
+        <li type="button" class="btn btn-light">
+            <a asp-route-CatId="@ViewBag.CurrentCateId" asp-area="Admin" asp-controller="AdminCategories" asp-action="Index" asp-route-page="@(Model.PageNumber + 1)"><i class="bi bi-arrow-right"></i></a>
+        </li>
+    </ul>
+</div>

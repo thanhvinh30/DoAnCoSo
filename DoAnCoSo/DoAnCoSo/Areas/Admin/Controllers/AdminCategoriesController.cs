@@ -6,19 +6,16 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using DoAnCoSo.Models;
-using Azure;
 using PagedList.Core;
-using DoAnCoSo.Helpper;
-using NuGet.Packaging.Signing;
 
 namespace DoAnCoSo.Areas.Admin.Controllers
 {
     [Area("Admin")]
-    public class AdminProductsController : Controller
+    public class AdminCategoriesController : Controller
     {
         private readonly DataDoAnCoSoContext _context;
 
-        public AdminProductsController(DataDoAnCoSoContext context)
+        public AdminCategoriesController(DataDoAnCoSoContext context)
         {
             _context = context;
         }
@@ -47,46 +44,24 @@ namespace DoAnCoSo.Areas.Admin.Controllers
             }
             return Json(new { status = "Success", redirectUrl = url });
         }
-        // GET: Admin/AdminProducts
-        public async Task<IActionResult> Index(int page = 1, int CatID = 0)
+        // GET: Admin/AdminCategories
+        public async Task<IActionResult> Index(int? page, int CatID = 0)
         {
-            var pageNumber = page < 1 ? 1 : page;
-            var pageSize = 6;
-            List<Product> lsProducts = new List<Product>();
-            if (CatID != 0)
-            {
-                lsProducts = _context.Products
-                        .AsNoTracking()
-                        .Where(p => p.CatId == CatID && p.ProId >= 1)
-                        .Include(x => x.Cat)
-                        .OrderByDescending(x => x.ProId)
-                        .OrderBy(x => x.ProId)
-                        .ToList();
-            }
-            else
-            {
+            var pageNumber = page ==null || page <= 0 ? 1 : page.Value;
+            var pageSize = 3;
+                var lsCategory = _context.Categories
+                                .AsNoTracking()
+                                .OrderByDescending(c => c.CatId)
+                                .OrderBy(x => x.CatId);
 
-                lsProducts = _context.Products
-                        .AsNoTracking()
-                        .Include(x => x.Cat)
-                        .OrderByDescending(x => x.ProId)
-                        .OrderBy(x => x.ProId)
-                        .ToList();
-            }
-
-
-            PagedList<Product> models = new PagedList<Product>(lsProducts.AsQueryable(), pageNumber, pageSize);           // Fix lỗi về lsProducts                                                                                                                              //PagedList<Product> models = new PagedList<Product>(lsProducts.AsEnumerable(), pageNumber, pageSize);
-
+            PagedList<Category> models = new PagedList<Category> (lsCategory, pageNumber, pageSize);
             ViewBag.CurrentCateId = CatID;
-            ViewBag.Currentpage = pageNumber;
-
-
-            ViewData["DanhMuc"] = new SelectList(_context.Categories, "CatId", "CatName", CatID);
-            ViewBag.CurrentPage = pageNumber;
+            ViewBag.CurrentCategory = pageNumber;
             return View(models);
+            //return View(await _context.Categories.ToListAsync());
         }
 
-        // GET: Admin/AdminProducts/Details/5
+        // GET: Admin/AdminCategories/Details/5
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null)
@@ -94,44 +69,40 @@ namespace DoAnCoSo.Areas.Admin.Controllers
                 return NotFound();
             }
 
-            var product = await _context.Products
-                .Include(p => p.Cat)
-                .FirstOrDefaultAsync(m => m.ProId == id);
-            if (product == null)
+            var category = await _context.Categories
+                .FirstOrDefaultAsync(m => m.CatId == id);
+            if (category == null)
             {
                 return NotFound();
             }
 
-            return View(product);
+            return View(category);
         }
 
-        // GET: Admin/AdminProducts/Create
+        // GET: Admin/AdminCategories/Create
         public IActionResult Create()
         {
-            ViewData["CatId"] = new SelectList(_context.Categories, "CatId", "CatName");
             return View();
         }
 
-        // POST: Admin/AdminProducts/Create
+        // POST: Admin/AdminCategories/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("ProId,CatId,ProName,ProImage,ProPrice,Quantity,UnitlnStock,DateCreated,DateModified,BestSellers,Active,HomeFlag,ShortDes,MetaDesc,MeetaKey")] Product product)
+        public async Task<IActionResult> Create([Bind("CatId,CatName,Ordering,ParentId,Levels,Published")] Category category)
         {
             if (ModelState.IsValid)
             {
-            
-                _context.Add(product);
+                _context.Add(category);
                 await _context.SaveChangesAsync();
                 SetAlert("Đã tạo thành công", "Success");
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["CatId"] = new SelectList(_context.Categories, "CatId", "CatName", product.CatId);
-            return View(product);
+            return View(category);
         }
 
-        // GET: Admin/AdminProducts/Edit/5
+        // GET: Admin/AdminCategories/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
@@ -139,23 +110,22 @@ namespace DoAnCoSo.Areas.Admin.Controllers
                 return NotFound();
             }
 
-            var product = await _context.Products.FindAsync(id);
-            if (product == null)
+            var category = await _context.Categories.FindAsync(id);
+            if (category == null)
             {
                 return NotFound();
             }
-            ViewData["CatId"] = new SelectList(_context.Categories, "CatId", "CatName", product.CatId);
-            return View(product);
+            return View(category);
         }
 
-        // POST: Admin/AdminProducts/Edit/5
+        // POST: Admin/AdminCategories/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("ProId,CatId,ProName,ProImage,ProPrice,Quantity,UnitlnStock,DateCreated,DateModified,BestSellers,Active,HomeFlag,ShortDes,MetaDesc,MeetaKey")] Product product)
+        public async Task<IActionResult> Edit(int id, [Bind("CatId,CatName,Ordering,ParentId,Levels,Published")] Category category)
         {
-            if (id != product.ProId)
+            if (id != category.CatId)
             {
                 return NotFound();
             }
@@ -164,14 +134,13 @@ namespace DoAnCoSo.Areas.Admin.Controllers
             {
                 try
                 {
-                   
-                    _context.Update(product);
+                    _context.Update(category);
                     SetAlert("Đã sửa thành công", "Success");
                     await _context.SaveChangesAsync();
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!ProductExists(product.ProId))
+                    if (!CategoryExists(category.CatId))
                     {
                         SetAlert("Sửa sai rầu", "Error");
                         return NotFound();
@@ -183,11 +152,10 @@ namespace DoAnCoSo.Areas.Admin.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["CatId"] = new SelectList(_context.Categories, "CatId", "CatName", product.CatId);
-            return View(product);
+            return View(category);
         }
 
-        // GET: Admin/AdminProducts/Delete/5
+        // GET: Admin/AdminCategories/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
@@ -195,26 +163,25 @@ namespace DoAnCoSo.Areas.Admin.Controllers
                 return NotFound();
             }
 
-            var product = await _context.Products
-                .Include(p => p.Cat)
-                .FirstOrDefaultAsync(m => m.ProId == id);
-            if (product == null)
+            var category = await _context.Categories
+                .FirstOrDefaultAsync(m => m.CatId == id);
+            if (category == null)
             {
                 return NotFound();
             }
 
-            return View(product);
+            return View(category);
         }
 
-        // POST: Admin/AdminProducts/Delete/5
+        // POST: Admin/AdminCategories/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var product = await _context.Products.FindAsync(id);
-            if (product != null)
+            var category = await _context.Categories.FindAsync(id);
+            if (category != null)
             {
-                _context.Products.Remove(product);
+                _context.Categories.Remove(category);
             }
 
             await _context.SaveChangesAsync();
@@ -222,9 +189,9 @@ namespace DoAnCoSo.Areas.Admin.Controllers
             return RedirectToAction(nameof(Index));
         }
 
-        private bool ProductExists(int id)
+        private bool CategoryExists(int id)
         {
-            return _context.Products.Any(e => e.ProId == id);
+            return _context.Categories.Any(e => e.CatId == id);
         }
     }
 }
