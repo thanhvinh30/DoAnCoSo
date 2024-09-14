@@ -9,6 +9,7 @@ namespace DoAnCoSo.Helpper
 {
     public static class Utilities
     {
+
         public static int PAGE_SIZE = 6;
         public static void CreateIfMissing(string path)                     // đây là lệnh tạo mới cho những cái chưa có ( trích từ lời video ) :>>
         {
@@ -16,6 +17,13 @@ namespace DoAnCoSo.Helpper
             if (!folderExists)
                 Directory.CreateDirectory(path);
         }
+        //private static void CreateIfMissing(string path)
+        //{
+        //    if (!Directory.Exists(path))
+        //    {
+        //        Directory.CreateDirectory(path);
+        //    }
+        //}
         public static string ToTitleCase(string str)
         {
             String result = str;
@@ -83,17 +91,23 @@ namespace DoAnCoSo.Helpper
         {
             try
             {
+                // Kiểm tra file null hoặc rỗng
+                if (file == null || file.Length == 0)
+                {
+                    return null; // Không có file upload hoặc file rỗng
+                }
+
                 // Set default name if newname is not provided
                 if (newname == null)
                     newname = file.FileName;
 
                 // Create the directory path and ensure it exists
                 string path = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "img-PhuTungXe(BanMoi)", sDirectory);
-
-                CreateIfMissing(path);
+                // Kiểm tra và tạo thư mục nếu chưa tồn tại
                 if (!Directory.Exists(path))
+                {
                     Directory.CreateDirectory(path);
-
+                }
                 // Define full file path including the new name
                 string pathFile = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "img-PhuTungXe(BanMoi)", sDirectory, newname);
 
@@ -106,6 +120,12 @@ namespace DoAnCoSo.Helpper
                 if (!supportedTypes.Contains(fileExt.ToLower()))
                 {
                     return null; // Unsupported file type
+                }
+
+                // Kiểm tra định dạng file
+                if (string.IsNullOrEmpty(fileExt) || !supportedTypes.Contains(fileExt.ToLower()))
+                {
+                    return null; // Nếu phần mở rộng không hợp lệ
                 }
                 else
                 {
@@ -121,6 +141,8 @@ namespace DoAnCoSo.Helpper
             }
             catch (Exception ex)
             {
+                // Log lỗi chi tiết
+                Console.WriteLine(ex.Message);
                 // Handle exceptions (optional: log error)
                 return null;
             }

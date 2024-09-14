@@ -6,8 +6,10 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using DoAnCoSo.Models;
+using Azure;
 using PagedList.Core;
 using DoAnCoSo.Helpper;
+using NuGet.Packaging.Signing;
 
 namespace DoAnCoSo.Areas.Admin.Controllers
 {
@@ -15,7 +17,11 @@ namespace DoAnCoSo.Areas.Admin.Controllers
     public class AdminProductsController : Controller
     {
         private readonly DataDoAnCoSoContext _context;
-        //Chức Năng thông báo Start
+
+        public AdminProductsController(DataDoAnCoSoContext context)
+        {
+            _context = context;
+        }
         protected void SetAlert(string message, string type)
         {
             TempData["AlertMessage"] = message;
@@ -30,8 +36,6 @@ namespace DoAnCoSo.Areas.Admin.Controllers
                 default: TempData["AlertType"] = ""; break;
             }
         }
-
-        //Chức Năng thông báo End
         // Thêm mới Filtter
 
         public IActionResult Filtter(int CatID = 0)
@@ -43,23 +47,16 @@ namespace DoAnCoSo.Areas.Admin.Controllers
             }
             return Json(new { status = "Success", redirectUrl = url });
         }
-        public AdminProductsController(DataDoAnCoSoContext context)
-        {
-            _context = context;
-        }
-
         // GET: Admin/AdminProducts
-        public async Task<IActionResult> Index(int page =1, int CatID = 0)
+        public async Task<IActionResult> Index(int page = 1, int CatID = 0)
         {
-            //var pageNumber = page == null || page <= 0 ? 1 : page.Value;
-            //var pageNumber = page;
             var pageNumber = page < 1 ? 1 : page;
             var pageSize = 6;
             List<Product> lsProducts = new List<Product>();
             if (CatID != 0)
             {
                 lsProducts = _context.Products
-                        .AsNoTracking()           
+                        .AsNoTracking()
                         .Where(p => p.CatId == CatID && p.ProId >= 1)
                         .Include(x => x.Cat)
                         .OrderByDescending(x => x.ProId)
@@ -111,7 +108,7 @@ namespace DoAnCoSo.Areas.Admin.Controllers
         // GET: Admin/AdminProducts/Create
         public IActionResult Create()
         {
-            ViewData["DanhMuc"] = new SelectList(_context.Categories, "CatId", "CatName");
+            ViewData["CatId"] = new SelectList(_context.Categories, "CatId", "CatName");
             return View();
         }
 
@@ -120,46 +117,17 @@ namespace DoAnCoSo.Areas.Admin.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("ProId,CatId,ProName,ProImage,ProPrice,Quantity,UnitlnStock,DateCreated,DateModified,BestSellers,Active,HomeFlag,ShortDes,MetaDesc,MeetaKey")] Product product, Microsoft.AspNetCore.Http.IFormFile ProImageFile)
+        public async Task<IActionResult> Create([Bind("ProId,CatId,ProName,ProImage,ProPrice,Quantity,UnitlnStock,DateCreated,DateModified,BestSellers,Active,HomeFlag,ShortDes,MetaDesc,MeetaKey")] Product product)
         {
             if (ModelState.IsValid)
             {
-                product.ProName = Utilities.ToTitleCase(product.ProName);
-                if (ProImageFile != null)
-                {
-                    string extension = Path.GetExtension(ProImageFile.FileName);
-                    string image = Utilities.SEOUrl(product.ProName) + extension;
-                    product.ProImage = await Utilities.UploadFile(ProImageFile, @"img-PhuTungXe(BanMoi)", image.ToLower());
-
-                    //
-                    if (string.IsNullOrEmpty(product.ProImage))
-                    {
-                        product.ProImage = "default.jpg"; // Sử dụng ảnh mặc định nếu không upload được
-                    }
-                    // Lưu tên file vào thuộc tính ProImage
-                    product.ProImage = ProImageFile.FileName;
-                    //
-                    var fileName = Path.GetFileName(ProImageFile.FileName);
-                    var filePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/img-PhuTungXe(BanMoi)", fileName);
-
-                    using (var stream = new FileStream(filePath, FileMode.Create))
-                    {
-                        await ProImageFile.CopyToAsync(stream);
-                    }
-                    product.ProImage = fileName; // Save the file name in the product object
-                    //
-                }
-                if (string.IsNullOrEmpty(product.ProImage)) product.ProImage = ".jpg";
-
-                //product.Alias = Utilities.SEOUrl(product.ProName);
-                product.DateModified = DateTime.Now;
-                product.DateCreated = DateTime.Now;
-
+            
                 _context.Add(product);
                 await _context.SaveChangesAsync();
+                SetAlert("Đã tạo thành công", "Success");
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["DanhMuc"] = new SelectList(_context.Categories, "CatId", "CatName", product.CatId);
+            ViewData["CatId"] = new SelectList(_context.Categories, "CatId", "CatName", product.CatId);
             return View(product);
         }
 
@@ -176,7 +144,7 @@ namespace DoAnCoSo.Areas.Admin.Controllers
             {
                 return NotFound();
             }
-            ViewData["DanhMuc"] = new SelectList(_context.Categories, "CatId", "CatName", product.CatId);
+            ViewData["CatId"] = new SelectList(_context.Categories, "CatId", "CatName", product.CatId);
             return View(product);
         }
 
@@ -196,6 +164,7 @@ namespace DoAnCoSo.Areas.Admin.Controllers
             {
                 try
                 {
+                   
                     _context.Update(product);
                     SetAlert("Đã sửa thành công", "Success");
                     await _context.SaveChangesAsync();
@@ -214,7 +183,7 @@ namespace DoAnCoSo.Areas.Admin.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["DanhMuc"] = new SelectList(_context.Categories, "CatId", "CatName", product.CatId);
+            ViewData["CatId"] = new SelectList(_context.Categories, "CatId", "CatName", product.CatId);
             return View(product);
         }
 
@@ -249,6 +218,7 @@ namespace DoAnCoSo.Areas.Admin.Controllers
             }
 
             await _context.SaveChangesAsync();
+            SetAlert("Đã Xóa thành công", "Success");
             return RedirectToAction(nameof(Index));
         }
 

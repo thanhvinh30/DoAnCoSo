@@ -36736,12 +36736,12 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\fontawesome-free-6.4.2-web\webfonts\fa-v4compatibility.woff2))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img-PhuTungXe(BanMoi)\PhuKienDanAo\Dè Trước - Dè Con - Mỏ cày - Carte\Oya - Dè trước Triumph Trident 660.jpg))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img-PhuTungXe(BanMoi)\Autotech - Đèn hậu tích hợp xi nhan Ducati Multistrada 1260.jpg))">
       <SourceType>Package</SourceType>
       <SourceId>DoAnCoSo</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/DoAnCoSo</BasePath>
-      <RelativePath>img-PhuTungXe(BanMoi)/PhuKienDanAo/Dè Trước - Dè Con - Mỏ cày - Carte/Oya - Dè trước Triumph Trident 660.jpg</RelativePath>
+      <RelativePath>img-PhuTungXe(BanMoi)/Autotech - Đèn hậu tích hợp xi nhan Ducati Multistrada 1260.jpg</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -36750,14 +36750,14 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img-PhuTungXe(BanMoi)\PhuKienDanAo\Dè Trước - Dè Con - Mỏ cày - Carte\Oya - Dè trước Triumph Trident 660.jpg))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img-PhuTungXe(BanMoi)\Autotech - Đèn hậu tích hợp xi nhan Ducati Multistrada 1260.jpg))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img-PhuTungXe(BanMoi)\PhuKienDanAo\Dè Trước - Dè Con - Mỏ cày - Carte\Oya - Dè trước Yamaha MT09 2021+.jpg))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img-PhuTungXe(BanMoi)\Autotech - Đèn hậu tích hợp xi nhan Ducati Panigale.jpg))">
       <SourceType>Package</SourceType>
       <SourceId>DoAnCoSo</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/DoAnCoSo</BasePath>
-      <RelativePath>img-PhuTungXe(BanMoi)/PhuKienDanAo/Dè Trước - Dè Con - Mỏ cày - Carte/Oya - Dè trước Yamaha MT09 2021+.jpg</RelativePath>
+      <RelativePath>img-PhuTungXe(BanMoi)/Autotech - Đèn hậu tích hợp xi nhan Ducati Panigale.jpg</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -36766,14 +36766,14 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img-PhuTungXe(BanMoi)\PhuKienDanAo\Dè Trước - Dè Con - Mỏ cày - Carte\Oya - Dè trước Yamaha MT09 2021+.jpg))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img-PhuTungXe(BanMoi)\Autotech - Đèn hậu tích hợp xi nhan Ducati Panigale.jpg))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img-PhuTungXe(BanMoi)\PhuKienDanAo\img10-02.jpg))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img-PhuTungXe(BanMoi)\Autotech - Đèn hậu tích hợp xi nhan Ducati Scrambler.jpg))">
       <SourceType>Package</SourceType>
       <SourceId>DoAnCoSo</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/DoAnCoSo</BasePath>
-      <RelativePath>img-PhuTungXe(BanMoi)/PhuKienDanAo/img10-02.jpg</RelativePath>
+      <RelativePath>img-PhuTungXe(BanMoi)/Autotech - Đèn hậu tích hợp xi nhan Ducati Scrambler.jpg</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -36782,14 +36782,14 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img-PhuTungXe(BanMoi)\PhuKienDanAo\img10-02.jpg))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img-PhuTungXe(BanMoi)\Autotech - Đèn hậu tích hợp xi nhan Ducati Scrambler.jpg))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img-PhuTungXe(BanMoi)\PhuKienDanAo\img11-02.jpg))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img-PhuTungXe(BanMoi)\Autotech - Đèn hậu tích hợp xi nhan Honda CBR1000 17 19.jpg))">
       <SourceType>Package</SourceType>
       <SourceId>DoAnCoSo</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/DoAnCoSo</BasePath>
-      <RelativePath>img-PhuTungXe(BanMoi)/PhuKienDanAo/img11-02.jpg</RelativePath>
+      <RelativePath>img-PhuTungXe(BanMoi)/Autotech - Đèn hậu tích hợp xi nhan Honda CBR1000 17 19.jpg</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -36798,14 +36798,14 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img-PhuTungXe(BanMoi)\PhuKienDanAo\img11-02.jpg))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img-PhuTungXe(BanMoi)\Autotech - Đèn hậu tích hợp xi nhan Honda CBR1000 17 19.jpg))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img-PhuTungXe(BanMoi)\PhuKienDanAo\img12-02.jpg))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img-PhuTungXe(BanMoi)\Brembo - Cùm côn dây billet.jpg))">
       <SourceType>Package</SourceType>
       <SourceId>DoAnCoSo</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/DoAnCoSo</BasePath>
-      <RelativePath>img-PhuTungXe(BanMoi)/PhuKienDanAo/img12-02.jpg</RelativePath>
+      <RelativePath>img-PhuTungXe(BanMoi)/Brembo - Cùm côn dây billet.jpg</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -36814,14 +36814,14 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img-PhuTungXe(BanMoi)\PhuKienDanAo\img12-02.jpg))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img-PhuTungXe(BanMoi)\Brembo - Cùm côn dây billet.jpg))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img-PhuTungXe(BanMoi)\PhuKienDanAo\img7-02.jpg))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img-PhuTungXe(BanMoi)\Brembo - Cùm côn thắng dầu billet Corsa Corta RR 16.jpg))">
       <SourceType>Package</SourceType>
       <SourceId>DoAnCoSo</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/DoAnCoSo</BasePath>
-      <RelativePath>img-PhuTungXe(BanMoi)/PhuKienDanAo/img7-02.jpg</RelativePath>
+      <RelativePath>img-PhuTungXe(BanMoi)/Brembo - Cùm côn thắng dầu billet Corsa Corta RR 16.jpg</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -36830,14 +36830,14 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img-PhuTungXe(BanMoi)\PhuKienDanAo\img7-02.jpg))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img-PhuTungXe(BanMoi)\Brembo - Cùm côn thắng dầu billet Corsa Corta RR 16.jpg))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img-PhuTungXe(BanMoi)\PhuKienDanAo\img8-02.jpg))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img-PhuTungXe(BanMoi)\Brembo - Dầu thắng DOT 4 500ml.jpg))">
       <SourceType>Package</SourceType>
       <SourceId>DoAnCoSo</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/DoAnCoSo</BasePath>
-      <RelativePath>img-PhuTungXe(BanMoi)/PhuKienDanAo/img8-02.jpg</RelativePath>
+      <RelativePath>img-PhuTungXe(BanMoi)/Brembo - Dầu thắng DOT 4 500ml.jpg</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -36846,14 +36846,14 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img-PhuTungXe(BanMoi)\PhuKienDanAo\img8-02.jpg))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img-PhuTungXe(BanMoi)\Brembo - Dầu thắng DOT 4 500ml.jpg))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img-PhuTungXe(BanMoi)\PhuKienDanAo\img9-02.jpg))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img-PhuTungXe(BanMoi)\Chigee AIO-5 Lite - CAM HÀNH TRÌNH VÀ Dàn ĐƯỜNG.jpg))">
       <SourceType>Package</SourceType>
       <SourceId>DoAnCoSo</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/DoAnCoSo</BasePath>
-      <RelativePath>img-PhuTungXe(BanMoi)/PhuKienDanAo/img9-02.jpg</RelativePath>
+      <RelativePath>img-PhuTungXe(BanMoi)/Chigee AIO-5 Lite - CAM HÀNH TRÌNH VÀ Dàn ĐƯỜNG.jpg</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -36862,14 +36862,14 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img-PhuTungXe(BanMoi)\PhuKienDanAo\img9-02.jpg))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img-PhuTungXe(BanMoi)\Chigee AIO-5 Lite - CAM HÀNH TRÌNH VÀ Dàn ĐƯỜNG.jpg))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img-PhuTungXe(BanMoi)\PhuKienDanChan\img13-03.jpg))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img-PhuTungXe(BanMoi)\CNC Racing - Cánh gió carbon Ducati Multistrada V4.jpg))">
       <SourceType>Package</SourceType>
       <SourceId>DoAnCoSo</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/DoAnCoSo</BasePath>
-      <RelativePath>img-PhuTungXe(BanMoi)/PhuKienDanChan/img13-03.jpg</RelativePath>
+      <RelativePath>img-PhuTungXe(BanMoi)/CNC Racing - Cánh gió carbon Ducati Multistrada V4.jpg</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -36878,14 +36878,14 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img-PhuTungXe(BanMoi)\PhuKienDanChan\img13-03.jpg))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img-PhuTungXe(BanMoi)\CNC Racing - Cánh gió carbon Ducati Multistrada V4.jpg))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img-PhuTungXe(BanMoi)\PhuKienDanChan\img14-03.jpg))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img-PhuTungXe(BanMoi)\Dau-phanh-dau-thang-IPONE-Brake-DOT-5.1-500ml.png))">
       <SourceType>Package</SourceType>
       <SourceId>DoAnCoSo</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/DoAnCoSo</BasePath>
-      <RelativePath>img-PhuTungXe(BanMoi)/PhuKienDanChan/img14-03.jpg</RelativePath>
+      <RelativePath>img-PhuTungXe(BanMoi)/Dau-phanh-dau-thang-IPONE-Brake-DOT-5.1-500ml.png</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -36894,14 +36894,14 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img-PhuTungXe(BanMoi)\PhuKienDanChan\img14-03.jpg))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img-PhuTungXe(BanMoi)\Dau-phanh-dau-thang-IPONE-Brake-DOT-5.1-500ml.png))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img-PhuTungXe(BanMoi)\PhuKienDanChan\img15-033.jpg))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img-PhuTungXe(BanMoi)\Discacciati - Cùm côn billet Ø16×19 dầu Dot 4.jpg))">
       <SourceType>Package</SourceType>
       <SourceId>DoAnCoSo</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/DoAnCoSo</BasePath>
-      <RelativePath>img-PhuTungXe(BanMoi)/PhuKienDanChan/img15-033.jpg</RelativePath>
+      <RelativePath>img-PhuTungXe(BanMoi)/Discacciati - Cùm côn billet Ø16×19 dầu Dot 4.jpg</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -36910,14 +36910,14 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img-PhuTungXe(BanMoi)\PhuKienDanChan\img15-033.jpg))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img-PhuTungXe(BanMoi)\Discacciati - Cùm côn billet Ø16×19 dầu Dot 4.jpg))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img-PhuTungXe(BanMoi)\PhuKienDanChan\img16-03.jpg))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img-PhuTungXe(BanMoi)\Evotech - Bảo vệ tay phanh côn Ducati DesertX.jpg))">
       <SourceType>Package</SourceType>
       <SourceId>DoAnCoSo</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/DoAnCoSo</BasePath>
-      <RelativePath>img-PhuTungXe(BanMoi)/PhuKienDanChan/img16-03.jpg</RelativePath>
+      <RelativePath>img-PhuTungXe(BanMoi)/Evotech - Bảo vệ tay phanh côn Ducati DesertX.jpg</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -36926,14 +36926,14 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img-PhuTungXe(BanMoi)\PhuKienDanChan\img16-03.jpg))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img-PhuTungXe(BanMoi)\Evotech - Bảo vệ tay phanh côn Ducati DesertX.jpg))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img-PhuTungXe(BanMoi)\PhuKienDanChan\img17-03.jpg))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img-PhuTungXe(BanMoi)\GaleSpeed - Cặp mâm CNC Kawasaki Z400 Ninja 400.jpg))">
       <SourceType>Package</SourceType>
       <SourceId>DoAnCoSo</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/DoAnCoSo</BasePath>
-      <RelativePath>img-PhuTungXe(BanMoi)/PhuKienDanChan/img17-03.jpg</RelativePath>
+      <RelativePath>img-PhuTungXe(BanMoi)/GaleSpeed - Cặp mâm CNC Kawasaki Z400 Ninja 400.jpg</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -36942,14 +36942,14 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img-PhuTungXe(BanMoi)\PhuKienDanChan\img17-03.jpg))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img-PhuTungXe(BanMoi)\GaleSpeed - Cặp mâm CNC Kawasaki Z400 Ninja 400.jpg))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img-PhuTungXe(BanMoi)\PhuKienDanChan\img18-03.jpg))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img-PhuTungXe(BanMoi)\GaleSpeed - Cặp mâm CNC Moto 3 vừa Exicter 150.jpg))">
       <SourceType>Package</SourceType>
       <SourceId>DoAnCoSo</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/DoAnCoSo</BasePath>
-      <RelativePath>img-PhuTungXe(BanMoi)/PhuKienDanChan/img18-03.jpg</RelativePath>
+      <RelativePath>img-PhuTungXe(BanMoi)/GaleSpeed - Cặp mâm CNC Moto 3 vừa Exicter 150.jpg</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -36958,14 +36958,14 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img-PhuTungXe(BanMoi)\PhuKienDanChan\img18-03.jpg))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img-PhuTungXe(BanMoi)\GaleSpeed - Cặp mâm CNC Moto 3 vừa Exicter 150.jpg))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img-PhuTungXe(BanMoi)\PhuKienDanChan\Phuộc Xe\Shark X2 - Phuộc sau chỉnh điện Honda SH350i.jpg))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img-PhuTungXe(BanMoi)\img12-02.jpg))">
       <SourceType>Package</SourceType>
       <SourceId>DoAnCoSo</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/DoAnCoSo</BasePath>
-      <RelativePath>img-PhuTungXe(BanMoi)/PhuKienDanChan/Phuộc Xe/Shark X2 - Phuộc sau chỉnh điện Honda SH350i.jpg</RelativePath>
+      <RelativePath>img-PhuTungXe(BanMoi)/img12-02.jpg</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -36974,14 +36974,14 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img-PhuTungXe(BanMoi)\PhuKienDanChan\Phuộc Xe\Shark X2 - Phuộc sau chỉnh điện Honda SH350i.jpg))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img-PhuTungXe(BanMoi)\img12-02.jpg))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img-PhuTungXe(BanMoi)\PhuKienDanChan\Phuộc Xe\Shark X2 - Phuộc sau Yamaha Xmax 300.jpg))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img-PhuTungXe(BanMoi)\img17-03.jpg))">
       <SourceType>Package</SourceType>
       <SourceId>DoAnCoSo</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/DoAnCoSo</BasePath>
-      <RelativePath>img-PhuTungXe(BanMoi)/PhuKienDanChan/Phuộc Xe/Shark X2 - Phuộc sau Yamaha Xmax 300.jpg</RelativePath>
+      <RelativePath>img-PhuTungXe(BanMoi)/img17-03.jpg</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -36990,14 +36990,14 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img-PhuTungXe(BanMoi)\PhuKienDanChan\Phuộc Xe\Shark X2 - Phuộc sau Yamaha Xmax 300.jpg))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img-PhuTungXe(BanMoi)\img17-03.jpg))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img-PhuTungXe(BanMoi)\PhuKienDanDau\img1-01.jpg))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img-PhuTungXe(BanMoi)\img2-01.jpg))">
       <SourceType>Package</SourceType>
       <SourceId>DoAnCoSo</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/DoAnCoSo</BasePath>
-      <RelativePath>img-PhuTungXe(BanMoi)/PhuKienDanDau/img1-01.jpg</RelativePath>
+      <RelativePath>img-PhuTungXe(BanMoi)/img2-01.jpg</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -37006,14 +37006,14 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img-PhuTungXe(BanMoi)\PhuKienDanDau\img1-01.jpg))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img-PhuTungXe(BanMoi)\img2-01.jpg))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img-PhuTungXe(BanMoi)\PhuKienDanDau\img2-01.jpg))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img-PhuTungXe(BanMoi)\img20-04.jpg))">
       <SourceType>Package</SourceType>
       <SourceId>DoAnCoSo</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/DoAnCoSo</BasePath>
-      <RelativePath>img-PhuTungXe(BanMoi)/PhuKienDanDau/img2-01.jpg</RelativePath>
+      <RelativePath>img-PhuTungXe(BanMoi)/img20-04.jpg</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -37022,14 +37022,14 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img-PhuTungXe(BanMoi)\PhuKienDanDau\img2-01.jpg))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img-PhuTungXe(BanMoi)\img20-04.jpg))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img-PhuTungXe(BanMoi)\PhuKienDanDau\img3-01.jpg))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img-PhuTungXe(BanMoi)\img23-04.jpg))">
       <SourceType>Package</SourceType>
       <SourceId>DoAnCoSo</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/DoAnCoSo</BasePath>
-      <RelativePath>img-PhuTungXe(BanMoi)/PhuKienDanDau/img3-01.jpg</RelativePath>
+      <RelativePath>img-PhuTungXe(BanMoi)/img23-04.jpg</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -37038,14 +37038,14 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img-PhuTungXe(BanMoi)\PhuKienDanDau\img3-01.jpg))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img-PhuTungXe(BanMoi)\img23-04.jpg))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img-PhuTungXe(BanMoi)\PhuKienDanDau\img4-01.jpg))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img-PhuTungXe(BanMoi)\img24-04.jpg))">
       <SourceType>Package</SourceType>
       <SourceId>DoAnCoSo</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/DoAnCoSo</BasePath>
-      <RelativePath>img-PhuTungXe(BanMoi)/PhuKienDanDau/img4-01.jpg</RelativePath>
+      <RelativePath>img-PhuTungXe(BanMoi)/img24-04.jpg</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -37054,14 +37054,14 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img-PhuTungXe(BanMoi)\PhuKienDanDau\img4-01.jpg))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img-PhuTungXe(BanMoi)\img24-04.jpg))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img-PhuTungXe(BanMoi)\PhuKienDanDau\img5-01.jpg))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img-PhuTungXe(BanMoi)\img25-05.jpg))">
       <SourceType>Package</SourceType>
       <SourceId>DoAnCoSo</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/DoAnCoSo</BasePath>
-      <RelativePath>img-PhuTungXe(BanMoi)/PhuKienDanDau/img5-01.jpg</RelativePath>
+      <RelativePath>img-PhuTungXe(BanMoi)/img25-05.jpg</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -37070,14 +37070,14 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img-PhuTungXe(BanMoi)\PhuKienDanDau\img5-01.jpg))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img-PhuTungXe(BanMoi)\img25-05.jpg))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img-PhuTungXe(BanMoi)\PhuKienDanDau\img6-01.jpg))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img-PhuTungXe(BanMoi)\img26-05.jpg))">
       <SourceType>Package</SourceType>
       <SourceId>DoAnCoSo</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/DoAnCoSo</BasePath>
-      <RelativePath>img-PhuTungXe(BanMoi)/PhuKienDanDau/img6-01.jpg</RelativePath>
+      <RelativePath>img-PhuTungXe(BanMoi)/img26-05.jpg</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -37086,14 +37086,14 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img-PhuTungXe(BanMoi)\PhuKienDanDau\img6-01.jpg))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img-PhuTungXe(BanMoi)\img26-05.jpg))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img-PhuTungXe(BanMoi)\PhuKienDanDau\Tay Phanh - Tay Côn\Discacciati - Cùm côn billet Ø16×19 dầu Dot 4.jpg))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img-PhuTungXe(BanMoi)\img28-05.jpg))">
       <SourceType>Package</SourceType>
       <SourceId>DoAnCoSo</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/DoAnCoSo</BasePath>
-      <RelativePath>img-PhuTungXe(BanMoi)/PhuKienDanDau/Tay Phanh - Tay Côn/Discacciati - Cùm côn billet Ø16×19 dầu Dot 4.jpg</RelativePath>
+      <RelativePath>img-PhuTungXe(BanMoi)/img28-05.jpg</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -37102,14 +37102,14 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img-PhuTungXe(BanMoi)\PhuKienDanDau\Tay Phanh - Tay Côn\Discacciati - Cùm côn billet Ø16×19 dầu Dot 4.jpg))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img-PhuTungXe(BanMoi)\img28-05.jpg))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img-PhuTungXe(BanMoi)\PhuKienDanDau\Tay Phanh - Tay Côn\Evotech - Bảo vệ tay phanh côn Ducati DesertX.jpg))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img-PhuTungXe(BanMoi)\Koso USA - Đồng hồ điện tử RX3 Honda Monkey 125.jpg))">
       <SourceType>Package</SourceType>
       <SourceId>DoAnCoSo</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/DoAnCoSo</BasePath>
-      <RelativePath>img-PhuTungXe(BanMoi)/PhuKienDanDau/Tay Phanh - Tay Côn/Evotech - Bảo vệ tay phanh côn Ducati DesertX.jpg</RelativePath>
+      <RelativePath>img-PhuTungXe(BanMoi)/Koso USA - Đồng hồ điện tử RX3 Honda Monkey 125.jpg</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -37118,14 +37118,14 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img-PhuTungXe(BanMoi)\PhuKienDanDau\Tay Phanh - Tay Côn\Evotech - Bảo vệ tay phanh côn Ducati DesertX.jpg))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img-PhuTungXe(BanMoi)\Koso USA - Đồng hồ điện tử RX3 Honda Monkey 125.jpg))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img-PhuTungXe(BanMoi)\PhuKienDanDen\Đèn Hậu\Autotech - Đèn hậu tích hợp xi nhan Ducati Multistrada 1260.jpg))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img-PhuTungXe(BanMoi)\Magura - Dầu Mineral oil (dầu thực vật)(100ml).jpg))">
       <SourceType>Package</SourceType>
       <SourceId>DoAnCoSo</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/DoAnCoSo</BasePath>
-      <RelativePath>img-PhuTungXe(BanMoi)/PhuKienDanDen/Đèn Hậu/Autotech - Đèn hậu tích hợp xi nhan Ducati Multistrada 1260.jpg</RelativePath>
+      <RelativePath>img-PhuTungXe(BanMoi)/Magura - Dầu Mineral oil (dầu thực vật)(100ml).jpg</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -37134,14 +37134,14 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img-PhuTungXe(BanMoi)\PhuKienDanDen\Đèn Hậu\Autotech - Đèn hậu tích hợp xi nhan Ducati Multistrada 1260.jpg))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img-PhuTungXe(BanMoi)\Magura - Dầu Mineral oil (dầu thực vật)(100ml).jpg))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img-PhuTungXe(BanMoi)\PhuKienDanDen\Đèn Hậu\Autotech - Đèn hậu tích hợp xi nhan Ducati Panigale.jpg))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img-PhuTungXe(BanMoi)\Malossi - Bi nồi 19gr Honda SH300i Ø 23X18 GR.19.jpg))">
       <SourceType>Package</SourceType>
       <SourceId>DoAnCoSo</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/DoAnCoSo</BasePath>
-      <RelativePath>img-PhuTungXe(BanMoi)/PhuKienDanDen/Đèn Hậu/Autotech - Đèn hậu tích hợp xi nhan Ducati Panigale.jpg</RelativePath>
+      <RelativePath>img-PhuTungXe(BanMoi)/Malossi - Bi nồi 19gr Honda SH300i Ø 23X18 GR.19.jpg</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -37150,14 +37150,14 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img-PhuTungXe(BanMoi)\PhuKienDanDen\Đèn Hậu\Autotech - Đèn hậu tích hợp xi nhan Ducati Panigale.jpg))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img-PhuTungXe(BanMoi)\Malossi - Bi nồi 19gr Honda SH300i Ø 23X18 GR.19.jpg))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img-PhuTungXe(BanMoi)\PhuKienDanDen\Đèn Hậu\Autotech - Đèn hậu tích hợp xi nhan Ducati Scrambler.jpg))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img-PhuTungXe(BanMoi)\Malossi - Nồi trước BMW C400X GT.jpg))">
       <SourceType>Package</SourceType>
       <SourceId>DoAnCoSo</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/DoAnCoSo</BasePath>
-      <RelativePath>img-PhuTungXe(BanMoi)/PhuKienDanDen/Đèn Hậu/Autotech - Đèn hậu tích hợp xi nhan Ducati Scrambler.jpg</RelativePath>
+      <RelativePath>img-PhuTungXe(BanMoi)/Malossi - Nồi trước BMW C400X GT.jpg</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -37166,14 +37166,14 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img-PhuTungXe(BanMoi)\PhuKienDanDen\Đèn Hậu\Autotech - Đèn hậu tích hợp xi nhan Ducati Scrambler.jpg))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img-PhuTungXe(BanMoi)\Malossi - Nồi trước BMW C400X GT.jpg))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img-PhuTungXe(BanMoi)\PhuKienDanDen\Đèn Hậu\Autotech - Đèn hậu tích hợp xi nhan Honda CBR1000 17 19.jpg))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img-PhuTungXe(BanMoi)\Malossi - Đế quạt gió SRGT200 Vespa 150.jpg))">
       <SourceType>Package</SourceType>
       <SourceId>DoAnCoSo</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/DoAnCoSo</BasePath>
-      <RelativePath>img-PhuTungXe(BanMoi)/PhuKienDanDen/Đèn Hậu/Autotech - Đèn hậu tích hợp xi nhan Honda CBR1000 17 19.jpg</RelativePath>
+      <RelativePath>img-PhuTungXe(BanMoi)/Malossi - Đế quạt gió SRGT200 Vespa 150.jpg</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -37182,14 +37182,14 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img-PhuTungXe(BanMoi)\PhuKienDanDen\Đèn Hậu\Autotech - Đèn hậu tích hợp xi nhan Honda CBR1000 17 19.jpg))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img-PhuTungXe(BanMoi)\Malossi - Đế quạt gió SRGT200 Vespa 150.jpg))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img-PhuTungXe(BanMoi)\PhuKienDanDen\Đèn Signal\NRC - Xi nhan Ducati Streetfighter V4-V2.jpg))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img-PhuTungXe(BanMoi)\MAXIMA - Chain Wax Bình Xịt Bôi Trơn &amp; Dưỡng Sên.jpg))">
       <SourceType>Package</SourceType>
       <SourceId>DoAnCoSo</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/DoAnCoSo</BasePath>
-      <RelativePath>img-PhuTungXe(BanMoi)/PhuKienDanDen/Đèn Signal/NRC - Xi nhan Ducati Streetfighter V4-V2.jpg</RelativePath>
+      <RelativePath>img-PhuTungXe(BanMoi)/MAXIMA - Chain Wax Bình Xịt Bôi Trơn &amp; Dưỡng Sên.jpg</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -37198,14 +37198,14 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img-PhuTungXe(BanMoi)\PhuKienDanDen\Đèn Signal\NRC - Xi nhan Ducati Streetfighter V4-V2.jpg))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img-PhuTungXe(BanMoi)\MAXIMA - Chain Wax Bình Xịt Bôi Trơn &amp; Dưỡng Sên.jpg))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img-PhuTungXe(BanMoi)\PhuKienDanDen\Đèn Signal\NRC - Xi nhan Kawasaki ZX10R-R 21 22.jpg))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img-PhuTungXe(BanMoi)\Maxima - Mỡ bò chống nước.jpg))">
       <SourceType>Package</SourceType>
       <SourceId>DoAnCoSo</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/DoAnCoSo</BasePath>
-      <RelativePath>img-PhuTungXe(BanMoi)/PhuKienDanDen/Đèn Signal/NRC - Xi nhan Kawasaki ZX10R-R 21 22.jpg</RelativePath>
+      <RelativePath>img-PhuTungXe(BanMoi)/Maxima - Mỡ bò chống nước.jpg</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -37214,14 +37214,14 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img-PhuTungXe(BanMoi)\PhuKienDanDen\Đèn Signal\NRC - Xi nhan Kawasaki ZX10R-R 21 22.jpg))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img-PhuTungXe(BanMoi)\Maxima - Mỡ bò chống nước.jpg))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img-PhuTungXe(BanMoi)\PhuKienDanDen\Đèn Signal\NRC - Xi nhan Yamaha R1 2015 - 2019.jpg))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img-PhuTungXe(BanMoi)\MIVV - Lon Delta race black.jpg))">
       <SourceType>Package</SourceType>
       <SourceId>DoAnCoSo</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/DoAnCoSo</BasePath>
-      <RelativePath>img-PhuTungXe(BanMoi)/PhuKienDanDen/Đèn Signal/NRC - Xi nhan Yamaha R1 2015 - 2019.jpg</RelativePath>
+      <RelativePath>img-PhuTungXe(BanMoi)/MIVV - Lon Delta race black.jpg</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -37230,14 +37230,14 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img-PhuTungXe(BanMoi)\PhuKienDanDen\Đèn Signal\NRC - Xi nhan Yamaha R1 2015 - 2019.jpg))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img-PhuTungXe(BanMoi)\MIVV - Lon Delta race black.jpg))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img-PhuTungXe(BanMoi)\PhuKienDanDen\Đèn Signal\Otilli - Xi nhan trước BMW S1000RR 2019+.jpg))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img-PhuTungXe(BanMoi)\MOS - mâm CNC cho Vespa Sprint Premavera 125-150.jpg))">
       <SourceType>Package</SourceType>
       <SourceId>DoAnCoSo</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/DoAnCoSo</BasePath>
-      <RelativePath>img-PhuTungXe(BanMoi)/PhuKienDanDen/Đèn Signal/Otilli - Xi nhan trước BMW S1000RR 2019+.jpg</RelativePath>
+      <RelativePath>img-PhuTungXe(BanMoi)/MOS - mâm CNC cho Vespa Sprint Premavera 125-150.jpg</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -37246,14 +37246,14 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img-PhuTungXe(BanMoi)\PhuKienDanDen\Đèn Signal\Otilli - Xi nhan trước BMW S1000RR 2019+.jpg))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img-PhuTungXe(BanMoi)\MOS - mâm CNC cho Vespa Sprint Premavera 125-150.jpg))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img-PhuTungXe(BanMoi)\PhuKienDanMay\img19-04.jpg))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img-PhuTungXe(BanMoi)\NRC - Xi nhan Ducati Streetfighter V4-V2.jpg))">
       <SourceType>Package</SourceType>
       <SourceId>DoAnCoSo</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/DoAnCoSo</BasePath>
-      <RelativePath>img-PhuTungXe(BanMoi)/PhuKienDanMay/img19-04.jpg</RelativePath>
+      <RelativePath>img-PhuTungXe(BanMoi)/NRC - Xi nhan Ducati Streetfighter V4-V2.jpg</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -37262,14 +37262,14 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img-PhuTungXe(BanMoi)\PhuKienDanMay\img19-04.jpg))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img-PhuTungXe(BanMoi)\NRC - Xi nhan Ducati Streetfighter V4-V2.jpg))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img-PhuTungXe(BanMoi)\PhuKienDanMay\img20-04.jpg))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img-PhuTungXe(BanMoi)\NRC - Xi nhan Kawasaki ZX10R-R 21 22.jpg))">
       <SourceType>Package</SourceType>
       <SourceId>DoAnCoSo</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/DoAnCoSo</BasePath>
-      <RelativePath>img-PhuTungXe(BanMoi)/PhuKienDanMay/img20-04.jpg</RelativePath>
+      <RelativePath>img-PhuTungXe(BanMoi)/NRC - Xi nhan Kawasaki ZX10R-R 21 22.jpg</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -37278,14 +37278,14 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img-PhuTungXe(BanMoi)\PhuKienDanMay\img20-04.jpg))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img-PhuTungXe(BanMoi)\NRC - Xi nhan Kawasaki ZX10R-R 21 22.jpg))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img-PhuTungXe(BanMoi)\PhuKienDanMay\img21-04.jpg))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img-PhuTungXe(BanMoi)\NRC - Xi nhan Yamaha R1 2015 - 2019.jpg))">
       <SourceType>Package</SourceType>
       <SourceId>DoAnCoSo</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/DoAnCoSo</BasePath>
-      <RelativePath>img-PhuTungXe(BanMoi)/PhuKienDanMay/img21-04.jpg</RelativePath>
+      <RelativePath>img-PhuTungXe(BanMoi)/NRC - Xi nhan Yamaha R1 2015 - 2019.jpg</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -37294,14 +37294,14 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img-PhuTungXe(BanMoi)\PhuKienDanMay\img21-04.jpg))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img-PhuTungXe(BanMoi)\NRC - Xi nhan Yamaha R1 2015 - 2019.jpg))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img-PhuTungXe(BanMoi)\PhuKienDanMay\img22-04.jpg))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img-PhuTungXe(BanMoi)\Ohlins - Phuộc sau Triumph Trident 660 ( TR 135).jpg))">
       <SourceType>Package</SourceType>
       <SourceId>DoAnCoSo</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/DoAnCoSo</BasePath>
-      <RelativePath>img-PhuTungXe(BanMoi)/PhuKienDanMay/img22-04.jpg</RelativePath>
+      <RelativePath>img-PhuTungXe(BanMoi)/Ohlins - Phuộc sau Triumph Trident 660 ( TR 135).jpg</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -37310,14 +37310,14 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img-PhuTungXe(BanMoi)\PhuKienDanMay\img22-04.jpg))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img-PhuTungXe(BanMoi)\Ohlins - Phuộc sau Triumph Trident 660 ( TR 135).jpg))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img-PhuTungXe(BanMoi)\PhuKienDanMay\img23-04.jpg))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img-PhuTungXe(BanMoi)\Otilli - Xi nhan trước BMW S1000RR 2019+.jpg))">
       <SourceType>Package</SourceType>
       <SourceId>DoAnCoSo</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/DoAnCoSo</BasePath>
-      <RelativePath>img-PhuTungXe(BanMoi)/PhuKienDanMay/img23-04.jpg</RelativePath>
+      <RelativePath>img-PhuTungXe(BanMoi)/Otilli - Xi nhan trước BMW S1000RR 2019+.jpg</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -37326,14 +37326,14 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img-PhuTungXe(BanMoi)\PhuKienDanMay\img23-04.jpg))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img-PhuTungXe(BanMoi)\Otilli - Xi nhan trước BMW S1000RR 2019+.jpg))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img-PhuTungXe(BanMoi)\PhuKienDanMay\img24-04.jpg))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img-PhuTungXe(BanMoi)\Oya - Che két Triumph Trident 660.jpg))">
       <SourceType>Package</SourceType>
       <SourceId>DoAnCoSo</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/DoAnCoSo</BasePath>
-      <RelativePath>img-PhuTungXe(BanMoi)/PhuKienDanMay/img24-04.jpg</RelativePath>
+      <RelativePath>img-PhuTungXe(BanMoi)/Oya - Che két Triumph Trident 660.jpg</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -37342,14 +37342,14 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img-PhuTungXe(BanMoi)\PhuKienDanMay\img24-04.jpg))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img-PhuTungXe(BanMoi)\Oya - Che két Triumph Trident 660.jpg))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img-PhuTungXe(BanMoi)\PhuKienDanMay\Pô &amp; Cổ Pô - Phụ kiện\MIVV - Lon Delta race black.jpg))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img-PhuTungXe(BanMoi)\Oya - Dè con + carte BMW S1000R 2021 S1000RR 2019+.jpg))">
       <SourceType>Package</SourceType>
       <SourceId>DoAnCoSo</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/DoAnCoSo</BasePath>
-      <RelativePath>img-PhuTungXe(BanMoi)/PhuKienDanMay/Pô &amp; Cổ Pô - Phụ kiện/MIVV - Lon Delta race black.jpg</RelativePath>
+      <RelativePath>img-PhuTungXe(BanMoi)/Oya - Dè con + carte BMW S1000R 2021 S1000RR 2019+.jpg</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -37358,14 +37358,14 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img-PhuTungXe(BanMoi)\PhuKienDanMay\Pô &amp; Cổ Pô - Phụ kiện\MIVV - Lon Delta race black.jpg))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img-PhuTungXe(BanMoi)\Oya - Dè con + carte BMW S1000R 2021 S1000RR 2019+.jpg))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img-PhuTungXe(BanMoi)\PhuKienDanMay\Pô &amp; Cổ Pô - Phụ kiện\Yoshimura - Pô full system R77 cho Honda ADV 150.jpg))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img-PhuTungXe(BanMoi)\Oya - Dè trước Triumph Trident 660.jpg))">
       <SourceType>Package</SourceType>
       <SourceId>DoAnCoSo</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/DoAnCoSo</BasePath>
-      <RelativePath>img-PhuTungXe(BanMoi)/PhuKienDanMay/Pô &amp; Cổ Pô - Phụ kiện/Yoshimura - Pô full system R77 cho Honda ADV 150.jpg</RelativePath>
+      <RelativePath>img-PhuTungXe(BanMoi)/Oya - Dè trước Triumph Trident 660.jpg</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -37374,14 +37374,14 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img-PhuTungXe(BanMoi)\PhuKienDanMay\Pô &amp; Cổ Pô - Phụ kiện\Yoshimura - Pô full system R77 cho Honda ADV 150.jpg))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img-PhuTungXe(BanMoi)\Oya - Dè trước Triumph Trident 660.jpg))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img-PhuTungXe(BanMoi)\PhuKienKhac\img25-05.jpg))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img-PhuTungXe(BanMoi)\Oya - Dè trước Yamaha MT09 2021+.jpg))">
       <SourceType>Package</SourceType>
       <SourceId>DoAnCoSo</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/DoAnCoSo</BasePath>
-      <RelativePath>img-PhuTungXe(BanMoi)/PhuKienKhac/img25-05.jpg</RelativePath>
+      <RelativePath>img-PhuTungXe(BanMoi)/Oya - Dè trước Yamaha MT09 2021+.jpg</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -37390,14 +37390,14 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img-PhuTungXe(BanMoi)\PhuKienKhac\img25-05.jpg))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img-PhuTungXe(BanMoi)\Oya - Dè trước Yamaha MT09 2021+.jpg))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img-PhuTungXe(BanMoi)\PhuKienKhac\img26-05.jpg))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img-PhuTungXe(BanMoi)\OZ - Mâm nhôm cho BMW S1000R 21+S1000RR 2019.jpg))">
       <SourceType>Package</SourceType>
       <SourceId>DoAnCoSo</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/DoAnCoSo</BasePath>
-      <RelativePath>img-PhuTungXe(BanMoi)/PhuKienKhac/img26-05.jpg</RelativePath>
+      <RelativePath>img-PhuTungXe(BanMoi)/OZ - Mâm nhôm cho BMW S1000R 21+S1000RR 2019.jpg</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -37406,14 +37406,14 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img-PhuTungXe(BanMoi)\PhuKienKhac\img26-05.jpg))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img-PhuTungXe(BanMoi)\OZ - Mâm nhôm cho BMW S1000R 21+S1000RR 2019.jpg))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img-PhuTungXe(BanMoi)\PhuKienKhac\img27-05.jpg))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img-PhuTungXe(BanMoi)\Puig - Cánh gió GP Yamaha R1 2020+.jpg))">
       <SourceType>Package</SourceType>
       <SourceId>DoAnCoSo</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/DoAnCoSo</BasePath>
-      <RelativePath>img-PhuTungXe(BanMoi)/PhuKienKhac/img27-05.jpg</RelativePath>
+      <RelativePath>img-PhuTungXe(BanMoi)/Puig - Cánh gió GP Yamaha R1 2020+.jpg</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -37422,14 +37422,14 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img-PhuTungXe(BanMoi)\PhuKienKhac\img27-05.jpg))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img-PhuTungXe(BanMoi)\Puig - Cánh gió GP Yamaha R1 2020+.jpg))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img-PhuTungXe(BanMoi)\PhuKienKhac\img28-05.jpg))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img-PhuTungXe(BanMoi)\Puig - Cánh gió đầu đèn Yamaha MT09 2021+.jpg))">
       <SourceType>Package</SourceType>
       <SourceId>DoAnCoSo</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/DoAnCoSo</BasePath>
-      <RelativePath>img-PhuTungXe(BanMoi)/PhuKienKhac/img28-05.jpg</RelativePath>
+      <RelativePath>img-PhuTungXe(BanMoi)/Puig - Cánh gió đầu đèn Yamaha MT09 2021+.jpg</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -37438,14 +37438,14 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img-PhuTungXe(BanMoi)\PhuKienKhac\img28-05.jpg))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img-PhuTungXe(BanMoi)\Puig - Cánh gió đầu đèn Yamaha MT09 2021+.jpg))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img-PhuTungXe(BanMoi)\PhuKienKhac\New folder\Black-800x800.jpg.jpg))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img-PhuTungXe(BanMoi)\RG Racing - Bảo vệ chóa đèn cho BMW R1200GS R1250GS.jpg))">
       <SourceType>Package</SourceType>
       <SourceId>DoAnCoSo</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/DoAnCoSo</BasePath>
-      <RelativePath>img-PhuTungXe(BanMoi)/PhuKienKhac/New folder/Black-800x800.jpg.jpg</RelativePath>
+      <RelativePath>img-PhuTungXe(BanMoi)/RG Racing - Bảo vệ chóa đèn cho BMW R1200GS R1250GS.jpg</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -37454,14 +37454,14 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img-PhuTungXe(BanMoi)\PhuKienKhac\New folder\Black-800x800.jpg.jpg))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img-PhuTungXe(BanMoi)\RG Racing - Bảo vệ chóa đèn cho BMW R1200GS R1250GS.jpg))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img-PhuTungXe(BanMoi)\PhuKienKhac\New folder\Brembo - Dầu thắng DOT 4 500ml.jpg))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img-PhuTungXe(BanMoi)\Shark X2 - Phuộc sau chỉnh điện Honda SH350i.jpg))">
       <SourceType>Package</SourceType>
       <SourceId>DoAnCoSo</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/DoAnCoSo</BasePath>
-      <RelativePath>img-PhuTungXe(BanMoi)/PhuKienKhac/New folder/Brembo - Dầu thắng DOT 4 500ml.jpg</RelativePath>
+      <RelativePath>img-PhuTungXe(BanMoi)/Shark X2 - Phuộc sau chỉnh điện Honda SH350i.jpg</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -37470,14 +37470,14 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img-PhuTungXe(BanMoi)\PhuKienKhac\New folder\Brembo - Dầu thắng DOT 4 500ml.jpg))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img-PhuTungXe(BanMoi)\Shark X2 - Phuộc sau chỉnh điện Honda SH350i.jpg))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img-PhuTungXe(BanMoi)\PhuKienKhac\New folder\Dau-phanh-dau-thang-IPONE-Brake-DOT-5.1-500ml.png))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img-PhuTungXe(BanMoi)\Shark X2 - Phuộc sau Yamaha Xmax 300.jpg))">
       <SourceType>Package</SourceType>
       <SourceId>DoAnCoSo</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/DoAnCoSo</BasePath>
-      <RelativePath>img-PhuTungXe(BanMoi)/PhuKienKhac/New folder/Dau-phanh-dau-thang-IPONE-Brake-DOT-5.1-500ml.png</RelativePath>
+      <RelativePath>img-PhuTungXe(BanMoi)/Shark X2 - Phuộc sau Yamaha Xmax 300.jpg</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -37486,14 +37486,14 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img-PhuTungXe(BanMoi)\PhuKienKhac\New folder\Dau-phanh-dau-thang-IPONE-Brake-DOT-5.1-500ml.png))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img-PhuTungXe(BanMoi)\Shark X2 - Phuộc sau Yamaha Xmax 300.jpg))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img-PhuTungXe(BanMoi)\PhuKienKhac\New folder\Magura - Dầu Mineral oil (dầu thực vật)(100ml).jpg))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img-PhuTungXe(BanMoi)\Yoshimura - Pô full system R77 cho Honda ADV 150.jpg))">
       <SourceType>Package</SourceType>
       <SourceId>DoAnCoSo</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/DoAnCoSo</BasePath>
-      <RelativePath>img-PhuTungXe(BanMoi)/PhuKienKhac/New folder/Magura - Dầu Mineral oil (dầu thực vật)(100ml).jpg</RelativePath>
+      <RelativePath>img-PhuTungXe(BanMoi)/Yoshimura - Pô full system R77 cho Honda ADV 150.jpg</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -37502,14 +37502,14 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img-PhuTungXe(BanMoi)\PhuKienKhac\New folder\Magura - Dầu Mineral oil (dầu thực vật)(100ml).jpg))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img-PhuTungXe(BanMoi)\Yoshimura - Pô full system R77 cho Honda ADV 150.jpg))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img-PhuTungXe(BanMoi)\PhuKienKhac\New folder\MAXIMA - Chain Wax Bình Xịt Bôi Trơn &amp; Dưỡng Sên.jpg))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img-PhuTungXe(BanMoi)\Ốc titanium GR5 10li nhìu size.jpg))">
       <SourceType>Package</SourceType>
       <SourceId>DoAnCoSo</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/DoAnCoSo</BasePath>
-      <RelativePath>img-PhuTungXe(BanMoi)/PhuKienKhac/New folder/MAXIMA - Chain Wax Bình Xịt Bôi Trơn &amp; Dưỡng Sên.jpg</RelativePath>
+      <RelativePath>img-PhuTungXe(BanMoi)/Ốc titanium GR5 10li nhìu size.jpg</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -37518,23 +37518,7 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img-PhuTungXe(BanMoi)\PhuKienKhac\New folder\MAXIMA - Chain Wax Bình Xịt Bôi Trơn &amp; Dưỡng Sên.jpg))</OriginalItemSpec>
-    </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img-PhuTungXe(BanMoi)\PhuKienKhac\New folder\Maxima - Mỡ bò chống nước.jpg))">
-      <SourceType>Package</SourceType>
-      <SourceId>DoAnCoSo</SourceId>
-      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
-      <BasePath>_content/DoAnCoSo</BasePath>
-      <RelativePath>img-PhuTungXe(BanMoi)/PhuKienKhac/New folder/Maxima - Mỡ bò chống nước.jpg</RelativePath>
-      <AssetKind>All</AssetKind>
-      <AssetMode>All</AssetMode>
-      <AssetRole>Primary</AssetRole>
-      <RelatedAsset></RelatedAsset>
-      <AssetTraitName></AssetTraitName>
-      <AssetTraitValue></AssetTraitValue>
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img-PhuTungXe(BanMoi)\PhuKienKhac\New folder\Maxima - Mỡ bò chống nước.jpg))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img-PhuTungXe(BanMoi)\Ốc titanium GR5 10li nhìu size.jpg))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img\1.webp))">
       <SourceType>Package</SourceType>
@@ -37823,6 +37807,278 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img\payment.png))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img\PhuKienDanAo\Dè Trước - Dè Con - Mỏ cày - Carte\Oya - Dè trước Triumph Trident 660.jpg))">
+      <SourceType>Package</SourceType>
+      <SourceId>DoAnCoSo</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/DoAnCoSo</BasePath>
+      <RelativePath>img/PhuKienDanAo/Dè Trước - Dè Con - Mỏ cày - Carte/Oya - Dè trước Triumph Trident 660.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img\PhuKienDanAo\Dè Trước - Dè Con - Mỏ cày - Carte\Oya - Dè trước Triumph Trident 660.jpg))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img\PhuKienDanAo\Dè Trước - Dè Con - Mỏ cày - Carte\Oya - Dè trước Yamaha MT09 2021+.jpg))">
+      <SourceType>Package</SourceType>
+      <SourceId>DoAnCoSo</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/DoAnCoSo</BasePath>
+      <RelativePath>img/PhuKienDanAo/Dè Trước - Dè Con - Mỏ cày - Carte/Oya - Dè trước Yamaha MT09 2021+.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img\PhuKienDanAo\Dè Trước - Dè Con - Mỏ cày - Carte\Oya - Dè trước Yamaha MT09 2021+.jpg))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img\PhuKienDanChan\Phuộc Xe\Shark X2 - Phuộc sau chỉnh điện Honda SH350i.jpg))">
+      <SourceType>Package</SourceType>
+      <SourceId>DoAnCoSo</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/DoAnCoSo</BasePath>
+      <RelativePath>img/PhuKienDanChan/Phuộc Xe/Shark X2 - Phuộc sau chỉnh điện Honda SH350i.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img\PhuKienDanChan\Phuộc Xe\Shark X2 - Phuộc sau chỉnh điện Honda SH350i.jpg))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img\PhuKienDanChan\Phuộc Xe\Shark X2 - Phuộc sau Yamaha Xmax 300.jpg))">
+      <SourceType>Package</SourceType>
+      <SourceId>DoAnCoSo</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/DoAnCoSo</BasePath>
+      <RelativePath>img/PhuKienDanChan/Phuộc Xe/Shark X2 - Phuộc sau Yamaha Xmax 300.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img\PhuKienDanChan\Phuộc Xe\Shark X2 - Phuộc sau Yamaha Xmax 300.jpg))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img\PhuKienDanDau\Tay Phanh - Tay Côn\Discacciati - Cùm côn billet Ø16×19 dầu Dot 4.jpg))">
+      <SourceType>Package</SourceType>
+      <SourceId>DoAnCoSo</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/DoAnCoSo</BasePath>
+      <RelativePath>img/PhuKienDanDau/Tay Phanh - Tay Côn/Discacciati - Cùm côn billet Ø16×19 dầu Dot 4.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img\PhuKienDanDau\Tay Phanh - Tay Côn\Discacciati - Cùm côn billet Ø16×19 dầu Dot 4.jpg))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img\PhuKienDanDau\Tay Phanh - Tay Côn\Evotech - Bảo vệ tay phanh côn Ducati DesertX.jpg))">
+      <SourceType>Package</SourceType>
+      <SourceId>DoAnCoSo</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/DoAnCoSo</BasePath>
+      <RelativePath>img/PhuKienDanDau/Tay Phanh - Tay Côn/Evotech - Bảo vệ tay phanh côn Ducati DesertX.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img\PhuKienDanDau\Tay Phanh - Tay Côn\Evotech - Bảo vệ tay phanh côn Ducati DesertX.jpg))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img\PhuKienDanDen\Đèn Signal\NRC - Xi nhan Ducati Streetfighter V4-V2.jpg))">
+      <SourceType>Package</SourceType>
+      <SourceId>DoAnCoSo</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/DoAnCoSo</BasePath>
+      <RelativePath>img/PhuKienDanDen/Đèn Signal/NRC - Xi nhan Ducati Streetfighter V4-V2.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img\PhuKienDanDen\Đèn Signal\NRC - Xi nhan Ducati Streetfighter V4-V2.jpg))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img\PhuKienDanDen\Đèn Signal\NRC - Xi nhan Kawasaki ZX10R-R 21 22.jpg))">
+      <SourceType>Package</SourceType>
+      <SourceId>DoAnCoSo</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/DoAnCoSo</BasePath>
+      <RelativePath>img/PhuKienDanDen/Đèn Signal/NRC - Xi nhan Kawasaki ZX10R-R 21 22.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img\PhuKienDanDen\Đèn Signal\NRC - Xi nhan Kawasaki ZX10R-R 21 22.jpg))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img\PhuKienDanDen\Đèn Signal\NRC - Xi nhan Yamaha R1 2015 - 2019.jpg))">
+      <SourceType>Package</SourceType>
+      <SourceId>DoAnCoSo</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/DoAnCoSo</BasePath>
+      <RelativePath>img/PhuKienDanDen/Đèn Signal/NRC - Xi nhan Yamaha R1 2015 - 2019.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img\PhuKienDanDen\Đèn Signal\NRC - Xi nhan Yamaha R1 2015 - 2019.jpg))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img\PhuKienDanDen\Đèn Signal\Otilli - Xi nhan trước BMW S1000RR 2019+.jpg))">
+      <SourceType>Package</SourceType>
+      <SourceId>DoAnCoSo</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/DoAnCoSo</BasePath>
+      <RelativePath>img/PhuKienDanDen/Đèn Signal/Otilli - Xi nhan trước BMW S1000RR 2019+.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img\PhuKienDanDen\Đèn Signal\Otilli - Xi nhan trước BMW S1000RR 2019+.jpg))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img\PhuKienDanMay\Pô &amp; Cổ Pô - Phụ kiện\MIVV - Lon Delta race black.jpg))">
+      <SourceType>Package</SourceType>
+      <SourceId>DoAnCoSo</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/DoAnCoSo</BasePath>
+      <RelativePath>img/PhuKienDanMay/Pô &amp; Cổ Pô - Phụ kiện/MIVV - Lon Delta race black.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img\PhuKienDanMay\Pô &amp; Cổ Pô - Phụ kiện\MIVV - Lon Delta race black.jpg))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img\PhuKienDanMay\Pô &amp; Cổ Pô - Phụ kiện\Yoshimura - Pô full system R77 cho Honda ADV 150.jpg))">
+      <SourceType>Package</SourceType>
+      <SourceId>DoAnCoSo</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/DoAnCoSo</BasePath>
+      <RelativePath>img/PhuKienDanMay/Pô &amp; Cổ Pô - Phụ kiện/Yoshimura - Pô full system R77 cho Honda ADV 150.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img\PhuKienDanMay\Pô &amp; Cổ Pô - Phụ kiện\Yoshimura - Pô full system R77 cho Honda ADV 150.jpg))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img\PhuKienKhac\New folder\Black-800x800.jpg.jpg))">
+      <SourceType>Package</SourceType>
+      <SourceId>DoAnCoSo</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/DoAnCoSo</BasePath>
+      <RelativePath>img/PhuKienKhac/New folder/Black-800x800.jpg.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img\PhuKienKhac\New folder\Black-800x800.jpg.jpg))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img\PhuKienKhac\New folder\Dau-phanh-dau-thang-IPONE-Brake-DOT-5.1-500ml.png))">
+      <SourceType>Package</SourceType>
+      <SourceId>DoAnCoSo</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/DoAnCoSo</BasePath>
+      <RelativePath>img/PhuKienKhac/New folder/Dau-phanh-dau-thang-IPONE-Brake-DOT-5.1-500ml.png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img\PhuKienKhac\New folder\Dau-phanh-dau-thang-IPONE-Brake-DOT-5.1-500ml.png))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img\PhuKienKhac\New folder\Magura - Dầu Mineral oil (dầu thực vật)(100ml).jpg))">
+      <SourceType>Package</SourceType>
+      <SourceId>DoAnCoSo</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/DoAnCoSo</BasePath>
+      <RelativePath>img/PhuKienKhac/New folder/Magura - Dầu Mineral oil (dầu thực vật)(100ml).jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img\PhuKienKhac\New folder\Magura - Dầu Mineral oil (dầu thực vật)(100ml).jpg))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img\PhuKienKhac\New folder\MAXIMA - Chain Wax Bình Xịt Bôi Trơn &amp; Dưỡng Sên.jpg))">
+      <SourceType>Package</SourceType>
+      <SourceId>DoAnCoSo</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/DoAnCoSo</BasePath>
+      <RelativePath>img/PhuKienKhac/New folder/MAXIMA - Chain Wax Bình Xịt Bôi Trơn &amp; Dưỡng Sên.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img\PhuKienKhac\New folder\MAXIMA - Chain Wax Bình Xịt Bôi Trơn &amp; Dưỡng Sên.jpg))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img\PhuKienKhac\New folder\Maxima - Mỡ bò chống nước.jpg))">
+      <SourceType>Package</SourceType>
+      <SourceId>DoAnCoSo</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/DoAnCoSo</BasePath>
+      <RelativePath>img/PhuKienKhac/New folder/Maxima - Mỡ bò chống nước.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img\PhuKienKhac\New folder\Maxima - Mỡ bò chống nước.jpg))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\js\jquery-1.9.1.js))">
       <SourceType>Package</SourceType>

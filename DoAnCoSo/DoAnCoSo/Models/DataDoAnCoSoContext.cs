@@ -19,6 +19,8 @@ public partial class DataDoAnCoSoContext : DbContext
 
     public virtual DbSet<Category> Categories { get; set; }
 
+    public virtual DbSet<Contact> Contacts { get; set; }
+
     public virtual DbSet<Customer> Customers { get; set; }
 
     public virtual DbSet<Location> Locations { get; set; }
@@ -67,6 +69,18 @@ public partial class DataDoAnCoSoContext : DbContext
 
             entity.Property(e => e.CatName).HasMaxLength(50);
             entity.Property(e => e.ParentId).HasColumnName("ParentID");
+        });
+
+        modelBuilder.Entity<Contact>(entity =>
+        {
+            entity.ToTable("Contact");
+
+            entity.Property(e => e.ContactId).HasColumnName("ContactID");
+            entity.Property(e => e.CusEmail)
+                .HasMaxLength(150)
+                .IsUnicode(false);
+            entity.Property(e => e.CusMess).HasMaxLength(250);
+            entity.Property(e => e.CusName).HasMaxLength(100);
         });
 
         modelBuilder.Entity<Customer>(entity =>
