@@ -1,18 +1,19 @@
-﻿﻿@using PagedList.Core.Mvc;
-@using PagedList.Mvc;
-
-@* @model PagedList.Core.IPagedList<DoAnCoSo.Models.Product> *@
-@model List<DoAnCoSo.Models.Product>
+﻿@using PagedList.Core.Mvc;
+@model PagedList.Core.IPagedList<DoAnCoSo.Models.Product> 
+@* @model List<DoAnCoSo.Models.Product> *@
+@* @model IEnumertable<DoAnCoSo.Models.Product> *@
 
 @{
-    ViewData["Title"] = "Các Sản Phẩm";
+    ViewData["Title"] = "Shop - " + ViewBag.CurrentPage;
     Layout = "~/Views/Shared/_Layout.cshtml";
+   // int PageCurrent = ViewBag.CurrentPage;
+   // int PageNext = ViewBag + 1;
 }
 <!-- Single Page Header start -->
 <div class="container-fluid page-header py-5">
-    <h1 class="text-center text-white display-6">Các Sản Phẩm </h1>
+    <h1 class="text-center text-white display-6">Các Sản Phẩm PHỤ TÙNG XE MÁY </h1>
     <ol class="breadcrumb justify-content-center mb-0">
-        <li class="breadcrumb-item"><a asp-controller="Home" asp-action="Index"> Trang Chủ</a></li>
+        <li class="breadcrumb-item"><a href="/"> Trang Chủ</a></li>
     </ol>
 </div>
 <!-- Single Page Header End -->
@@ -97,20 +98,46 @@
                     
                     <div class="col-lg-9">
                         <div class="row g-4 justify-content-center">
-                            @foreach (var item in Model)
+                            @if(Model != null && Model.Count() > 0)
+                            {
+                                @foreach (var item in Model)
+                                { 
+                                    string url = $"";
+                                    <div class="col-md-6 col-lg-6 col-xl-4">
+                                        <div class="rounded position-relative fruite-item">
+                                            <a href="@url">
+                                                <div class="fruite-img">
+                                                    <img src="~/img-PhuTungXe(BanMoi)/@item.ProImage" class="img-fluid w-100 rounded-top" alt="">
+                                                </div>
+                                                <div class="text-white bg-secondary px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px;">Chi Tiết Sản Phẩm</div>
+                                                <div class="p-4 border border-secondary border-top-0 rounded-bottom">
+                                                    <h4>@item.ProName</h4>
+                                                    <p>@item.ShortDes</p>
+                                                    <div class="d-flex justify-content-between flex-lg-wrap">
+                                                        <p class="text-dark fs-5 fw-bold mb-0">@item.ProPrice.Value.ToString("#,##0")VND</p>
+                                                        <a class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Thêm Vào Giỏ Hàng</a>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                }
+                            }
+                            <!--
+                            foreach (var item in Model)
                             {
                             <div class="col-md-6 col-lg-6 col-xl-4">
                                 <div class="rounded position-relative fruite-item">
                                     <a href="shop-detail.html">
                                         <div class="fruite-img">
-                                            <img src="~/img-PhuTungXe(BanMoi)/@item.ProImage" class="img-fluid w-100 rounded-top" alt="">
+                                            <img src="~/img-PhuTungXe(BanMoi)/item.ProImage" class="img-fluid w-100 rounded-top" alt="">
                                         </div>
                                         <div class="text-white bg-secondary px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px;">Chi Tiết Sản Phẩm</div>
                                         <div class="p-4 border border-secondary border-top-0 rounded-bottom">
-                                            <h4>@item.ProName</h4>
-                                            <p>@item.ShortDes</p>
+                                            <h4>item.ProName</h4>
+                                            <p>item.ShortDes</p>
                                             <div class="d-flex justify-content-between flex-lg-wrap">
-                                                <p class="text-dark fs-5 fw-bold mb-0">@item.ProPrice.Value.ToString("#,##0")VND</p>
+                                                <p class="text-dark fs-5 fw-bold mb-0">item.ProPrice.Value.ToString("#,##0")VND</p>
                                                 <a asp-controller="Products" asp-action="Detail"class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Thêm Vào Giỏ Hàng</a>
                                             </div>
                                         </div>
@@ -118,18 +145,28 @@
                                 </div>
                             </div>
                             }
-
+                            -->
                             <div class="col-12">
                                 <div class="pagination d-flex justify-content-center mt-5">
                                     <div class="pagination d-flex justify-content-center mt-5">
-                                        <a asp-controller="Home" class="rounded">&laquo;</a>
-                                        <a asp-controller="Home" class="active rounded">1</a>
-                                        <a asp-controller="Home" class="rounded">2</a>
-                                        <a asp-controller="Home" class="rounded">3</a>
-                                        <a asp-controller="Home" class="rounded">4</a>
-                                        <a asp-controller="Home" class="rounded">5</a>
-                                        <a asp-controller="Home" class="rounded">6</a>
-                                        <a asp-controller="Home" class="rounded">&raquo;</a>
+                                        <ul class="pagination d-flex justify-content-center mt-5">
+                                            <!--
+                                            if (PageCurrent > 1)
+                                            {
+                                                <li class="page-item">
+                                                    <a class="rounded">&laquo;</a>
+                                                </li>
+                                            }
+                                            -->
+                                        </ul>
+                                        <a  class="rounded">&laquo;</a>
+                                        <a  class="active rounded">1</a>
+                                        <a  class="rounded">2</a>
+                                        <a  class="rounded">3</a>
+                                        <a  class="rounded">4</a>
+                                        <a  class="rounded">5</a>
+                                        <a  class="rounded">6</a>
+                                        <a  class="rounded">&raquo;</a>
                                     </div>
                                 </div>
                                 <!--
