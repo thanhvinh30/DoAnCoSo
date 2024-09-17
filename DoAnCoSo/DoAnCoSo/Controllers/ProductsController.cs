@@ -86,7 +86,7 @@ namespace DoAnCoSo.Controllers
            
 
         }
-        [Route("Detail.html", Name ="ProductsDetail")]
+        [Route("Detail/{id}.html", Name = "ProductsDetail")]
         public IActionResult Details(int id)
         {
             try
@@ -98,7 +98,7 @@ namespace DoAnCoSo.Controllers
                     return RedirectToAction("Index");
                 }
 
-                return View();
+                return View(product);
 
             }
             catch
