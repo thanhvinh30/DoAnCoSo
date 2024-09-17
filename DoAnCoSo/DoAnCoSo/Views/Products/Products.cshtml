@@ -3,10 +3,8 @@
 @using X.PagedList
 @{
     
-    ViewData["Title"] = "" + ViewBag.CurrentPage;
+    ViewData["Title"] = "Trang Các Sản Phẩm" ;
     Layout = "~/Views/Shared/_Layout.cshtml";
-   // int PageCurrent = ViewBag.CurrentPage;
-   // int PageNext = ViewBag + 1;
 }
 <!-- Single Page Header start -->
 <div class="container-fluid page-header py-5">
@@ -35,22 +33,35 @@
                     <div class="col-lg-3">
                         <div class="row g-4">
                            
-                            <div class="col-lg-12">
+                            <div class="col-lg-12" style="margin-top: 40px;">
                                 <div class="mb-3">
                                     <h4>Danh Mục sản phẩm</h4>
                                     @if (ViewBag.CategoriesWithProductCount != null)
                                     {
-                                        @foreach (var item in ViewBag.CategoriesWithProductCount)
-                                        {
-                                    <ul class="list-unstyled fruite-categorie">
-                                        <li>
-                                            <div class="d-flex justify-content-between fruite-name">
-                                                        <a href="@Url.Action("Products", new { CatID = item.CatId })"><i class="fa fa-motorcycle me-2" aria-hidden="true"></i>@item.CatName</a>
+                                        <ul class="list-unstyled fruite-categorie">
+                                            <!-- Liên kết để hiển thị tất cả sản phẩm (không lọc) -->
+                                            <li>
+                                                <div class="d-flex justify-content-between fruite-name">
+                                                    <a href="@Url.Action("Products", new { CatID = 0 })">
+                                                        <i class="fa fa-motorcycle me-2" aria-hidden="true"></i>Hiển thị tất cả sản phẩm
+                                                    </a>
+                                                    
+                                                </div>
+                                            </li>
+
+                                            <!-- Danh sách các danh mục và số lượng sản phẩm -->
+                                            @foreach (var item in ViewBag.CategoriesWithProductCount)
+                                            {
+                                                <li>
+                                                    <div class="d-flex justify-content-between fruite-name">
+                                                        <a href="@Url.Action("Products", new { CatID = item.CatId })">
+                                                            <i class="fa fa-motorcycle me-2" aria-hidden="true"></i>@item.CatName
+                                                        </a>
                                                         <span>(@item.ProductCount)</span>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                        }
+                                                    </div>
+                                                </li>
+                                            }
+                                        </ul>
                                     }
                                 </div>
                             </div>

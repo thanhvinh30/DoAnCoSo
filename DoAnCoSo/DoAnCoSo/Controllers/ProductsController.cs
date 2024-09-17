@@ -24,18 +24,22 @@ namespace DoAnCoSo.Controllers
             var pageNumber = page < 1 ? 1 : page;
             var pageSize = 6;
             List<Product> lsProducts = new List<Product>();
+
+
             //Start
              // Tính toán số lượng sản phẩm theo từng danh mục
-    var categoriesWithProductCount = _context.Categories
-        .Select(c => new 
-        {
-            c.CatId,
-            c.CatName,
-            ProductCount = _context.Products.Count(p => p.CatId == c.CatId)
-        }).ToList();
-            // Truyền thêm thông tin số lượng sản phẩm của mỗi danh mục qua View
-            ViewBag.CategoriesWithProductCount = categoriesWithProductCount;
+            //var categoriesWithProductCount = _context.Categories
+            //.Select(c => new 
+            //{
+            //    c.CatId,
+            //    c.CatName,
+            //    ProductCount = _context.Products.Count(p => p.CatId == c.CatId)
+            //}).ToList();
+            //// Truyền thêm thông tin số lượng sản phẩm của mỗi danh mục qua View
+            //ViewBag.CategoriesWithProductCount = categoriesWithProductCount;
             //End
+
+
             if (CatID != 0)
             {
                 lsProducts = _context.Products
@@ -103,6 +107,18 @@ namespace DoAnCoSo.Controllers
         {
             try
             {
+                //Start
+                // Tính toán số lượng sản phẩm theo từng danh mục
+                var categoriesWithProductCount = _context.Categories
+                    .Select(c => new
+                    {
+                        c.CatId,
+                        c.CatName,
+                        ProductCount = _context.Products.Count(p => p.CatId == c.CatId)
+                    }).ToList();
+                // Truyền thêm thông tin số lượng sản phẩm của mỗi danh mục qua View
+                ViewBag.CategoriesWithProductCount = categoriesWithProductCount;
+                //End
                 var product = _context.Products.Include(x => x.Cat).FirstOrDefault(x => x.ProId == id);
 
                 if (product == null)

@@ -1,0 +1,21 @@
+﻿
+@*
+    For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@model List<Category>
+
+@if (ViewBag.CategoriesWithProductCount != null)
+{
+    <div class="col-lg-8 text-end">
+        @foreach (var item in ViewBag.CategoriesWithProductCount)
+        {
+            <ul class="nav nav-pills d-inline-flex text-center mb-5">
+                <li class="nav-item">
+                    <a class="d-flex m-2 py-2 bg-light rounded-pill active" data-bs-toggle="pill" href="@Url.Action("Products", new { CatID = item.CatId })">
+                        <span class="text-dark" style="width: 130px;">@item.CatName</span>
+                    </a>
+                </li>
+            </ul>
+        }
+    </div>
+}

@@ -1,7 +1,7 @@
 ﻿@model DoAnCoSo.Models.Product
 
 @{
-    ViewData["Title"] = "Details";
+    ViewData["Title"] = "Chi Tiết Sản Phẩm";
     Layout = "~/Views/Shared/_Layout.cshtml";
     List<Product> lsproducts = ViewBag.CurrentProductsList;
 }
@@ -204,44 +204,33 @@
                         </div>
                         <div class="mb-4">
                             <h4>Các loại sản phẩm</h4>
-                            <ul class="list-unstyled fruite-categorie">
-                                <li>
-                                    <div class="d-flex justify-content-between fruite-name">
-                                        <a href="#"><i class="fa fa-motorcycle me-2" aria-hidden="true"></i>Nhông Sên Dĩa</a>
-                                        <span>(3)</span>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="d-flex justify-content-between fruite-name">
-                                        <a href="#"><i class="fa fa-motorcycle me-2" aria-hidden="true"></i>Lọc Gió</a>
-                                        <span>(3)</span>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="d-flex justify-content-between fruite-name">
-                                        <a href="#"><i class="fa fa-motorcycle me-2" aria-hidden="true"></i>Kiến Chiếu Hậu</a>
-                                        <span>(2)</span>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="d-flex justify-content-between fruite-name">
-                                        <a href="#"><i class="fa fa-motorcycle me-2" aria-hidden="true"></i>Đèn Led Xe Máy</a>
-                                        <span>(8)</span>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="d-flex justify-content-between fruite-name">
-                                        <a href="#"><i class="fa fa-motorcycle me-2" aria-hidden="true"></i>Bao Tay Cầm</a>
-                                        <span>(5)</span>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="d-flex justify-content-between fruite-name">
-                                        <a href="#"><i class="fa fa-motorcycle me-2" aria-hidden="true"></i>Ba - Ga</a>
-                                        <span>(5)</span>
-                                    </div>
-                                </li>
-                            </ul>
+                            @if (ViewBag.CategoriesWithProductCount != null)
+                            {
+                                <ul class="list-unstyled fruite-categorie">
+                                    <!-- Liên kết để hiển thị tất cả sản phẩm (không lọc) -->
+                                    <li>
+                                        <div class="d-flex justify-content-between fruite-name">
+                                            <a href="@Url.Action("Products", new { CatID = 0 })">
+                                                <i class="fa fa-motorcycle me-2" aria-hidden="true"></i>Hiển thị tất cả sản phẩm
+                                            </a>
+
+                                        </div>
+                                    </li>
+
+                                    <!-- Danh sách các danh mục và số lượng sản phẩm -->
+                                    @foreach (var item in ViewBag.CategoriesWithProductCount)
+                                    {
+                                        <li>
+                                            <div class="d-flex justify-content-between fruite-name">
+                                                <a href="@Url.Action("Products", new { CatID = item.CatId })">
+                                                    <i class="fa fa-motorcycle me-2" aria-hidden="true"></i>@item.CatName
+                                                </a>
+                                                <span>(@item.ProductCount)</span>
+                                            </div>
+                                        </li>
+                                    }
+                                </ul>
+                            }
                         </div>
                     </div>
                     <!--<div class="col-lg-12">
