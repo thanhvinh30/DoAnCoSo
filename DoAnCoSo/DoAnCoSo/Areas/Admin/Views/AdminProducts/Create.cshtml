@@ -106,7 +106,7 @@
                 <input type="hidden" asp-for="ProId" />
                 <hr />
                 <!--method="post" enctype="multipart/form-data" thêm vào form-->
-                <form asp-action="Create">
+                <form asp-action="Create" asp-controller="AdminProducts" method="post" enctype="multipart/form-data">
                     <div class="row">
 
                         <div class="col-xl-12">
@@ -148,7 +148,7 @@
                                             <div class="mb-3 row" style="height:60px">
                                                 <div class="col-lg-10" style="display:flex;">
                                                     <label asp-for="ProImage" class="col-lg-2 col-form-label" style="margin: 13px 0px"></label>
-                                                    <input asp-for="ProImage" style="height:35px; margin:17px 45px" type="file" class="form-control" />
+                                                    <input asp-for="ProImage" style="height:35px; margin:17px 45px" type="file" class="form-control" name="ProImageFile" />
                                                     <span asp-validation-for="ProImage" class="text-danger"></span>
                                             <!--
                                                     <label class="col-lg-2 col-form-label" for="ProImageFile">Product Image</label>

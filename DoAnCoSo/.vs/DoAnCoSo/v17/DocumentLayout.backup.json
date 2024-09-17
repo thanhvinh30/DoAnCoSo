@@ -1,20 +1,7 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "D:\\DoAn\\DoAnCoSo\\DoAnCoSo\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{83E1D782-A8CC-4934-8ED6-41B6287C8013}|DoAnCoSo\\DoAnCoSo.csproj|d:\\doan\\doancoso\\doancoso\\doancoso\\areas\\admin\\views\\adminproducts\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{83E1D782-A8CC-4934-8ED6-41B6287C8013}|DoAnCoSo\\DoAnCoSo.csproj|solutionrelative:doancoso\\areas\\admin\\views\\adminproducts\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{83E1D782-A8CC-4934-8ED6-41B6287C8013}|DoAnCoSo\\DoAnCoSo.csproj|d:\\doan\\doancoso\\doancoso\\doancoso\\areas\\admin\\controllers\\adminproductscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{83E1D782-A8CC-4934-8ED6-41B6287C8013}|DoAnCoSo\\DoAnCoSo.csproj|solutionrelative:doancoso\\areas\\admin\\controllers\\adminproductscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{83E1D782-A8CC-4934-8ED6-41B6287C8013}|DoAnCoSo\\DoAnCoSo.csproj|d:\\doan\\doancoso\\doancoso\\doancoso\\controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{83E1D782-A8CC-4934-8ED6-41B6287C8013}|DoAnCoSo\\DoAnCoSo.csproj|solutionrelative:doancoso\\controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -22,50 +9,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": -1,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Edit.cshtml",
-              "DocumentMoniker": "D:\\DoAn\\DoAnCoSo\\DoAnCoSo\\DoAnCoSo\\Areas\\Admin\\Views\\AdminProducts\\Edit.cshtml",
-              "RelativeDocumentMoniker": "DoAnCoSo\\Areas\\Admin\\Views\\AdminProducts\\Edit.cshtml",
-              "ToolTip": "D:\\DoAn\\DoAnCoSo\\DoAnCoSo\\DoAnCoSo\\Areas\\Admin\\Views\\AdminProducts\\Edit.cshtml",
-              "RelativeToolTip": "DoAnCoSo\\Areas\\Admin\\Views\\AdminProducts\\Edit.cshtml",
-              "ViewState": "AgIAAH0AAAAAAAAAAAAAAIEAAAA1AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-09-17T10:23:32.799Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "AdminProductsController.cs",
-              "DocumentMoniker": "D:\\DoAn\\DoAnCoSo\\DoAnCoSo\\DoAnCoSo\\Areas\\Admin\\Controllers\\AdminProductsController.cs",
-              "RelativeDocumentMoniker": "DoAnCoSo\\Areas\\Admin\\Controllers\\AdminProductsController.cs",
-              "ToolTip": "D:\\DoAn\\DoAnCoSo\\DoAnCoSo\\DoAnCoSo\\Areas\\Admin\\Controllers\\AdminProductsController.cs",
-              "RelativeToolTip": "DoAnCoSo\\Areas\\Admin\\Controllers\\AdminProductsController.cs",
-              "ViewState": "AgIAAG8AAAAAAAAAAAAQwN4AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-17T09:08:22.102Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "ProductsController.cs",
-              "DocumentMoniker": "D:\\DoAn\\DoAnCoSo\\DoAnCoSo\\DoAnCoSo\\Controllers\\ProductsController.cs",
-              "RelativeDocumentMoniker": "DoAnCoSo\\Controllers\\ProductsController.cs",
-              "ToolTip": "D:\\DoAn\\DoAnCoSo\\DoAnCoSo\\DoAnCoSo\\Controllers\\ProductsController.cs",
-              "RelativeToolTip": "DoAnCoSo\\Controllers\\ProductsController.cs",
-              "ViewState": "AgIAABAAAAAAAAAAAAAgwBcAAAAxAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-17T08:52:12.18Z",
-              "EditorCaption": ""
             }
           ]
         }
