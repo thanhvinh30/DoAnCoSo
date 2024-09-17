@@ -1,9 +1,8 @@
 ﻿@using PagedList.Core.Mvc;
 @model PagedList.Core.IPagedList<DoAnCoSo.Models.Product> 
-@* @model List<DoAnCoSo.Models.Product> *@
-@* @model IEnumertable<DoAnCoSo.Models.Product> *@
-    @using X.PagedList
+@using X.PagedList
 @{
+    
     ViewData["Title"] = "" + ViewBag.CurrentPage;
     Layout = "~/Views/Shared/_Layout.cshtml";
    // int PageCurrent = ViewBag.CurrentPage;
@@ -35,49 +34,27 @@
                 <div class="row g-4">
                     <div class="col-lg-3">
                         <div class="row g-4">
+                           
                             <div class="col-lg-12">
                                 <div class="mb-3">
-                                    <h4>Các loại sản phẩm</h4>
+                                    <h4>Danh Mục sản phẩm</h4>
+                                    @if (ViewBag.CategoriesWithProductCount != null)
+                                    {
+                                        @foreach (var item in ViewBag.CategoriesWithProductCount)
+                                        {
                                     <ul class="list-unstyled fruite-categorie">
                                         <li>
                                             <div class="d-flex justify-content-between fruite-name">
-                                                <a asp-controller="Home"><i class="fa fa-motorcycle me-2" aria-hidden="true"></i>Nhông Sên Dĩa</a>
-                                                <span>(3)</span>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="d-flex justify-content-between fruite-name">
-                                                <a asp-controller="Home"><i class="fa fa-motorcycle me-2" aria-hidden="true"></i>Lọc Gió</a>
-                                                <span>(3)</span>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="d-flex justify-content-between fruite-name">
-                                                <a asp-controller="Home"><i class="fa fa-motorcycle me-2" aria-hidden="true"></i>Kiến Chiếu Hậu</a>
-                                                <span>(2)</span>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="d-flex justify-content-between fruite-name">
-                                                <a asp-controller="Home"><i class="fa fa-motorcycle me-2" aria-hidden="true"></i>Đèn Led Xe Máy</a>
-                                                <span>(8)</span>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="d-flex justify-content-between fruite-name">
-                                                <a asp-controller="Home"><i class="fa fa-motorcycle me-2" aria-hidden="true"></i>Bao Tay Cầm</a>
-                                                <span>(5)</span>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="d-flex justify-content-between fruite-name">
-                                                <a asp-controller="Home"><i class="fa fa-motorcycle me-2" aria-hidden="true"></i>Ba - Ga</a>
-                                                <span>(5)</span>
+                                                        <a href="@Url.Action("Products", new { CatID = item.CatId })"><i class="fa fa-motorcycle me-2" aria-hidden="true"></i>@item.CatName</a>
+                                                        <span>(@item.ProductCount)</span>
                                             </div>
                                         </li>
                                     </ul>
+                                        }
+                                    }
                                 </div>
                             </div>
+                               
                             <div class="col-lg-12">
                                 <div class="mb-3">
                                     <h4 class="mb-2">Mức Giá</h4>
@@ -85,6 +62,7 @@
                                     <output id="amount" name="amount" min-velue="0" max-value="500" for="rangeInput">0</output>
                                 </div>
                             </div>
+
                             <div class="col-lg-12">
                                 <div class="position-relative">
                                     <img src="img/banner-fruits.jpg" class="img-fluid w-100 rounded" alt="">
@@ -93,6 +71,7 @@
                                     </div>
                                 </div>
                             </div>
+
                         </div>
                     </div>
                     

@@ -1,4 +1,4 @@
-﻿using Azure;
+﻿//using Azure;
 using DoAnCoSo.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -24,6 +24,18 @@ namespace DoAnCoSo.Controllers
             var pageNumber = page < 1 ? 1 : page;
             var pageSize = 6;
             List<Product> lsProducts = new List<Product>();
+            //Start
+             // Tính toán số lượng sản phẩm theo từng danh mục
+    var categoriesWithProductCount = _context.Categories
+        .Select(c => new 
+        {
+            c.CatId,
+            c.CatName,
+            ProductCount = _context.Products.Count(p => p.CatId == c.CatId)
+        }).ToList();
+            // Truyền thêm thông tin số lượng sản phẩm của mỗi danh mục qua View
+            ViewBag.CategoriesWithProductCount = categoriesWithProductCount;
+            //End
             if (CatID != 0)
             {
                 lsProducts = _context.Products
@@ -61,16 +73,16 @@ namespace DoAnCoSo.Controllers
         {
             return View();
         }
-        [Route("CatID.html", Name = "ListProducts")]
-        public IActionResult List(int id, int page = 1)
+        [Route("List/{id}.html", Name = "ListProducts")]
+        public IActionResult List(string ProName, int page = 1)
         {
                 try
                 {
                     //var pageNumber = page == null page <= 0 ? 1 : page.Value;
                     var pageSize = 6;
-                    var Category = _context.Categories.Find(id);
+                    var Category = _context.Categories.AsNoTracking().SingleOrDefault(x => x.CatName == ProName);
                     var lsCate = _context.Products  .AsNoTracking()
-                                                    .Where( x => x.CatId == id)
+                                                    .Where( x => x.CatId == Category.CatId)
                                                     .OrderByDescending(x => x.DateCreated);
 
 
@@ -98,8 +110,15 @@ namespace DoAnCoSo.Controllers
                     return RedirectToAction("Index");
                 }
 
+                
+                var lsproducts = _context.Products
+                                                    .AsNoTracking()
+                                                    .Where(x => x.CatId == product.CatId && x.ProId != id && x.Active == true)
+                                                    .Take(5)    
+                                                    .OrderBy( x => x.DateCreated)
+                                                    .ToList();
+                ViewBag.CurrentProductsList = lsproducts;
                 return View(product);
-
             }
             catch
             {
