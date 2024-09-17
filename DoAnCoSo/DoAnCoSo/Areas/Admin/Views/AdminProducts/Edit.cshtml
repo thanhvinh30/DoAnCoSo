@@ -104,7 +104,7 @@
             <div class="card-body">
                 <h1 class="header-title mt-0">Edit Product</h1>
                 <hr />
-                <form asp-action="Edit" asp-controller="AdminProducts" asp-route-id="@Model.ProId">
+                <form asp-action="Edit" asp-controller="AdminProducts" asp-route-id="@Model.ProId" method="post" enctype="multipart/form-data">
                     <div asp-validation-summary="ModelOnly" class="text-danger"></div>
                     <input type="hidden" asp-for="ProId" />
                     <input type="hidden" asp-for="ProImage" />
@@ -120,9 +120,9 @@
                     </div>
 
                     <div class="mb-3 row form-group ">
-                        <label asp-for="ProName" class="col-lg-2 col-form-label" for="ProName">Product Name</label>
+                        <label asp-for="ProName" class="col-lg-2 col-form-label">Product Name</label>
                         <div class="col-lg-10">
-                            <input asp-for="ProName" type="text" class="form-control" id="ProName" value="">
+                            <input asp-for="ProName" type="text" class="form-control"  value="@Model.ProName">
                         </div>
                      
                     </div>
@@ -132,13 +132,14 @@
                         <div class="col-lg-5">
                             <input asp-for="ProImage" type="file" class="form-control" />
                         </div>
-                       
+
+
                     </div>
 
                     <div class="mb-3 row form-group">
                         <label asp-for="ProPrice" class="col-lg-2 col-form-label"></label>
                         <div class="col-lg-10">
-                            <input asp-for="ProPrice" type="text" class="form-control" id="simpleinput" value="">
+                            <input asp-for="ProPrice" type="text" class="form-control" value="@Model.ProPrice"/>
                         </div>
                         
                     </div>
@@ -146,14 +147,14 @@
                     <div class="mb-3 row form-group">
                         <label asp-for="Quantity" class="col-lg-2 col-form-label"></label>
                         <div class="col-lg-10">
-                            <input asp-for="Quantity" class="form-control" type="number" >
+                            <input asp-for="Quantity" class="form-control" type="number" value="@Model.Quantity" />
                         </div>
                        
                     </div>
                     <div class="mb-3 row form-group">
                         <label asp-for="UnitlnStock" class="col-lg-2 col-form-label">UnitlnStock</label>
                         <div class="col-lg-10">
-                            <input asp-for="UnitlnStock" class="form-control" type="number" >
+                            <input asp-for="UnitlnStock" class="form-control" type="number" value="@Model.UnitlnStock"/>
                         </div>
                      
                     </div>
@@ -161,7 +162,7 @@
                     <div class="mb-3 row form-group">
                         <label asp-for="DateCreated" class="col-lg-2 col-form-label"></label>
                         <div class="col-lg-10">
-                            <input asp-for="DateCreated" class="form-control">
+                            <input asp-for="DateCreated" class="form-control" value="@Model.DateCreated"/>
                         </div>
                    
                     </div>
@@ -177,18 +178,15 @@
                         <div class="mt-4" style="display: flex; gap: 70px;">
                             <div class="form-switch mb-2">
                               
-                                <input asp-for="BestSellers" type="checkbox" class="form-check-input" />
+                                <input asp-for="BestSellers" type="checkbox" class="form-check-input" value="@Model.BestSellers" />
                                 <label asp-for="BestSellers" class="form-check-label" ></label>
                             </div>
                             <div class="form-switch mb-2">
-                                <input asp-for="Active" type="checkbox" class="form-check-input">
-                                <label asp-for="Active" class="form-check-label"> 
-                                    
-                                </label>
-                          
+                                <input asp-for="Active" type="checkbox" class="form-check-input" value="@Model.Active" />
+                                <label asp-for="Active" class="form-check-label"> </label>                 
                             </div>
                             <div class="form-switch mb-2">                          
-                                <input asp-for="HomeFlag" type="checkbox" class="form-check-input" />
+                                <input asp-for="HomeFlag" type="checkbox" class="form-check-input" value="@Model.HomeFlag" />
                                 <label asp-for="HomeFlag" class="form-check-label"></label>
                             </div>
                         </div>
@@ -197,21 +195,21 @@
                     <div class="mb-3 row form-group">
                         <label asp-for="ShortDes" class="col-lg-2 col-form-label"></label>
                         <div class="col-lg-10">
-                            <input asp-for="ShortDes" type="text" class="form-control" id="simpleinput" value="">
+                            <input asp-for="ShortDes" type="text" class="form-control" value="@Model.ShortDes">
                         </div>
               
                     </div>
                     <div class="mb-3 row form-group">
                         <label asp-for="MetaDesc" class="col-lg-2 col-form-label"></label>
                         <div class="col-lg-10">
-                            <input asp-for="MetaDesc" type="text" class="form-control" id="simpleinput" value="">
+                            <input asp-for="MetaDesc" type="text" class="form-control" value="@Model.MetaDesc">
                         </div>
                  
                     </div>
                     <div class="mb-3 row form-group">
                         <label asp-for="MeetaKey" class="col-lg-2 col-form-label"></label>
                         <div class="col-lg-10">
-                            <input asp-for="MeetaKey" type="text" class="form-control" id="simpleinput" value="">
+                            <input asp-for="MeetaKey" type="text" class="form-control" value="@Model.MeetaKey">
                         </div>
                   
                     </div>

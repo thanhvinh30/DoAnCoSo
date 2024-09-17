@@ -10,6 +10,7 @@ using Azure;
 using PagedList.Core;
 using DoAnCoSo.Helpper;
 using NuGet.Packaging.Signing;
+using System.Numerics;
 
 namespace DoAnCoSo.Areas.Admin.Controllers
 {
@@ -153,7 +154,7 @@ namespace DoAnCoSo.Areas.Admin.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("ProId,CatId,ProName,ProImage,ProPrice,Quantity,UnitlnStock,DateCreated,DateModified,BestSellers,Active,HomeFlag,ShortDes,MetaDesc,MeetaKey")] Product product)
+        public async Task<IActionResult> Edit(int id, [Bind("ProId,CatId,ProName,ProImage,ProPrice,Quantity,UnitlnStock,DateCreated,DateModified,BestSellers,Active,HomeFlag,ShortDes,MetaDesc,MeetaKey")] Product product, IFormFile ProImageFile)
         {
             if (id != product.ProId)
             {
@@ -164,7 +165,40 @@ namespace DoAnCoSo.Areas.Admin.Controllers
             {
                 try
                 {
-                   
+                    //Mới Thêm 
+                    // Handle image upload
+                    if (ProImageFile != null && ProImageFile.Length > 0)
+                    {
+                        // Assuming you save the image to a folder and store the path
+                        var filePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/img-PhuTungXe(BanMoi)", ProImageFile.FileName);
+                        using (var stream = new FileStream(filePath, FileMode.Create))
+                        {
+                            await ProImageFile.CopyToAsync(stream);
+                        }
+                        product.ProImage = "/img-PhuTungXe(BanMoi)/" + ProImageFile.FileName; // Update with the correct path
+                    }
+                    // Attach the product to the context but mark it as unchanged
+                    _context.Attach(product);
+
+                    // Specify which fields were modified by the user
+                    _context.Entry(product).Property(p => p.CatId).IsModified = true;
+                    _context.Entry(product).Property(p => p.ProName).IsModified = true;
+                    //_context.Entry(product).Property(p => p.ProImage).IsModified = true;
+                    _context.Entry(product).Property(p => p.ProPrice).IsModified = true;
+                    _context.Entry(product).Property(p => p.Quantity).IsModified = true;
+                    _context.Entry(product).Property(p => p.UnitlnStock).IsModified = true;
+                    _context.Entry(product).Property(p => p.DateModified).IsModified = true;
+                    _context.Entry(product).Property(p => p.BestSellers).IsModified = true;
+                    _context.Entry(product).Property(p => p.Active).IsModified = true;
+                    _context.Entry(product).Property(p => p.HomeFlag).IsModified = true;
+                    _context.Entry(product).Property(p => p.ShortDes).IsModified = true;
+                    _context.Entry(product).Property(p => p.MetaDesc).IsModified = true;
+                    _context.Entry(product).Property(p => p.MeetaKey).IsModified = true;
+
+                    // Save changes
+                    await _context.SaveChangesAsync();
+
+                    // End
                     _context.Update(product);
                     SetAlert("Đã sửa thành công", "Success");
                     await _context.SaveChangesAsync();

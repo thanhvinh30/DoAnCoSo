@@ -36960,22 +36960,6 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img-PhuTungXe(BanMoi)\GaleSpeed - Cặp mâm CNC Moto 3 vừa Exicter 150.jpg))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img-PhuTungXe(BanMoi)\img12-02.jpg))">
-      <SourceType>Package</SourceType>
-      <SourceId>DoAnCoSo</SourceId>
-      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
-      <BasePath>_content/DoAnCoSo</BasePath>
-      <RelativePath>img-PhuTungXe(BanMoi)/img12-02.jpg</RelativePath>
-      <AssetKind>All</AssetKind>
-      <AssetMode>All</AssetMode>
-      <AssetRole>Primary</AssetRole>
-      <RelatedAsset></RelatedAsset>
-      <AssetTraitName></AssetTraitName>
-      <AssetTraitValue></AssetTraitValue>
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img-PhuTungXe(BanMoi)\img12-02.jpg))</OriginalItemSpec>
-    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img-PhuTungXe(BanMoi)\img17-03.jpg))">
       <SourceType>Package</SourceType>
       <SourceId>DoAnCoSo</SourceId>
@@ -37071,22 +37055,6 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img-PhuTungXe(BanMoi)\img25-05.jpg))</OriginalItemSpec>
-    </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img-PhuTungXe(BanMoi)\img26-05.jpg))">
-      <SourceType>Package</SourceType>
-      <SourceId>DoAnCoSo</SourceId>
-      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
-      <BasePath>_content/DoAnCoSo</BasePath>
-      <RelativePath>img-PhuTungXe(BanMoi)/img26-05.jpg</RelativePath>
-      <AssetKind>All</AssetKind>
-      <AssetMode>All</AssetMode>
-      <AssetRole>Primary</AssetRole>
-      <RelatedAsset></RelatedAsset>
-      <AssetTraitName></AssetTraitName>
-      <AssetTraitValue></AssetTraitValue>
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img-PhuTungXe(BanMoi)\img26-05.jpg))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img-PhuTungXe(BanMoi)\img28-05.jpg))">
       <SourceType>Package</SourceType>
@@ -37360,6 +37328,22 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img-PhuTungXe(BanMoi)\Oya - Dè con + carte BMW S1000R 2021 S1000RR 2019+.jpg))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img-PhuTungXe(BanMoi)\Oya - Dè sau bánh Triumph Trident 660.jpg))">
+      <SourceType>Package</SourceType>
+      <SourceId>DoAnCoSo</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/DoAnCoSo</BasePath>
+      <RelativePath>img-PhuTungXe(BanMoi)/Oya - Dè sau bánh Triumph Trident 660.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img-PhuTungXe(BanMoi)\Oya - Dè sau bánh Triumph Trident 660.jpg))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img-PhuTungXe(BanMoi)\Oya - Dè trước Triumph Trident 660.jpg))">
       <SourceType>Package</SourceType>
       <SourceId>DoAnCoSo</SourceId>
@@ -37503,6 +37487,22 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img-PhuTungXe(BanMoi)\Yoshimura - Pô full system R77 cho Honda ADV 150.jpg))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img-PhuTungXe(BanMoi)\Ốc titanium GR5 10li bắt heo đầu trụ.jpg))">
+      <SourceType>Package</SourceType>
+      <SourceId>DoAnCoSo</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/DoAnCoSo</BasePath>
+      <RelativePath>img-PhuTungXe(BanMoi)/Ốc titanium GR5 10li bắt heo đầu trụ.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img-PhuTungXe(BanMoi)\Ốc titanium GR5 10li bắt heo đầu trụ.jpg))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img-PhuTungXe(BanMoi)\Ốc titanium GR5 10li nhìu size.jpg))">
       <SourceType>Package</SourceType>

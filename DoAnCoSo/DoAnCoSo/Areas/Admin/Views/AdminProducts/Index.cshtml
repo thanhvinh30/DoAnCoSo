@@ -240,13 +240,37 @@ foreach (var item in Model) {
 
                         <!--Page List Start-->
 
-                        <div aria-label="Page navigation example" class="btn-group mb-2">
-                            <ul class="pagination">
+                        <div aria-label="Page navigation example" class="btn-group mb-2" style="margin: 30px 0px;">
+                            <ul class="pagination" style="gap: 10px">
                                 <li type="button" class="btn btn-light">
-                                    <a asp-route-CatId="@ViewBag.CurrentCateId" asp-area="Admin" asp-controller="AdminProducts" asp-action="Index" asp-route-page="@(Model.PageNumber - 1)"><i class="bi bi-arrow-left"></i></a>
+                                    <a  asp-route-CatId="@ViewBag.CurrentCateId" 
+                                        asp-area="Admin" 
+                                        asp-controller="AdminProducts" 
+                                        asp-action="Index" 
+                                        asp-route-page="@(Model.PageNumber - 1)">
+                                        <i class="bi bi-arrow-left"></i>
+                                    </a>
                                 </li>
+                                @for (var i = 1; i <= Model.PageCount; i++)
+                                {
+                                    <li type="button" class="btn btn-light @(i == Model.PageNumber ? "active" : "")">
+                                        <a asp-route-CatId="@ViewBag.CurrentCateId"
+                                           asp-area="Admin"
+                                           asp-controller="AdminProducts"
+                                           asp-action="Index"
+                                           asp-route-page="@i">
+                                            @i
+                                        </a>
+                                    </li>
+                                }
                                 <li type="button" class="btn btn-light">
-                                    <a asp-route-CatId="@ViewBag.CurrentCateId" asp-area="Admin" asp-controller="AdminProducts" asp-action="Index" asp-route-page="@(Model.PageNumber + 1)"><i class="bi bi-arrow-right"></i></a>
+                                    <a  asp-route-CatId="@ViewBag.CurrentCateId" 
+                                        asp-area="Admin" 
+                                        asp-controller="AdminProducts" 
+                                        asp-action="Index" 
+                                        asp-route-page="@(Model.PageNumber + 1)">
+                                        <i class="bi bi-arrow-right"></i>
+                                    </a>
                                 </li>
                             </ul>
                         </div>

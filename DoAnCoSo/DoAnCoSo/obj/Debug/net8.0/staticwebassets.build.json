@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "AHl7emPRpzQ5G+h58SwO/CJtAH+G4grNBK3cFOKbKYQ=",
+  "Hash": "EIG1INBB/QphNNWb9CHtcumCYDD0UwPXVbRGaLhOfck=",
   "Source": "DoAnCoSo",
   "BasePath": "_content/DoAnCoSo",
   "Mode": "Default",
@@ -44591,25 +44591,6 @@
       "OriginalItemSpec": "wwwroot\\img-PhuTungXe(BanMoi)\\GaleSpeed - Cặp mâm CNC Moto 3 vừa Exicter 150.jpg"
     },
     {
-      "Identity": "D:\\DoAn\\DoAnCoSo\\DoAnCoSo\\DoAnCoSo\\wwwroot\\img-PhuTungXe(BanMoi)\\img12-02.jpg",
-      "SourceId": "DoAnCoSo",
-      "SourceType": "Discovered",
-      "ContentRoot": "D:\\DoAn\\DoAnCoSo\\DoAnCoSo\\DoAnCoSo\\wwwroot\\",
-      "BasePath": "_content/DoAnCoSo",
-      "RelativePath": "img-PhuTungXe(BanMoi)/img12-02.jpg",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\img-PhuTungXe(BanMoi)\\img12-02.jpg"
-    },
-    {
       "Identity": "D:\\DoAn\\DoAnCoSo\\DoAnCoSo\\DoAnCoSo\\wwwroot\\img-PhuTungXe(BanMoi)\\img17-03.jpg",
       "SourceId": "DoAnCoSo",
       "SourceType": "Discovered",
@@ -44722,25 +44703,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\img-PhuTungXe(BanMoi)\\img25-05.jpg"
-    },
-    {
-      "Identity": "D:\\DoAn\\DoAnCoSo\\DoAnCoSo\\DoAnCoSo\\wwwroot\\img-PhuTungXe(BanMoi)\\img26-05.jpg",
-      "SourceId": "DoAnCoSo",
-      "SourceType": "Discovered",
-      "ContentRoot": "D:\\DoAn\\DoAnCoSo\\DoAnCoSo\\DoAnCoSo\\wwwroot\\",
-      "BasePath": "_content/DoAnCoSo",
-      "RelativePath": "img-PhuTungXe(BanMoi)/img26-05.jpg",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\img-PhuTungXe(BanMoi)\\img26-05.jpg"
     },
     {
       "Identity": "D:\\DoAn\\DoAnCoSo\\DoAnCoSo\\DoAnCoSo\\wwwroot\\img-PhuTungXe(BanMoi)\\img28-05.jpg",
@@ -44990,6 +44952,25 @@
       "OriginalItemSpec": "wwwroot\\img-PhuTungXe(BanMoi)\\NRC - Xi nhan Yamaha R1 2015 - 2019.jpg"
     },
     {
+      "Identity": "D:\\DoAn\\DoAnCoSo\\DoAnCoSo\\DoAnCoSo\\wwwroot\\img-PhuTungXe(BanMoi)\\Ốc titanium GR5 10li bắt heo đầu trụ.jpg",
+      "SourceId": "DoAnCoSo",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\DoAn\\DoAnCoSo\\DoAnCoSo\\DoAnCoSo\\wwwroot\\",
+      "BasePath": "_content/DoAnCoSo",
+      "RelativePath": "img-PhuTungXe(BanMoi)/Ốc titanium GR5 10li bắt heo đầu trụ.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img-PhuTungXe(BanMoi)\\Ốc titanium GR5 10li bắt heo đầu trụ.jpg"
+    },
+    {
       "Identity": "D:\\DoAn\\DoAnCoSo\\DoAnCoSo\\DoAnCoSo\\wwwroot\\img-PhuTungXe(BanMoi)\\Ốc titanium GR5 10li nhìu size.jpg",
       "SourceId": "DoAnCoSo",
       "SourceType": "Discovered",
@@ -45083,6 +45064,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\img-PhuTungXe(BanMoi)\\Oya - Dè con + carte BMW S1000R 2021 S1000RR 2019+.jpg"
+    },
+    {
+      "Identity": "D:\\DoAn\\DoAnCoSo\\DoAnCoSo\\DoAnCoSo\\wwwroot\\img-PhuTungXe(BanMoi)\\Oya - Dè sau bánh Triumph Trident 660.jpg",
+      "SourceId": "DoAnCoSo",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\DoAn\\DoAnCoSo\\DoAnCoSo\\DoAnCoSo\\wwwroot\\",
+      "BasePath": "_content/DoAnCoSo",
+      "RelativePath": "img-PhuTungXe(BanMoi)/Oya - Dè sau bánh Triumph Trident 660.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img-PhuTungXe(BanMoi)\\Oya - Dè sau bánh Triumph Trident 660.jpg"
     },
     {
       "Identity": "D:\\DoAn\\DoAnCoSo\\DoAnCoSo\\DoAnCoSo\\wwwroot\\img-PhuTungXe(BanMoi)\\Oya - Dè trước Triumph Trident 660.jpg",

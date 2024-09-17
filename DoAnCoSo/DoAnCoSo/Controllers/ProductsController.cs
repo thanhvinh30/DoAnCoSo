@@ -20,37 +20,7 @@ namespace DoAnCoSo.Controllers
         //[Route("/shop.html", Name = "Shop-Products")]
         public IActionResult Products(int page = 1, int CatID = 0)
         {
-            //int pageNumber = page == null || page <= 0 ? 1 : page.Value;
-            //int pageSize = 6;
-            //var lsproducts = db.Products
-            //    .AsNoTracking()
-            //    .OrderBy(x => x.ProId)
-            //    .ToList();
-            //// .ToPagedList(pageNumber, pageSize);
-
-            //PagedList<Product> lstpro = new PagedList<Product>(lsproducts.AsQueryable(), pageSize, pageNumber);
-            //ViewBag.CurrentPage = pageNumber; // Để giữ giá trị phân loại trong view
-            //return View(lsproducts);
-            // Dùng try catch, nếu có lỗi thì dễ xử lí hơn
-            //-----------------------------------//
-            //try
-            //{
-            //int pageNumber = page  == null || page <= 0 ? 1 : page.Value;
-            //int pageSize = 6;
-            //var lsproducts = db.Products
-            //    .AsNoTracking()
-            //    .OrderByDescending(x => x.DateCreated);
-            //    //.ToList();
-            //   // .ToPagedList(pageNumber, pageSize);
-
-            //PagedList<Product> models = new PagedList<Product>(lsproducts, pageSize, pageNumber);
-            //ViewBag.CurrentPage = pageNumber; // Để giữ giá trị phân loại trong view
-            //return View(lsproducts);
-            //}
-            //catch
-            //{
-            //    return RedirectToAction("Index", "Home");
-            //}
+           
             var pageNumber = page < 1 ? 1 : page;
             var pageSize = 6;
             List<Product> lsProducts = new List<Product>();

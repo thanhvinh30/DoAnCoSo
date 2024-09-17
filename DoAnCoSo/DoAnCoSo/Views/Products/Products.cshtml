@@ -157,6 +157,16 @@
                                                 &laquo;
                                             </a>
                                         </li>
+                                        <!-- Page Number Buttons -->
+                                        @for (var i = 1; i <= Model.PageCount; i++)
+                                        {
+                                            <li type="button" class="rounded @(i == Model.PageNumber ? "active" : "")">
+                                                <a class="rounded" asp-route-CatId="@ViewBag.CurrentCateId"
+                                                   asp-route-page="@i">
+                                                    @i
+                                                </a>
+                                            </li>
+                                        }
 
                                         <!-- Next Page Button -->
                                         <li type="button" class="rounded @(Model.PageNumber == Model.PageCount  ? "disabled" : "")">
