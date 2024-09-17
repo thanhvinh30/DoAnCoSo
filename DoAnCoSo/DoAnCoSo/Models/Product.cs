@@ -23,11 +23,11 @@ public partial class Product
 
     public DateTime? DateModified { get; set; }
 
-    public bool? BestSellers { get; set; }
+    public bool BestSellers { get; set; }
 
-    public bool? Active { get; set; }
+    public bool Active { get; set; }
 
-    public bool? HomeFlag { get; set; }
+    public bool HomeFlag { get; set; }
 
     public string? ShortDes { get; set; }
 

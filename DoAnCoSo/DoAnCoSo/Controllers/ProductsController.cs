@@ -17,11 +17,9 @@ namespace DoAnCoSo.Controllers
         {
             _context = context;
         }
-        [Route("/shop.html", Name = "Shop-Products")]
-        public IActionResult Products(int? page)
+        //[Route("/shop.html", Name = "Shop-Products")]
+        public IActionResult Products(int page = 1, int CatID = 0)
         {
-
-
             //int pageNumber = page == null || page <= 0 ? 1 : page.Value;
             //int pageSize = 6;
             //var lsproducts = db.Products
@@ -34,31 +32,66 @@ namespace DoAnCoSo.Controllers
             //ViewBag.CurrentPage = pageNumber; // Để giữ giá trị phân loại trong view
             //return View(lsproducts);
             // Dùng try catch, nếu có lỗi thì dễ xử lí hơn
-            try
-            {
-            int pageNumber = page  == null || page <= 0 ? 1 : page.Value;
-            int pageSize = 6;
-            var lsproducts = db.Products
-                .AsNoTracking()
-                .OrderByDescending(x => x.DateCreated);
-                //.ToList();
-               // .ToPagedList(pageNumber, pageSize);
+            //-----------------------------------//
+            //try
+            //{
+            //int pageNumber = page  == null || page <= 0 ? 1 : page.Value;
+            //int pageSize = 6;
+            //var lsproducts = db.Products
+            //    .AsNoTracking()
+            //    .OrderByDescending(x => x.DateCreated);
+            //    //.ToList();
+            //   // .ToPagedList(pageNumber, pageSize);
 
-            PagedList<Product> models = new PagedList<Product>(lsproducts, pageSize, pageNumber);
-            ViewBag.CurrentPage = pageNumber; // Để giữ giá trị phân loại trong view
-            return View(models);
-            }
-            catch
+            //PagedList<Product> models = new PagedList<Product>(lsproducts, pageSize, pageNumber);
+            //ViewBag.CurrentPage = pageNumber; // Để giữ giá trị phân loại trong view
+            //return View(lsproducts);
+            //}
+            //catch
+            //{
+            //    return RedirectToAction("Index", "Home");
+            //}
+            var pageNumber = page < 1 ? 1 : page;
+            var pageSize = 6;
+            List<Product> lsProducts = new List<Product>();
+            if (CatID != 0)
             {
-                return RedirectToAction("Index", "Home");
+                lsProducts = _context.Products
+                        .AsNoTracking()
+                        .Where(p => p.CatId == CatID && p.ProId >= 1)
+                        .Include(x => x.Cat)
+                        .OrderByDescending(x => x.ProId)
+                        .OrderBy(x => x.ProId)
+                        .ToList();
             }
-          
+            else
+            {
+
+                lsProducts = _context.Products
+                        .AsNoTracking()
+                        .Include(x => x.Cat)
+                        .OrderByDescending(x => x.ProId)
+                        .OrderBy(x => x.ProId)
+                        .ToList();
+            }
+
+
+            PagedList<Product> models = new PagedList<Product>(lsProducts.AsQueryable(), pageNumber, pageSize);           // Fix lỗi về lsProducts                                                                                                                              //PagedList<Product> models = new PagedList<Product>(lsProducts.AsEnumerable(), pageNumber, pageSize);
+
+            ViewBag.CurrentCateId = CatID;
+            ViewBag.Currentpage = pageNumber;
+
+
+            ViewData["DanhMuc"] = new SelectList(_context.Categories, "CatId", "CatName", CatID);
+            ViewBag.CurrentPage = pageNumber;
+            return View(models);
+
         }
         public IActionResult Cart()
         {
             return View();
         }
-        [Route("/{Alias}-{id}", Name = "ListProducts")]
+        [Route("CatID.html", Name = "ListProducts")]
         public IActionResult List(int id, int page = 1)
         {
                 try
@@ -83,7 +116,7 @@ namespace DoAnCoSo.Controllers
            
 
         }
-        [Route("/{Alias}-{id}.html", Name ="ProductsDetail")]
+        [Route("Detail.html", Name ="ProductsDetail")]
         public IActionResult Details(int id)
         {
             try

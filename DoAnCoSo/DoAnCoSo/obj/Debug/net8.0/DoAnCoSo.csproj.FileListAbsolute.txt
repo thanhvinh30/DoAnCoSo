@@ -786,3 +786,4 @@ D:\DoAn\DoAnCoSo\DoAnCoSo\DoAnCoSo\bin\Debug\net8.0\runtimes\win\lib\net6.0\Syst
 D:\DoAn\DoAnCoSo\DoAnCoSo\DoAnCoSo\obj\Debug\net8.0\DoAnCoSo.MvcApplicationPartsAssemblyInfo.cs
 D:\DoAn\DoAnCoSo\DoAnCoSo\DoAnCoSo\bin\Debug\net8.0\PagedList.dll
 D:\DoAn\DoAnCoSo\DoAnCoSo\DoAnCoSo\bin\Debug\net8.0\PagedList.Mvc.dll
+D:\DoAn\DoAnCoSo\DoAnCoSo\DoAnCoSo\bin\Debug\net8.0\X.PagedList.dll

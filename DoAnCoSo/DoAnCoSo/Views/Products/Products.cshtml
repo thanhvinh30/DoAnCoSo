@@ -2,9 +2,9 @@
 @model PagedList.Core.IPagedList<DoAnCoSo.Models.Product> 
 @* @model List<DoAnCoSo.Models.Product> *@
 @* @model IEnumertable<DoAnCoSo.Models.Product> *@
-
+    @using X.PagedList
 @{
-    ViewData["Title"] = "Shop - " + ViewBag.CurrentPage;
+    ViewData["Title"] = "" + ViewBag.CurrentPage;
     Layout = "~/Views/Shared/_Layout.cshtml";
    // int PageCurrent = ViewBag.CurrentPage;
    // int PageNext = ViewBag + 1;
@@ -98,9 +98,9 @@
                     
                     <div class="col-lg-9">
                         <div class="row g-4 justify-content-center">
-                            @if(Model != null && Model.Count() > 0)
-                            {
-                                @foreach (var item in Model)
+                            <!--if (Model != null && Model.Count() > 0)
+                            { }-->
+                            @foreach (var item in Model)
                                 { 
                                     string url = $"";
                                     <div class="col-md-6 col-lg-6 col-xl-4">
@@ -122,7 +122,7 @@
                                         </div>
                                     </div>
                                 }
-                            }
+                            
                             <!--
                             foreach (var item in Model)
                             {
@@ -147,33 +147,27 @@
                             }
                             -->
                             <div class="col-12">
-                                <div class="pagination d-flex justify-content-center mt-5">
-                                    <div class="pagination d-flex justify-content-center mt-5">
-                                        <ul class="pagination d-flex justify-content-center mt-5">
-                                            <!--
-                                            if (PageCurrent > 1)
-                                            {
-                                                <li class="page-item">
-                                                    <a class="rounded">&laquo;</a>
-                                                </li>
-                                            }
-                                            -->
-                                        </ul>
-                                        <a  class="rounded">&laquo;</a>
-                                        <a  class="active rounded">1</a>
-                                        <a  class="rounded">2</a>
-                                        <a  class="rounded">3</a>
-                                        <a  class="rounded">4</a>
-                                        <a  class="rounded">5</a>
-                                        <a  class="rounded">6</a>
-                                        <a  class="rounded">&raquo;</a>
-                                    </div>
+                               
+                                <div aria-label="Page navigation example" class="btn-group mb-2 pagination d-flex justify-content-center mt-5">
+                                    <ul class="pagination d-flex justify-content-center mt-5">
+                                        <!-- Previous Page Button -->
+                                        <li type="button" class="rounded @(Model.PageNumber == 1 ? "disabled" : "")">
+                                            <a class="rounded" asp-route-CatId="@ViewBag.CurrentCateId"
+                                               asp-route-page="@(Model.PageNumber - 1)">
+                                                &laquo;
+                                            </a>
+                                        </li>
+
+                                        <!-- Next Page Button -->
+                                        <li type="button" class="rounded @(Model.PageNumber == Model.PageCount  ? "disabled" : "")">
+                                            <a class="rounded" asp-route-CatId="@ViewBag.CurrentCateId"
+                                               asp-route-page="@(Model.PageNumber + 1)">
+                                                &raquo;
+                                            </a>
+                                        </li>
+                                    </ul>
                                 </div>
-                                <!--
-                                <div class="d-flex justify-content-center">
-                                    Html.PagedListPager(Model, page => Url.Action("Products", new { page=page }))
-                                </div>
-                                -->
+
                             </div>
 
                         </div>
