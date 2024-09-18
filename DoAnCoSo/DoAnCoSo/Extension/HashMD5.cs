@@ -22,7 +22,7 @@ namespace DoAnCoSo.Extension
                 StringBuilder sbHash = new StringBuilder();
                 foreach (byte b in bHash)
                 {
-                    sbHash.Append(b.ToString("x2"));
+                    sbHash.Append(String.Format("{0:x2}", b));
                 }
                 return sbHash.ToString();
             }

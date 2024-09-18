@@ -17,9 +17,9 @@ public partial class Customer
 
     public DateOnly? Birthday { get; set; }
 
-    public int? Phone { get; set; }
+    public string Phone { get; set; }
 
-    public int? LocationId { get; set; }
+    public int LocationId { get; set; }
 
     public DateOnly? CreateDate { get; set; }
 

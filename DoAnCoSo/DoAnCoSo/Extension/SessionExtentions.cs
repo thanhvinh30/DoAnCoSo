@@ -4,7 +4,7 @@ using Newtonsoft.Json;
 
 namespace DoAnCoSo.Extension
 {
-    public static class SessionExtentions
+    public static class SessionExtentions                                       // Xử lí phần giỏ hàng
     {
         public static void Set<T> (this ISession session, string key, T value)
         {
