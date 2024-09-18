@@ -59,7 +59,9 @@ namespace DoAnCoSo.Controllers
             }
             
             vm.Products = lsProductsView;
+            vm.Categories = lsCats;
             ViewBag.AllProducts = lsproducts;
+            ViewBag.lsCat = lsCats;
             //End
             return View(vm);
         }

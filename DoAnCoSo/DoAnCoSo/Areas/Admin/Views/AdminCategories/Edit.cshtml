@@ -28,6 +28,20 @@
                 </div>
                 <span asp-validation-for="Ordering" class="text-danger"></span>
             </div>
+            <div class="form-group">
+                <label class="col-lg-2 col-form-label">Levels</label>
+                <div class="col-lg-10">
+                    <input asp-for="Levels" class="form-control" type="number">
+                </div>
+                <span asp-validation-for="Levels" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label class="col-lg-2 col-form-label">ParentId</label>
+                <div class="col-lg-10">
+                    <input asp-for="ParentId" class="form-control" type="number">
+                </div>
+                <span asp-validation-for="ParentId" class="text-danger"></span>
+            </div>
             <div class="form-group form-check" style="margin:20px -22px ">
                 <div class="form-switch mb-2">
                     <input asp-for="Published" type="checkbox" class="form-check-input" />
