@@ -569,6 +569,10 @@
       "PackagePath": "staticwebassets\\css\\bootstrap.min.css"
     },
     {
+      "Id": "D:\\DoAn\\DoAnCoSo\\DoAnCoSo\\DoAnCoSo\\wwwroot\\css\\button-clean-Cart.css",
+      "PackagePath": "staticwebassets\\css\\button-clean-Cart.css"
+    },
+    {
       "Id": "D:\\DoAn\\DoAnCoSo\\DoAnCoSo\\DoAnCoSo\\wwwroot\\css\\style-account.css",
       "PackagePath": "staticwebassets\\css\\style-account.css"
     },

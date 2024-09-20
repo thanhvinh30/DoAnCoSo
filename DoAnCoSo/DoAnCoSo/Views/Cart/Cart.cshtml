@@ -54,13 +54,13 @@
                                     <td>
                                         <div class="input-group quantity mt-4" style="width: 100px;">
                                             <div class="input-group-btn">
-                                                <a class="btn btn-sm btn-minus rounded-circle bg-light border" asp-controller="Cart" asp-action="Increase" asp-route-id="@item.ProId">
+                                            <a class="btn btn-sm btn-minus rounded-circle bg-light border" asp-controller="Cart" asp-action="Decrease" asp-route-id="@item.ProId">
                                                     <i class="fa fa-minus"></i>
                                                 </a>
                                             </div>
                                             <input type="text" class="form-control form-control-sm text-center border-0" value="@item.Quantity">
                                             <div class="input-group-btn">
-                                                <a class="btn btn-sm btn-plus rounded-circle bg-light border" asp-controller="Cart" asp-action="Decrease" asp-route-id="@item.ProId">
+                                            <a class="btn btn-sm btn-plus rounded-circle bg-light border" asp-controller="Cart" asp-action="Increase" asp-route-id="@item.ProId">
                                                     <i class="fa fa-plus"></i>
                                                 </a>
                                             </div>
@@ -76,15 +76,17 @@
                                     </td>
                                 </tr>
                             }   
-                            <tr>
-                                <td colspan="9">Grand ToTal: @Model.GrandToTal.ToString("#,##0")VND</td>
-                            </tr>
+                            <tr rowspan="10">
+                                <td colspan="10"><p>Tổng Giỏ Hàng: @Model.GrandToTal.ToString("#,##0")VND</p></td>
+
+                            <td><a class="btn btn-md rounded-circle bg-light border mt-4" asp-controller="Cart" asp-action="CleanCart"><i class="fa fa-trash" aria-hidden="true"></i></a></td>
+                        </tr>
                         }
                         else
                         {   
                             <tr>
-                            <td colspan="8"><h4>Chưa có sản phẩm nào trong giỏ hàng! Mong Quý Khách Nhanh Tay Mua Hàng Nào ^^</h4></td>
-                            </tr>
+                                <td colspan="8"><h4>Chưa có sản phẩm nào trong giỏ hàng! Mong Quý Khách Nhanh Tay Mua Hàng Nào ^^</h4></td>
+                            </tr>                        
                         }
                 </tbody>                
             </table>

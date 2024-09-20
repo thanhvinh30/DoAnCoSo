@@ -45,39 +45,79 @@ namespace DoAnCoSo.Controllers
             HttpContext.Session.SetJson("Cart", cart);
 
             return Redirect(Request.Headers["Referer"].ToString());
-
-            // Moiwsi --------------------------------------------------------------
-            // Lấy sản phẩm từ database
-            //var product = await _context.Products.FindAsync(id);
-            //if (product == null)
-            //{
-            //    return NotFound(); // Kiểm tra nếu không tìm thấy sản phẩm
-            //}
-
-            //// Lấy giỏ hàng từ session hoặc tạo mới nếu chưa có
-            //List<Cart> cart = HttpContext.Session.GetJson<List<Cart>>("Cart") ?? new List<Cart>();
-
-            //// Tìm sản phẩm trong giỏ hàng
-            //var cartItem = cart.FirstOrDefault(c => c.ProId == id);
-
-            //if (cartItem == null)
-            //{
-            //    // Nếu chưa có trong giỏ, thêm mới
-            //    cart.Add(new Cart(product));
-            //}
-            //else
-            //{
-            //    // Nếu đã có, tăng số lượng
-            //    cartItem.Quantity++;
-            //}
-
-            //// Cập nhật lại giỏ hàng vào session
-            //HttpContext.Session.SetJson("Cart", cart);
-
-            //// Chuyển hướng về trang trước đó
-            //return Redirect(Request.Headers["Referer"].ToString());
         }
-        public IActionResult Checkout()
+
+
+        //Action để tăng số lượng sản phẩm
+        public IActionResult Increase(int id)
+        {
+            List<Cart> cart = HttpContext.Session.GetJson<List<Cart>>("Cart") ?? new List<Cart>();
+            Cart cartItem = cart.Where(c => c.ProId == id).FirstOrDefault();
+            if (cartItem != null && cartItem.Quantity > 0)
+            {
+                ++cartItem.Quantity;
+            }
+            else
+            {
+                cart.RemoveAll(p => p.ProId == id);
+            }
+            if (cart.Count == 0)
+            {
+                HttpContext.Session.Remove("Cart");
+            }
+            else
+            {
+                HttpContext.Session.SetJson("Cart", cart);
+            }
+            return RedirectToAction("Cart");
+        }
+
+        // Action để giảm số lượng sản phẩm
+        public IActionResult Decrease(int id)
+        {
+            List<Cart> cart = HttpContext.Session.GetJson<List<Cart>>("Cart") ?? new List<Cart>();
+            Cart cartItem = cart.Where( c => c.ProId == id).FirstOrDefault();
+            if (cartItem != null && cartItem.Quantity > 1)
+            {
+                --cartItem.Quantity;
+            }
+            else
+            {
+                cart.RemoveAll( p => p.ProId == id);
+            }
+            if (cart.Count == 0)
+            {
+                HttpContext.Session.Remove("Cart");
+            }
+            else
+            {
+                HttpContext.Session.SetJson("Cart", cart);
+            }
+            return RedirectToAction("Cart");
+        }
+
+        // Action để xóa sản phẩm khỏi giỏ hàng
+        public IActionResult Remove(int id)
+        {
+            List<Cart> cart = HttpContext.Session.GetJson<List<Cart>>("Cart") ?? new List<Cart>();
+            cart.RemoveAll(p => p.ProId == id);
+            if (cart.Count == 0)
+            {
+                HttpContext.Session.Remove("Cart");
+            }
+            else
+            {
+                HttpContext.Session.SetJson("Cart", cart);
+            }
+            return RedirectToAction("Cart");
+        }
+        public IActionResult CleanCart()
+        {
+            HttpContext.Session.Remove("Cart");
+            return RedirectToAction("Cart");
+        }
+
+            public IActionResult Checkout()
         {
 
             return View();
