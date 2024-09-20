@@ -26,7 +26,7 @@
                                         <p class="text-dark fs-5 fw-bold mb-0">
                                             @item.ProPrice.ToString("#,##0") VND
                                         </p>
-                                        <a asp-action="AddToCart" asp-controller="Cart" asp-route-id="@item.ProId" class="btn border border-secondary rounded-pill px-3 text-primary">
+                                        <a asp-action="Add" asp-controller="Cart" asp-route-id="@item.ProId" class="btn border border-secondary rounded-pill px-3 text-primary">
                                             <i class="fa fa-shopping-bag me-2 text-primary"></i> Thêm Vào Giỏ hàng
                                         </a>
                                     </div>

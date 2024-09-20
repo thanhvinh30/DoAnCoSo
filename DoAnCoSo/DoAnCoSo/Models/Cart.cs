@@ -35,8 +35,8 @@ public partial class Cart
     {
         ProId = pro.ProId;
         ProName = pro.ProName;
+        ProImage = pro.ProImage;
         Price = pro.ProPrice;
         Quantity = 1;
-        ProImage = pro.ProImage;
     }
 }

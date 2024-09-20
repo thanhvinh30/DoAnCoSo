@@ -30,12 +30,6 @@ namespace DoAnCoSo
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDistributedMemoryCache(); // Sử dụng bộ nhớ phân tán để lưu trữ session
-            services.AddSession(options =>
-            {
-                options.IdleTimeout = TimeSpan.FromMinutes(30); // Thời gian timeout của session
-                options.Cookie.HttpOnly = true;
-                options.Cookie.IsEssential = true;
-            });
             services.AddControllersWithViews(); // Hoặc AddMvc() tùy theo cấu hình của bạn
             // Thêm mới
             services.AddMvc();
@@ -76,7 +70,6 @@ namespace DoAnCoSo
             app.UseRouting();
 
             app.UseAuthorization();
-            app.UseSession();
 
             app.UseEndpoints(endpoints =>
             {

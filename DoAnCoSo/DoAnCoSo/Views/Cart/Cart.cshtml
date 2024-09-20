@@ -1,5 +1,5 @@
 ﻿@using DoAnCoSo.Models.ViewModels
-@model CartItemViewModel
+@model DoAnCoSo.Models.ViewModels.CartItemViewModel
 
 
 @{
@@ -20,14 +20,12 @@
 <!-- Cart Page Start -->
 <div class="container-fluid py-5">
     <div class="container py-5">
-        @if (Model != null && Model.CartItems.Count() > 0)
-        {
+       
         <div class="table-responsive">
             <table class="table">
                         
                     <thead>
                         <tr>
-                            <th scope="col">Số sản phẩm</th>
                             <th scope="col">Ảnh sản phẩm</th>
                             <th scope="col">Tên sản phẩm</th>
                             <th scope="col">Giá</th>
@@ -37,49 +35,57 @@
                         </tr>
                     </thead>
                     <tbody>
-                        @foreach ( var item in Model.CartItems)
+                        @if (Model != null && Model.CartItems.Count() > 0)
                         {
+                            @foreach ( var item in Model.CartItems)
+                            {
+                                <tr>
+                                    <th scope="row">
+                                        <div class="d-flex align-items-center">
+                                            <img src="~/img-PhuTungXe(BanMoi)/@item.ProImage" class="img-fluid me-5 rounded-circle" style="width: 80px; height: 80px;" alt="Chưa có ảnh">
+                                        </div>
+                                    </th>
+                                    <td>
+                                        <p class="mb-0 mt-4">@item.ProName</p>
+                                    </td>
+                                    <td>
+                                        <p class="mb-0 mt-4">@item.Price.ToString("#,##0")VND</p>
+                                    </td>
+                                    <td>
+                                        <div class="input-group quantity mt-4" style="width: 100px;">
+                                            <div class="input-group-btn">
+                                                <a class="btn btn-sm btn-minus rounded-circle bg-light border" asp-controller="Cart" asp-action="Increase" asp-route-id="@item.ProId">
+                                                    <i class="fa fa-minus"></i>
+                                                </a>
+                                            </div>
+                                            <input type="text" class="form-control form-control-sm text-center border-0" value="@item.Quantity">
+                                            <div class="input-group-btn">
+                                                <a class="btn btn-sm btn-plus rounded-circle bg-light border" asp-controller="Cart" asp-action="Decrease" asp-route-id="@item.ProId">
+                                                    <i class="fa fa-plus"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <p class="mb-0 mt-4">@Model.CartItems.Where( x => x.ProId == item.ProId).Sum( x => x.Quantity * x.Price).ToString("#,##0")VND</p>
+                                    </td>
+                                    <td>
+                                        <a class="btn btn-md rounded-circle bg-light border mt-4" asp-controller="Cart" asp-action="Remove" asp-route-id="@item.ProId">
+                                            <i class="fa fa-times text-danger"></i>
+                                        </a>
+                                    </td>
+                                </tr>
+                            }   
                             <tr>
-                                <td>
-                                    <p class="mb-0 mt-4">@item.CartId</p>
-                                </td>
-                                <th scope="row">
-                                    <div class="d-flex align-items-center">
-                                        <img src="~/img-PhuTungXe(BanMoi)/@item.ProImage" class="img-fluid me-5 rounded-circle" style="width: 80px; height: 80px;" alt="Chưa có ảnh">
-                                    </div>
-                                </th>
-                                <td>
-                                    <p class="mb-0 mt-4">@item.ProName</p>
-                                </td>
-                                <td>
-                                    <p class="mb-0 mt-4">@item.Price.ToString("#,##0")VND</p>
-                                </td>
-                                <td>
-                                    <div class="input-group quantity mt-4" style="width: 100px;">
-                                        <div class="input-group-btn">
-                                            <a class="btn btn-sm btn-minus rounded-circle bg-light border" asp-controller="Cart" asp-action="Increase" asp-route-id="@item.ProId">
-                                                <i class="fa fa-minus"></i>
-                                            </a>
-                                        </div>
-                                        <input type="text" class="form-control form-control-sm text-center border-0" value="@item.Quantity">
-                                        <div class="input-group-btn">
-                                            <a class="btn btn-sm btn-plus rounded-circle bg-light border" asp-controller="Cart" asp-action="Decrease" asp-route-id="@item.ProId">
-                                                <i class="fa fa-plus"></i>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td>
-                                    <p class="mb-0 mt-4">@Model.CartItems.Where( x => x.ProId == item.ProId).Sum( x => x.Quantity * x.Price).ToString("#,##0")VND</p>
-                                </td>
-                                <td>
-                                    <a class="btn btn-md rounded-circle bg-light border mt-4" asp-controller="Cart" asp-action="Remove" asp-route-id="@item.ProId">
-                                        <i class="fa fa-times text-danger"></i>
-                                    </a>
-                                </td>
+                                <td colspan="9">Grand ToTal: @Model.GrandToTal.ToString("#,##0")VND</td>
                             </tr>
-                        }   
-                        
+                        }
+                        else
+                        {   
+                            <tr>
+                            <td colspan="8"><h4>Chưa có sản phẩm nào trong giỏ hàng! Mong Quý Khách Nhanh Tay Mua Hàng Nào ^^</h4></td>
+                            </tr>
+                        }
                 </tbody>                
             </table>
         </div>
@@ -101,19 +107,16 @@
                     </div>
                     <div class="py-4 mb-4 border-top border-bottom d-flex justify-content-between">
                         <h5 class="mb-0 ps-4 me-4"> Tổng cộng</h5>
-                            <p class="mb-0 pe-4">@Model.GrandToTal.ToString("#,##0")VND</p>
+                            <p class="mb-0 pe-4"></p>
                     </div>
+                    <!--Model.GrandToTal.ToString("#,##0")VND-->
                     <a href="chackout.html">
                         <button class="btn border-secondary rounded-pill px-4 py-3 text-primary text-uppercase mb-4 ms-4" type="button">Tiến hành thanh toán</button>
                     </a>
                 </div>
             </div>
         </div>
-        }
-        else
-        {
-        <h4>Chưa có sản phẩm nào trong giỏ hàng! Mong Quý Khách Nhanh Tay Mua Hàng Nào ^^</h4>
-        }
+       
     </div>
 </div>
 <!-- Cart Page End -->
