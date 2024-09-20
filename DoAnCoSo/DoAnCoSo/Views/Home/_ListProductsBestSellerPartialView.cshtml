@@ -3,7 +3,7 @@
     For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
 *@
 @model List<Product>
-
+@Html.Partial("_NotificationPartial")
 @foreach (var item in Model)
 {
      string url = $"Detail/{item.ProId}.html";

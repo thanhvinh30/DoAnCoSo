@@ -6,6 +6,7 @@
     ViewData["Title"] = "Trang Các Sản Phẩm" ;
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+@Html.Partial("_NotificationPartial")
 <!-- Single Page Header start -->
 <div class="container-fluid page-header py-5">
     <h1 class="text-center text-white display-6">Các Sản Phẩm PHỤ TÙNG XE MÁY </h1>
@@ -87,6 +88,7 @@
                     </div>
                     
                     <div class="col-lg-9">
+                        @Html.Partial("_NotificationPartial")
                         <div class="row g-4 justify-content-center">
                             @if (Model != null && Model.Count() > 0)
                             { 

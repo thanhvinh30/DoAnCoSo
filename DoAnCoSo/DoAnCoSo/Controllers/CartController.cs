@@ -43,7 +43,7 @@ namespace DoAnCoSo.Controllers
             }
 
             HttpContext.Session.SetJson("Cart", cart);
-
+            TempData["Success"] = "Bạn đã thêm sản phẩm thành công";
             return Redirect(Request.Headers["Referer"].ToString());
         }
 
@@ -109,6 +109,7 @@ namespace DoAnCoSo.Controllers
             {
                 HttpContext.Session.SetJson("Cart", cart);
             }
+            TempData["Success"] = "Bạn đã Xóa sản phẩm thành công";
             return RedirectToAction("Cart");
         }
         public IActionResult CleanCart()
