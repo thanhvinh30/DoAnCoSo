@@ -1,0 +1,48 @@
+﻿
+@*
+    For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@model List<Product>
+
+@foreach (var item in Model)
+{
+     string url = $"Detail/{item.ProId}.html";
+    <div class="col-lg-6 col-xl-4">
+        <div class="p-4 rounded bg-light">
+            <div class="row align-items-center">
+                <div class="col-6">
+                    <img src="@Url.Content($"~/img-PhuTungXe(BanMoi)/{item.ProImage}")" class="img-fluid rounded-circle w-100" alt="@item.ProName">
+                </div>
+                <div class="col-6">
+                    <a asp-route="ProductsDetail" asp-route-id="@item.ProId" class="h5">@item.ProName</a>
+                   <div class="d-flex my-3">
+                        <!--Hiển thị đánh giá bằng sao, thay thế bằng điểm đánh giá thực tế-->
+                        @for (int i = 0; i < 5; i++)
+                        {
+                            if (i <item.Rating)
+                            {
+                                <i class="fas fa-star text-primary"></i>
+                            }
+                            else
+                            {
+                                <i class="fas fa-star"></i>
+                            }
+                        }
+                        </div>
+                    <h4 class="mb-3">@item.ProPrice.Value.ToString("#,##0")VND</h4> <!-- Định dạng giá tiền -->
+                    <a href="" class="btn border border-secondary rounded-pill px-3 text-primary">
+                        <i class="fa fa-shopping-bag me-2 text-primary"></i> Thêm Vào Giỏ hàng
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+
+
+<!--
+    link: Carrt: Url.Action("AddToCart", "Cart", new { id = product.ProductId })
+    Url.Action("Detail", "Shop", new { id = product.ProductId })
+
+
+-->

@@ -57,14 +57,28 @@ namespace DoAnCoSo.Controllers
                                                         .ToList ();
                 lsProductsView.Add (productHomeVM);
             }
-            
+
+            // Cập nhật sản phẩm Bestseller
+            //UpdateBestSellers();
+
+            // Thêm lệnh lấy danh sách sản phẩm Bestseller
+            var bestSellerProducts = _context.Products
+                                             .AsNoTracking()
+                                             .Where(p => p.Active == true && p.BestSellers == true)
+                                             .OrderByDescending( x => x.DateCreated) // Giả sử `SalesCount` là thuộc tính đếm số lượng bán
+                                             .Take(6) // Lấy 10 sản phẩm bán chạy nhất
+                                             .ToList();
+
             vm.Products = lsProductsView;
             vm.Categories = lsCats;
+
             ViewBag.AllProducts = lsproducts;
             ViewBag.lsCat = lsCats;
+            ViewBag.BestSellerProducts = bestSellerProducts;
             //End
             return View(vm);
         }
+        
         public IActionResult Contact()
         {
             return View();

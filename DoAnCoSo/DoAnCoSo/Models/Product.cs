@@ -36,4 +36,5 @@ public partial class Product
     public string? MeetaKey { get; set; }
 
     public virtual Category? Cat { get; set; }
+    public int Rating { get; set; }
 }
