@@ -17,6 +17,8 @@ public partial class DataDoAnCoSoContext : DbContext
 
     public virtual DbSet<Account> Accounts { get; set; }
 
+    public virtual DbSet<Cart> Carts { get; set; }
+
     public virtual DbSet<Category> Categories { get; set; }
 
     public virtual DbSet<Contact> Contacts { get; set; }
@@ -54,11 +56,25 @@ public partial class DataDoAnCoSoContext : DbContext
             entity.Property(e => e.Phone)
                 .HasMaxLength(12)
                 .IsUnicode(false);
+            entity.Property(e => e.Salt)
+                .HasMaxLength(10)
+                .IsFixedLength();
             entity.Property(e => e.UserNameAcc).HasMaxLength(150);
 
             entity.HasOne(d => d.Role).WithMany(p => p.Accounts)
                 .HasForeignKey(d => d.RoleId)
                 .HasConstraintName("FK_Account_Roles");
+        });
+
+        modelBuilder.Entity<Cart>(entity =>
+        {
+            entity.ToTable("Cart");
+
+            entity.Property(e => e.ProImage).HasMaxLength(100);
+            entity.Property(e => e.ProName).HasMaxLength(50);
+
+            entity.HasOne(d => d.Order).WithMany(p => p.Carts)
+                .HasForeignKey(d => d.CartId);
         });
 
         modelBuilder.Entity<Category>(entity =>
@@ -100,6 +116,9 @@ public partial class DataDoAnCoSoContext : DbContext
             entity.Property(e => e.CusPassword)
                 .HasMaxLength(50)
                 .IsUnicode(false);
+            entity.Property(e => e.Salt)
+                .HasMaxLength(10)
+                .IsFixedLength();
 
             entity.HasOne(d => d.Location).WithMany(p => p.Customers)
                 .HasForeignKey(d => d.LocationId)

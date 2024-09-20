@@ -9,11 +9,11 @@ public partial class Product
 
     public int? CatId { get; set; }
 
-    public string? ProName { get; set; }
+    public string ProName { get; set; } = null!;
 
     public string? ProImage { get; set; }
 
-    public int? ProPrice { get; set; }
+    public decimal ProPrice { get; set; }
 
     public int? Quantity { get; set; }
 
@@ -35,6 +35,7 @@ public partial class Product
 
     public string? MeetaKey { get; set; }
 
+    public int? Rating { get; set; }
+
     public virtual Category? Cat { get; set; }
-    public int Rating { get; set; }
 }

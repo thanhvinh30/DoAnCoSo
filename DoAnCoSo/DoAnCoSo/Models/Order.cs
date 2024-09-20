@@ -37,9 +37,11 @@ public partial class Order
 
     public string? CustomerAddress { get; set; }
 
+    public virtual ICollection<Cart> Carts { get; set; } = new List<Cart>();
+
     public virtual Customer? Cus { get; set; }
 
     public virtual ICollection<OrderDetail> OrderDetails { get; set; } = new List<OrderDetail>();
 
-    public virtual TransactStatus Status { get; set; }
+    public virtual TransactStatus? Status { get; set; }
 }

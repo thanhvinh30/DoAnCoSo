@@ -17,9 +17,9 @@ public partial class Customer
 
     public DateOnly? Birthday { get; set; }
 
-    public string Phone { get; set; }
+    public int? Phone { get; set; }
 
-    public int LocationId { get; set; }
+    public int? LocationId { get; set; }
 
     public DateOnly? CreateDate { get; set; }
 
@@ -28,6 +28,8 @@ public partial class Customer
     public string? Avatar { get; set; }
 
     public bool Active { get; set; }
+
+    public string? Salt { get; set; }
 
     public virtual Location? Location { get; set; }
 

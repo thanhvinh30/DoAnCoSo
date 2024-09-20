@@ -22,5 +22,8 @@ public partial class Account
     public bool Active { get; set; }
 
     public DateOnly? CreateDate { get; set; }
+
+    public string? Salt { get; set; }
+
     public virtual Role? Role { get; set; }
 }

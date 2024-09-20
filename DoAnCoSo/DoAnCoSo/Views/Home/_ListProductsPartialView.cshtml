@@ -24,15 +24,15 @@
                                     <p>@item.MetaDesc</p>
                                     <div class="d-flex justify-content-between flex-lg-wrap">
                                         <p class="text-dark fs-5 fw-bold mb-0">
-                                            @item.ProPrice.Value.ToString("#,##0") VND
+                                            @item.ProPrice.ToString("#,##0") VND
                                         </p>
-                                        <a href="cart.html" class="btn border border-secondary rounded-pill px-3 text-primary">
+                                        <a asp-action="AddToCart" asp-controller="Cart" asp-route-id="@item.ProId" class="btn border border-secondary rounded-pill px-3 text-primary">
                                             <i class="fa fa-shopping-bag me-2 text-primary"></i> Thêm Vào Giỏ hàng
                                         </a>
                                     </div>
                                 </div>
                             </div>
-                        </a>
+                        </a>                       
                     </div>
                 }
             </div>
