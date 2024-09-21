@@ -3,28 +3,16 @@
   "WorkspaceRootPath": "D:\\DoAn\\DoAnCoSo\\DoAnCoSo\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{83E1D782-A8CC-4934-8ED6-41B6287C8013}|DoAnCoSo\\DoAnCoSo.csproj|d:\\doan\\doancoso\\doancoso\\doancoso\\views\\products\\products.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{83E1D782-A8CC-4934-8ED6-41B6287C8013}|DoAnCoSo\\DoAnCoSo.csproj|solutionrelative:doancoso\\views\\products\\products.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{83E1D782-A8CC-4934-8ED6-41B6287C8013}|DoAnCoSo\\DoAnCoSo.csproj|d:\\doan\\doancoso\\doancoso\\doancoso\\controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{83E1D782-A8CC-4934-8ED6-41B6287C8013}|DoAnCoSo\\DoAnCoSo.csproj|solutionrelative:doancoso\\controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{83E1D782-A8CC-4934-8ED6-41B6287C8013}|DoAnCoSo\\DoAnCoSo.csproj|d:\\doan\\doancoso\\doancoso\\doancoso\\views\\products\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{83E1D782-A8CC-4934-8ED6-41B6287C8013}|DoAnCoSo\\DoAnCoSo.csproj|solutionrelative:doancoso\\views\\products\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{83E1D782-A8CC-4934-8ED6-41B6287C8013}|DoAnCoSo\\DoAnCoSo.csproj|d:\\doan\\doancoso\\doancoso\\doancoso\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{83E1D782-A8CC-4934-8ED6-41B6287C8013}|DoAnCoSo\\DoAnCoSo.csproj|solutionrelative:doancoso\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{83E1D782-A8CC-4934-8ED6-41B6287C8013}|DoAnCoSo\\DoAnCoSo.csproj|d:\\doan\\doancoso\\doancoso\\doancoso\\controllers\\cartcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{83E1D782-A8CC-4934-8ED6-41B6287C8013}|DoAnCoSo\\DoAnCoSo.csproj|solutionrelative:doancoso\\controllers\\cartcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{83E1D782-A8CC-4934-8ED6-41B6287C8013}|DoAnCoSo\\DoAnCoSo.csproj|d:\\doan\\doancoso\\doancoso\\doancoso\\views\\cart\\cart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{83E1D782-A8CC-4934-8ED6-41B6287C8013}|DoAnCoSo\\DoAnCoSo.csproj|solutionrelative:doancoso\\views\\cart\\cart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{83E1D782-A8CC-4934-8ED6-41B6287C8013}|DoAnCoSo\\DoAnCoSo.csproj|d:\\doan\\doancoso\\doancoso\\doancoso\\controllers\\cartcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{83E1D782-A8CC-4934-8ED6-41B6287C8013}|DoAnCoSo\\DoAnCoSo.csproj|solutionrelative:doancoso\\controllers\\cartcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,11 +22,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 2,
               "Title": "CartController.cs",
               "DocumentMoniker": "D:\\DoAn\\DoAnCoSo\\DoAnCoSo\\DoAnCoSo\\Controllers\\CartController.cs",
               "RelativeDocumentMoniker": "DoAnCoSo\\Controllers\\CartController.cs",
@@ -47,18 +35,17 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAUwC4AAABDAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-20T15:20:32.815Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 1,
               "Title": "Cart.cshtml",
               "DocumentMoniker": "D:\\DoAn\\DoAnCoSo\\DoAnCoSo\\DoAnCoSo\\Views\\Cart\\Cart.cshtml",
               "RelativeDocumentMoniker": "DoAnCoSo\\Views\\Cart\\Cart.cshtml",
               "ToolTip": "D:\\DoAn\\DoAnCoSo\\DoAnCoSo\\DoAnCoSo\\Views\\Cart\\Cart.cshtml",
               "RelativeToolTip": "DoAnCoSo\\Views\\Cart\\Cart.cshtml",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAABAAAAAGAAAAAAAAAA==",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAAwBEAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-09-20T15:11:16.824Z",
               "IsPinned": true,
@@ -66,59 +53,21 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ProductsController.cs",
-              "DocumentMoniker": "D:\\DoAn\\DoAnCoSo\\DoAnCoSo\\DoAnCoSo\\Controllers\\ProductsController.cs",
-              "RelativeDocumentMoniker": "DoAnCoSo\\Controllers\\ProductsController.cs",
-              "ToolTip": "D:\\DoAn\\DoAnCoSo\\DoAnCoSo\\DoAnCoSo\\Controllers\\ProductsController.cs",
-              "RelativeToolTip": "DoAnCoSo\\Controllers\\ProductsController.cs",
-              "ViewState": "AgIAAIkAAAAAAAAAAAAAAGwAAAAsAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-21T04:45:30.055Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Details.cshtml",
-              "DocumentMoniker": "D:\\DoAn\\DoAnCoSo\\DoAnCoSo\\DoAnCoSo\\Views\\Products\\Details.cshtml",
-              "RelativeDocumentMoniker": "DoAnCoSo\\Views\\Products\\Details.cshtml",
-              "ToolTip": "D:\\DoAn\\DoAnCoSo\\DoAnCoSo\\DoAnCoSo\\Views\\Products\\Details.cshtml",
-              "RelativeToolTip": "DoAnCoSo\\Views\\Products\\Details.cshtml",
-              "ViewState": "AgIAAKkAAAAAAAAAAAAAAJ0AAAAaAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-09-21T04:44:54.287Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Products.cshtml",
-              "DocumentMoniker": "D:\\DoAn\\DoAnCoSo\\DoAnCoSo\\DoAnCoSo\\Views\\Products\\Products.cshtml",
-              "RelativeDocumentMoniker": "DoAnCoSo\\Views\\Products\\Products.cshtml",
-              "ToolTip": "D:\\DoAn\\DoAnCoSo\\DoAnCoSo\\DoAnCoSo\\Views\\Products\\Products.cshtml",
-              "RelativeToolTip": "DoAnCoSo\\Views\\Products\\Products.cshtml",
-              "ViewState": "AgIAAF8AAAAAAAAAAAAAAGsAAABNAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-09-21T04:44:34.884Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
               "Title": "HomeController.cs",
               "DocumentMoniker": "D:\\DoAn\\DoAnCoSo\\DoAnCoSo\\DoAnCoSo\\Controllers\\HomeController.cs",
               "RelativeDocumentMoniker": "DoAnCoSo\\Controllers\\HomeController.cs",
               "ToolTip": "D:\\DoAn\\DoAnCoSo\\DoAnCoSo\\DoAnCoSo\\Controllers\\HomeController.cs",
               "RelativeToolTip": "DoAnCoSo\\Controllers\\HomeController.cs",
-              "ViewState": "AgIAADwAAAAAAAAAAAAgwFMAAAAtAAAAAAAAAA==",
+              "ViewState": "AgIAAFEAAAAAAAAAAAAqwF8AAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-21T04:10:55.545Z",
+              "WhenOpened": "2024-09-21T13:40:04.216Z",
+              "IsPinned": true,
               "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
             }
           ]
         }

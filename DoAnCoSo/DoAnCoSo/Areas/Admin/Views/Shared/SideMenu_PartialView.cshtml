@@ -10,21 +10,14 @@
            
                 <a asp-area="Admin" asp-controller="Home" asp-action="Index" data-bs-toggle="collapse">
                     <i data-feather="home"></i>
-                    <span asp-area="Admin" asp-controller="Home" asp-action="Index" > Dashboards </span>
+                    <span asp-area="Admin" asp-controller="Home" asp-action="Index" > Trang Chính </span>
                 </a>
 
         </li>
 
 
-        <li class="menu-title mt-2">Day - Email</li>
-
-        <li>
-            <a href="apps-calendar.html">
-                <i data-feather="calendar"></i>
-                <span> Calendar </span>
-            </a>
-        </li>
-
+        <li class="menu-title mt-2">Các hệ thống chính</li>
+        <!--
         <li>
             <a href="#sidebarEmail" data-bs-toggle="collapse">
                 <i data-feather="mail"></i>
@@ -39,7 +32,7 @@
                 </ul>
             </div>
         </li>
-
+        -->
         <li>
             <a href="#sidebarProjects" data-bs-toggle="collapse">
                 <i data-feather="briefcase"></i>
@@ -70,44 +63,6 @@
             </div>
         </li>
 
-        <li class="menu-title mt-2">Custom</li>
-
-        <li>
-            <a href="#sidebarExpages" data-bs-toggle="collapse">
-                <i data-feather="file-text"></i>
-                <span> Pages </span>
-                <span class="menu-arrow"></span>
-            </a>
-            <div class="collapse" id="sidebarExpages">
-                <ul class="nav-second-level">
-                    <li><a href="pages-starter.html">Starter</a></li>
-                </ul>
-            </div>
-        </li>
-
-        <li>
-            <a href="#sidebarLayouts" data-bs-toggle="collapse">
-                <i data-feather="layout"></i>
-                <span class="badge bg-danger float-end">New</span>
-                <span> Layouts </span>
-            </a>
-            <div class="collapse" id="sidebarLayouts">
-                <ul class="nav-second-level">
-                    <li><a href="layouts-horizontal.html">Horizontal</a></li>
-                    <li><a href="layouts-detached.html">Detached</a></li>
-                    <li><a href="layouts-two-column.html">Two Column Menu</a></li>
-                    <li><a href="layouts-preloader.html">Preloader</a></li>
-                </ul>
-            </div>
-        </li>
-
-
-
-
-
-        <!-- Cái trang Quản Lý Start-->
-        <li class="menu-title mt-2">Components</li>
-
         <li>
             <a href="#sidebarTasks" data-bs-toggle="collapse">
                 <i data-feather="package"></i>
@@ -121,6 +76,22 @@
                 </ul>
             </div>
         </li>
+
+        <li>
+            <a href="#sidebarTables" data-bs-toggle="collapse">
+                <i data-feather="grid"></i>
+                <span> Quản lý Đơn Hàng </span>
+                <span class="menu-arrow"></span>
+            </a>
+            <div class="collapse" id="sidebarTables">
+                <ul class="nav-second-level">
+                    <li><a href="tables-basic.html">Basic</a></li>
+                    <li><a href="tables-datatables.html">Data Tables</a></li>
+                </ul>
+            </div>
+        </li>
+
+        <li class="menu-title mt-2">Khách Hàng</li>
 
         <li>
             <a href="#sidebarMultilevel" data-bs-toggle="collapse">
@@ -139,22 +110,8 @@
         <li>
             <a href="charts.html">
                 <i data-feather="bar-chart-2"></i>
-                <span> Doanh Số </span>
+                <span> Doanh Thu </span>
             </a>
-        </li>
-
-        <li>
-            <a href="#sidebarTables" data-bs-toggle="collapse">
-                <i data-feather="grid"></i>
-                <span> Quản lý Đơn Hàng </span>
-                <span class="menu-arrow"></span>
-            </a>
-            <div class="collapse" id="sidebarTables">
-                <ul class="nav-second-level">
-                    <li><a href="tables-basic.html">Basic</a></li>
-                    <li><a href="tables-datatables.html">Data Tables</a></li>
-                </ul>
-            </div>
         </li>
 
         <li>
@@ -167,6 +124,25 @@
                 <ul class="nav-second-level">
                     <li><a href="maps-google.html">Google Maps</a></li>
                     <li><a href="maps-vector.html">Vector Maps</a></li>
+                </ul>
+            </div>
+        </li>
+
+        <!-- Cái trang Quản Lý Start-->
+        <li class="menu-title mt-2">Cài Đặt</li>
+
+        <li>
+            <a href="#sidebarTasks" data-bs-toggle="collapse">
+                <i data-feather="package"></i>
+                <span> Tài Khoản </span>
+                <span class="menu-arrow"></span>
+            </a>
+            <div class="collapse" id="sidebarTasks">
+                <ul class="nav-second-level">
+                    <li><a>Đăng Nhập</a></li>
+                    <li><a href="forms-advanced.html">Đăng Ký</a></li>
+                    <li><a>Tài Khoản Của Bạn</a></li>
+                    <li><a href="forms-advanced.html">Advanced</a></li>
                 </ul>
             </div>
         </li>
