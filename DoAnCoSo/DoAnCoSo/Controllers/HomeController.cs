@@ -69,12 +69,22 @@ namespace DoAnCoSo.Controllers
                                              .Take(6) // Lấy 10 sản phẩm bán chạy nhất
                                              .ToList();
 
+            //// Thêm sản phẩm mới nhất dựa trên CreateDate
+            //var lsNewProducts = _context.Products
+            //                            .AsNoTracking()
+            //                            .Where(p => p.Active == true)
+            //                            .OrderByDescending(p => p.DateCreated)
+            //                            .Take(10) // Lấy 10 sản phẩm mới nhất
+            //                            .ToList();
+
+
             vm.Products = lsProductsView;
             vm.Categories = lsCats;
 
             ViewBag.AllProducts = lsproducts;
             ViewBag.lsCat = lsCats;
             ViewBag.BestSellerProducts = bestSellerProducts;
+            //ViewBag.LatestProducts = lsNewProducts; // Thêm danh sách sản phẩm mới nhất vào ViewBag
             //End
             return View(vm);
         }

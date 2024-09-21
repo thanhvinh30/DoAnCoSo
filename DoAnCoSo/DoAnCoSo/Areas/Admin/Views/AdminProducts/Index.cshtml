@@ -184,9 +184,11 @@ foreach (var item in Model) {
                                     <th scope="col">Category Name</th>
                                     <th scope="col">Price</th>
                                     <th scope="col">Image Products</th>
+                                    <th scope="col">Active</th>
+                                    <th scope="col">BestSeller</th>
+                                    <th scope="col">Home Flag</th>
                                     <th scope="col">UnitlnStock</th>
                                     <th scope="col">Quantity</th>
-                                    <!---->
                                     <th scope="col">#</th>
                                 </tr>
                             </thead>
@@ -211,7 +213,7 @@ foreach (var item in Model) {
                                                 <img style="width: 100px; height:100px; border:5px" src="~/img-PhuTungXe(BanMoi)/@item.ProImage" asp-append-version="true" alt="Chưa có Ảnh" />
                                             </th>
                                             <td>
-                                                @if (item.UnitlnStock > 0)
+                                                @if (item.Active == true)
                                                 {
                                                     <div class="spinner-grow text-success m-2" role="status">
                                                     </div>
@@ -223,14 +225,45 @@ foreach (var item in Model) {
                                                     </div>
                                                 }
                                             </td>
+                                            <td>
+                                                @if (item.BestSellers == true)
+                                                {
+                                                    <div class="spinner-grow text-success m-2" role="status">
+                                                    </div>
+
+                                                }
+                                                else
+                                                {
+                                                    <div class="spinner-grow text-danger m-2" role="status">
+                                                    </div>
+                                                }
+                                            </td>
+                                            <td>
+                                                @if (item.HomeFlag == true)
+                                                {
+                                                    <div class="spinner-grow text-success m-2" role="status">
+                                                    </div>
+
+                                                }
+                                                else
+                                                {
+                                                    <div class="spinner-grow text-danger m-2" role="status">
+                                                    </div>
+                                                }
+                                            </td>
+                                            <td scope="row">@item.UnitlnStock</td>
                                             <td scope="row">@item.Quantity</td>
                                             <td>
-                                                <a class="btn btn-outline-warning" asp-area="Admin" asp-controller="AdminProducts" asp-action="Edit" asp-route-id="@item.ProId">Edit</a>
-                                                <a class="btn btn-outline-primary" asp-area="Admin" asp-controller="AdminProducts" asp-action="Details" asp-route-id="@item.ProId">Details</a>
-                                                <a class="btn btn-outline-danger" asp-area="Admin" asp-controller="AdminProducts" asp-action="Delete" asp-route-id="@item.ProId">Delete</a>
+                                                <div class="dropdown">
+                                                    <a href="javascript:void(0);" class="table-action-btn dropdown-toggle arrow-none btn btn-light btn-xs" data-bs-toggle="dropdown" aria-expanded="false"><i class="uil uil-ellipsis-h"></i></a>
+                                                    <div class="dropdown-menu dropdown-menu-end">
+                                                        <a class="dropdown-item btn btn-outline-warning" asp-area="Admin" asp-controller="AdminProducts" asp-action="Edit" asp-route-id="@item.ProId">Edit</a>
+                                                        <a class="dropdown-item btn btn-outline-primary" asp-area="Admin" asp-controller="AdminProducts" asp-action="Details" asp-route-id="@item.ProId">Details</a>
+                                                        <a class="dropdown-item btn btn-outline-danger" asp-area="Admin" asp-controller="AdminProducts" asp-action="Delete" asp-route-id="@item.ProId">Delete</a>
+                                                    </div>
+                                                </div>
                                             </td>
                                         </tr>
-
                                     }
                                 }
 

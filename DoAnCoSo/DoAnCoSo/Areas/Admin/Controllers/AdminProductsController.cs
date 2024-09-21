@@ -162,7 +162,11 @@ namespace DoAnCoSo.Areas.Admin.Controllers
                 return NotFound();
             }
             ViewData["CatId"] = new SelectList(_context.Categories, "CatId", "CatName", product.CatId);
+
+            //ViewData["ReturnUrl"] = returnUrl ?? Request.Headers["Referer"].ToString(); // Lưu ReturnUrl hoặc Referer vào ViewData
+
             return View(product);
+            //return Redirect(Request.Headers["Referer"].ToString());
         }
 
         // POST: Admin/AdminProducts/Edit/5
@@ -221,6 +225,8 @@ namespace DoAnCoSo.Areas.Admin.Controllers
                     _context.Update(product);
                     SetAlert("Đã sửa thành công", "Success");
                     await _context.SaveChangesAsync();
+
+                    
                 }
                 catch (DbUpdateConcurrencyException)
                 {
@@ -237,7 +243,10 @@ namespace DoAnCoSo.Areas.Admin.Controllers
                 return RedirectToAction(nameof(Index));
             }
             ViewData["CatId"] = new SelectList(_context.Categories, "CatId", "CatName", product.CatId);
+            //ViewData["ReturnUrl"] = returnUrl;
+
             return View(product);
+            //return Redirect(Request.Headers["Referer"].ToString());
         }
 
         // GET: Admin/AdminProducts/Delete/5

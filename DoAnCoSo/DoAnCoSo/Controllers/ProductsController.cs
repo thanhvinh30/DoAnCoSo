@@ -29,11 +29,12 @@ namespace DoAnCoSo.Controllers
             //Start
             // Tính toán số lượng sản phẩm theo từng danh mục
             var categoriesWithProductCount = _context.Categories
+                .Where( c => c.Published)
             .Select(c => new
             {
                 c.CatId,
                 c.CatName,
-                ProductCount = _context.Products.Count(p => p.CatId == c.CatId)
+                ProductCount = _context.Products.Count(p => p.CatId == c.CatId && p.Active)
             }).ToList();
             // Truyền thêm thông tin số lượng sản phẩm của mỗi danh mục qua View
             ViewBag.CategoriesWithProductCount = categoriesWithProductCount;
@@ -44,7 +45,7 @@ namespace DoAnCoSo.Controllers
             {
                 lsProducts = _context.Products
                         .AsNoTracking()
-                        .Where(p => p.CatId == CatID && p.ProId >= 1)
+                        .Where(p => p.CatId == CatID && p.ProId >= 1 && p.Cat.Published && p.Active)
                         .Include(x => x.Cat)
                         .OrderByDescending(x => x.ProId)
                         .OrderBy(x => x.ProId)
@@ -56,19 +57,21 @@ namespace DoAnCoSo.Controllers
                 lsProducts = _context.Products
                         .AsNoTracking()
                         .Include(x => x.Cat)
+                        .Where(c => c.Cat.Published && c.Active)
                         .OrderByDescending(x => x.ProId)
                         .OrderBy(x => x.ProId)
                         .ToList();
             }
 
 
-            PagedList<Product> models = new PagedList<Product>(lsProducts.AsQueryable(), pageNumber, pageSize);           // Fix lỗi về lsProducts                                                                                                                              //PagedList<Product> models = new PagedList<Product>(lsProducts.AsEnumerable(), pageNumber, pageSize);
+            PagedList<Product> models = new PagedList<Product>(lsProducts.AsQueryable(), pageNumber, pageSize);           // Fix lỗi về lsProducts 
+            //PagedList<Product> models = new PagedList<Product>(lsProducts.AsEnumerable(), pageNumber, pageSize);
 
             ViewBag.CurrentCateId = CatID;
             ViewBag.Currentpage = pageNumber;
 
 
-            ViewData["DanhMuc"] = new SelectList(_context.Categories, "CatId", "CatName", CatID);
+            ViewData["DanhMuc"] = new SelectList(_context.Categories.Where(c => c.Published), "CatId", "CatName", CatID);
             ViewBag.CurrentPage = pageNumber;
             return View(models);
 
@@ -103,19 +106,20 @@ namespace DoAnCoSo.Controllers
 
         }
         [Route("Detail/{id}.html", Name = "ProductsDetail")]
-        public IActionResult Details(int id)
+        public IActionResult Details(int id,int CatID = 0)
         {
             try
             {
                 //Start
                 // Tính toán số lượng sản phẩm theo từng danh mục
                 var categoriesWithProductCount = _context.Categories
-                    .Select(c => new
-                    {
-                        c.CatId,
-                        c.CatName,
-                        ProductCount = _context.Products.Count(p => p.CatId == c.CatId)
-                    }).ToList();
+                    .Where(c => c.Published)
+                .Select(c => new
+                {
+                    c.CatId,
+                    c.CatName,
+                    ProductCount = _context.Products.Count(p => p.CatId == c.CatId && p.Active)
+                }).ToList();
                 // Truyền thêm thông tin số lượng sản phẩm của mỗi danh mục qua View
                 ViewBag.CategoriesWithProductCount = categoriesWithProductCount;
                 //End
@@ -133,6 +137,7 @@ namespace DoAnCoSo.Controllers
                                                     .Take(5)    
                                                     .OrderBy( x => x.DateCreated)
                                                     .ToList();
+                ViewData["DanhMuc"] = new SelectList(_context.Categories.Where(c => c.Published), "CatId", "CatName", CatID);
                 ViewBag.CurrentProductsList = lsproducts;
                 return View(product);
             }

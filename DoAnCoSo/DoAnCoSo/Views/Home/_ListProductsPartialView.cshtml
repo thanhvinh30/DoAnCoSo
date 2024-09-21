@@ -11,9 +11,9 @@
             <div class="row g-4">
                 @foreach (var item in Model)
                 {
-                    string url = Url.Action("ProductsDetail", "Home", new { id = item.ProId });
+                    string url = $"Detail/{item.ProId}.html";
                     <div class="col-md-6 col-lg-4 col-xl-3">
-                        <a href="@url" class="text-decoration-none">
+                        <a asp-route ="ProductsDetail" asp-route-id="@item.ProId" class="text-decoration-none">
                             <div class="rounded position-relative fruite-item">
                                 <div class="fruite-img">
                                     <img src="@Url.Content($"~/img-PhuTungXe(BanMoi)/{item.ProImage}")" class="img-fluid w-100 rounded-top" alt="">
@@ -32,7 +32,7 @@
                                     </div>
                                 </div>
                             </div>
-                        </a>                       
+                        </a>
                     </div>
                 }
             </div>
