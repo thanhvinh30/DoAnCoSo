@@ -116,15 +116,15 @@
                                     {
                             <ul class="nav nav-pills d-inline-flex text-center mb-5">
                             <!-- Tab "All Products" -->
-                           <!-- <li class="nav-item">
-                                <a class="d-flex m-2 py-2 bg-light rounded-pill (count == 0 ? "active" : "")" data-bs-toggle="pill" href="#all-items">
-                                    <span class="text-dark" style="width: 130px;">All Products</span>
+                            <li class="nav-item">
+                                <a class="d-flex m-2 py-2 bg-light rounded-pill @(count == 0 ? "active" : "")" data-bs-toggle="pill" href="#all-items">
+                                    <span class="text-dark" style="width: 130px;">Sản Phẩm</span>
                                 </a>
-                            </li>-->
+                            </li>
                             @foreach (var item in ViewBag.lsCat)
                         {                          
                                 <li class="nav-item">
-                                    <a class="d-flex m-2 py-2 bg-light rounded-pill  @(count == 0 ? "active" : "")" data-bs-toggle="pill" href="#tab-@item.CatId">
+                                    <a class="d-flex m-2 py-2 bg-light rounded-pill " data-bs-toggle="pill" href="#tab-@item.CatId">
                                             <span class="text-dark" style="width: 130px;">@item.CatName</span>
                                         </a>
                                 </li>

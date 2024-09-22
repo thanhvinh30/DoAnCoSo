@@ -27,7 +27,7 @@ builder.Services.AddSession(options =>
 var app = builder.Build();
 app.UseStaticFiles();
 app.UseSession();
-app.UseStatusCodePagesWithRedirects("/Home/Error?status={0}");
+app.UseStatusCodePagesWithRedirects("/Home/Error?statuscode={0}");
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
 {

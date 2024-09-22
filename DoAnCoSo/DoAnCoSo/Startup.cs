@@ -49,6 +49,7 @@ namespace DoAnCoSo
             //services.AddSingleton<HtmlEncoder>(HtmlEncoder.Create(allowedRanges: new[] { UnicodeRange.All }));                // Sửa phần chữ Unicode ( tiếng việt ) 
 
             services.AddControllersWithViews().AddRazorRuntimeCompilation();
+            //services.AddDbContext<DataDoAnCoSoContext>(ServiceLifetime.Transient);
         }
 
 
