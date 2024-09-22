@@ -48,7 +48,7 @@ public partial class DataDoAnCoSoContext : DbContext
         modelBuilder.Entity<Account>(entity =>
         {
             entity.HasKey(e => e.AccountId).HasName("PK_Account");
-
+            entity.Property(e => e.AccountId).HasColumnType("int").UseIdentityColumn();
             entity.Property(e => e.Email)
                 .HasMaxLength(150)
                 .IsUnicode(false);
@@ -69,9 +69,10 @@ public partial class DataDoAnCoSoContext : DbContext
         modelBuilder.Entity<Cart>(entity =>
         {
             entity.ToTable("Cart");
-
+            entity.Property(e => e.CartId).HasColumnType("int").UseIdentityColumn();
             entity.Property(e => e.ProImage).HasMaxLength(100);
             entity.Property(e => e.ProName).HasMaxLength(50);
+            entity.Property(e => e.Price).HasColumnType("decimal(18, 2)");
 
             entity.HasOne(d => d.Order).WithMany(p => p.Carts)
                 .HasForeignKey(d => d.CartId);
@@ -80,7 +81,7 @@ public partial class DataDoAnCoSoContext : DbContext
         modelBuilder.Entity<Category>(entity =>
         {
             entity.HasKey(e => e.CatId);
-
+            entity.Property(e => e.CatId).HasColumnType("int").UseIdentityColumn();
             entity.ToTable("Category");
 
             entity.Property(e => e.CatName).HasMaxLength(50);
@@ -90,7 +91,7 @@ public partial class DataDoAnCoSoContext : DbContext
         modelBuilder.Entity<Contact>(entity =>
         {
             entity.ToTable("Contact");
-
+            entity.Property(e => e.ContactId).HasColumnType("int").UseIdentityColumn();
             entity.Property(e => e.ContactId).HasColumnName("ContactID");
             entity.Property(e => e.CusEmail)
                 .HasMaxLength(150)
@@ -102,7 +103,7 @@ public partial class DataDoAnCoSoContext : DbContext
         modelBuilder.Entity<Customer>(entity =>
         {
             entity.HasKey(e => e.CusId);
-
+            entity.Property(e => e.CusId).HasColumnType("int").UseIdentityColumn();
             entity.ToTable("Customer");
 
             entity.Property(e => e.Address).HasMaxLength(250);
@@ -128,7 +129,7 @@ public partial class DataDoAnCoSoContext : DbContext
         modelBuilder.Entity<Location>(entity =>
         {
             entity.HasKey(e => e.LocationId).HasName("PK_Location");
-
+            entity.Property(e => e.LocationId).HasColumnType("int").UseIdentityColumn();
             entity.Property(e => e.Name).HasMaxLength(100);
             entity.Property(e => e.NameWithType).HasMaxLength(150);
             entity.Property(e => e.PathWithType).HasMaxLength(150);
@@ -136,6 +137,7 @@ public partial class DataDoAnCoSoContext : DbContext
 
         modelBuilder.Entity<Order>(entity =>
         {
+            entity.Property(e => e.OrderId).HasColumnType("int").UseIdentityColumn();
             entity.Property(e => e.CustomerAddress).HasMaxLength(250);
             entity.Property(e => e.CustomerEmail).HasMaxLength(100);
             entity.Property(e => e.CustomerName).HasMaxLength(100);
@@ -173,7 +175,7 @@ public partial class DataDoAnCoSoContext : DbContext
         modelBuilder.Entity<Product>(entity =>
         {
             entity.HasKey(e => e.ProId);
-
+            entity.Property(e => e.ProId).HasColumnType("int").UseIdentityColumn();
             entity.Property(e => e.DateCreated).HasColumnType("datetime");
             entity.Property(e => e.DateModified).HasColumnType("datetime");
             entity.Property(e => e.MeetaKey).HasMaxLength(100);
@@ -181,6 +183,7 @@ public partial class DataDoAnCoSoContext : DbContext
             entity.Property(e => e.ProImage).HasMaxLength(100);
             entity.Property(e => e.ProName).HasMaxLength(250);
             entity.Property(e => e.ShortDes).HasMaxLength(50);
+            entity.Property(e => e.ProPrice).HasColumnType("decimal(18, 2)");
 
             entity.HasOne(d => d.Cat).WithMany(p => p.Products)
                 .HasForeignKey(d => d.CatId)
@@ -189,6 +192,7 @@ public partial class DataDoAnCoSoContext : DbContext
 
         modelBuilder.Entity<Role>(entity =>
         {
+            entity.Property(e => e.RoleId).HasColumnType("int").UseIdentityColumn();
             entity.Property(e => e.DesRole).HasMaxLength(50);
             entity.Property(e => e.RoleName).HasMaxLength(100);
         });

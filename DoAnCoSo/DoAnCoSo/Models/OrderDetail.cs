@@ -1,10 +1,15 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Identity;
+using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
+using System.ComponentModel.DataAnnotations;
 
 namespace DoAnCoSo.Models;
 
-public partial class OrderDetail
+public partial class OrderDetail 
 {
+    [Key]
+    [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
     public int OrderDetailId { get; set; }
 
     public int? OrderId { get; set; }

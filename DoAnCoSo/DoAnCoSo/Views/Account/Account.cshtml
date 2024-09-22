@@ -18,12 +18,12 @@
 <div class="custom-card">
     <div class="custom-container" id="container">
         <div class="custom-form-container custom-sign-up">
-            <form>
+            <form asp-action="Account" asp-controller="Account">
                 <h1>Đăng Ký</h1>
                 <span>or use your email for registration</span>
-                <input type="text" placeholder="Name">
-                <input type="email" placeholder="Email">
-                <input type="password" placeholder="Password">
+                <input asp-for="CusName" placeholder="Name">
+                <input asp-for="CusEmail" placeholder="Email">
+                <input asp-for="CusPassword" placeholder="Password">
                 <button>Đăng Ký</button>
             </form>
         </div>

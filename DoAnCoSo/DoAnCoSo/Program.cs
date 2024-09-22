@@ -1,10 +1,32 @@
 ﻿using DoAnCoSo.Helpper;
 using DoAnCoSo.Models;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
 
 
+
+
 var builder = WebApplication.CreateBuilder(args);
+
+
+builder.Services.AddIdentity<Customer, IdentityRole>()
+    .AddEntityFrameworkStores<DataDoAnCoSoContext>().AddDefaultTokenProviders(); 
+
+builder.Services.Configure<IdentityOptions>(options =>
+{
+    // Password settings.
+    options.Password.RequireDigit = true;
+    options.Password.RequireLowercase = true;
+    options.Password.RequireNonAlphanumeric = false;
+    options.Password.RequireUppercase = false;
+    options.Password.RequiredLength = 4;
+
+
+    options.User.RequireUniqueEmail = true;
+});
+
+
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
@@ -25,8 +47,11 @@ builder.Services.AddSession(options =>
 });
 
 var app = builder.Build();
-app.UseStaticFiles();
+
 app.UseSession();
+
+app.UseStaticFiles();
+
 app.UseStatusCodePagesWithRedirects("/Home/Error?statuscode={0}");
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
@@ -41,6 +66,7 @@ app.UseStaticFiles();
 
 app.UseRouting();
 
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.UseEndpoints(endpoints =>

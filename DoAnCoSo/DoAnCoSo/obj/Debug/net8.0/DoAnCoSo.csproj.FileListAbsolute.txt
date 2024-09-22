@@ -470,8 +470,6 @@ D:\DoAn\DoAnCoSo\DoAnCoSo\DoAnCoSo\bin\Debug\net8.0\refs\Microsoft.AspNetCore.Co
 D:\DoAn\DoAnCoSo\DoAnCoSo\DoAnCoSo\bin\Debug\net8.0\refs\Microsoft.AspNetCore.Connections.Abstractions.dll
 D:\DoAn\DoAnCoSo\DoAnCoSo\DoAnCoSo\bin\Debug\net8.0\refs\Microsoft.AspNetCore.CookiePolicy.dll
 D:\DoAn\DoAnCoSo\DoAnCoSo\DoAnCoSo\bin\Debug\net8.0\refs\Microsoft.AspNetCore.Cors.dll
-D:\DoAn\DoAnCoSo\DoAnCoSo\DoAnCoSo\bin\Debug\net8.0\refs\Microsoft.AspNetCore.Cryptography.Internal.dll
-D:\DoAn\DoAnCoSo\DoAnCoSo\DoAnCoSo\bin\Debug\net8.0\refs\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
 D:\DoAn\DoAnCoSo\DoAnCoSo\DoAnCoSo\bin\Debug\net8.0\refs\Microsoft.AspNetCore.DataProtection.Abstractions.dll
 D:\DoAn\DoAnCoSo\DoAnCoSo\DoAnCoSo\bin\Debug\net8.0\refs\Microsoft.AspNetCore.DataProtection.dll
 D:\DoAn\DoAnCoSo\DoAnCoSo\DoAnCoSo\bin\Debug\net8.0\refs\Microsoft.AspNetCore.DataProtection.Extensions.dll
@@ -567,8 +565,6 @@ D:\DoAn\DoAnCoSo\DoAnCoSo\DoAnCoSo\bin\Debug\net8.0\refs\Microsoft.Extensions.Fi
 D:\DoAn\DoAnCoSo\DoAnCoSo\DoAnCoSo\bin\Debug\net8.0\refs\Microsoft.Extensions.Hosting.Abstractions.dll
 D:\DoAn\DoAnCoSo\DoAnCoSo\DoAnCoSo\bin\Debug\net8.0\refs\Microsoft.Extensions.Hosting.dll
 D:\DoAn\DoAnCoSo\DoAnCoSo\DoAnCoSo\bin\Debug\net8.0\refs\Microsoft.Extensions.Http.dll
-D:\DoAn\DoAnCoSo\DoAnCoSo\DoAnCoSo\bin\Debug\net8.0\refs\Microsoft.Extensions.Identity.Core.dll
-D:\DoAn\DoAnCoSo\DoAnCoSo\DoAnCoSo\bin\Debug\net8.0\refs\Microsoft.Extensions.Identity.Stores.dll
 D:\DoAn\DoAnCoSo\DoAnCoSo\DoAnCoSo\bin\Debug\net8.0\refs\Microsoft.Extensions.Localization.Abstractions.dll
 D:\DoAn\DoAnCoSo\DoAnCoSo\DoAnCoSo\bin\Debug\net8.0\refs\Microsoft.Extensions.Localization.dll
 D:\DoAn\DoAnCoSo\DoAnCoSo\DoAnCoSo\bin\Debug\net8.0\refs\Microsoft.Extensions.Logging.Abstractions.dll
@@ -787,3 +783,9 @@ D:\DoAn\DoAnCoSo\DoAnCoSo\DoAnCoSo\obj\Debug\net8.0\DoAnCoSo.MvcApplicationParts
 D:\DoAn\DoAnCoSo\DoAnCoSo\DoAnCoSo\bin\Debug\net8.0\PagedList.dll
 D:\DoAn\DoAnCoSo\DoAnCoSo\DoAnCoSo\bin\Debug\net8.0\PagedList.Mvc.dll
 D:\DoAn\DoAnCoSo\DoAnCoSo\DoAnCoSo\bin\Debug\net8.0\X.PagedList.dll
+D:\DoAn\DoAnCoSo\DoAnCoSo\DoAnCoSo\bin\Debug\net8.0\Microsoft.AspNetCore.Cryptography.Internal.dll
+D:\DoAn\DoAnCoSo\DoAnCoSo\DoAnCoSo\bin\Debug\net8.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+D:\DoAn\DoAnCoSo\DoAnCoSo\DoAnCoSo\bin\Debug\net8.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+D:\DoAn\DoAnCoSo\DoAnCoSo\DoAnCoSo\bin\Debug\net8.0\Microsoft.Extensions.Identity.Core.dll
+D:\DoAn\DoAnCoSo\DoAnCoSo\DoAnCoSo\bin\Debug\net8.0\Microsoft.Extensions.Identity.Stores.dll
+D:\DoAn\DoAnCoSo\DoAnCoSo\DoAnCoSo\bin\Debug\net8.0\Microsoft.Extensions.Options.dll

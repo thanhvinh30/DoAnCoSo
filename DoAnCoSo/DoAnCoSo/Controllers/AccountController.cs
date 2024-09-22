@@ -25,9 +25,7 @@ namespace DoAnCoSo.Controllers
         {
             return View();
         }
-        //[HttpGet]
-        //[AllowAnonymous]
-        //[Route("dang-ky.html", Name ="Đăng Ký")]
+        
         public IActionResult Register()
         {
             return View();

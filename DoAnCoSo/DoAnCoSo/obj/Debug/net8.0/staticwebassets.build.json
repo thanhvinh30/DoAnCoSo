@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "w4DYzlcb2DErlDAqjls4AWmKtpA+RYIEhZLGfamehvY=",
+  "Hash": "da3Gxs0aad3LJNCgq1U5gUxDZgMUapCmKpdPcDMJSQQ=",
   "Source": "DoAnCoSo",
   "BasePath": "_content/DoAnCoSo",
   "Mode": "Default",
@@ -43943,6 +43943,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\img\\Banner-ngang.jpg"
+    },
+    {
+      "Identity": "D:\\DoAn\\DoAnCoSo\\DoAnCoSo\\DoAnCoSo\\wwwroot\\img\\cart-page-header - 1.jpg",
+      "SourceId": "DoAnCoSo",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\DoAn\\DoAnCoSo\\DoAnCoSo\\DoAnCoSo\\wwwroot\\",
+      "BasePath": "_content/DoAnCoSo",
+      "RelativePath": "img/cart-page-header - 1.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\cart-page-header - 1.jpg"
     },
     {
       "Identity": "D:\\DoAn\\DoAnCoSo\\DoAnCoSo\\DoAnCoSo\\wwwroot\\img\\cart-page-header.jpg",
