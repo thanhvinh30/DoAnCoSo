@@ -16,6 +16,8 @@ var builder = WebApplication.CreateBuilder(args);
 
 
 
+builder.Services.AddIdentity<AppUserModel, IdentityRole>()
+    .AddEntityFrameworkStores<DataDoAnCoSoContext>().AddDefaultTokenProviders();
 builder.Services.Configure<IdentityOptions>(options =>
 {
     // Password settings.
@@ -29,18 +31,12 @@ builder.Services.Configure<IdentityOptions>(options =>
     options.User.RequireUniqueEmail = true;
 });
 
-
-
-
-
 builder.Services.AddDbContext<DataDoAnCoSoContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("dbPhuTungXeMay")));
 
 
 builder.Services.AddDistributedMemoryCache();
 
-builder.Services.AddIdentity<AppUserModel, IdentityRole>()
-    .AddEntityFrameworkStores<DataDoAnCoSoContext>().AddDefaultTokenProviders();
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 builder.Services.AddSession(options =>

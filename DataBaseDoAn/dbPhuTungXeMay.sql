@@ -186,6 +186,8 @@ go
 
 select * from TransactStatus
 
+ALTER TABLE Customer
+DROP CONSTRAINT FK_Customer_Locations; -- Đổi 'FK_Customer_Locations' thành tên khóa ngoại thực tế mà bạn tìm được
 
 -- Create table Đơn hàng - Chi Tiết thanh Toán
 create table Orders

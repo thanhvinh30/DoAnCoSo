@@ -141,6 +141,9 @@ namespace DoAnCoSo.Controllers
             {
                 if (ModelState.IsValid)
                 {
+
+
+
                     string salt = Utilities.GetRanDomKey();
                     Customer khachhang = new Customer
                     {
@@ -153,11 +156,6 @@ namespace DoAnCoSo.Controllers
                     };
 
                     //
-                    if (string.IsNullOrEmpty(taikhoan.Password) || string.IsNullOrEmpty(salt))
-                    {
-                        TempData["Error"] = "Mật khẩu hoặc khóa salt không hợp lệ.";
-                        return View(taikhoan);
-                    }
                     //
                     try
                     {
@@ -166,14 +164,6 @@ namespace DoAnCoSo.Controllers
                         // Lưu session Makh
                         HttpContext.Session.SetString("CustomerId", khachhang.CusId.ToString());
                         //
-                        _context.Add(khachhang);
-                        await _context.SaveChangesAsync();
-
-                        if (khachhang.CusId == 0) // hoặc khachhang.CusId == null nếu là kiểu nullable
-                        {
-                            TempData["Error"] = "Không thể lấy CusId.";
-                            return RedirectToAction("Register", "Customer");
-                        }
                         //
                         var taikhoanID = HttpContext.Session.GetString("CustomerId");
                         //Identity
@@ -191,7 +181,7 @@ namespace DoAnCoSo.Controllers
                         await HttpContext.SignInAsync(claimsPrincipal);
                         return RedirectToAction("Index", "Home");
                     }
-                    catch
+                    catch (Exception ex)
                     {
                         return RedirectToAction("Register", "Customer");
                     }
