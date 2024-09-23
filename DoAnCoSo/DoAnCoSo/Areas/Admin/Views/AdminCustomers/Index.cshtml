@@ -1,4 +1,5 @@
 ﻿﻿@using PagedList.Core.Mvc;
+
 @model PagedList.Core.IPagedList<DoAnCoSo.Models.Customer>
 
 @{
@@ -204,28 +205,34 @@ foreach (var item in Model) {
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    @if (Model != null)
+                                    @if (Model != null && Model.Any())
                                     {
                                         foreach (var item in Model)
                                         {
                                             <tr class="odd">
-                                                <td class="dtr-control " tabindex="0">@item.CusId</td>
-                                                <td class="dtr-control " tabindex="0">
+                                                <td class="dtr-control" tabindex="0">@item.CusId</td>
+                                                <td class="dtr-control" tabindex="0">
                                                     <p>@item.CusName</p>
                                                     <p>@item.Phone</p>
                                                     <p>@item.CusEmail</p>
                                                 </td>
-                                                <td class="dtr-control " tabindex="0">@item.Address</td>
-                                                <td class="dtr-control " tabindex="0">@item.Location.Name</td>
+                                                <td class="dtr-control" tabindex="0">@item.Address</td>
+                                                <td class="dtr-control" tabindex="0">@item.Location?.Name</td>
                                                 <td>
                                                     <a class="btn btn-outline-warning" asp-area="Admin" asp-controller="AdminCustomers" asp-action="Edit" asp-route-id="@item.CusId">View</a>
                                                     <a class="btn btn-outline-primary" asp-area="Admin" asp-controller="AdminCustomers" asp-action="Details" asp-route-id="@item.CusId">Details</a>
                                                     <a class="btn btn-outline-danger" asp-area="Admin" asp-controller="AdminCustomers" asp-action="Delete" asp-route-id="@item.CusId">Delete</a>
-
                                                 </td>
                                             </tr>
                                         }
                                     }
+                                    else
+                                    {
+                                        <tr>
+                                            <td colspan="5">Không có dữ liệu khách hàng.</td>
+                                        </tr>
+                                    }
+
                                 </tbody>
                             </table>
                         </div>
@@ -233,32 +240,38 @@ foreach (var item in Model) {
 
 
                     <!--Page List Start-->
-        <div class="row">
-                        <div class="col-sm-12 col-md-7">
-                            <div class="dataTables_paginate paging_simple_numbers " id="basic-datatable_paginate" aria-label="Page navigation example">
-                                <ul class="pagination pagination-rounded">
-
-                                    <li class="paginate_button page-item active previous disabled " id="basic-datatable_previous">
-                                        <a href="#" aria-controls="basic-datatable" data-dt-idx="0" tabindex="0" class="page-link">
-                                            <i class="uil uil-angle-left"></i>
-                                        </a>
-                                    </li>
-
-                                    <li class="paginate_button page-item active">
-                                        <a href="#" aria-controls="basic-datatable" data-dt-idx="1" tabindex="0" class="page-link"></a>
-                                    </li>
-
-                                    <li class="paginate_button page-item active next disabled" id="basic-datatable_next">
-                                        <a href="#" aria-controls="basic-datatable" data-dt-idx="7" tabindex="0" class="page-link">
-                                            <i class="uil uil-angle-right"></i>
-                                        </a>
-                                    </li>
-
-                                    <pager class="pager-container" list="@Model" asp-area="Admin" asp-controller="AdminCustomers" asp-action="Index" />
-                                </ul>
-                            </div>
-                        </div>
+                    <div aria-label="Page navigation example" class="btn-group mb-2" style="margin: 30px 0px;">
+                        <ul class="pagination" style="gap: 10px">
+                            <li type="button" class="btn btn-light @(Model.HasPreviousPage ? "" : "disabled")">
+                                <a asp-area="Admin"
+                                   asp-controller="AdminCustomer"
+                                   asp-action="Index"
+                                   asp-route-page="@(Model.PageNumber - 1)">
+                                    <i class="bi bi-arrow-left"></i>
+                                </a>
+                            </li>
+                            @for (var i = 1; i <= Model.PageCount; i++)
+                            {
+                                <li type="button" class="btn btn-light @(i == Model.PageNumber ? "active" : "")">
+                                    <a asp-area="Admin"
+                                       asp-controller="AdminCustomer"
+                                       asp-action="Index"
+                                       asp-route-page="@i">
+                                        @i
+                                    </a>
+                                </li>
+                            }
+                            <li type="button" class="btn btn-light @(Model.HasNextPage ? "" : "disabled")">
+                                <a asp-area="Admin"
+                                   asp-controller="AdminCustomer"
+                                   asp-action="Index"
+                                   asp-route-page="@(Model.PageNumber + 1)">
+                                    <i class="bi bi-arrow-right"></i>
+                                </a>
+                            </li>
+                        </ul>
                     </div>
+
                     <!-- Page List End-->
 
                 </div> <!-- end card -->

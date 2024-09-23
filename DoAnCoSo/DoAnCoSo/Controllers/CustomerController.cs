@@ -72,6 +72,9 @@ namespace DoAnCoSo.Controllers
             }
             return RedirectToAction("Index");
         }
+
+
+
         [HttpGet]
         [AllowAnonymous]
         public IActionResult Login(string returnUrl = null)
@@ -127,6 +130,9 @@ namespace DoAnCoSo.Controllers
             }
             return View(customer);
         } 
+
+
+
         [HttpGet]
         [AllowAnonymous]
         public IActionResult Register()

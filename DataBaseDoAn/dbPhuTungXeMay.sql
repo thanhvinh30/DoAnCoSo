@@ -151,7 +151,7 @@ Create table Customer
 
 )
 GO
-
+SET IDENTITY_INSERT Customer ON;
 select * from Customer
 
 -- Create table Địa phương

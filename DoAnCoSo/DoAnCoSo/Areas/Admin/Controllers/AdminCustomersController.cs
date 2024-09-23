@@ -20,21 +20,61 @@ namespace DoAnCoSo.Areas.Admin.Controllers
             _context = context;
         }
 
+        protected void SetAlert(string message, string type)
+        {
+            TempData["AlertMessage"] = message;
+            switch (type)
+            {
+                case "Success":
+                    TempData["AlertType"] = "alert-Success"; break;
+                case "Warning":
+                    TempData["AlertType"] = "alert-Warning"; break;
+                case "Error":
+                    TempData["AlertType"] = "alert-Error"; break;
+                default: TempData["AlertType"] = ""; break;
+            }
+        }
+
         // GET: Admin/AdminCustomers
+        //public async Task<IActionResult> Index(int? page)
+        //{
+        //    var pageNumber = page == null || page <= 0 ? 1 : page.Value;                                    // tùy theo số lượng biến
+        //    var pageSize = 10;                                                                              // Số lượng biến trong page
+        //    var lsCustomers = _context.Customers
+        //                            .AsNoTracking()
+        //                            .Include(x => x.Location)
+        //                            .OrderByDescending(x => x.CreateDate);
+
+        //    PagedList<Customer> models = new PagedList<Customer>(lsCustomers, pageNumber, pageSize);
+        //    ViewBag.CurrentPage = pageNumber;
+        //    return View(models);
+        //    //return View(await _context.Customers.ToListAsync());
+        //}
         public async Task<IActionResult> Index(int? page)
         {
-            var pageNumber = page == null || page <= 0 ? 1 : page.Value;                                    // tùy theo số lượng biến
-            var pageSize = 10;                                                                              // Số lượng biến trong page
-            var lsCustomers = _context.Customers
-                                    .AsNoTracking()
-                                    .Include(x => x.Location)
-                                    .OrderByDescending(x => x.CreateDate);
+            var pageNumber = page == null || page <= 0 ? 1 : page.Value;
+            var pageSize = 5;
 
-            PagedList<Customer> models = new PagedList<Customer>(lsCustomers, pageNumber, pageSize);
+            var lsCustomers = await _context.Customers
+                                           .AsNoTracking()
+                                           .Include(x => x.Location)
+                                           .OrderByDescending(x => x.CreateDate)
+                                           .ToListAsync(); // Chú ý sử dụng ToListAsync để lấy dữ liệu
+
+            if (lsCustomers == null || !lsCustomers.Any())
+            {
+                // Kiểm tra nếu không có khách hàng nào
+                ViewBag.Message = "Không có dữ liệu khách hàng";
+            }
+
+            PagedList<Customer> models = new PagedList<Customer>(lsCustomers.AsQueryable(), pageNumber, pageSize);
             ViewBag.CurrentPage = pageNumber;
+
             return View(models);
-            //return View(await _context.Customers.ToListAsync());
         }
+
+
+
 
         // GET: Admin/AdminCustomers/Details/5
         public async Task<IActionResult> Details(int? id)
