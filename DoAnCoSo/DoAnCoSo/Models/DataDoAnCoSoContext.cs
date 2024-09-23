@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
+using DoAnCoSo.ModelView;
 
 namespace DoAnCoSo.Models;
 
@@ -223,4 +224,8 @@ public partial class DataDoAnCoSoContext : DbContext
     }
 
     partial void OnModelCreatingPartial(ModelBuilder modelBuilder);
+
+public DbSet<DoAnCoSo.ModelView.RegisterVM> RegisterVM { get; set; } = default!;
+
+public DbSet<DoAnCoSo.ModelView.LoginViewModel> LoginViewModel { get; set; } = default!;
 }

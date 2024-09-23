@@ -15,6 +15,9 @@ using System.Text.Unicode;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using DoAnCoSo.Models;
+using DoAnCoSo.Respository;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Authentication.Cookies;
 
 
 namespace DoAnCoSo
@@ -40,16 +43,30 @@ namespace DoAnCoSo
             var stringConnectdb = Configuration.GetConnectionString("dbPhuTungXeMay");
             services.AddDbContext<DataDoAnCoSoContext>(Options => Options.UseSqlServer(stringConnectdb));
             //
-
+            services.AddSession();
+            services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
+            .AddCookie(options =>
+            {
+                options.AccessDeniedPath = new PathString("/");
+                options.LoginPath = new PathString("/Customer/Login");
+                options.LogoutPath = new PathString("/Home/Index");
+            });
             //
             services.AddDbContext<DataDoAnCoSoContext>(options =>
             options.UseSqlServer(Configuration.GetConnectionString("dbPhuTungXeMay")));
+
             //
 
             //services.AddSingleton<HtmlEncoder>(HtmlEncoder.Create(allowedRanges: new[] { UnicodeRange.All }));                // Sửa phần chữ Unicode ( tiếng việt ) 
 
             services.AddControllersWithViews().AddRazorRuntimeCompilation();
             //services.AddDbContext<DataDoAnCoSoContext>(ServiceLifetime.Transient);
+            services.AddIdentity<AppUserModel, IdentityRole>()
+                    .AddEntityFrameworkStores<DataContext>()
+                    .AddDefaultTokenProviders();
+
+
+
         }
 
 

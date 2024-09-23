@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 
 namespace DoAnCoSo.Respository
 {
-    public class DataContext : IdentityDbContext<Customer>
+    public class DataContext : IdentityDbContext<AppUserModel>
     {
         public DataContext(DbContextOptions<DataContext> options) : base(options) 
         {
@@ -14,6 +14,5 @@ namespace DoAnCoSo.Respository
         }
         public DbSet<Product> Products { get; set; }
         public DbSet<Category> categories { get; set; }
-        public DbSet<Customer> Customers { get; set; }
     }
 }

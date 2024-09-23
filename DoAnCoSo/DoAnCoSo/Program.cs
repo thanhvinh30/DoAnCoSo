@@ -1,7 +1,12 @@
 ﻿using DoAnCoSo.Helpper;
 using DoAnCoSo.Models;
+using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.CodeAnalysis.Options;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.IdentityModel.Tokens;
+using System.Text;
 
 
 
@@ -10,8 +15,6 @@ using Microsoft.EntityFrameworkCore;
 var builder = WebApplication.CreateBuilder(args);
 
 
-builder.Services.AddIdentity<Customer, IdentityRole>()
-    .AddEntityFrameworkStores<DataDoAnCoSoContext>().AddDefaultTokenProviders(); 
 
 builder.Services.Configure<IdentityOptions>(options =>
 {
@@ -28,8 +31,7 @@ builder.Services.Configure<IdentityOptions>(options =>
 
 
 
-// Add services to the container.
-builder.Services.AddControllersWithViews();
+
 
 builder.Services.AddDbContext<DataDoAnCoSoContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("dbPhuTungXeMay")));
@@ -37,8 +39,10 @@ builder.Services.AddDbContext<DataDoAnCoSoContext>(options =>
 
 builder.Services.AddDistributedMemoryCache();
 
-
-
+builder.Services.AddIdentity<AppUserModel, IdentityRole>()
+    .AddEntityFrameworkStores<DataDoAnCoSoContext>().AddDefaultTokenProviders();
+// Add services to the container.
+builder.Services.AddControllersWithViews();
 builder.Services.AddSession(options =>
 {
     options.IdleTimeout = TimeSpan.FromSeconds(30);

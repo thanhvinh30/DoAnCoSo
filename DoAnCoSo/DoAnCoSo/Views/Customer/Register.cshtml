@@ -1,0 +1,113 @@
+﻿@model DoAnCoSo.ModelView.RegisterVM
+
+@{
+    ViewData["Title"] = "Register";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<!--
+<h1>Register</h1>
+
+<h4>RegisterVM</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Register">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="FulllName" class="control-label"></label>
+                <input asp-for="FulllName" class="form-control" />
+                <span asp-validation-for="FulllName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Email" class="control-label"></label>
+                <input asp-for="Email" class="form-control" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Phone" class="control-label"></label>
+                <input asp-for="Phone" class="form-control" />
+                <span asp-validation-for="Phone" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Password" class="control-label"></label>
+                <input asp-for="Password" class="form-control" />
+                <span asp-validation-for="Password" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ConfirmPassword" class="control-label"></label>
+                <input asp-for="ConfirmPassword" class="form-control" />
+                <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+-->
+
+
+
+<!-- Single Page Header start -->
+<div class="container-fluid page-header py-5">
+    <h1 class="text-center text-white display-6">Đăng Ký</h1>
+    <ol class="breadcrumb justify-content-center mb-0">
+        <li class="breadcrumb-item"><a asp-controller="Home" asp-action="Index"> Trang Chủ</a></li>
+    </ol>
+</div>
+@Html.Partial("_NotificationPartial")
+<!-- Single Page Header End -->
+<div class="custom-card">
+    <div class="custom-container" id="container">
+        <form class="form-Register" asp-action="Register" asp-controller="Customer" method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <p class="title">Đăng Ký</p>
+
+            <label>
+            <input asp-for="FulllName" required="" placeholder="Họ và tên" type="text" class="input">
+            </label>
+            <span asp-validation-for="FulllName"></span>
+
+            <label>
+                <input asp-for="Email" required="" placeholder="Email" type="email" class="input">
+            </label>
+            <span asp-validation-for="Email"></span>
+
+            <label>
+                <input asp-for="Phone" required="" placeholder="Nhap So Dien Thoai" type="text" class="input">               
+            </label>
+            <span asp-validation-for="Phone"></span>
+
+            <label>
+                <input asp-for="Password" required="" placeholder="Mật Khẩu" type="password" class="input">
+            </label>
+            <span asp-validation-for="Password"></span>
+
+            <label>
+                <input asp-for="ConfirmPassword" required="" placeholder="Nhap lai Mật Khẩu" type="password" class="input">
+            </label>
+            <span asp-validation-for="ConfirmPassword"></span>
+
+            <input type="submit" value="Tạo tài khoản" class="btn btn-primary"></input>
+        </form>
+        <div class="custom-toggle-container">
+            <div class="custom-toggle">
+                <div class="custom-toggle-panel custom-toggle-right">
+                    <h1>Chào Mừng Bạn Đã Quay Lại</h1>
+                    <p>Nhập thông tin cá nhân của bạn để sử dụng tất cả các tính năng của trang web</p>
+                    <button class="hidden"><a asp-action="Login" asp-controller="Customer">Đăng Nhập</a></button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

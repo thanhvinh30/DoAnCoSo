@@ -9,7 +9,24 @@ namespace DoAnCoSo.Helpper
 {
     public static class Utilities
     {
+        public static bool IsValidEmail(string email)
+        {
+            var trimmedEmail = email.Trim();
 
+            if (trimmedEmail.EndsWith("."))
+            {
+                return false; // suggested by @TK-421
+            }
+            try
+            {
+                var addr = new System.Net.Mail.MailAddress(email);
+                return addr.Address == trimmedEmail;
+            }
+            catch
+            {
+                return false;
+            }
+        }
         public static int PAGE_SIZE = 6;
         public static void CreateIfMissing(string path)                     // đây là lệnh tạo mới cho những cái chưa có ( trích từ lời video ) :>>
         {
@@ -43,7 +60,7 @@ namespace DoAnCoSo.Helpper
         }
         public static string GetRanDomKey(int length = 5)
         {
-            string pattern = "";
+            string pattern = "0123456789";
             Random rd = new Random();
             StringBuilder sb = new StringBuilder();
 

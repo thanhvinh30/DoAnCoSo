@@ -7,25 +7,25 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace DoAnCoSo.Models;
 
-public partial class Customer : IdentityUser
+public class Customer
 {
-    [Key]
-    [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+
     public int CusId { get; set; }
-    [Required(ErrorMessage = " Nhập Username")]
+    [Required(ErrorMessage = " Nhập họ và tên")]
 
     public string CusName { get; set; }
     [DataType(DataType.Password), Required(ErrorMessage ="Làm ơn nhập password")]
     public string CusPassword { get; set; }
 
     [Required(ErrorMessage = " Nhập Email"), EmailAddress]
+
     public string CusEmail { get; set; }
 
     public string Address { get; set; }
 
     public DateOnly Birthday { get; set; }
 
-    public int Phone { get; set; }
+    public string Phone { get; set; }
 
     public int LocationId { get; set; }
 

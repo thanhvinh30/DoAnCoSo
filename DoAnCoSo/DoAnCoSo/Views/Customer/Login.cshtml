@@ -1,0 +1,73 @@
+﻿@model DoAnCoSo.ModelView.LoginViewModel
+
+@{
+    ViewData["Title"] = "Login";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<!--
+<h1>Login</h1>
+
+<h4>LoginViewModel</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Login">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="UserName" />
+            <div class="form-group">
+                <label asp-for="Password" class="control-label"></label>
+                <input asp-for="Password" class="form-control" />
+                <span asp-validation-for="Password" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+-->
+
+
+<div class="container-fluid page-header py-5">
+    <h1 class="text-center text-white display-6">Đăng Nhập</h1>
+    <ol class="breadcrumb justify-content-center mb-0">
+        <li class="breadcrumb-item"><a asp-controller="Home" asp-action="Index"> Trang Chủ</a></li>
+    </ol>
+</div>
+<!-- Single Page Header End -->
+
+<div class="custom-card">
+    <div class="custom-container" id="container">
+
+        <form class="form-Register" asp-action="Login" asp-controller="Customer" method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger">            </div>
+            <p class="title">Tài Khoản</p>
+            <p class="message">hãy nhập thông tin của bạn </p>
+
+            <label>
+                <input asp-for="UserName" required="" placeholder="" type="text" class="input">
+            </label>
+            <span asp-validation-for="UserName"></span>
+            <label>
+                <input asp-for="Password" required="" placeholder="" type="password" class="input">
+                
+            </label>
+            <span asp-validation-for="Password"></span>
+
+            <input type="submit" value="Đăng Nhập" class="btn btn-primary"></input>
+        </form>
+        <div class="custom-toggle-container">
+            <div class="custom-toggle">
+                <div class="custom-toggle-panel custom-toggle-right">
+                    <h1>Tạo Tài Khoản</h1>
+                    <p>Đăng ký với thông tin cá nhân của bạn để sử dụng tất cả các tính năng của trang web</p>
+                    <button class="hidden"><a asp-action="Register" asp-controller="Customer">Đăng Ký</a></button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -4,6 +4,7 @@ namespace DoAnCoSo.ModelView
 {
     public class LoginViewModel
     {
+        [Key]
         [MaxLength(100)]
         [Required(ErrorMessage ="Vui lòng nhập Số điện thoại hoặc Email")]
         [Display(Name ="Điện thoại / Email")]
