@@ -22,15 +22,15 @@ namespace DoAnCoSo.Controllers
     {
         private UserManager<AppUserModel> _userManager;
         private SignInManager<AppUserModel> _siginManager;
-        private readonly ILogger<CustomerController> _logger;
+
         private readonly DataDoAnCoSoContext _context;
 
-        public CustomerController(DataDoAnCoSoContext context, UserManager<AppUserModel> userManager, SignInManager<AppUserModel> siginManager, ILogger<CustomerController> logger)
+        public CustomerController(DataDoAnCoSoContext context, UserManager<AppUserModel> userManager, SignInManager<AppUserModel> siginManager)
         {
             _userManager = userManager;
             _siginManager = siginManager;
             _context = context;
-            _logger = logger;
+
         }
         [HttpGet]
         [AllowAnonymous]
@@ -64,7 +64,7 @@ namespace DoAnCoSo.Controllers
                 return Json(data: true);
             }
         }
-        public IActionResult Dashboard()
+        public IActionResult MyAccount()
         {
             var taikhoanID = HttpContext.Session.GetString("CustomerId");
             if (taikhoanID != null)
@@ -77,6 +77,8 @@ namespace DoAnCoSo.Controllers
             }
             return RedirectToAction("Login");
         }
+
+
         [HttpGet]
         public IActionResult Logout()
         {
@@ -93,7 +95,7 @@ namespace DoAnCoSo.Controllers
             var taikhoanID = HttpContext.Session.GetString("CustomerId");
             if (taikhoanID != null)
             {
-                return RedirectToAction("Dashboard", "Customer");
+                return RedirectToAction("MyAccount", "Customer");
             }
             return View();
         }
@@ -139,7 +141,7 @@ namespace DoAnCoSo.Controllers
 
                     await HttpContext.SignInAsync(claimsPrincipal);
                     TempData["Success"] = "Đăng Nhập Thành Công";
-                    return RedirectToAction("Dashboard", "Customer");
+                    return RedirectToAction("MyAccount", "Home");
                 }
 
             }
@@ -152,7 +154,7 @@ namespace DoAnCoSo.Controllers
             {
                 RedirectToAction("Register", "Customer");
             }
-            return View(customer); //return //RedirectToAction("Register", "Customer");
+            return RedirectToAction("Register", "Customer"); //return //RedirectToAction("Register", "Customer");
         } 
 
 
@@ -210,7 +212,7 @@ namespace DoAnCoSo.Controllers
 
                         TempData["Success"] = "Đăng Nhập Thành Công";
                         await HttpContext.SignInAsync(claimsPrincipal);
-                        return RedirectToAction("Dashboard", "Customer");
+                        return RedirectToAction("MyAccount", "Customer");
                     }
                     catch (Exception ex)
                     {
