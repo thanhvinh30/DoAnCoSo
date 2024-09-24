@@ -4,6 +4,8 @@
     ViewData["Title"] = "Dashboard";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+
+<h1>Tài khoảng của tôi </h1>
 <!--
 <h1>Dashboard</h1>
 
@@ -60,12 +62,6 @@
             Html.DisplayFor(model => model.LastLogin)
         </dd>
         <dt class = "col-sm-2">
-            Html.DisplayNameFor(model => model.Avatar)
-        </dt>
-        <dd class = "col-sm-10">
-            Html.DisplayFor(model => model.Avatar)
-        </dd>
-        <dt class = "col-sm-2">
             Html.DisplayNameFor(model => model.Active)
         </dt>
         <dd class = "col-sm-10">
@@ -90,54 +86,3 @@
     <a asp-action="Index">Back to List</a>
 </div>
 -->
-
-<!-- Single Page Header start -->
-<div class="container-fluid page-header py-5">
-    <h1 class="text-center text-white display-6">Đăng Nhập</h1>
-    <ol class="breadcrumb justify-content-center mb-0">
-        <li class="breadcrumb-item"><a asp-controller="Home" asp-action="Index"> Trang Chủ</a></li>
-    </ol>
-</div>
-<!-- Single Page Header End -->
-<!-- Account Start -->
-<div class="custom-card">
-    <div class="custom-container" id="container">
-        <div class="custom-form-container custom-sign-up">
-            <div asp-validation-summary="ModelOnly" class="text-danget"></div>
-            <form asp-action="Register" asp-controller="Account">
-                <div asp-validation-summary="ModelOnly" class="text-danget"></div>
-                <h1>Thông Tin Khách Hàng</h1>
-                <span>Thông tin cụ thể về khách hàng</span>
-                <input asp-for="CusName" placeholder="Họ Và Tên">
-                <input asp-for="CusEmail" placeholder="Email">
-                <input asp-for="CusPassword" placeholder="Mật Khẩu">
-                <button>Đăng Ký</button>
-            </form>
-        </div>
-        <div class="custom-form-container custom-sign-in">
-            <form asp-action="Login" asp-controller="Account">
-                <div asp-validation-summary="ModelOnly" class="text-danget"></div>
-                <h1>Đăng Nhập</h1>
-                <input asp-for="CusName" placeholder="Nhập Họ Và Tên">
-                <input asp-for ="CusPassword" placeholder="Password">
-                <a href="#">Quên Mật Khẩu</a>
-                <button>Đăng Nhập</button>
-            </form>
-        </div>
-        <div class="custom-toggle-container">
-            <div class="custom-toggle">
-                <div class="custom-toggle-panel custom-toggle-left">
-                    <h1>Chào Mừng Bạn Đã Quay Lại</h1>
-                    <p>Nhập thông tin cá nhân của bạn để sử dụng tất cả các tính năng của trang web</p>
-                    <button class="hidden" id="login">Đăng Nhập</button>
-                </div>
-                <div class="custom-toggle-panel custom-toggle-right">
-                    <h1>Tạo Tài Khoản</h1>
-                    <p>Đăng ký với thông tin cá nhân của bạn để sử dụng tất cả các tính năng của trang web</p>
-                    <button class="hidden" id="register">Đăng Ký</button>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- Account End-->

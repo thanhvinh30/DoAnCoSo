@@ -7,12 +7,20 @@
       "RelativeMoniker": "D:0:0:{83E1D782-A8CC-4934-8ED6-41B6287C8013}|DoAnCoSo\\DoAnCoSo.csproj|solutionrelative:doancoso\\controllers\\customercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{83E1D782-A8CC-4934-8ED6-41B6287C8013}|DoAnCoSo\\DoAnCoSo.csproj|d:\\doan\\doancoso\\doancoso\\doancoso\\views\\shared\\_header.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{83E1D782-A8CC-4934-8ED6-41B6287C8013}|DoAnCoSo\\DoAnCoSo.csproj|solutionrelative:doancoso\\views\\shared\\_header.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{83E1D782-A8CC-4934-8ED6-41B6287C8013}|DoAnCoSo\\DoAnCoSo.csproj|d:\\doan\\doancoso\\doancoso\\doancoso\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{83E1D782-A8CC-4934-8ED6-41B6287C8013}|DoAnCoSo\\DoAnCoSo.csproj|solutionrelative:doancoso\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{83E1D782-A8CC-4934-8ED6-41B6287C8013}|DoAnCoSo\\DoAnCoSo.csproj|d:\\doan\\doancoso\\doancoso\\doancoso\\views\\customer\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{83E1D782-A8CC-4934-8ED6-41B6287C8013}|DoAnCoSo\\DoAnCoSo.csproj|solutionrelative:doancoso\\views\\customer\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{83E1D782-A8CC-4934-8ED6-41B6287C8013}|DoAnCoSo\\DoAnCoSo.csproj|d:\\doan\\doancoso\\doancoso\\doancoso\\views\\shared\\_footer.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{83E1D782-A8CC-4934-8ED6-41B6287C8013}|DoAnCoSo\\DoAnCoSo.csproj|solutionrelative:doancoso\\views\\shared\\_footer.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{83E1D782-A8CC-4934-8ED6-41B6287C8013}|DoAnCoSo\\DoAnCoSo.csproj|d:\\doan\\doancoso\\doancoso\\doancoso\\views\\shared\\_header.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{83E1D782-A8CC-4934-8ED6-41B6287C8013}|DoAnCoSo\\DoAnCoSo.csproj|solutionrelative:doancoso\\views\\shared\\_header.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -32,7 +40,7 @@
               "RelativeDocumentMoniker": "DoAnCoSo\\Controllers\\CustomerController.cs",
               "ToolTip": "D:\\DoAn\\DoAnCoSo\\DoAnCoSo\\DoAnCoSo\\Controllers\\CustomerController.cs",
               "RelativeToolTip": "DoAnCoSo\\Controllers\\CustomerController.cs",
-              "ViewState": "AgIAAF0AAAAAAAAAAAAqwGsAAAAqAAAAAAAAAA==",
+              "ViewState": "AgIAAIMAAAAAAAAAAAAAAI0AAAA2AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-23T08:41:12.759Z",
               "IsPinned": true,
@@ -40,7 +48,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "_Header.cshtml",
               "DocumentMoniker": "D:\\DoAn\\DoAnCoSo\\DoAnCoSo\\DoAnCoSo\\Views\\Shared\\_Header.cshtml",
               "RelativeDocumentMoniker": "DoAnCoSo\\Views\\Shared\\_Header.cshtml",
@@ -54,16 +62,43 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "_Footer.cshtml",
               "DocumentMoniker": "D:\\DoAn\\DoAnCoSo\\DoAnCoSo\\DoAnCoSo\\Views\\Shared\\_Footer.cshtml",
               "RelativeDocumentMoniker": "DoAnCoSo\\Views\\Shared\\_Footer.cshtml",
               "ToolTip": "D:\\DoAn\\DoAnCoSo\\DoAnCoSo\\DoAnCoSo\\Views\\Shared\\_Footer.cshtml",
               "RelativeToolTip": "DoAnCoSo\\Views\\Shared\\_Footer.cshtml",
-              "ViewState": "AgIAACYAAAAAAAAAAAAAADQAAAAaAAAAAAAAAA==",
+              "ViewState": "AgIAACQAAAAAAAAAAAAAACsAAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-09-24T02:20:22.922Z",
-              "IsPinned": true
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "D:\\DoAn\\DoAnCoSo\\DoAnCoSo\\DoAnCoSo\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "DoAnCoSo\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "D:\\DoAn\\DoAnCoSo\\DoAnCoSo\\DoAnCoSo\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "DoAnCoSo\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAAAB0AAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-09-24T09:28:32.914Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Login.cshtml",
+              "DocumentMoniker": "D:\\DoAn\\DoAnCoSo\\DoAnCoSo\\DoAnCoSo\\Views\\Customer\\Login.cshtml",
+              "RelativeDocumentMoniker": "DoAnCoSo\\Views\\Customer\\Login.cshtml",
+              "ToolTip": "D:\\DoAn\\DoAnCoSo\\DoAnCoSo\\DoAnCoSo\\Views\\Customer\\Login.cshtml",
+              "RelativeToolTip": "DoAnCoSo\\Views\\Customer\\Login.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-09-24T09:13:10.508Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Bookmark",

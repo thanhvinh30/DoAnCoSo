@@ -117,6 +117,9 @@ public partial class DataDoAnCoSoContext : DbContext
             entity.Property(e => e.CusPassword)
                 .HasMaxLength(50)
                 .IsUnicode(false);
+            entity.Property(e => e.Phone)
+               .HasMaxLength(150)
+               .IsUnicode(false);
             entity.Property(e => e.Salt)
                 .HasMaxLength(10)
                 .IsFixedLength();

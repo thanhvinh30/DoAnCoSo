@@ -13,6 +13,7 @@ using Microsoft.AspNetCore.Identity;
 using static Microsoft.EntityFrameworkCore.DbLoggerCategory;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Data.SqlClient;
+using Microsoft.AspNetCore.Mvc.Infrastructure;
 
 namespace DoAnCoSo.Controllers
 {
@@ -76,7 +77,13 @@ namespace DoAnCoSo.Controllers
             }
             return RedirectToAction("Login");
         }
-
+        [HttpGet]
+        public IActionResult Logout()
+        {
+            HttpContext.SignOutAsync();
+            HttpContext.Session.Remove("CustomerId");
+            return RedirectToAction("Index", "Home");
+        }
 
 
         [HttpGet]
@@ -108,7 +115,7 @@ namespace DoAnCoSo.Controllers
                     if (khachhang == null)
                     {
                         ModelState.AddModelError("", "Tài khoản hoặc mật khẩu không hợp lệ.");
-                        return View(customer);
+                        return RedirectToAction("Register", "Customer");
                     }
                     // So sánh mật khẩu
                     string pass = (customer.Password + khachhang.Salt.Trim()).ToMD5();
@@ -117,6 +124,8 @@ namespace DoAnCoSo.Controllers
                         ModelState.AddModelError("", "Tài khoản hoặc mật khẩu không hợp lệ.");
                         return View(customer); // Trả về form đăng nhập với lỗi
                     }
+                    if (khachhang.Active == false) return RedirectToAction("Index", "Home");
+
                     HttpContext.Session.SetString("CustomerId", khachhang.CusId.ToString());
                     var taikhoanID = HttpContext.Session.GetString("CustomerId");
 
@@ -139,10 +148,8 @@ namespace DoAnCoSo.Controllers
             //    // Ghi lại lỗi chi tiết
             //    RedirectToAction("Register", "Customer");
             //}
-            catch (Exception ex) // Bắt tất cả các ngoại lệ khác
+            catch// Bắt tất cả các ngoại lệ khác
             {
-                _logger.LogError("Lỗi không xác định: " + ex.Message);
-                ModelState.AddModelError("", "Có lỗi xảy ra. Vui lòng thử lại sau.");
                 RedirectToAction("Register", "Customer");
             }
             return View(customer); //return //RedirectToAction("Register", "Customer");

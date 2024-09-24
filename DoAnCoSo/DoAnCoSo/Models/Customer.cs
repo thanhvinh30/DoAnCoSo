@@ -21,7 +21,7 @@ public class Customer
 
     public string CusEmail { get; set; }
 
-    public string Address { get; set; }
+    public string? Address { get; set; }
 
     public DateOnly Birthday { get; set; }
 

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "da3Gxs0aad3LJNCgq1U5gUxDZgMUapCmKpdPcDMJSQQ=",
+  "Hash": "68DK9ms6dE5MXux+z7Fl+Jid1p7sTkw0XZNh1PeS+/8=",
   "Source": "DoAnCoSo",
   "BasePath": "_content/DoAnCoSo",
   "Mode": "Default",
@@ -2732,6 +2732,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\bootstrap.min.css"
+    },
+    {
+      "Identity": "D:\\DoAn\\DoAnCoSo\\DoAnCoSo\\DoAnCoSo\\wwwroot\\css\\bootstrap-myaccount.css",
+      "SourceId": "DoAnCoSo",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\DoAn\\DoAnCoSo\\DoAnCoSo\\DoAnCoSo\\wwwroot\\",
+      "BasePath": "_content/DoAnCoSo",
+      "RelativePath": "css/bootstrap-myaccount.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\bootstrap-myaccount.css"
     },
     {
       "Identity": "D:\\DoAn\\DoAnCoSo\\DoAnCoSo\\DoAnCoSo\\wwwroot\\css\\button-clean-Cart.css",
