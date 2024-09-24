@@ -28,7 +28,8 @@ namespace DoAnCoSo.Controllers
                     return View(khachhang);
                 }
             }
-            return RedirectToAction("Login", "Customer");
+            return RedirectToAction("Login");
+            //return View();
         }
         public async Task<IActionResult> Index()
         {

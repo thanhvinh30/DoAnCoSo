@@ -45,7 +45,7 @@
                 <div class="d-flex flex-column text-start footer-item">
                     <h4 class="text-light mb-3">Tài khoản</h4>
                     @if(User.Identity.IsAuthenticated){
-                        <a asp-controller="Customer" asp-action="Dashboard" class="btn-link">Tài khoản của tôi</a>
+                        <a asp-controller="Home" asp-action="MyAccount" class="btn-link">Tài khoản của tôi</a>
                     }
                     else
                     {

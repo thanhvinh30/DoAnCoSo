@@ -86,4 +86,208 @@
 </div>
 -->
 
-<h1> tài khaorng của tôi </h1>
+<div class="container-fluid page-header py-5">
+    <h1 class="text-center text-white display-6">Tài Khoản Cá Nhan</h1>
+    <ol class="breadcrumb justify-content-center mb-0">
+        <li class="breadcrumb-item"><a asp-controller="Home" asp-action="Index"> Trang Chủ</a></li>
+        <li class="breadcrumb-item"><a asp-controller="Products" asp-action="Cart">Giỏ hàng</a></li>
+        <li class="breadcrumb-item"><a asp-controller="Products" asp-action="Products">Sản Phẩm</a></li>
+    </ol>
+</div>
+
+
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-lg-4 pb-5">
+            <!-- Account Sidebar-->
+            <div class="author-card pb-3">
+                <div class="author-card-cover">
+                    <a class="btn btn-style-1 btn-white btn-sm" href="#" data-toggle="tooltip" title="" >
+                        <img class="author-card-cover" src="~/img/banner-fruits.jpg" />
+                    </a>
+                </div>
+                <div class="author-card-profile">
+                    <div class="author-card-avatar">
+                        <img src="" alt="Daniel Adams">
+                    </div>
+                    <div class="author-card-details">
+                        <h5 class="author-card-name text-lg">Daniel Adams</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="wizard">
+                <nav class="list-group list-group-flush">
+                    <a class="list-group-item" href="#Orders">
+                        <i class="fa fa-cart-arrow-down"></i>Orders List                        
+                    </a>
+                    <a class="list-group-item active" href="#Profile">
+                        <i class="fa fa-user text-muted"></i>Profile Settings
+                    </a>
+                    <a asp-controller="Customer" asp-action="Logout" class="list-group-item" >
+                        <i class="fa fa-sign-out" aria-hidden="true"></i>Log Out                        
+                    </a>                         
+                </nav>
+            </div>
+        </div>
+
+
+        <!-- Profile Settings-->
+
+
+        <div id="Profile" class="col-lg-8 pb-5">
+            <form class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="account-fn">First Name</label>
+                        <input class="form-control" type="text" id="account-fn" value="Daniel" required="">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="account-ln">Last Name</label>
+                        <input class="form-control" type="text" id="account-ln" value="Adams" required="">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="account-email">E-mail Address</label>
+                        <input class="form-control" type="email" id="account-email" value="daniel.adams@example.com" disabled="">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="account-phone">Phone Number</label>
+                        <input class="form-control" type="text" id="account-phone" value="+7 (805) 348 95 72" required="">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="account-pass">New Password</label>
+                        <input class="form-control" type="password" id="account-pass">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="account-confirm-pass">Confirm Password</label>
+                        <input class="form-control" type="password" id="account-confirm-pass">
+                    </div>
+                </div>
+                <div class="col-12">
+                    <hr class="mt-2 mb-3">
+                    <div class="d-flex flex-wrap justify-content-between align-items-center">
+                        <div class="custom-control custom-checkbox d-block">
+                            <input class="custom-control-input" type="checkbox" id="subscribe_me" checked="">
+                            <label class="custom-control-label" for="subscribe_me">Subscribe me to Newsletter</label>
+                        </div>
+                        <button class="btn btn-style-1 btn-primary" type="button" data-toast="" data-toast-position="topRight" data-toast-type="success" data-toast-icon="fe-icon-check-circle" data-toast-title="Success!" data-toast-message="Your profile updated successfuly.">Update Profile</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+
+        <div id="Orders" class="col-lg-8 pb-5">
+            <div class="d-flex justify-content-end pb-3">
+                <div class="form-inline">
+                    <label class="text-muted mr-3" for="order-sort">Sort Orders</label>
+                    <select class="form-control" id="order-sort">
+                        <option>All</option>
+                        <option>Delivered</option>
+                        <option>In Progress</option>
+                        <option>Delayed</option>
+                        <option>Canceled</option>
+                    </select>
+                </div>
+            </div>
+            <div class="table-responsive">
+                <table class="table table-hover mb-0">
+                    <thead>
+                        <tr>
+                            <th>Order #</th>
+                            <th>Date Purchased</th>
+                            <th>Status</th>
+                            <th>Total</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><a class="navi-link" href="#order-details" data-toggle="modal">78A643CD409</a></td>
+                            <td>August 08, 2017</td>
+                            <td><span class="badge badge-danger m-0">Canceled</span></td>
+                            <td><span>$760.50</span></td>
+                        </tr>
+                        <tr>
+                            <td><a class="navi-link" href="#order-details" data-toggle="modal">34VB5540K83</a></td>
+                            <td>July 21, 2017</td>
+                            <td><span class="badge badge-info m-0">In Progress</span></td>
+                            <td>$315.20</td>
+                        </tr>
+                        <tr>
+                            <td><a class="navi-link" href="#order-details" data-toggle="modal">112P45A90V2</a></td>
+                            <td>June 15, 2017</td>
+                            <td><span class="badge badge-warning m-0">Delayed</span></td>
+                            <td>$1,264.00</td>
+                        </tr>
+                        <tr>
+                            <td><a class="navi-link" href="#order-details" data-toggle="modal">28BA67U0981</a></td>
+                            <td>May 19, 2017</td>
+                            <td><span class="badge badge-success m-0">Delivered</span></td>
+                            <td>$198.35</td>
+                        </tr>
+                        <tr>
+                            <td><a class="navi-link" href="#order-details" data-toggle="modal">502TR872W2</a></td>
+                            <td>April 04, 2017</td>
+                            <td><span class="badge badge-success m-0">Delivered</span></td>
+                            <td>$2,133.90</td>
+                        </tr>
+                        <tr>
+                            <td><a class="navi-link" href="#order-details" data-toggle="modal">47H76G09F33</a></td>
+                            <td>March 30, 2017</td>
+                            <td><span class="badge badge-success m-0">Delivered</span></td>
+                            <td>$86.40</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        var profileLink = document.querySelector('a[href="#Profile"]');
+        var ordersLink = document.querySelector('a[href="#Orders"]');
+        var profileSection = document.getElementById("Profile");
+        var ordersSection = document.getElementById("Orders");
+
+        // Xử lý khi nhấp vào Profile
+        profileLink.addEventListener("click", function(event) {
+            event.preventDefault();  // Ngăn chặn hành vi mặc định
+
+            // Ẩn Order và hiển thị Profile
+            ordersSection.style.display = "none";
+            profileSection.style.display = "block";
+
+            // Đặt class 'active' cho Profile
+            profileLink.classList.add("active");
+            ordersLink.classList.remove("active");
+        });
+
+        // Xử lý khi nhấp vào Orders
+        ordersLink.addEventListener("click", function(event) {
+            event.preventDefault();  // Ngăn chặn hành vi mặc định
+
+            // Ẩn Profile và hiển thị Order
+            profileSection.style.display = "none";
+            ordersSection.style.display = "block";
+
+            // Đặt class 'active' cho Orders
+            ordersLink.classList.add("active");
+            profileLink.classList.remove("active");
+        });
+
+        // Hiển thị phần Profile mặc định khi trang tải xong
+        profileSection.style.display = "block";
+    });
+</script>

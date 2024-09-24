@@ -48,9 +48,10 @@ namespace DoAnCoSo
             .AddCookie(options =>
             {
                 options.AccessDeniedPath = new PathString("/");
-                options.LoginPath = new PathString("/Customer/MyAccount");
+                options.LoginPath = new PathString("/Home/MyAccount");
                 options.LogoutPath = new PathString("/Home/Index");
             });
+
             //
             services.AddDbContext<DataDoAnCoSoContext>(options =>
             options.UseSqlServer(Configuration.GetConnectionString("dbPhuTungXeMay")));

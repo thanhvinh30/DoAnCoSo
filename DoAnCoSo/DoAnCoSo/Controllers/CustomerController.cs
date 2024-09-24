@@ -14,6 +14,7 @@ using static Microsoft.EntityFrameworkCore.DbLoggerCategory;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Data.SqlClient;
 using Microsoft.AspNetCore.Mvc.Infrastructure;
+using Microsoft.AspNetCore.Authentication.Cookies;
 
 namespace DoAnCoSo.Controllers
 {
@@ -64,19 +65,19 @@ namespace DoAnCoSo.Controllers
                 return Json(data: true);
             }
         }
-        public IActionResult MyAccount()
-        {
-            var taikhoanID = HttpContext.Session.GetString("CustomerId");
-            if (taikhoanID != null)
-            {
-                var khachhang = _context.Customers.AsNoTracking().SingleOrDefault(x => x.CusId == Convert.ToInt32(taikhoanID));
-                if (khachhang != null)
-                {
-                    return View(khachhang);
-                }
-            }
-            return RedirectToAction("Login");
-        }
+        //public IActionResult MyAccount()
+        //{
+        //    var taikhoanID = HttpContext.Session.GetString("CustomerId");
+        //    if (taikhoanID != null)
+        //    {
+        //        var khachhang = _context.Customers.AsNoTracking().SingleOrDefault(x => x.CusId == Convert.ToInt32(taikhoanID));
+        //        if (khachhang != null)
+        //        {
+        //            return View(khachhang);
+        //        }
+        //    }
+        //    return RedirectToAction("Login");
+        //}
 
 
         [HttpGet]
@@ -95,7 +96,7 @@ namespace DoAnCoSo.Controllers
             var taikhoanID = HttpContext.Session.GetString("CustomerId");
             if (taikhoanID != null)
             {
-                return RedirectToAction("MyAccount", "Customer");
+                return RedirectToAction("MyAccount", "Home");
             }
             return View();
         }
@@ -139,7 +140,13 @@ namespace DoAnCoSo.Controllers
                     ClaimsIdentity claimsIdentity = new ClaimsIdentity(claims, "Login");
                     ClaimsPrincipal claimsPrincipal = new ClaimsPrincipal(claimsIdentity);
 
+                    var authProperties = new AuthenticationProperties
+                    {
+                        IsPersistent = true // Để giữ trạng thái đăng nhập qua các phiên làm việc
+                    };
+
                     await HttpContext.SignInAsync(claimsPrincipal);
+                    await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, new ClaimsPrincipal(claimsIdentity), authProperties);
                     TempData["Success"] = "Đăng Nhập Thành Công";
                     return RedirectToAction("MyAccount", "Home");
                 }
