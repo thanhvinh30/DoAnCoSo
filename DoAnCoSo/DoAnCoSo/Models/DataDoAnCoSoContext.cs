@@ -108,7 +108,6 @@ public partial class DataDoAnCoSoContext : DbContext
             entity.ToTable("Customer");
 
             entity.Property(e => e.Address).HasMaxLength(250);
-            entity.Property(e => e.Avatar).HasMaxLength(250);
             entity.Property(e => e.CusEmail)
                 .HasMaxLength(50)
                 .IsUnicode(false);

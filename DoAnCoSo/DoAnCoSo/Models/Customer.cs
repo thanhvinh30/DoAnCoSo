@@ -33,7 +33,6 @@ public class Customer
 
     public DateOnly LastLogin { get; set; }
 
-    public string Avatar { get; set; }
 
     public bool Active { get; set; }
 

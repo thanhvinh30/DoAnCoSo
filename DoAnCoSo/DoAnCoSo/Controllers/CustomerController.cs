@@ -12,6 +12,7 @@ using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Identity;
 using static Microsoft.EntityFrameworkCore.DbLoggerCategory;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Data.SqlClient;
 
 namespace DoAnCoSo.Controllers
 {
@@ -20,14 +21,15 @@ namespace DoAnCoSo.Controllers
     {
         private UserManager<AppUserModel> _userManager;
         private SignInManager<AppUserModel> _siginManager;
-
+        private readonly ILogger<CustomerController> _logger;
         private readonly DataDoAnCoSoContext _context;
 
-        public CustomerController(DataDoAnCoSoContext context, UserManager<AppUserModel> userManager, SignInManager<AppUserModel> siginManager)
+        public CustomerController(DataDoAnCoSoContext context, UserManager<AppUserModel> userManager, SignInManager<AppUserModel> siginManager, ILogger<CustomerController> logger)
         {
             _userManager = userManager;
             _siginManager = siginManager;
             _context = context;
+            _logger = logger;
         }
         [HttpGet]
         [AllowAnonymous]
@@ -61,16 +63,18 @@ namespace DoAnCoSo.Controllers
                 return Json(data: true);
             }
         }
-        public IActionResult Account()
+        public IActionResult Dashboard()
         {
             var taikhoanID = HttpContext.Session.GetString("CustomerId");
             if (taikhoanID != null)
             {
                 var khachhang = _context.Customers.AsNoTracking().SingleOrDefault(x => x.CusId == Convert.ToInt32(taikhoanID));
-                if (khachhang == null) return RedirectToAction("Index", "Home");
-
+                if (khachhang != null)
+                {
+                    return View(khachhang);
+                }
             }
-            return RedirectToAction("Index");
+            return RedirectToAction("Login");
         }
 
 
@@ -82,13 +86,13 @@ namespace DoAnCoSo.Controllers
             var taikhoanID = HttpContext.Session.GetString("CustomerId");
             if (taikhoanID != null)
             {
-                return RedirectToAction("Index", "Home");
+                return RedirectToAction("Dashboard", "Customer");
             }
             return View();
         }
         [HttpPost]
         [AllowAnonymous]
-        public async Task<IActionResult> Login(LoginViewModel customer, string url)
+        public async Task<IActionResult> Login(LoginViewModel customer, string returnUrl = null)
         {
             try
             {
@@ -97,17 +101,21 @@ namespace DoAnCoSo.Controllers
                     bool isEmail = Utilities.IsValidEmail(customer.UserName);
                     if (!isEmail) return View(customer);
 
-                    var khachhang = _context.Customers.AsNoTracking().SingleOrDefault(x => x.CusEmail.Trim() == customer.UserName);
-                    if (khachhang == null) return RedirectToAction("Register","Customer");
+                    var khachhang = _context.Customers.AsNoTracking()
+    .SingleOrDefault(x => x.CusEmail.Trim() == customer.UserName);
 
-                    string pass = (customer.Password + khachhang.Salt.Trim().ToMD5());
-                    if (customer.Password != pass)
+                    // Kiểm tra khachhang có null hay không
+                    if (khachhang == null)
                     {
+                        ModelState.AddModelError("", "Tài khoản hoặc mật khẩu không hợp lệ.");
                         return View(customer);
                     }
-                    if (khachhang.Active == false)
+                    // So sánh mật khẩu
+                    string pass = (customer.Password + khachhang.Salt.Trim()).ToMD5();
+                    if (khachhang.CusPassword != pass)
                     {
-                        return RedirectToAction("","Customer");
+                        ModelState.AddModelError("", "Tài khoản hoặc mật khẩu không hợp lệ.");
+                        return View(customer); // Trả về form đăng nhập với lỗi
                     }
                     HttpContext.Session.SetString("CustomerId", khachhang.CusId.ToString());
                     var taikhoanID = HttpContext.Session.GetString("CustomerId");
@@ -121,14 +129,23 @@ namespace DoAnCoSo.Controllers
                     ClaimsPrincipal claimsPrincipal = new ClaimsPrincipal(claimsIdentity);
 
                     await HttpContext.SignInAsync(claimsPrincipal);
-                    return RedirectToAction("Checkout","Products");
+                    TempData["Success"] = "Đăng Nhập Thành Công";
+                    return RedirectToAction("Dashboard", "Customer");
                 }
+
             }
-            catch
+            //catch 
+            //{
+            //    // Ghi lại lỗi chi tiết
+            //    RedirectToAction("Register", "Customer");
+            //}
+            catch (Exception ex) // Bắt tất cả các ngoại lệ khác
             {
-                return RedirectToAction("Register","Customer");
+                _logger.LogError("Lỗi không xác định: " + ex.Message);
+                ModelState.AddModelError("", "Có lỗi xảy ra. Vui lòng thử lại sau.");
+                RedirectToAction("Register", "Customer");
             }
-            return View(customer);
+            return View(customer); //return //RedirectToAction("Register", "Customer");
         } 
 
 
@@ -157,6 +174,7 @@ namespace DoAnCoSo.Controllers
                         Phone = taikhoan.Phone.Trim().ToLower(),
                         CusEmail = taikhoan.Email.Trim().ToLower(),
                         CusPassword = (taikhoan.Password + salt.Trim()).ToMD5(),
+                        Salt = salt,
                         Active = true,
                         CreateDate = DateOnly.FromDateTime(DateTime.Now)
                     };
@@ -183,9 +201,9 @@ namespace DoAnCoSo.Controllers
                         ClaimsIdentity claimsIdentity = new ClaimsIdentity(claims, "login");
                         ClaimsPrincipal claimsPrincipal = new ClaimsPrincipal(claimsIdentity);
 
-                        TempData["Warning"] = "Error Roàiii";
+                        TempData["Success"] = "Đăng Nhập Thành Công";
                         await HttpContext.SignInAsync(claimsPrincipal);
-                        return RedirectToAction("Index", "Home");
+                        return RedirectToAction("Dashboard", "Customer");
                     }
                     catch (Exception ex)
                     {

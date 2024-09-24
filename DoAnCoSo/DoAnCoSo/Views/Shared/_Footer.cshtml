@@ -44,7 +44,14 @@
             <div class="col-lg-3 col-md-6">
                 <div class="d-flex flex-column text-start footer-item">
                     <h4 class="text-light mb-3">Tài khoản</h4>
-                    <a asp-area="Admin" asp-controller="Home" asp-action="Index" class="btn-link">Tài khoản của tôi</a>
+                    @if(User.Identity.IsAuthenticated){
+                        <a asp-controller="Customer" asp-action="Dashboard" class="btn-link">Tài khoản của tôi</a>
+                    }
+                    else
+                    {
+                        <a asp-controller="Customer" asp-action="Register" class="btn-link">Đăng ký tài khoản</a>
+                        <a asp-controller="Customer" asp-action="Login" class="btn-link">Đăng Nhập</a>
+                    }
                     <a asp-controller="Products" asp-action="Cart" class="btn-link">Giỏ hàng</a>
                     <a asp-controller="Products" asp-action="Products" class="btn-link">Các sản phẩm</></a>
                 </div>
