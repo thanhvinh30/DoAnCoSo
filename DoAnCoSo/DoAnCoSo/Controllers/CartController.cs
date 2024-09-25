@@ -4,6 +4,8 @@ using DoAnCoSo.Respository;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using DoAnCoSo.Models.ViewModels;
 using NuGet.Protocol;
+using DoAnCoSo.ModelView;
+using DoAnCoSo.Extension;
 
 namespace DoAnCoSo.Controllers
 {
@@ -115,13 +117,101 @@ namespace DoAnCoSo.Controllers
         public IActionResult CleanCart()
         {
             HttpContext.Session.Remove("Cart");
-            return RedirectToAction("Cart");
+            return RedirectToAction("Cart","Customer");
         }
 
-            public IActionResult Checkout()
+        public IActionResult Checkout()
         {
 
             return View();
         }
+        //-----------------------------------------------------------------------------
+
+
+        public IActionResult Index()
+        {
+            List<int> lsproductsID = new List<int>();
+            var lsGioHang = GioHang;
+            
+            return View(GioHang);
+        }
+
+
+        public List<CartItem> GioHang
+        {
+            get
+            {
+                var gh = HttpContext.Session.Get<List<CartItem>>("GioHang");
+                if (gh == default(List<CartItem>))
+                {
+                    gh =new List<CartItem>();
+                }
+                return gh;
+            }
+        }
+
+        [HttpPost]
+        [Route("AddToCart.html")]
+        public IActionResult AddToCart(int productID, int? amount)
+        {
+            List<CartItem> giohang = GioHang;
+
+            try
+            {
+                CartItem item = GioHang.SingleOrDefault(p => p.Product.ProId == productID);
+                if (item != null)
+                {
+                    if (amount.HasValue)
+                    {
+                        item.Amount = amount.Value;
+                    }
+                    else
+                    {
+                        item.Amount++;
+                    }
+                }
+                else
+                {
+                    Product hh = _context.Products.SingleOrDefault(p => p.ProId == productID);
+                    item = new CartItem
+                    {
+                        Amount = amount.HasValue ? amount.Value : 1,
+                        Product = hh
+                    };
+                    giohang.Add(item);
+                }
+                HttpContext.Session.Set<List<CartItem>>("GioHang", giohang);
+                return Json(new {success = true}); 
+            }
+            catch
+            {
+                return Json(new {success = false});
+            }
+        }
+
+
+        [HttpPost]
+        //[Route("emove.html")]
+        public ActionResult remove(int productID)
+        {
+            try
+            {
+                List<CartItem> giohang = GioHang;
+                CartItem item = giohang.SingleOrDefault(p => p.Product.ProId == productID);
+                if (item != null)
+                {
+                    giohang.Remove(item);
+                }
+                HttpContext.Session.Set<List<CartItem>>("GioHang", giohang);
+                return Json(new { success = true });
+            }
+            catch
+            {
+                return Json(new { success = false });
+            }
+        }
+
+
+
     }
 }

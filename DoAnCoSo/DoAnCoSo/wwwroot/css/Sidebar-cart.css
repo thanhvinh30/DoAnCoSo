@@ -1,0 +1,55 @@
+﻿/* CSS for Cart Sidebar */
+.cart-sidebar {
+    position: fixed;
+    right: -400px; /* Ẩn giỏ hàng ở bên phải màn hình */
+    top: 0;
+    width: 400px;
+    height: 100%;
+    background-color: #fff;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+    transition: right 0.4s ease;
+    z-index: 9999; /* Đảm bảo sidebar nằm trên các phần khác */
+}
+
+.cart-header {
+    padding: 15px;
+    background-color: #f8f9fa;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cart-body {
+    padding: 15px;
+    overflow-y: auto;
+    height: calc(100% - 120px); /* Trừ phần header và footer */
+}
+
+.cart-footer {
+    padding: 15px;
+    background-color: #f8f9fa;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.close-btn {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* Hiển thị giỏ hàng khi hover vào biểu tượng */
+.cart-icon:hover + #cartSidebar {
+    right: 0; /* Khi hover vào biểu tượng giỏ hàng, giỏ hàng trượt ra */
+}
+
+/* Đảm bảo giỏ hàng trượt lại khi không hover */
+#cartSidebar:hover {
+    right: 0;
+}
+
+#cartSidebar {
+    right: -400px; /* Trở lại vị trí ẩn ban đầu */
+}

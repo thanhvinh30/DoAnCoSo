@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "68DK9ms6dE5MXux+z7Fl+Jid1p7sTkw0XZNh1PeS+/8=",
+  "Hash": "WFDBYpD98RWrruFQNPXSeDEvCTVEWFUpV1tXjjA1Cvs=",
   "Source": "DoAnCoSo",
   "BasePath": "_content/DoAnCoSo",
   "Mode": "Default",
@@ -2770,6 +2770,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\button-clean-Cart.css"
+    },
+    {
+      "Identity": "D:\\DoAn\\DoAnCoSo\\DoAnCoSo\\DoAnCoSo\\wwwroot\\css\\Sidebar-cart.css",
+      "SourceId": "DoAnCoSo",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\DoAn\\DoAnCoSo\\DoAnCoSo\\DoAnCoSo\\wwwroot\\",
+      "BasePath": "_content/DoAnCoSo",
+      "RelativePath": "css/Sidebar-cart.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\Sidebar-cart.css"
     },
     {
       "Identity": "D:\\DoAn\\DoAnCoSo\\DoAnCoSo\\DoAnCoSo\\wwwroot\\css\\style.css",

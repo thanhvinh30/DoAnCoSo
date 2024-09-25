@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace DoAnCoSo.Areas.Admin.Controllers
 {
     [Area("Admin")]
-    [Authorize]
+
     public class HomeController : Controller
     {
 

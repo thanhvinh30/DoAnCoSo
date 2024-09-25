@@ -12,7 +12,7 @@ using Microsoft.AspNetCore.Authorization;
 namespace DoAnCoSo.Areas.Admin.Controllers
 {
     [Area("Admin")]
-    [Authorize]
+
     public class AdminCustomersController : Controller
     {
         private readonly DataDoAnCoSoContext _context;

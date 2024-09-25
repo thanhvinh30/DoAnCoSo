@@ -79,7 +79,13 @@
                             <tr rowspan="10">
                                 <td colspan="10"><p>Tổng Giỏ Hàng: @Model.GrandToTal.ToString("#,##0")VND</p></td>
 
-                            <td><a class="btn btn-md rounded-circle bg-light border mt-4" asp-controller="Cart" asp-action="CleanCart"><i class="fa fa-trash" aria-hidden="true"></i></a></td>
+                            <td>
+                                    <a class="btn btn-md rounded-circle bg-light border mt-4" 
+                                    asp-controller="Cart" 
+                                    asp-action="CleanCart">
+                                        <i class="fa fa-trash" aria-hidden="true"></i>
+                                    </a>
+                            </td>
                         </tr>
                         }
                         else
@@ -123,3 +129,5 @@
 </div>
 <!-- Cart Page End -->
 
+
+    

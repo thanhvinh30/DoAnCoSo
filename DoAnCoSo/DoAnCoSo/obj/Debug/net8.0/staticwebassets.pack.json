@@ -565,6 +565,10 @@
       "PackagePath": "staticwebassets\\assets\\libs\\spectrum-colorpicker2\\spectrum.min.js"
     },
     {
+      "Id": "D:\\DoAn\\DoAnCoSo\\DoAnCoSo\\DoAnCoSo\\wwwroot\\css\\Sidebar-cart.css",
+      "PackagePath": "staticwebassets\\css\\Sidebar-cart.css"
+    },
+    {
       "Id": "D:\\DoAn\\DoAnCoSo\\DoAnCoSo\\DoAnCoSo\\wwwroot\\css\\bootstrap-myaccount.css",
       "PackagePath": "staticwebassets\\css\\bootstrap-myaccount.css"
     },

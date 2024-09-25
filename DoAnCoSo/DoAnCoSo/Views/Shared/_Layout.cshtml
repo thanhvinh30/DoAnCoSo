@@ -28,6 +28,7 @@
     <link href="~/css/style-account.css" rel="stylesheet">
     <link href="~/css/button-clean-Cart.css" rel="stylesheet">
     <link href="~/css/bootstrap-myaccount.css" rel="stylesheet">
+   
 
     <!-- Template Stylesheet -->
     <link href="~/css/style.css" rel="stylesheet">
@@ -56,5 +57,26 @@
     <script src="~/js/main.js"></script>
     <script src="~/js/site.js"></script>
     <script src="~/js/script.js"></script>
+    <!--
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const cartSidebar = document.getElementById('cartSidebar');
+            const closeBtn = document.querySelector('.close-btn');
+
+            // Đóng thanh giỏ hàng khi nhấn vào nút đóng
+            closeBtn.addEventListener('click', function() {
+                cartSidebar.style.right = '-400px'; // Đẩy giỏ hàng ra ngoài
+            });
+
+            // Tuỳ chọn: Đóng giỏ hàng nếu người dùng nhấn ra ngoài thanh giỏ hàng
+            window.addEventListener('click', function(e) {
+                const cartIcon = document.querySelector('.cart-icon'); // Biểu tượng giỏ hàng
+                if (!cartSidebar.contains(e.target) && !cartIcon.contains(e.target)) {
+                    cartSidebar.style.right = '-400px'; // Đóng giỏ hàng nếu click ra ngoài
+                }
+            });
+        });
+    </script>
+    -->
 </body>
 </html>
