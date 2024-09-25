@@ -49,7 +49,7 @@ namespace DoAnCoSo
             {
                 options.AccessDeniedPath = new PathString("/");
                 options.LoginPath = new PathString("/Home/MyAccount");
-                options.LogoutPath = new PathString("/Home/Index");
+                options.LogoutPath = "/Customer/Logout";
             });
 
             //
@@ -65,6 +65,14 @@ namespace DoAnCoSo
             services.AddIdentity<AppUserModel, IdentityRole>()
                     .AddEntityFrameworkStores<DataContext>()
                     .AddDefaultTokenProviders();
+
+            services.AddSession(options =>
+            {
+                options.IdleTimeout = TimeSpan.FromMinutes(5);
+                options.Cookie.HttpOnly = true;
+                options.Cookie.IsEssential = true;
+            });
+
 
 
 
@@ -89,7 +97,7 @@ namespace DoAnCoSo
             app.UseRouting();
             app.UseAuthentication();
             app.UseAuthorization();
-
+            app.UseSession();
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllerRoute(

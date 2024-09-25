@@ -81,9 +81,9 @@ namespace DoAnCoSo.Controllers
 
 
         [HttpGet]
-        public IActionResult Logout()
+        public async Task<IActionResult> Logout()
         {
-            HttpContext.SignOutAsync();
+            await HttpContext.SignOutAsync();
             HttpContext.Session.Remove("CustomerId");
             return RedirectToAction("Index", "Home");
         }

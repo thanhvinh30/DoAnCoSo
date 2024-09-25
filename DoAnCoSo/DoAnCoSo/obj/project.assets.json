@@ -2892,7 +2892,7 @@
           }
         }
       },
-      "X.PagedList/10.0.3": {
+      "X.PagedList/10.2.1": {
         "type": "package",
         "compile": {
           "lib/net8.0/X.PagedList.dll": {}
@@ -7832,20 +7832,21 @@
         "useSharedDesignerContext.txt"
       ]
     },
-    "X.PagedList/10.0.3": {
-      "sha512": "HIYIXYlqIWrhedP1ext7bG1Bj3LS8X7zgNrZlrPdcQBbXCjns+QXudVbadzZq9tLrfQJmVowJirwCM1pONyeBg==",
+    "X.PagedList/10.2.1": {
+      "sha512": "SS2rDErBq4fj6WW7sRb5QHipDjjVjDY3TZEJyx8MjXTEJZ4jrJ1Iks/QVOegkQ2f3JxeXIrkGdsOIKbVEtQnXQ==",
       "type": "package",
-      "path": "x.pagedlist/10.0.3",
+      "path": "x.pagedlist/10.2.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
+        "LICENSE.md",
         "README.md",
-        "icon.png",
         "lib/net6.0/X.PagedList.dll",
         "lib/net8.0/X.PagedList.dll",
         "lib/netstandard2.0/X.PagedList.dll",
         "lib/netstandard2.1/X.PagedList.dll",
-        "x.pagedlist.10.0.3.nupkg.sha512",
+        "x-pagedlist.png",
+        "x.pagedlist.10.2.1.nupkg.sha512",
         "x.pagedlist.nuspec"
       ]
     }
@@ -7856,13 +7857,14 @@
       "Microsoft.AspNetCore.Identity.EntityFrameworkCore >= 8.0.8",
       "Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation >= 8.0.8",
       "Microsoft.EntityFrameworkCore >= 8.0.8",
+      "Microsoft.EntityFrameworkCore.Design >= 8.0.8",
       "Microsoft.EntityFrameworkCore.SqlServer >= 8.0.8",
       "Microsoft.EntityFrameworkCore.Tools >= 8.0.8",
       "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 8.0.5",
       "Newtonsoft.Json >= 13.0.3",
       "PagedList.Core.Mvc >= 3.0.0",
       "PagedList.Mvc >= 4.5.0",
-      "X.PagedList >= 10.0.3"
+      "X.PagedList >= 10.2.1"
     ]
   },
   "packageFolders": {
@@ -7926,6 +7928,12 @@
             "target": "Package",
             "version": "[8.0.8, )"
           },
+          "Microsoft.EntityFrameworkCore.Design": {
+            "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+            "suppressParent": "All",
+            "target": "Package",
+            "version": "[8.0.8, )"
+          },
           "Microsoft.EntityFrameworkCore.SqlServer": {
             "target": "Package",
             "version": "[8.0.8, )"
@@ -7954,7 +7962,7 @@
           },
           "X.PagedList": {
             "target": "Package",
-            "version": "[10.0.3, )"
+            "version": "[10.2.1, )"
           }
         },
         "imports": [

@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 using DoAnCoSo.ModelView;                   // Mới Thêm
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Authorization;
 
 namespace DoAnCoSo.Controllers
 {
@@ -17,6 +18,8 @@ namespace DoAnCoSo.Controllers
             _logger = logger;
             _context = context;                         // Add
         }
+        //[Authorize]
+        [Route("logout.html", Name ="MyAccount")]
         public IActionResult MyAccount() 
         {
             var taikhoanID = HttpContext.Session.GetString("CustomerId");
