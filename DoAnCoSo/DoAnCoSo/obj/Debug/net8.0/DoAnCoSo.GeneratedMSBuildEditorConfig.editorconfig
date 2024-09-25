@@ -166,16 +166,8 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FydFxDaGVja291dC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/DoAn/DoAnCoSo/DoAnCoSo/DoAnCoSo/Views/Customer/Dashboard.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3VzdG9tZXJcRGFzaGJvYXJkLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
 [D:/DoAn/DoAnCoSo/DoAnCoSo/DoAnCoSo/Views/Customer/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3VzdG9tZXJcTG9naW4uY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[D:/DoAn/DoAnCoSo/DoAnCoSo/DoAnCoSo/Views/Customer/MyAccount.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3VzdG9tZXJcTXlBY2NvdW50LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/DoAn/DoAnCoSo/DoAnCoSo/DoAnCoSo/Views/Customer/Register.cshtml]
@@ -206,6 +198,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxXYXJyYW50eV9Qb2xpY3kuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/DoAn/DoAnCoSo/DoAnCoSo/DoAnCoSo/Views/Home/_ChangePasswordPartialView.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxfQ2hhbmdlUGFzc3dvcmRQYXJ0aWFsVmlldy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/DoAn/DoAnCoSo/DoAnCoSo/DoAnCoSo/Views/Home/_ListProductsBestSellerPartialView.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxfTGlzdFByb2R1Y3RzQmVzdFNlbGxlclBhcnRpYWxWaWV3LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
@@ -216,10 +212,6 @@ build_metadata.AdditionalFiles.CssScope =
 
 [D:/DoAn/DoAnCoSo/DoAnCoSo/DoAnCoSo/Views/Home/_OrderPartialView.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxfT3JkZXJQYXJ0aWFsVmlldy5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[D:/DoAn/DoAnCoSo/DoAnCoSo/DoAnCoSo/Views/Products/Cart.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdHNcQ2FydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/DoAn/DoAnCoSo/DoAnCoSo/DoAnCoSo/Views/Products/Checkout.cshtml]

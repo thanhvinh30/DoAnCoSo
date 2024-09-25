@@ -11,10 +11,12 @@ using PagedList.Core;
 using DoAnCoSo.Helpper;
 using NuGet.Packaging.Signing;
 using System.Numerics;
+using Microsoft.AspNetCore.Authorization;
 
 namespace DoAnCoSo.Areas.Admin.Controllers
 {
     [Area("Admin")]
+    [Authorize]
     public class AdminProductsController : Controller
     {
         private readonly DataDoAnCoSoContext _context;

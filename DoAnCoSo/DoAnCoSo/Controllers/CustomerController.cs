@@ -65,28 +65,8 @@ namespace DoAnCoSo.Controllers
                 return Json(data: true);
             }
         }
-        //public IActionResult MyAccount()
-        //{
-        //    var taikhoanID = HttpContext.Session.GetString("CustomerId");
-        //    if (taikhoanID != null)
-        //    {
-        //        var khachhang = _context.Customers.AsNoTracking().SingleOrDefault(x => x.CusId == Convert.ToInt32(taikhoanID));
-        //        if (khachhang != null)
-        //        {
-        //            return View(khachhang);
-        //        }
-        //    }
-        //    return RedirectToAction("Login");
-        //}
+        
 
-
-        [HttpGet]
-        public async Task<IActionResult> Logout()
-        {
-            await HttpContext.SignOutAsync();
-            HttpContext.Session.Remove("CustomerId");
-            return RedirectToAction("Index", "Home");
-        }
 
 
         [HttpGet]
@@ -221,7 +201,7 @@ namespace DoAnCoSo.Controllers
 
                         TempData["Success"] = "Đăng Nhập Thành Công";
                         await HttpContext.SignInAsync(claimsPrincipal);
-                        return RedirectToAction("MyAccount", "Customer");
+                        return RedirectToAction("MyAccount", "Home");
                     }
                     catch (Exception ex)
                     {

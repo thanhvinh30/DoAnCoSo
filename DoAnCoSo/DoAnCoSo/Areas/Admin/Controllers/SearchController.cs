@@ -10,11 +10,12 @@ using Azure;
 using PagedList.Core;
 using DoAnCoSo.Helpper;
 using NuGet.Packaging.Signing;
+using Microsoft.AspNetCore.Authorization;
 
 namespace DoAnCoSo.Areas.Admin.Controllers
 {
     [Area("Admin")]
-
+    [Authorize]
     public class SearchController : Controller
     {
         private readonly DataDoAnCoSoContext _context;
@@ -24,28 +25,7 @@ namespace DoAnCoSo.Areas.Admin.Controllers
             _context = context;
         }
         [HttpPost]
-        //public IActionResult FindProducts(string keyword)
-        //{
-        //    List<Product> ls = new List<Product>();
-        //    if (string.IsNullOrEmpty(keyword) || keyword.Length < 1)
-        //    {
-        //        return PartialView("SearchProducts_PartialView", null);
-        //    }
-        //    ls = _context.Products
-        //                            .AsNoTracking()
-        //                            .Include(s => s.CatId)
-        //                            .Where( x => x.ProName.Contains(keyword))
-        //                            .OrderByDescending(x => x.ProName)
-        //                            .ToList();
-        //    if ( ls == null)
-        //    {
-        //        return PartialView("SearchProducts_PartialView", null);
-        //    }
-        //    else 
-        //    {
-        //        return PartialView("SearchProducts_PartialView", ls);
-        //    }
-        //}
+      
         public IActionResult FindProducts(string keyword)
         {
             if (string.IsNullOrEmpty(keyword) || keyword.Length < 1)

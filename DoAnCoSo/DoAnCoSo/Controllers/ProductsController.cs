@@ -105,6 +105,8 @@ namespace DoAnCoSo.Controllers
            
 
         }
+
+
         [Route("Detail/{id}.html", Name = "ProductsDetail")]
         public IActionResult Details(int id,int CatID = 0)
         {

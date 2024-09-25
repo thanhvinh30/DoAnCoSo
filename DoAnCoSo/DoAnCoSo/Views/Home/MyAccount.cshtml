@@ -4,6 +4,7 @@
     ViewData["Title"] = "MyAccount";
     Layout = "~/Views/Shared/_Layout.cshtml";
     List<Order> DanhSachDonHang = ViewBag.DonHang;
+    DoAnCoSo.ModelView.ChangePasswordVM changePasswordVM = new DoAnCoSo.ModelView.ChangePasswordVM(); 
 }
 
 <!--
@@ -96,7 +97,7 @@
     </ol>
 </div>
 
-
+@Html.Partial("_NotificationPartial")
 <div class="container mt-5">
     <div class="row">
         <div class="col-lg-4 pb-5">
@@ -121,11 +122,14 @@
                     <a class="list-group-item" href="#Orders">
                         <i class="fa fa-cart-arrow-down"></i>Danh Sách Đơn Hàng                        
                     </a>
-                    <a class="list-group-item active" href="#Profile">
+                    <a class="list-group-item" href="#Profile">
                         <i class="fa fa-user text-muted"></i>Thông tin cá nhân
                     </a>
-                    <a href="/logout.html" class="list-group-item">
-                        <i class="fa fa-sign-out" aria-hidden="true"></i>Log Out                        
+                    <a class="list-group-item" href="#ChangePassword">
+                        <i class="fa fa-key" ></i>Thay đổi mật khẩu
+                    </a>
+                    <a asp-controller="Home" asp-action="Logout" class="list-group-item">
+                        <i class="fa fa-sign-out"></i>Đăng Xuất                        
                     </a>                         
                 </nav>
             </div>
@@ -136,57 +140,41 @@
 
 
         <div id="Profile" class="col-lg-8 pb-5">
-            <form class="row">
+            <form asp-controller="Home" asp-action="UpdateProfile" class="row" method="post">
                 <div class="col-md-6">
                     <div class="form-group">
                         <label for="account-fn">Họ và Tên</label>
-                        <input class="form-control" type="text" id="account-fn" value="@Model.CusName" required="">
+                        <input asp-for="CusName" class="form-control" type="text" value="@Model.CusName" required="">
                     </div>
                 </div>                
                 <div class="col-md-6">
                     <div class="form-group">
                         <label for="account-email">E-mail</label>
-                        <input class="form-control" type="email" id="account-email" value="@Model.CusEmail" disabled="">
+                        <input asp-for="CusEmail" class="form-control" type="email" value="@Model.CusEmail" disabled="">
                     </div>
                 </div>
                 <div class="col-md-6">
                     <div class="form-group">
-                        <label for="account-phone">Phone Number</label>
-                        <input class="form-control" type="text" id="account-phone" value="@Model.Phone" required="">
+                        <label for="account-phone">Số điện thoại</label>
+                        <input asp-for="Phone" class="form-control" type="text" value="@Model.Phone" required="">
                     </div>
                 </div>
                 <div class="col-md-6">
                     <div class="form-group">
                         <label for="account-phone">Địa Chỉ</label>
-                        <input class="form-control" type="text" id="account-phone" value="@Model.Address" required="">
+                        <input asp-for="Address" class="form-control" type="text"value="@Model.Address" required="">
                     </div>
                 </div>
                 <div class="col-md-6">
                     <div class="form-group">
                         <label for="account-phone">Ngày Sinh</label>
-                        <input class="form-control" type="date" id="account-phone" value="@Model.Birthday" required="">
+                        <input asp-for="Birthday" class="form-control" type="date" value="@Model.Birthday" required="">
                     </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="form-group">
-                        <label for="account-pass">New Password</label>
-                        <input class="form-control" type="password" id="account-pass" name="NewPassword">
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="form-group">
-                        <label for="account-confirm-pass">Confirm Password</label>
-                        <input class="form-control" type="password" id="account-confirm-pass" name="ConfirmPassword">
-                    </div>
-                </div>
+                </div>               
                 <div class="col-12">
                     <hr class="mt-2 mb-3">
-                    <div class="d-flex flex-wrap justify-content-between align-items-center">
-                        <div class="custom-control custom-checkbox d-block">
-                            <input class="custom-control-input" type="checkbox" id="subscribe_me" checked="">
-                            <label class="custom-control-label" for="subscribe_me">Subscribe me to Newsletter</label>
-                        </div>
-                        <button class="btn btn-style-1 btn-primary" type="button" data-toast-message="Your profile updated successfuly." type="submit">Update Profile</button>
+                    <div class="d-flex flex-wrap justify-content-between align-items-center">                       
+                        <button class="btn btn-style-1 btn-primary" type="submit">Lưu thay đổi</button>
                     </div>
                 </div>
             </form>
@@ -209,45 +197,53 @@
                 @await Html.PartialAsync("_OrderPartialView.cshtml", DanhSachDonHang)
             </div>
         </div>
-       
+
+        <div id="ChangePassword" class="col-lg-8 pb-5">
+            <div class="table-responsive">
+                @await Html.PartialAsync("_ChangePasswordPartialView.cshtml", changePasswordVM)
+            </div>
+        </div>
     </div>
 </div>
 
 
 <script>
-    document.addEventListener("DOMContentLoaded", function() {
+    document.addEventListener("DOMContentLoaded", function () {
         var profileLink = document.querySelector('a[href="#Profile"]');
         var ordersLink = document.querySelector('a[href="#Orders"]');
+        var changePasswordLink = document.querySelector('a[href="#ChangePassword"]');
+
         var profileSection = document.getElementById("Profile");
         var ordersSection = document.getElementById("Orders");
+        var changePasswordSection = document.getElementById("ChangePassword");
 
-        // Xử lý khi nhấp vào Profile
-        profileLink.addEventListener("click", function(event) {
-            event.preventDefault();  // Ngăn chặn hành vi mặc định
-
-            // Ẩn Order và hiển thị Profile
-            ordersSection.style.display = "none";
-            profileSection.style.display = "block";
-
-            // Đặt class 'active' cho Profile
-            profileLink.classList.add("active");
-            ordersLink.classList.remove("active");
-        });
-
-        // Xử lý khi nhấp vào Orders
-        ordersLink.addEventListener("click", function(event) {
-            event.preventDefault();  // Ngăn chặn hành vi mặc định
-
-            // Ẩn Profile và hiển thị Order
+        // Hàm ẩn tất cả các phần
+        function hideAllSections() {
             profileSection.style.display = "none";
-            ordersSection.style.display = "block";
+            ordersSection.style.display = "none";
+            changePasswordSection.style.display = "none";
+        }
 
-            // Đặt class 'active' cho Orders
-            ordersLink.classList.add("active");
-            profileLink.classList.remove("active");
+        // Khi nhấn vào "Profile Settings"
+        profileLink.addEventListener("click", function (event) {
+            event.preventDefault();  // Ngăn hành vi mặc định
+            hideAllSections();  // Ẩn tất cả các phần
+            profileSection.style.display = "block";  // Hiển thị phần Profile
         });
 
-        // Hiển thị phần Profile mặc định khi trang tải xong
-        profileSection.style.display = "block";
+        // Khi nhấn vào "Orders List"
+        ordersLink.addEventListener("click", function (event) {
+            event.preventDefault();  // Ngăn hành vi mặc định
+            hideAllSections();  // Ẩn tất cả các phần
+            ordersSection.style.display = "block";  // Hiển thị phần Orders
+        });
+
+        // Khi nhấn vào "Change Password"
+        changePasswordLink.addEventListener("click", function (event) {
+            event.preventDefault();  // Ngăn hành vi mặc định
+            hideAllSections();  // Ẩn tất cả các phần
+            changePasswordSection.style.display = "block";  // Hiển thị phần Change Password
+        });
     });
 </script>
+
