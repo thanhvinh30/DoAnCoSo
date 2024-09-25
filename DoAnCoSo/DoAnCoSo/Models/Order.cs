@@ -33,14 +33,8 @@ public partial class Order
     public bool? Deleted { get; set; }
 
     public int? Quantity { get; set; }
+    public decimal? TotalMoney { get; set; }
 
-    public string? CustomerName { get; set; }
-
-    public string? CustomerPhone { get; set; }
-
-    public string? CustomerEmail { get; set; }
-
-    public string? CustomerAddress { get; set; }
 
     public virtual ICollection<Cart> Carts { get; set; } = new List<Cart>();
 

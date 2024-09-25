@@ -48,7 +48,7 @@ namespace DoAnCoSo
             .AddCookie(options =>
             {
                 options.AccessDeniedPath = new PathString("/");
-                options.LoginPath = new PathString("/Home/MyAccount");
+                options.LoginPath = new PathString("/Customer/Login");
                 options.LogoutPath = "/Customer/Logout";
             });
 

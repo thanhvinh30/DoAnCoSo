@@ -17,9 +17,9 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
     .AddCookie(options =>
     {
-        options.ExpireTimeSpan = TimeSpan.FromMinutes(20);
+        options.ExpireTimeSpan = TimeSpan.FromMinutes(5);
         options.SlidingExpiration = true;
-        options.AccessDeniedPath = "/Forbidden/";
+        options.AccessDeniedPath = "/";
     });
 
 builder.Services.AddIdentity<AppUserModel, IdentityRole>()

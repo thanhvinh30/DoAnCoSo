@@ -3,12 +3,28 @@
   "WorkspaceRootPath": "D:\\DoAn\\DoAnCoSo\\DoAnCoSo\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{83E1D782-A8CC-4934-8ED6-41B6287C8013}|DoAnCoSo\\DoAnCoSo.csproj|d:\\doan\\doancoso\\doancoso\\doancoso\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{83E1D782-A8CC-4934-8ED6-41B6287C8013}|DoAnCoSo\\DoAnCoSo.csproj|solutionrelative:doancoso\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{83E1D782-A8CC-4934-8ED6-41B6287C8013}|DoAnCoSo\\DoAnCoSo.csproj|d:\\doan\\doancoso\\doancoso\\doancoso\\controllers\\customercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{83E1D782-A8CC-4934-8ED6-41B6287C8013}|DoAnCoSo\\DoAnCoSo.csproj|solutionrelative:doancoso\\controllers\\customercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{83E1D782-A8CC-4934-8ED6-41B6287C8013}|DoAnCoSo\\DoAnCoSo.csproj|d:\\doan\\doancoso\\doancoso\\doancoso\\startup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{83E1D782-A8CC-4934-8ED6-41B6287C8013}|DoAnCoSo\\DoAnCoSo.csproj|solutionrelative:doancoso\\startup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{83E1D782-A8CC-4934-8ED6-41B6287C8013}|DoAnCoSo\\DoAnCoSo.csproj|d:\\doan\\doancoso\\doancoso\\doancoso\\views\\shared\\_header.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{83E1D782-A8CC-4934-8ED6-41B6287C8013}|DoAnCoSo\\DoAnCoSo.csproj|solutionrelative:doancoso\\views\\shared\\_header.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{83E1D782-A8CC-4934-8ED6-41B6287C8013}|DoAnCoSo\\DoAnCoSo.csproj|d:\\doan\\doancoso\\doancoso\\doancoso\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{83E1D782-A8CC-4934-8ED6-41B6287C8013}|DoAnCoSo\\DoAnCoSo.csproj|solutionrelative:doancoso\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{83E1D782-A8CC-4934-8ED6-41B6287C8013}|DoAnCoSo\\DoAnCoSo.csproj|d:\\doan\\doancoso\\doancoso\\doancoso\\views\\shared\\_footer.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{83E1D782-A8CC-4934-8ED6-41B6287C8013}|DoAnCoSo\\DoAnCoSo.csproj|solutionrelative:doancoso\\views\\shared\\_footer.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{83E1D782-A8CC-4934-8ED6-41B6287C8013}|DoAnCoSo\\DoAnCoSo.csproj|d:\\doan\\doancoso\\doancoso\\doancoso\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{83E1D782-A8CC-4934-8ED6-41B6287C8013}|DoAnCoSo\\DoAnCoSo.csproj|solutionrelative:doancoso\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,17 +34,17 @@
       "DocumentGroups": [
         {
           "DockedWidth": 216,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "CustomerController.cs",
               "DocumentMoniker": "D:\\DoAn\\DoAnCoSo\\DoAnCoSo\\DoAnCoSo\\Controllers\\CustomerController.cs",
               "RelativeDocumentMoniker": "DoAnCoSo\\Controllers\\CustomerController.cs",
               "ToolTip": "D:\\DoAn\\DoAnCoSo\\DoAnCoSo\\DoAnCoSo\\Controllers\\CustomerController.cs",
               "RelativeToolTip": "DoAnCoSo\\Controllers\\CustomerController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAQAAAAAAAAAA==",
+              "ViewState": "AgIAAIsAAAAAAAAAAAAAAGIAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-23T08:41:12.759Z",
               "IsPinned": true,
@@ -36,16 +52,68 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 5,
               "Title": "HomeController.cs",
               "DocumentMoniker": "D:\\DoAn\\DoAnCoSo\\DoAnCoSo\\DoAnCoSo\\Controllers\\HomeController.cs",
               "RelativeDocumentMoniker": "DoAnCoSo\\Controllers\\HomeController.cs",
               "ToolTip": "D:\\DoAn\\DoAnCoSo\\DoAnCoSo\\DoAnCoSo\\Controllers\\HomeController.cs",
               "RelativeToolTip": "DoAnCoSo\\Controllers\\HomeController.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAqwBQAAAAKAAAAAAAAAA==",
+              "ViewState": "AgIAABIAAAAAAAAAAAASwBQAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-24T10:10:03.584Z",
+              "WhenOpened": "2024-09-25T02:59:48.856Z",
               "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Startup.cs",
+              "DocumentMoniker": "D:\\DoAn\\DoAnCoSo\\DoAnCoSo\\DoAnCoSo\\Startup.cs",
+              "RelativeDocumentMoniker": "DoAnCoSo\\Startup.cs",
+              "ToolTip": "D:\\DoAn\\DoAnCoSo\\DoAnCoSo\\DoAnCoSo\\Startup.cs",
+              "RelativeToolTip": "DoAnCoSo\\Startup.cs",
+              "ViewState": "AgIAAB8AAAAAAAAAAAAgwDAAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-25T04:35:44.059Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\DoAn\\DoAnCoSo\\DoAnCoSo\\DoAnCoSo\\Program.cs",
+              "RelativeDocumentMoniker": "DoAnCoSo\\Program.cs",
+              "ToolTip": "D:\\DoAn\\DoAnCoSo\\DoAnCoSo\\DoAnCoSo\\Program.cs",
+              "RelativeToolTip": "DoAnCoSo\\Program.cs",
+              "ViewState": "AgIAACcAAAAAAAAAAAAAABMAAAA3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-25T04:35:27.408Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "_Footer.cshtml",
+              "DocumentMoniker": "D:\\DoAn\\DoAnCoSo\\DoAnCoSo\\DoAnCoSo\\Views\\Shared\\_Footer.cshtml",
+              "RelativeDocumentMoniker": "DoAnCoSo\\Views\\Shared\\_Footer.cshtml",
+              "ToolTip": "D:\\DoAn\\DoAnCoSo\\DoAnCoSo\\DoAnCoSo\\Views\\Shared\\_Footer.cshtml",
+              "RelativeToolTip": "DoAnCoSo\\Views\\Shared\\_Footer.cshtml",
+              "ViewState": "AgIAABwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-09-25T04:33:43.942Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "_Header.cshtml",
+              "DocumentMoniker": "D:\\DoAn\\DoAnCoSo\\DoAnCoSo\\DoAnCoSo\\Views\\Shared\\_Header.cshtml",
+              "RelativeDocumentMoniker": "DoAnCoSo\\Views\\Shared\\_Header.cshtml",
+              "ToolTip": "D:\\DoAn\\DoAnCoSo\\DoAnCoSo\\DoAnCoSo\\Views\\Shared\\_Header.cshtml",
+              "RelativeToolTip": "DoAnCoSo\\Views\\Shared\\_Header.cshtml",
+              "ViewState": "AgIAACgAAAAAAAAAAAAAACcAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-09-25T04:33:43.162Z",
               "EditorCaption": ""
             },
             {

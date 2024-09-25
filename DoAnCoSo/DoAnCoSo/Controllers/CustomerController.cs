@@ -96,6 +96,8 @@ namespace DoAnCoSo.Controllers
             var taikhoanID = HttpContext.Session.GetString("CustomerId");
             if (taikhoanID != null)
             {
+                
+                                                
                 return RedirectToAction("MyAccount", "Home");
             }
             return View();

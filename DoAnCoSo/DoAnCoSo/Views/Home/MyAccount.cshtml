@@ -3,6 +3,7 @@
 @{
     ViewData["Title"] = "MyAccount";
     Layout = "~/Views/Shared/_Layout.cshtml";
+    List<Order> DanhSachDonHang = ViewBag.DonHang;
 }
 
 <!--
@@ -156,14 +157,26 @@
                 </div>
                 <div class="col-md-6">
                     <div class="form-group">
+                        <label for="account-phone">Địa Chỉ</label>
+                        <input class="form-control" type="text" id="account-phone" value="@Model.Address" required="">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="account-phone">Ngày Sinh</label>
+                        <input class="form-control" type="date" id="account-phone" value="@Model.Birthday" required="">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
                         <label for="account-pass">New Password</label>
-                        <input class="form-control" type="password" id="account-pass">
+                        <input class="form-control" type="password" id="account-pass" name="NewPassword">
                     </div>
                 </div>
                 <div class="col-md-6">
                     <div class="form-group">
                         <label for="account-confirm-pass">Confirm Password</label>
-                        <input class="form-control" type="password" id="account-confirm-pass">
+                        <input class="form-control" type="password" id="account-confirm-pass" name="ConfirmPassword">
                     </div>
                 </div>
                 <div class="col-12">
@@ -173,12 +186,11 @@
                             <input class="custom-control-input" type="checkbox" id="subscribe_me" checked="">
                             <label class="custom-control-label" for="subscribe_me">Subscribe me to Newsletter</label>
                         </div>
-                        <button class="btn btn-style-1 btn-primary" type="button" data-toast="" data-toast-position="topRight" data-toast-type="success" data-toast-icon="fe-icon-check-circle" data-toast-title="Success!" data-toast-message="Your profile updated successfuly.">Update Profile</button>
+                        <button class="btn btn-style-1 btn-primary" type="button" data-toast-message="Your profile updated successfuly." type="submit">Update Profile</button>
                     </div>
                 </div>
             </form>
         </div>
-
 
         <div id="Orders" class="col-lg-8 pb-5">
             <div class="d-flex justify-content-end pb-3">
@@ -194,56 +206,10 @@
                 </div>
             </div>
             <div class="table-responsive">
-                <table class="table table-hover mb-0">
-                    <thead>
-                        <tr>
-                            <th>Order #</th>
-                            <th>Date Purchased</th>
-                            <th>Status</th>
-                            <th>Total</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td><a class="navi-link" href="#order-details" data-toggle="modal">78A643CD409</a></td>
-                            <td>August 08, 2017</td>
-                            <td><span class="badge badge-danger m-0">Canceled</span></td>
-                            <td><span>$760.50</span></td>
-                        </tr>
-                        <tr>
-                            <td><a class="navi-link" href="#order-details" data-toggle="modal">34VB5540K83</a></td>
-                            <td>July 21, 2017</td>
-                            <td><span class="badge badge-info m-0">In Progress</span></td>
-                            <td>$315.20</td>
-                        </tr>
-                        <tr>
-                            <td><a class="navi-link" href="#order-details" data-toggle="modal">112P45A90V2</a></td>
-                            <td>June 15, 2017</td>
-                            <td><span class="badge badge-warning m-0">Delayed</span></td>
-                            <td>$1,264.00</td>
-                        </tr>
-                        <tr>
-                            <td><a class="navi-link" href="#order-details" data-toggle="modal">28BA67U0981</a></td>
-                            <td>May 19, 2017</td>
-                            <td><span class="badge badge-success m-0">Delivered</span></td>
-                            <td>$198.35</td>
-                        </tr>
-                        <tr>
-                            <td><a class="navi-link" href="#order-details" data-toggle="modal">502TR872W2</a></td>
-                            <td>April 04, 2017</td>
-                            <td><span class="badge badge-success m-0">Delivered</span></td>
-                            <td>$2,133.90</td>
-                        </tr>
-                        <tr>
-                            <td><a class="navi-link" href="#order-details" data-toggle="modal">47H76G09F33</a></td>
-                            <td>March 30, 2017</td>
-                            <td><span class="badge badge-success m-0">Delivered</span></td>
-                            <td>$86.40</td>
-                        </tr>
-                    </tbody>
-                </table>
+                @await Html.PartialAsync("_OrderPartialView.cshtml", DanhSachDonHang)
             </div>
         </div>
+       
     </div>
 </div>
 

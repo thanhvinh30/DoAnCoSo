@@ -138,15 +138,11 @@ public partial class DataDoAnCoSoContext : DbContext
         modelBuilder.Entity<Order>(entity =>
         {
             entity.Property(e => e.OrderId).HasColumnType("int").UseIdentityColumn();
-            entity.Property(e => e.CustomerAddress).HasMaxLength(250);
-            entity.Property(e => e.CustomerEmail).HasMaxLength(100);
-            entity.Property(e => e.CustomerName).HasMaxLength(100);
-            entity.Property(e => e.CustomerPhone)
-                .HasMaxLength(11)
-                .IsUnicode(false);
+           
             entity.Property(e => e.OderDate).HasColumnType("datetime");
             entity.Property(e => e.PaymentType).HasMaxLength(50);
             entity.Property(e => e.ShipDate).HasColumnType("datetime");
+            entity.Property(e => e.TotalMoney).HasColumnType("decimal(18, 2)");
 
             entity.HasOne(d => d.Cus).WithMany(p => p.Orders)
                 .HasForeignKey(d => d.CusId)

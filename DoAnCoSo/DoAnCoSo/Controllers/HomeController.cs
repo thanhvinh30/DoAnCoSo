@@ -28,6 +28,13 @@ namespace DoAnCoSo.Controllers
                 var khachhang = _context.Customers.AsNoTracking().SingleOrDefault(x => x.CusId == Convert.ToInt32(taikhoanID));
                 if (khachhang != null)
                 {
+                    var Lsorder = _context.Orders
+                                                    .Include(x => x.Status)
+                                                    .AsNoTracking()
+                                                    .Where( x => x.CusId == khachhang.CusId)
+                                                    .OrderByDescending( x => x.OderDate)
+                                                    .ToList();
+                    ViewBag.DonHang = Lsorder;
                     return View(khachhang);
                 }
             }
