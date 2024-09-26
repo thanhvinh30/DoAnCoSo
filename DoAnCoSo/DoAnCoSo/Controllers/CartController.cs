@@ -127,7 +127,31 @@ namespace DoAnCoSo.Controllers
         }
         //-----------------------------------------------------------------------------
 
+        [HttpPost]
+        public IActionResult UpdateCart(int productID, int? quantity)
+        {
+            var cart = HttpContext.Session.GetJson<List<Cart>>("Cart") ?? new List<Cart>();
+            try
+            {
+                if (cart != null)
+                {
+                    Cart item = cart.SingleOrDefault(p => p.ProId == productID);
+                    if (item != null && quantity.HasValue)
+                    {
+                        item.Quantity = quantity.Value;
+                    }
+                    HttpContext.Session.Set<List<Cart>>("Cart", cart);
+                }
+                return Json(new {success = true});
+            }
+            catch
+            {
+                return Json(new { success = false });
+            }
+        }
 
+
+        //-----------------------------------------------------------------------------
         public IActionResult Index()
         {
             List<int> lsproductsID = new List<int>();
@@ -150,6 +174,12 @@ namespace DoAnCoSo.Controllers
             }
         }
 
+        /*
+        1. Thêm mới sản phẩm 
+        2. Cập nhật
+        3. Xóa sản phẩm 
+        4. Xóa giỏ hàng
+         */
         [HttpPost]
         [Route("AddToCart.html")]
         public IActionResult AddToCart(int productID, int? amount)

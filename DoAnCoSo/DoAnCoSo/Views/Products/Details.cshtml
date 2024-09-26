@@ -139,19 +139,7 @@
                         <p class="mb-4">@Model.ShortDes</p>
                         <p class="mb-4">@Model.MetaDesc</p>
                         <p class="mb-4">@Model.MeetaKey</p>
-                        <div class="input-group quantity mb-5" style="width: 100px;">
-                            <div class="input-group-btn">
-                                <a asp-controller="Cart" asp-action="Decrease" class="btn btn-sm btn-minus rounded-circle bg-light border">
-                                    <i class="fa fa-minus"></i>
-                                </a>
-                            </div>
-                            <input type="text" class="form-control form-control-sm text-center border-0" value="">
-                            <div class="input-group-btn">
-                                <a asp-controller="Cart" asp-action="Increase" class="btn btn-sm btn-plus rounded-circle bg-light border">
-                                    <i class="fa fa-plus"></i>
-                                </a>
-                            </div>
-                        </div>
+                        
                         <a asp-action="Add"
                            asp-controller="Cart"
                            asp-route-id="@Model.ProId" class="btn border border-secondary rounded-pill px-4 py-2 mb-4 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Thêm vào giỏ hàng</a>
@@ -214,7 +202,7 @@
         <h1 class="fw-bold mb-0">Những sảm phẩm tương tự</h1>
         <div class="vesitable">
             <div class="owl-carousel vegetable-carousel justify-content-center">
-                @if(lsproducts != null)
+                @if (lsproducts != null)
                 {
                     foreach (var item in lsproducts)
                     {
@@ -243,30 +231,14 @@
                                 </div>
                                 <div class="d-flex justify-content-between flex-lg-wrap">
                                     <p class="text-dark fs-5 fw-bold">@item.ProPrice.ToString("#,##0")VND/ Cái</p>
-                                    <a href="#" class="btn border border-secondary rounded-pill px-3 py-1 mb-4 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Thêm vào giỏ hàng</a>
+                                    <a asp-action="Add"
+                                       asp-controller="Cart"
+                                       asp-route-id="@item.ProId" class="btn border border-secondary rounded-pill px-3 py-1 mb-4 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Thêm vào giỏ hàng</a>
                                 </div>
                             </div>
                         </div>
                     }
                 }
-
-                <!--
-                <div class="border border-primary rounded position-relative vesitable-item">
-                    <div class="vesitable-img">
-                        <img src="img-PhuTungXe/LocGio/Lọc Gió Chính Hãng Honda Lead đời đâu , SCR.webp" class="img-fluid w-100 rounded-top" alt="">
-                    </div>
-                    <div class="text-white bg-primary px-3 py-1 rounded position-absolute" style="top: 10px; right: 10px;">Vegetable</div>
-                    <div class="p-4 pb-0 rounded-bottom">
-                        <h4>Lọc Gió</h4>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt</p>
-                        <div class="d-flex justify-content-between flex-lg-wrap">
-                            <p class="text-dark fs-5 fw-bold">200.000Đ/ Cái</p>
-                            <a href="#" class="btn border border-secondary rounded-pill px-3 py-1 mb-4 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Thêm vào giỏ hàng</a>
-                        </div>
-                    </div>
-                </div>
-                -->
-                
             </div>
         </div>
 
@@ -274,3 +246,11 @@
     </div>
 </div>
 <!-- Single Product End -->
+
+<script>
+    $(document).ready(function () {
+        $(function (){
+            $("")
+        })
+    })
+</script>

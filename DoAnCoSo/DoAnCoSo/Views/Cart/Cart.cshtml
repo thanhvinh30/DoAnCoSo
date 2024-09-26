@@ -46,7 +46,7 @@
                                         </div>
                                     </th>
                                     <td>
-                                        <p class="mb-0 mt-4">@item.ProName</p>
+                                    <a asp-route="ProductsDetail" asp-route-id="@item.ProId" class="mb-0 mt-4">@item.ProName</a>
                                     </td>
                                     <td>
                                         <p class="mb-0 mt-4">@item.Price.ToString("#,##0")VND</p>
@@ -118,9 +118,17 @@
                             <p class="mb-0 pe-4"></p>
                     </div>
                     <!--Model.GrandToTal.ToString("#,##0")VND-->
-                    <a href="chackout.html">
-                        <button class="btn border-secondary rounded-pill px-4 py-3 text-primary text-uppercase mb-4 ms-4" type="button">Tiến hành thanh toán</button>
-                    </a>
+                    @if(User.Identity.IsAuthenticated){
+                        <a href="">
+                            <button class="btn border-secondary rounded-pill px-4 py-3 text-primary text-uppercase mb-4 ms-4" type="button">Tiến hành thanh toán</button>
+                        </a>
+                    }
+                    else
+                    {
+                            <a href="">
+                                <button class="btn border-secondary rounded-pill px-4 py-3 text-primary text-uppercase mb-4 ms-4" type="button">Tiến hành thanh toán</button>
+                            </a>
+                    }                    
                 </div>
             </div>
         </div>

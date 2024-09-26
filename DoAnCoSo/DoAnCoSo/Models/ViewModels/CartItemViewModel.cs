@@ -8,5 +8,6 @@ namespace DoAnCoSo.Models.ViewModels
         public decimal GrandToTal {  get; set; }
         //public List<Product> ProItems { get; set; }
         public List<CartItem> items { get; set; }
+        public List<Product> products { get; set; }
     }
 }
