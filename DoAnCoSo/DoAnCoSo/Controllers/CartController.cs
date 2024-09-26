@@ -117,7 +117,7 @@ namespace DoAnCoSo.Controllers
         public IActionResult CleanCart()
         {
             HttpContext.Session.Remove("Cart");
-            return RedirectToAction("Cart","Customer");
+            return RedirectToAction("Index","Home");
         }
 
         public IActionResult Checkout()

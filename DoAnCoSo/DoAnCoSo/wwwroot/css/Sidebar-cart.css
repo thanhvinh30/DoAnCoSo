@@ -1,55 +1,53 @@
-﻿/* CSS for Cart Sidebar */
-.cart-sidebar {
+﻿/* Sidebar ẩn mặc định */
+#cartSidebar {
+    width: 300px;
     position: fixed;
-    right: -400px; /* Ẩn giỏ hàng ở bên phải màn hình */
+    right: -300px; /* Đẩy sidebar ra ngoài màn hình */
     top: 0;
-    width: 400px;
     height: 100%;
     background-color: #fff;
-    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
-    transition: right 0.4s ease;
-    z-index: 9999; /* Đảm bảo sidebar nằm trên các phần khác */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    transition: right 0.3s ease-in-out;
+    z-index: 1000;
 }
 
-.cart-header {
-    padding: 15px;
-    background-color: #f8f9fa;
+    /* Khi sidebar được mở (hover), nó sẽ hiện ra */
+    #cartSidebar.open {
+        right: 0; /* Hiển thị sidebar */
+    }
+
+    /* CSS cho nút đóng sidebar */
+    #cartSidebar .close-btn {
+        position: absolute;
+        top: 10px;
+        right: 20px;
+        font-size: 24px;
+        cursor: pointer;
+    }
+
+.cart-item {
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
 }
 
-.cart-body {
-    padding: 15px;
-    overflow-y: auto;
-    height: calc(100% - 120px); /* Trừ phần header và footer */
+    .cart-item img {
+        width: 50px;
+        height: 50px;
+        margin-right: 10px;
+    }
+
+.cart-item-details {
+    flex-grow: 1;
 }
 
-.cart-footer {
-    padding: 15px;
-    background-color: #f8f9fa;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
+.cart-item-price {
+    margin-left: auto;
 }
 
-.close-btn {
-    background: none;
-    border: none;
-    font-size: 1.5rem;
-    cursor: pointer;
-}
-
-/* Hiển thị giỏ hàng khi hover vào biểu tượng */
-.cart-icon:hover + #cartSidebar {
-    right: 0; /* Khi hover vào biểu tượng giỏ hàng, giỏ hàng trượt ra */
-}
-
-/* Đảm bảo giỏ hàng trượt lại khi không hover */
-#cartSidebar:hover {
-    right: 0;
-}
-
-#cartSidebar {
-    right: -400px; /* Trở lại vị trí ẩn ban đầu */
+.cart-total {
+    padding: 10px;
+    text-align: center;
+    border-top: 1px solid #ddd;
 }

@@ -25,6 +25,7 @@
 
     <!-- Customized Bootstrap Stylesheet -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/Sidebar-cart.css" rel="stylesheet">
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
@@ -76,10 +77,34 @@
                         </div>
                         <div class="d-flex m-3 me-0">
                             <button class="btn-search btn border border-secondary btn-md-square rounded-circle bg-white me-4" data-bs-toggle="modal" data-bs-target="#searchModal"><i class="fas fa-search text-primary"></i></button>
-                            <a href="cart.html" class="position-relative me-4 my-auto">
+                            <a href="cart.html" class="position-relative me-4 my-auto cart-icon">
                                 <i class="fa fa-shopping-bag fa-2x"></i>
                                 <span class="position-absolute bg-secondary rounded-circle d-flex align-items-center justify-content-center text-dark px-1" style="top: -5px; left: 15px; height: 20px; min-width: 20px;">3</span>
                             </a>
+                            <div id="cartSidebar">
+                                <span class="close-btn">&times;</span> <!-- Nút đóng -->
+                            
+                                <h3 class="text-center">Giỏ Hàng</h3>
+                            
+                                <!-- Hiển thị các mục giỏ hàng -->
+                               
+                               
+                                    <div class="cart-item">
+                                        <img src="~/img-PhuTungXe(BanMoi)" alt="@item.ProName">
+                                        <div class="cart-item-details">
+                                            <p></p>
+                                            <p></p>
+                                        </div>
+                                        <div class="cart-item-price">VND</div>
+                                    </div>
+                                
+                            
+                                <!-- Phần hiển thị tổng tiền -->
+                                <div class="cart-total">
+                                    <h5>Tổng cộng: VND</h5>
+                                    <button>Tiến hành thanh toán</button>
+                                </div>
+                            </div>
                             <a href="account.html" class="my-auto">
                                 <i class="fas fa-user fa-2x"></i>
                             </a>
@@ -989,6 +1014,28 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+    <script>document.addEventListener('DOMContentLoaded', function() {
+        const cartSidebar = document.getElementById('cartSidebar');
+        const cartIcon = document.querySelector('.cart-icon');
+    
+        // Mở sidebar khi hover vào biểu tượng giỏ hàng
+        cartIcon.addEventListener('mouseenter', function() {
+            cartSidebar.classList.add('open');
+        });
+    
+        // Đóng sidebar khi người dùng rời khỏi biểu tượng giỏ hàng và sidebar
+        cartIcon.addEventListener('mouseleave', function() {
+            setTimeout(function() {
+                cartSidebar.classList.remove('open');
+            }, 300);  // Đợi 300ms để tránh việc đóng ngay lập tức khi người dùng chuyển chuột
+        });
+    
+        // Đóng sidebar khi di chuột ra ngoài sidebar
+        cartSidebar.addEventListener('mouseleave', function() {
+            cartSidebar.classList.remove('open');
+        });
+    });
+    </script>
     </body>
 
 </html>

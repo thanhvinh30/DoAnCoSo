@@ -76,10 +76,6 @@ namespace DoAnCoSo.Controllers
             return View(models);
 
         }
-        public IActionResult Cart()
-        {
-            return View();
-        }
         [Route("List/{id}.html", Name = "ListProducts")]
         public IActionResult List(string ProName, int page = 1)
         {

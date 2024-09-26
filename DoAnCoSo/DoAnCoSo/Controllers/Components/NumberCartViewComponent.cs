@@ -12,11 +12,6 @@ namespace DoAnCoSo.Controllers.Components
         {
             //List<Cart> cartItems = HttpContext.Session.GetJson<List<Cart>>("Cart") ?? new List<Cart>();
             var cart = HttpContext.Session.Get<List<Cart>>("Cart");
-            int soluongsanpham = 0;
-            if (cart != null)
-            {
-                soluongsanpham = cart.Count;
-            }
             return View(cart);
         }
     }
