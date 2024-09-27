@@ -3,26 +3,21 @@ using Microsoft.AspNetCore.Mvc;
 using DoAnCoSo.Helpper;
 using Microsoft.AspNetCore.Authorization;
 using DoAnCoSo.Extension;
-using Microsoft.EntityFrameworkCore.Metadata.Internal;
-using Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Templates.Blazor;
 using DoAnCoSo.ModelView;
-using Microsoft.AspNetCore.Http;
 using System.Security.Claims;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Identity;
-using static Microsoft.EntityFrameworkCore.DbLoggerCategory;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Data.SqlClient;
-using Microsoft.AspNetCore.Mvc.Infrastructure;
 using Microsoft.AspNetCore.Authentication.Cookies;
 
 namespace DoAnCoSo.Controllers
 {
-
+    [Authorize]
     public class CustomerController : Controller
     {
         private UserManager<AppUserModel> _userManager;
         private SignInManager<AppUserModel> _siginManager;
+        
 
         private readonly DataDoAnCoSoContext _context;
 
@@ -69,6 +64,7 @@ namespace DoAnCoSo.Controllers
 
         #region  Login
         [HttpGet]
+        [AllowAnonymous]
         public IActionResult Login(string? returnUrl)
         {
             ViewBag.ReturnUrl = returnUrl;
@@ -80,6 +76,7 @@ namespace DoAnCoSo.Controllers
             return View();
         }
         [HttpPost]
+        [AllowAnonymous]
         public async Task<IActionResult> Login(LoginViewModel customer, string? returnUrl )
         {
             ViewBag.ReturnUrl = returnUrl;
@@ -134,13 +131,18 @@ namespace DoAnCoSo.Controllers
                     claimsIdentity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
                     ClaimsPrincipal claimsPrincipal = new ClaimsPrincipal(claimsIdentity);
 
+                    //ClaimsIdentity claimsIdentity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
+                    //claimsIdentity = new ClaimsIdentity(claims, "Login");
+                    //ClaimsPrincipal claimsPrincipal = new ClaimsPrincipal(claimsIdentity);
+
+
                     var authProperties = new AuthenticationProperties
                     {
                         IsPersistent = true // Để giữ trạng thái đăng nhập qua các phiên làm việc
                     };
 
                     //await HttpContext.SignInAsync(claimsPrincipal);
-                    await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, new ClaimsPrincipal(claimsIdentity), authProperties);
+                    await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, claimsPrincipal, authProperties);
                     TempData["Success"] = "Đăng Nhập Thành Công";
                     return RedirectToAction("MyAccount", "Customer");
                 }
@@ -214,7 +216,7 @@ namespace DoAnCoSo.Controllers
 
                         TempData["Success"] = "Đăng Nhập Thành Công";
                         await HttpContext.SignInAsync(claimsPrincipal);
-                        return RedirectToAction("MyAccount", "Home");
+                        return RedirectToAction("MyAccount", "Customer");
                     }
                     catch (Exception ex)
                     {
@@ -234,24 +236,44 @@ namespace DoAnCoSo.Controllers
         #endregion
 
 
-
-        [Authorize]
+        // Nếu yêu cầu quyền Admin
+        [AllowAnonymous]
         public IActionResult MyAccount()
         {
+            //var taikhoanID = HttpContext.Session.GetString("CustomerId");
+            //var cusIdClaim = User.Claims.FirstOrDefault(c => c.Type == "CusId");
+            //if (taikhoanID != null)
+            //{
+            //    var cusId = Convert.ToInt32(cusIdClaim.Value);
+            //    var khachhang = _context.Customers.AsNoTracking().SingleOrDefault(x => x.CusId == cusId);
+            //    if (khachhang != null)
+            //    {
+            //        var Lsorder = _context.Orders
+            //                                    .Include(x => x.Status)
+            //                                    .AsNoTracking()
+            //                                    .Where(x => x.CusId == khachhang.CusId)
+            //                                    .OrderByDescending(x => x.OderDate)
+            //                                    .ToList();
+            //        ViewBag.DonHang = Lsorder;
+            //        return View(khachhang);
+            //    }
+            //}
+            //return RedirectToAction("Login");
+
+
+
             var taikhoanID = HttpContext.Session.GetString("CustomerId");
-            var cusIdClaim = User.Claims.FirstOrDefault(c => c.Type == "CusId");
             if (taikhoanID != null)
             {
-                var cusId = Convert.ToInt32(cusIdClaim.Value);
-                var khachhang = _context.Customers.AsNoTracking().SingleOrDefault(x => x.CusId == cusId);
+                var khachhang = _context.Customers.AsNoTracking().SingleOrDefault(x => x.CusId == Convert.ToInt32(taikhoanID));
                 if (khachhang != null)
                 {
                     var Lsorder = _context.Orders
-                                                .Include(x => x.Status)
-                                                .AsNoTracking()
-                                                .Where(x => x.CusId == khachhang.CusId)
-                                                .OrderByDescending(x => x.OderDate)
-                                                .ToList();
+                                                    .Include(x => x.Status)
+                                                    .AsNoTracking()
+                                                    .Where(x => x.CusId == khachhang.CusId)
+                                                    .OrderByDescending(x => x.OderDate)
+                                                    .ToList();
                     ViewBag.DonHang = Lsorder;
                     return View(khachhang);
                 }
@@ -259,5 +281,108 @@ namespace DoAnCoSo.Controllers
             return RedirectToAction("Login");
         }
 
+
+        #region  System
+        [HttpPost]
+        public IActionResult ChangePassword(ChangePasswordVM model)
+        {
+            try
+            {
+
+                var taikhoanID = HttpContext.Session.GetString("CustomerId");
+                if (taikhoanID == null)
+                {
+                    return RedirectToAction("Login", "Customer");
+                }
+                if (ModelState.IsValid)
+                {
+                    var customerId = int.Parse(taikhoanID);
+                    var taikhoan = _context.Customers.Find(Convert.ToInt32(taikhoanID));
+                    if (taikhoan == null)
+                    {
+                        return RedirectToAction("Login", "Customer");
+                    }
+                    var pass = (model.PasswordNow.Trim() + taikhoan.Salt.Trim()).ToMD5();
+                    if (pass != taikhoan.CusPassword)
+                    {
+                        ModelState.AddModelError("", "Mật khẩu hiện tại không chính xác.");
+                        return View(model); // Trả về view với thông báo lỗi
+                    }
+
+                    // Kiểm tra mật khẩu mới và mật khẩu xác nhận có khớp nhau không
+                    if (model.PasswordNew != model.ComfirmPasswordNew)
+                    {
+                        ModelState.AddModelError("", "Mật khẩu mới và mật khẩu xác nhận không khớp.");
+                        return View(model); // Trả về view với thông báo lỗi
+                    }
+
+                    if (pass == taikhoan.CusPassword)
+                    {
+                        string passnew = (model.PasswordNew.Trim() + taikhoan.Salt.Trim()).ToMD5();
+                        taikhoan.CusPassword = passnew;
+                        _context.Update(taikhoan);
+                        _context.SaveChanges();
+                        TempData["Success"] = "Thay đổi mật khẩu Thành Công";
+                        return RedirectToAction("MyAccount", "Customer");
+                    }
+
+
+                }
+            }
+            catch (Exception ex)
+            {
+                ModelState.AddModelError("", "Có lỗi xảy ra khi thay đổi mật khẩu. Vui lòng thử lại.");
+                return RedirectToAction("MyAccount", "Customer");
+            }
+            TempData["Success"] = "Thay đổi mật khẩu  không thành công";
+            return RedirectToAction("MyAccount", "Customer");
+
+        }
+        [HttpPost]
+        public IActionResult UpdateProfile(CustomerUpdateVM model)
+        {
+            if (!ModelState.IsValid)
+            {
+                return View(model); // Trả về form với lỗi nếu dữ liệu không hợp lệ
+            }
+
+            var customerId = HttpContext.Session.GetString("CustomerId");
+            if (customerId == null)
+            {
+                return RedirectToAction("Login", "Customer"); // Chuyển về trang đăng nhập nếu chưa đăng nhập
+            }
+
+            var customer = _context.Customers.Find(int.Parse(customerId));
+            if (customer == null)
+            {
+                ModelState.AddModelError("", "Không tìm thấy tài khoản.");
+                return View(model);
+            }
+
+            // Cập nhật thông tin khách hàng
+            customer.CusName = model.CusName;
+            customer.Phone = model.Phone;
+            customer.Address = model.Address;
+            customer.LastLogin = DateOnly.FromDateTime(DateTime.Now);
+
+            // Nếu người dùng không nhập ngày sinh, giữ nguyên giá trị hiện tại
+            customer.Birthday = model.Birthday.HasValue ? DateOnly.FromDateTime(model.Birthday.Value) : customer.Birthday;
+
+
+            // Lưu thay đổi
+            _context.Update(customer);
+            _context.SaveChanges();
+
+            TempData["Success"] = "Cập nhật thông tin thành công!";
+            return RedirectToAction("MyAccount", "Customer"); // Chuyển về trang hồ sơ sau khi cập nhật
+        }
+        [HttpGet]
+        public IActionResult Logout()
+        {
+            HttpContext.SignOutAsync();
+            HttpContext.Session.Remove("CustomerId");
+            return RedirectToAction("Index", "Home");
+        }
+        #endregion
     }
 }

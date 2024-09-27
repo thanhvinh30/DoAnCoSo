@@ -34,10 +34,11 @@ builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationSc
     {
         options.ExpireTimeSpan = TimeSpan.FromMinutes(30);
         options.SlidingExpiration = true;
-        options.AccessDeniedPath = new PathString("/AccessDenied");
         options.LoginPath = "/Customer/Login";
-        //options.LogoutPath = "/Home/Logout";
+        options.LogoutPath = "/Customer/Logout";
+        options.AccessDeniedPath = "/Customer/AccessDenied";
     });
+builder.Services.AddAuthorization();
 
 builder.Services.AddIdentity<AppUserModel, IdentityRole>()
     .AddEntityFrameworkStores<DataDoAnCoSoContext>().AddDefaultTokenProviders();
@@ -64,11 +65,7 @@ builder.Services.AddDbContext<DataDoAnCoSoContext>(options =>
 var app = builder.Build();
 
 
-
-app.UseStaticFiles();
-
-app.UseStatusCodePagesWithRedirects("/Home/Error?statuscode={0}");
-// Configure the HTTP request pipeline.
+app.UseRouting();
 if (!app.Environment.IsDevelopment())
 {
     app.UseExceptionHandler("/Home/Error");
@@ -76,15 +73,17 @@ if (!app.Environment.IsDevelopment())
     app.UseHsts();
 }
 
-app.UseHttpsRedirection();
-app.UseStaticFiles();
-
-app.UseRouting();
-
-
 app.UseSession();  // Session phải được đặt trước Authentication
 app.UseAuthentication();
 app.UseAuthorization();
+
+app.UseStaticFiles();
+
+app.UseStatusCodePagesWithRedirects("/Home/Error?statuscode={0}");
+// Configure the HTTP request pipeline.
+
+app.UseHttpsRedirection();
+app.UseStaticFiles();
 
 
 app.UseEndpoints(endpoints =>
