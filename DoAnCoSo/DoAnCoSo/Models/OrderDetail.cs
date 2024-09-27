@@ -33,4 +33,5 @@ public partial class OrderDetail
     public double? Total { get; set; }
 
     public virtual Order? Order { get; set; }
+    public virtual Location Location { get; set; }
 }

@@ -3,6 +3,7 @@ using DoAnCoSo.Models;
 using DoAnCoSo.ModelView;
 using DoAnCoSo.Respository;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 
 namespace DoAnCoSo.Controllers
@@ -46,9 +47,14 @@ namespace DoAnCoSo.Controllers
                 model.Email = khachhang.CusEmail;
                 model.PhoneNumber = khachhang.Phone;
                 model.Address = khachhang.Address;
+
+
             }
+            ViewData["lsTinhThanh"] = new SelectList(_context.Locations.Where(x => x.Level == 1).OrderBy(x => x.Type).ToList(), "LocationID");
+            ViewBag.GioHang = gh;
+
             
-            return View();
+            return View(model);
         }
     }
 }

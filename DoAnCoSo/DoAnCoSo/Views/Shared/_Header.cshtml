@@ -43,13 +43,13 @@
                     @await Component.InvokeAsync("NumberCart")                    
                     @if (User.Identity?.IsAuthenticated ?? false)
                     {
-                        <a asp-controller="Home" asp-action="MyAccount" class="my-auto">
+                        <a asp-controller="Customer" asp-action="MyAccount" class="my-auto">
                             <i class="fas fa-user fa-2x"></i>
                         </a>
                     }
                     else
                     {
-                        <a asp-controller="Customer" asp-action="Register" class="my-auto">
+                        <a asp-controller="Customer" asp-action="Login" class="my-auto">
                             <i class="fas fa-user fa-2x"></i>
                         </a>
                     }

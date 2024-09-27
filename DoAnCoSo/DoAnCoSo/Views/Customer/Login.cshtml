@@ -43,7 +43,7 @@
 <div class="custom-card">
     <div class="custom-container" id="container">
 
-        <form class="form-Register" asp-action="Login" asp-controller="Customer" method="post">
+        <form class="form-Register" asp-action="Login" asp-route-returnurl="@ViewBag.ReturnUrl" asp-controller="Customer" method="post">
             <div asp-validation-summary="ModelOnly" class="text-danger">            </div>
             <p class="title">Tài Khoản</p>
             <p class="message">hãy nhập thông tin của bạn </p>

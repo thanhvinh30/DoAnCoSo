@@ -20,8 +20,6 @@ public partial class Order
 
     public int? StatusId { get; set; }
 
-    public bool? Paid { get; set; }
-
     public DateOnly? PaymentDate { get; set; }
 
     public int? PaymentId { get; set; }
@@ -30,10 +28,13 @@ public partial class Order
 
     public string? Note { get; set; }
 
-    public bool? Deleted { get; set; }
-
     public int? Quantity { get; set; }
     public decimal? TotalMoney { get; set; }
+    public string CusFullName {  get; set; }
+    public string CusAddress { get; set; }
+    public DateTime NeedDate { get; set; }
+    public decimal PayShip {  get; set; }
+    public string CusPhone { get; set; }
 
 
     public virtual ICollection<Cart> Carts { get; set; } = new List<Cart>();

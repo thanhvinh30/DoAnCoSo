@@ -1,6 +1,11 @@
-﻿@{
+﻿@model DoAnCoSo.ModelView.MuaHangVM
+
+
+@{
     ViewData["Title"] = "Thủ tục thanh toán";
     Layout = "~/Views/Shared/_Layout.cshtml";
+    List<DoAnCoSo.Models.Cart> carts = ViewBag.GioHang;
+    List<Location> locations = ViewBag.lsTinhThanh;
 }
 
 <!-- Single Page Header start -->
@@ -17,23 +22,9 @@
 <div class="container-fluid py-5">
     <div class="container py-5">
         <h1 class="mb-4">Chi tiết thanh toán</h1>
-        <form action="#">
+        <form >
             <div class="row g-5">
                 <div class="col-md-12 col-lg-6 col-xl-7">
-                    <div class="row">
-                        <div class="col-md-12 col-lg-6">
-                            <div class="form-item w-100">
-                                <label class="form-label my-3">Tên <sup>*</sup></label>
-                                <input type="text" class="form-control">
-                            </div>
-                        </div>
-                        <div class="col-md-12 col-lg-6">
-                            <div class="form-item w-100">
-                                <label class="form-label my-3">Họ<sup>*</sup></label>
-                                <input type="text" class="form-control">
-                            </div>
-                        </div>
-                    </div>
                     <div class="form-item">
                         <label class="form-label my-3">Họ và Tên<sup>*</sup></label>
                         <input type="text" class="form-control">
@@ -43,15 +34,18 @@
                         <input type="text" class="form-control" placeholder="House Number Street Name">
                     </div>
                     <div class="form-item">
-                        <label class="form-label my-3">Thị trấn/Thành phố<sup>*</sup></label>
+                        <label class="form-label my-3 required">Thị trấn/Thành phố<sup>*</sup></label>
                         <input type="text" class="form-control">
+
+                        <select class="form-label">
+                            <option selected>Tỉnh / Thành Phố</option>
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                        </select>
                     </div>
                     <div class="form-item">
                         <label class="form-label my-3">Quốc gia<sup>*</sup></label>
-                        <input type="text" class="form-control">
-                    </div>
-                    <div class="form-item">
-                        <label class="form-label my-3">Mã bưu / Zip<sup>*</sup></label>
                         <input type="text" class="form-control">
                     </div>
                     <div class="form-item">
@@ -62,17 +56,12 @@
                         <label class="form-label my-3">Địa chỉ email<sup>*</sup></label>
                         <input type="email" class="form-control">
                     </div>
-                    <div class="form-check my-3">
-                        <input type="checkbox" class="form-check-input" id="Account-1" name="Accounts" value="Accounts">
-                        <label class="form-check-label" for="Account-1">Tạo một tài khoản?</label>
-                    </div>
-                    <hr>
-                    <div class="form-check my-3">
-                        <input class="form-check-input" type="checkbox" id="Address-1" name="Address" value="Address">
-                        <label class="form-check-label" for="Address-1">Gửi đến một địa chỉ khác?</label>
+                    <div class="form-item">
+                        <label class="form-label my-3">Địa chỉ email<sup>*</sup></label>
+                        <input type="email" class="form-control">
                     </div>
                     <div class="form-item">
-                        <textarea name="text" class="form-control" spellcheck="false" cols="30" rows="11" placeholder="Ghi chú Oreder (Tùy chọn)"></textarea>
+                        <textarea name="text" class="form-control" spellcheck="false" cols="30" rows="11" placeholder="Ghi chú Oreder (Tùy chọn)" ></textarea>
                     </div>
                 </div>
                 <div class="col-md-12 col-lg-6 col-xl-5">
@@ -199,3 +188,56 @@
     </div>
 </div>
 <!-- Checkout Page End -->
+
+
+<script>
+    $(document).ready(function () {
+        $('select').niceselect();
+        $(function () {
+            $("#TinhThanh").change(function () {
+                var locationid = $('#TinhThanh').val();
+                $.ajax({
+                    URL: '/location/QuanHuyenList',
+                    type: "GET",
+                    datatype: "JSON",
+                    data: { Locationid: locationid },
+                    success: function (QuanHuyen) {
+                        $("#QuanHuyen").empty();
+                        $("#PhuongXa").empty();
+                        var strPhuongXa = '<option value = "" disabled selected> Phường / Xã</option>';
+                        var strQuanHuyen = '<option value = "" disabled selected> Quận / Huyện</option>';
+                        $.each(QuanHuyen, function (i, item) {
+                            var option = '<option value="' + item.locationid + '"  >' + item.name + '</option>';
+                            $("#QuanHuyen").append()option;
+                        });
+                        $('select').niceSelect('update');
+                    }
+)
+            });
+        });
+    });
+    $(document).ready(function () {
+        $('select').niceselect();
+        $(function () {
+            $("#QuanHuyen").change(function () {
+                var locationid = $('#QuanHuyen').val();
+                $.ajax({
+                    URL: '/location/PHuongXaList',
+                    type: "GET",
+                    datatype: "JSON",
+                    data: { Locationid: locationid },
+                    success: function (QuanHuyen) {
+                        $("#PhuongXa").empty();
+                        var strPhuongXa = '<option value = "" disabled selected> Phường / Xã</option>'; 
+                        $("#PHuongXa").append(readonly);
+                        $.each(QuanHuyen, function (i, item) {
+                            var option = '<option value="' + item.locationid + '"  >' + item.name + '</option>';
+                            $("#PhuongXa").append()option;
+                        });
+                        $('select').niceSelect('update');
+                    }
+    )
+            });
+        });
+    });
+</script>

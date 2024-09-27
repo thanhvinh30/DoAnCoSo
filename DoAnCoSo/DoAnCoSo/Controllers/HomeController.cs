@@ -9,6 +9,7 @@ using Microsoft.AspNetCore.Authentication;
 
 namespace DoAnCoSo.Controllers
 {
+
     public class HomeController : Controller
     {
         DataDoAnCoSoContext db = new DataDoAnCoSoContext();
@@ -20,29 +21,7 @@ namespace DoAnCoSo.Controllers
             _logger = logger;
             _context = context;                         // Add
         }
-        //[Authorize]
-        public IActionResult MyAccount() 
-        {
-            var taikhoanID = HttpContext.Session.GetString("CustomerId");
-            if (taikhoanID != null)
-            {
-                var khachhang = _context.Customers.AsNoTracking().SingleOrDefault(x => x.CusId == Convert.ToInt32(taikhoanID));
-                if (khachhang != null)
-                {
-                    var Lsorder = _context.Orders
-                                                    .Include(x => x.Status)
-                                                    .AsNoTracking()
-                                                    .Where( x => x.CusId == khachhang.CusId)
-                                                    .OrderByDescending( x => x.OderDate)
-                                                    .ToList();
-                    ViewBag.DonHang = Lsorder;
-                    return View(khachhang);
-                }
-            }
-            return RedirectToAction("Login");
-            //return View();
-        }
-
+       
         [HttpPost]
         public IActionResult ChangePassword(ChangePasswordVM model)
         {            

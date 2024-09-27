@@ -1,5 +1,6 @@
 ﻿using DoAnCoSo.Helpper;
 using DoAnCoSo.Models;
+using DoAnCoSo.Respository;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
@@ -14,12 +15,28 @@ using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
 
+// Add services to the container.
+builder.Services.AddControllersWithViews();
+
+builder.Services.AddDistributedMemoryCache();
+
+builder.Services.AddSession(options =>
+{
+    options.IdleTimeout = TimeSpan.FromMinutes(30);
+    options.Cookie.HttpOnly = true;
+    options.Cookie.IsEssential = true;
+});
+
+
+
 builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
     .AddCookie(options =>
     {
-        options.ExpireTimeSpan = TimeSpan.FromMinutes(5);
+        options.ExpireTimeSpan = TimeSpan.FromMinutes(30);
         options.SlidingExpiration = true;
-        options.AccessDeniedPath = "/";
+        options.AccessDeniedPath = new PathString("/AccessDenied");
+        options.LoginPath = "/Customer/Login";
+        //options.LogoutPath = "/Home/Logout";
     });
 
 builder.Services.AddIdentity<AppUserModel, IdentityRole>()
@@ -41,20 +58,12 @@ builder.Services.AddDbContext<DataDoAnCoSoContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("dbPhuTungXeMay")));
 
 
-builder.Services.AddDistributedMemoryCache();
 
-// Add services to the container.
-builder.Services.AddControllersWithViews();
-builder.Services.AddSession(options =>
-{
-    options.IdleTimeout = TimeSpan.FromSeconds(30);
-    //options.Cookie.HttpOnly = true;
-    options.Cookie.IsEssential = true;
-});
+
 
 var app = builder.Build();
 
-app.UseSession();
+
 
 app.UseStaticFiles();
 
@@ -72,8 +81,11 @@ app.UseStaticFiles();
 
 app.UseRouting();
 
+
+app.UseSession();  // Session phải được đặt trước Authentication
 app.UseAuthentication();
 app.UseAuthorization();
+
 
 app.UseEndpoints(endpoints =>
 {
@@ -88,6 +100,6 @@ app.MapControllerRoute(
     pattern: "{controller=Home}/{action=Index}/{id?}");
 
 app.Run();
-
+//logger.LogInformation("Application has started and routing is configured correctly.");
 
 
