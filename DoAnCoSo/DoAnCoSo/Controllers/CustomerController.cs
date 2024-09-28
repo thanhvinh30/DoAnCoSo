@@ -12,7 +12,7 @@ using Microsoft.AspNetCore.Authentication.Cookies;
 
 namespace DoAnCoSo.Controllers
 {
-    [Authorize]
+    //[Authorize]
     public class CustomerController : Controller
     {
         private UserManager<AppUserModel> _userManager;
@@ -64,7 +64,7 @@ namespace DoAnCoSo.Controllers
 
         #region  Login
         [HttpGet]
-        [AllowAnonymous]
+        //[AllowAnonymous]
         public IActionResult Login(string? returnUrl)
         {
             ViewBag.ReturnUrl = returnUrl;
@@ -76,7 +76,7 @@ namespace DoAnCoSo.Controllers
             return View();
         }
         [HttpPost]
-        [AllowAnonymous]
+        //[AllowAnonymous]
         public async Task<IActionResult> Login(LoginViewModel customer, string? returnUrl )
         {
             ViewBag.ReturnUrl = returnUrl;
@@ -164,13 +164,13 @@ namespace DoAnCoSo.Controllers
 
         #region Register
         [HttpGet]
-        [AllowAnonymous]
+        //[AllowAnonymous]
         public IActionResult Register()
         {
             return View();
         }
         [HttpPost]
-        [AllowAnonymous]
+        //[AllowAnonymous]
         public async Task<IActionResult> Register(RegisterVM taikhoan)
         {
             try
@@ -237,6 +237,7 @@ namespace DoAnCoSo.Controllers
 
 
         // Nếu yêu cầu quyền Admin
+        [Authorize]
         [AllowAnonymous]
         public IActionResult MyAccount()
         {

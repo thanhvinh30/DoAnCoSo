@@ -51,6 +51,7 @@ namespace DoAnCoSo.Areas.Admin.Controllers
             return Json(new { status = "Success", redirectUrl = url });
         }
         // GET: Admin/AdminProducts
+        [AllowAnonymous]
         public async Task<IActionResult> Index(int page = 1, int CatID = 0)
         {
             var pageNumber = page < 1 ? 1 : page;
