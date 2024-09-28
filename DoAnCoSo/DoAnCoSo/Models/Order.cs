@@ -14,7 +14,7 @@ public partial class Order
 
     public int? CusId { get; set; }
 
-    public DateTime? OderDate { get; set; }
+    public DateTime? OrderDate { get; set; }
 
     public DateTime? ShipDate { get; set; }
 

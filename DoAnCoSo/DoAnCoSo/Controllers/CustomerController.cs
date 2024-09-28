@@ -70,7 +70,7 @@ namespace DoAnCoSo.Controllers
         //[AllowAnonymous]
         public IActionResult Login(string? returnUrl)
         {
-            ViewBag.ReturnUrl = returnUrl;
+            ViewBag.ReturnUrl = returnUrl ?? Url.Action("MyAccount", "Customer");
             var taikhoanID = HttpContext.Session.GetString("CustomerId");
             if (taikhoanID != null)
             {                                             
@@ -147,6 +147,12 @@ namespace DoAnCoSo.Controllers
                     //await HttpContext.SignInAsync(claimsPrincipal);
                     await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, claimsPrincipal, authProperties);
                     TempData["Success"] = "Đăng Nhập Thành Công";
+                    // Kiểm tra xem returnUrl có giá trị hay không, nếu có thì chuyển hướng về trang đó
+                    if (!string.IsNullOrEmpty(returnUrl) && Url.IsLocalUrl(returnUrl))
+                    {
+                        return Redirect(returnUrl);
+                    }
+
                     return RedirectToAction("MyAccount", "Customer");
                 }
 
@@ -276,7 +282,7 @@ namespace DoAnCoSo.Controllers
                                                     .Include(x => x.Status)
                                                     .AsNoTracking()
                                                     .Where(x => x.CusId == khachhang.CusId)
-                                                    .OrderByDescending(x => x.OderDate)
+                                                    .OrderByDescending(x => x.OrderDate)
                                                     .ToList();
                     ViewBag.LastLogout = khachhang.LastLogin;
                     ViewBag.DonHang = Lsorder;
@@ -409,14 +415,23 @@ namespace DoAnCoSo.Controllers
 
 
 
-        [AllowAnonymous]
         public IActionResult Checkout()
-        {         
+        {
             if (cartItems.Count == 0)
             {
                 return RedirectToAction("Login", "Customer");
             }
             return View(cartItems);
+
+            //var customerId = HttpContext.Session.GetString("CustomerId");
+            //if (customerId == null && cartItems.Count == 0)
+            //{
+            //    // Chưa đăng nhập, chuyển hướng đến trang đăng nhập với returnUrl là Checkout
+            //    return RedirectToAction("Login", "Customer", new { returnUrl = Url.Action("Checkout", "Customer") });
+            //}
+
+            //// Xử lý tiếp nếu đã đăng nhập
+            //return View(cartItems);
         }
     }
 }

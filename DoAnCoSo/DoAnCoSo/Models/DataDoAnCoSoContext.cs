@@ -140,7 +140,7 @@ public partial class DataDoAnCoSoContext : DbContext
         {
             entity.Property(e => e.OrderId).HasColumnType("int").UseIdentityColumn();
            
-            entity.Property(e => e.OderDate).HasColumnType("datetime");
+            entity.Property(e => e.OrderDate).HasColumnType("datetime");
             entity.Property(e => e.PaymentType).HasMaxLength(50);
             entity.Property(e => e.ShipType).HasMaxLength(50);
             entity.Property(e => e.TotalMoney).HasColumnType("decimal(18, 2)");

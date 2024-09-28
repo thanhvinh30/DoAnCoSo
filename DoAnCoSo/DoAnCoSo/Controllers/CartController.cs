@@ -120,11 +120,6 @@ namespace DoAnCoSo.Controllers
             return RedirectToAction("Index","Home");
         }
 
-        public IActionResult Checkout()
-        {
-
-            return View();
-        }
         //-----------------------------------------------------------------------------
 
         [HttpPost]

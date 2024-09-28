@@ -118,17 +118,18 @@
                             <p class="mb-0 pe-4"></p>
                     </div>
                     <!--Model.GrandToTal.ToString("#,##0")VND-->
-                    @if(User.Identity.IsAuthenticated){
+                    <!--if (User.Identity?.IsAuthenticated ?? false)
+                    {-->
                         <a asp-controller="Customer" asp-action="Checkout">
                             <button class="btn border-secondary rounded-pill px-4 py-3 text-primary text-uppercase mb-4 ms-4" type="button">Tiến hành thanh toán</button>
                         </a>
-                    }
+                    <!--}
                     else
                     {
-                        <a asp-controller="Customer" asp-action="Checkout">
+                        <a asp-controller="Customer" asp-action="Login">
                                 <button class="btn border-secondary rounded-pill px-4 py-3 text-primary text-uppercase mb-4 ms-4" type="button">Tiến hành thanh toán</button>
                             </a>
-                    }                    
+                    }-->                    
                 </div>
             </div>
         </div>
