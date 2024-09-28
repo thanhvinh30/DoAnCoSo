@@ -152,9 +152,5 @@ namespace DoAnCoSo.Controllers
 
             //return View();
         }
-        public IActionResult Checkout()
-        {
-            return View();
-        }
     }
 }

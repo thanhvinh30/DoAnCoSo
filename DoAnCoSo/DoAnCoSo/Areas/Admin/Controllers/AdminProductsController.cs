@@ -16,7 +16,7 @@ using Microsoft.AspNetCore.Authorization;
 namespace DoAnCoSo.Areas.Admin.Controllers
 {
     [Area("Admin")]
-    [Authorize]
+
     public class AdminProductsController : Controller
     {
         private readonly DataDoAnCoSoContext _context;
@@ -51,7 +51,7 @@ namespace DoAnCoSo.Areas.Admin.Controllers
             return Json(new { status = "Success", redirectUrl = url });
         }
         // GET: Admin/AdminProducts
-        [AllowAnonymous]
+
         public async Task<IActionResult> Index(int page = 1, int CatID = 0)
         {
             var pageNumber = page < 1 ? 1 : page;
@@ -109,13 +109,13 @@ namespace DoAnCoSo.Areas.Admin.Controllers
             return View(product);
         }
 
+        #region  Create
         // GET: Admin/AdminProducts/Create
         public IActionResult Create()
         {
             ViewData["CatId"] = new SelectList(_context.Categories, "CatId", "CatName");
             return View();
         }
-
         // POST: Admin/AdminProducts/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
@@ -150,7 +150,9 @@ namespace DoAnCoSo.Areas.Admin.Controllers
             ViewData["CatId"] = new SelectList(_context.Categories, "CatId", "CatName", product.CatId);
             return View(product);
         }
+        #endregion
 
+        #region  Edit
         // GET: Admin/AdminProducts/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
@@ -251,7 +253,9 @@ namespace DoAnCoSo.Areas.Admin.Controllers
             return View(product);
             //return Redirect(Request.Headers["Referer"].ToString());
         }
+        #endregion
 
+        #region  Delete
         // GET: Admin/AdminProducts/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
@@ -286,6 +290,8 @@ namespace DoAnCoSo.Areas.Admin.Controllers
             SetAlert("Đã Xóa thành công", "Success");
             return RedirectToAction(nameof(Index));
         }
+        #endregion
+
 
         private bool ProductExists(int id)
         {

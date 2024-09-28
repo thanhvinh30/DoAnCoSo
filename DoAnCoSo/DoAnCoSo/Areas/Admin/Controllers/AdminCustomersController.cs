@@ -37,21 +37,6 @@ namespace DoAnCoSo.Areas.Admin.Controllers
             }
         }
 
-        // GET: Admin/AdminCustomers
-        //public async Task<IActionResult> Index(int? page)
-        //{
-        //    var pageNumber = page == null || page <= 0 ? 1 : page.Value;                                    // tùy theo số lượng biến
-        //    var pageSize = 10;                                                                              // Số lượng biến trong page
-        //    var lsCustomers = _context.Customers
-        //                            .AsNoTracking()
-        //                            .Include(x => x.Location)
-        //                            .OrderByDescending(x => x.CreateDate);
-
-        //    PagedList<Customer> models = new PagedList<Customer>(lsCustomers, pageNumber, pageSize);
-        //    ViewBag.CurrentPage = pageNumber;
-        //    return View(models);
-        //    //return View(await _context.Customers.ToListAsync());
-        //}
         public async Task<IActionResult> Index(int? page)
         {
             var pageNumber = page == null || page <= 0 ? 1 : page.Value;
@@ -75,9 +60,6 @@ namespace DoAnCoSo.Areas.Admin.Controllers
             return View(models);
         }
 
-
-
-
         // GET: Admin/AdminCustomers/Details/5
         public async Task<IActionResult> Details(int? id)
         {
@@ -96,6 +78,7 @@ namespace DoAnCoSo.Areas.Admin.Controllers
             return View(customer);
         }
 
+        #region  Create
         // GET: Admin/AdminCustomers/Create
         public IActionResult Create()
         {
@@ -105,6 +88,7 @@ namespace DoAnCoSo.Areas.Admin.Controllers
         // POST: Admin/AdminCustomers/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
+
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("CusId,CusName,CusPassword,CusEmail,Address,Birthday,Phone,LocationId,CreateDate,LastLogin,Avatar,Active")] Customer customer)
@@ -117,7 +101,9 @@ namespace DoAnCoSo.Areas.Admin.Controllers
             }
             return View(customer);
         }
+        #endregion
 
+        #region  Edit
         // GET: Admin/AdminCustomers/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
@@ -168,7 +154,9 @@ namespace DoAnCoSo.Areas.Admin.Controllers
             }
             return View(customer);
         }
+        #endregion
 
+        #region  Delete
         // GET: Admin/AdminCustomers/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
@@ -201,6 +189,7 @@ namespace DoAnCoSo.Areas.Admin.Controllers
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
+        #endregion
 
         private bool CustomerExists(int id)
         {

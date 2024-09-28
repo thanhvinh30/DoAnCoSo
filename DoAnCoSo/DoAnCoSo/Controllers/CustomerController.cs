@@ -9,18 +9,17 @@ using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Authentication.Cookies;
+using DoAnCoSo.Respository;
 
 namespace DoAnCoSo.Controllers
 {
     //[Authorize]
     public class CustomerController : Controller
     {
+        #region  Private
         private UserManager<AppUserModel> _userManager;
         private SignInManager<AppUserModel> _siginManager;
-        
-
         private readonly DataDoAnCoSoContext _context;
-
         public CustomerController(DataDoAnCoSoContext context, UserManager<AppUserModel> userManager, SignInManager<AppUserModel> siginManager)
         {
             _userManager = userManager;
@@ -28,6 +27,10 @@ namespace DoAnCoSo.Controllers
             _context = context;
 
         }
+        #endregion
+
+
+        public List<Cart> cartItems => HttpContext.Session.GetJson<List<Cart>>("Cart") ?? new List<Cart>();
 
         #region  Validate
         [HttpGet]
@@ -127,13 +130,13 @@ namespace DoAnCoSo.Controllers
 
 
 
-                    ClaimsIdentity claimsIdentity = new ClaimsIdentity(claims, "Login");
-                    claimsIdentity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
+                    //ClaimsIdentity claimsIdentity = new ClaimsIdentity(claims, "Login");
+                    //claimsIdentity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
+                    //ClaimsPrincipal claimsPrincipal = new ClaimsPrincipal(claimsIdentity);
+
+                    ClaimsIdentity claimsIdentity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
                     ClaimsPrincipal claimsPrincipal = new ClaimsPrincipal(claimsIdentity);
 
-                    //ClaimsIdentity claimsIdentity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
-                    //claimsIdentity = new ClaimsIdentity(claims, "Login");
-                    //ClaimsPrincipal claimsPrincipal = new ClaimsPrincipal(claimsIdentity);
 
 
                     var authProperties = new AuthenticationProperties
@@ -235,7 +238,7 @@ namespace DoAnCoSo.Controllers
         }
         #endregion
 
-
+        #region  MyAccount
         // Nếu yêu cầu quyền Admin
         [Authorize]
         [AllowAnonymous]
@@ -275,13 +278,14 @@ namespace DoAnCoSo.Controllers
                                                     .Where(x => x.CusId == khachhang.CusId)
                                                     .OrderByDescending(x => x.OderDate)
                                                     .ToList();
+                    ViewBag.LastLogout = khachhang.LastLogin;
                     ViewBag.DonHang = Lsorder;
                     return View(khachhang);
                 }
             }
             return RedirectToAction("Login");
         }
-
+        #endregion
 
         #region  System
         [HttpPost]
@@ -380,10 +384,39 @@ namespace DoAnCoSo.Controllers
         [HttpGet]
         public IActionResult Logout()
         {
+            var customerId = HttpContext.Session.GetString("CustomerId");
+            //var customer = _context.Customers.Find(int.Parse(customerId));
+            if (customerId != null)
+            {
+                // Lấy khách hàng từ cơ sở dữ liệu (đồng bộ)
+                var khachhang = _context.Customers.Find(Convert.ToInt32(customerId));
+                if (khachhang != null)
+                {
+                    // Cập nhật thời gian đăng xuất
+                    khachhang.LastLogin = DateOnly.FromDateTime(DateTime.Now);
+                    _context.Update(khachhang);
+                    _context.SaveChanges();  // Sử dụng phương thức đồng bộ để lưu thay đổi
+                }
+            }
             HttpContext.SignOutAsync();
             HttpContext.Session.Remove("CustomerId");
+
+            
             return RedirectToAction("Index", "Home");
         }
         #endregion
+
+
+
+
+        [AllowAnonymous]
+        public IActionResult Checkout()
+        {         
+            if (cartItems.Count == 0)
+            {
+                return RedirectToAction("Login", "Customer");
+            }
+            return View(cartItems);
+        }
     }
 }

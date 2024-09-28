@@ -19,21 +19,19 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
 
 builder.Services.AddDistributedMemoryCache();
-
-builder.Services.AddSession(options =>
-{
-    options.IdleTimeout = TimeSpan.FromMinutes(30);
-    options.Cookie.HttpOnly = true;
-    options.Cookie.IsEssential = true;
-});
+builder.Services.AddSession();
+//builder.Services.AddSession(options =>
+//{
+//    options.IdleTimeout = TimeSpan.FromMinutes(30);
+//    options.Cookie.HttpOnly = true;
+//    options.Cookie.IsEssential = true;
+//});
 
 
 
 builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
     .AddCookie(options =>
-    {
-        options.ExpireTimeSpan = TimeSpan.FromMinutes(30);
-        options.SlidingExpiration = true;
+    {      
         options.LoginPath = "/Customer/Login";
         options.LogoutPath = "/Customer/Logout";
         options.AccessDeniedPath = "/Customer/AccessDenied";
@@ -74,7 +72,9 @@ if (!app.Environment.IsDevelopment())
 }
 
 app.UseSession();  // Session phải được đặt trước Authentication
+
 app.UseAuthentication();
+
 app.UseAuthorization();
 
 app.UseStaticFiles();

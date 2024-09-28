@@ -22,7 +22,7 @@ public partial class Order
 
     public DateOnly? PaymentDate { get; set; }
 
-    public int? PaymentId { get; set; }
+    public string ShipType {  get; set; }
 
     public string? PaymentType { get; set; }
 

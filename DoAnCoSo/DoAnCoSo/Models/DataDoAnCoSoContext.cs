@@ -142,13 +142,13 @@ public partial class DataDoAnCoSoContext : DbContext
            
             entity.Property(e => e.OderDate).HasColumnType("datetime");
             entity.Property(e => e.PaymentType).HasMaxLength(50);
-            entity.Property(e => e.ShipDate).HasColumnType("datetime");
+            entity.Property(e => e.ShipType).HasMaxLength(50);
             entity.Property(e => e.TotalMoney).HasColumnType("decimal(18, 2)");
             entity.Property(e => e.CusAddress).HasMaxLength(150);
             entity.Property(e => e.CusFullName).HasMaxLength(150);
             entity.Property(e => e.PayShip).HasColumnType("decimal(18, 2)");
             entity.Property(e => e.CusPhone).HasMaxLength(50);
-
+            
             entity.HasOne(d => d.Cus).WithMany(p => p.Orders)
                 .HasForeignKey(d => d.CusId)
                 .HasConstraintName("FK_Orders_Customer");
